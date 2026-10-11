@@ -149,17 +149,24 @@ def wait_until_all_grown():
 			do_a_flip()
 
 
+# Progress goes to the Output window (quick_print doesn't slow the drone)
 while True:
+	quick_print("Planting")
 	if not plant_all():
 		print("Can't afford cactus - farm what it costs, then come back")
 		break
 
 	size = get_world_size()
 	for y in range(size):
+		quick_print("Sorting row " + str(y + 1) + " of " + str(size))
 		sort_row(y)
 	for x in range(size):
+		quick_print("Sorting column " + str(x + 1) + " of " + str(size))
 		sort_column(x)
 
+	quick_print("Waiting for every cactus to finish growing")
 	wait_until_all_grown()
 	# The grid is sorted, so this one harvest takes the whole farm
+	before = num_items(Items.Cactus)
 	harvest()
+	quick_print("Harvested " + str(num_items(Items.Cactus) - before) + " cactus")
