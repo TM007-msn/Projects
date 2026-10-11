@@ -1,23 +1,12 @@
 # The Farmer Was Replaced - cactus farm
-# Uses: functions, lists, tuples, senses, plant, till, cactus
-#       (measure() and swap() come with the cactus unlock).
 #
-# How cacti work:
-#   - Every cactus has a size (0-9), which measure() reads.
-#   - If the whole farm is sorted - each cactus no bigger than the ones to
-#     its North and East - harvesting one fully grown cactus harvests every
-#     connected one too, and you get n*n cactus for n harvested.
-#     Unsorted, you only get the one you harvested.
+# Sorted cacti (each one no bigger than its North and East neighbours)
+# chain-harvest: one harvest takes the whole farm and pays n*n for n cacti.
+# Brown = grown but out of order, green = sorted.
 #
-# Plan:
-#   1. Plant a cactus on every square.
-#   2. Sort every row (smallest at the West end) using swap().
-#   3. Sort every column (smallest at the South end).
-#      Sorting rows and then columns leaves the rows still sorted,
-#      so the whole grid ends up sorted both ways.
-#   4. Wait until every cactus is fully grown, then harvest once.
-#
-# Warning: the first pass clears anything that isn't a cactus.
+# Each cycle: plant every square -> sort rows -> sort columns
+#             -> wait until all grown -> harvest once.
+# Progress shows in the Output window.
 
 
 def move_steps(direction, steps):
@@ -26,7 +15,7 @@ def move_steps(direction, steps):
 
 
 def goto(tx, ty):
-	# Shortest route, using the fact that the farm wraps round at the edges
+	# Shortest route, using the farm wrapping round at the edges
 	size = get_world_size()
 
 	dx = tx - get_pos_x()
@@ -53,16 +42,14 @@ def all_squares():
 	for x in range(size):
 		for i in range(size):
 			if x % 2 == 0:
-				y = i
+				squares.append((x, i))
 			else:
-				y = size - 1 - i
-			squares.append((x, y))
+				squares.append((x, size - 1 - i))
 	return squares
 
 
-# Plants a cactus on every square.
-# Returns False if we couldn't afford one.
 def plant_all():
+	# Returns False if we can't afford a cactus
 	for square in all_squares():
 		goto(square[0], square[1])
 		entity = get_entity_type()
@@ -76,69 +63,51 @@ def plant_all():
 	return True
 
 
-# Cocktail-shaker sort along one row / column: sweep forward pushing the
-# biggest to the end, then back pushing the smallest to the start.
-# Each pass shrinks the unsorted range to where the last swap happened,
-# so already-sorted ends aren't walked over again.
-def sort_row(y):
+def goto_on_line(index, pos, is_row):
+	# Row: index is y, pos is x.  Column: index is x, pos is y.
+	if is_row:
+		goto(pos, index)
+	else:
+		goto(index, pos)
+
+
+def sort_line(index, is_row):
+	# Cocktail-shaker sort of one row (small -> West) or column (small -> South).
+	# Each pass shrinks the unsorted range to where the last swap happened.
+	if is_row:
+		forward = East
+		back = West
+	else:
+		forward = North
+		back = South
+
 	lo = 0
 	hi = get_world_size() - 1
 	while lo < hi:
-		# Forward pass: push the biggest cactus East
-		goto(lo, y)
+		# Forward pass: push the biggest to the far end
+		goto_on_line(index, lo, is_row)
 		last = lo
-		x = lo
-		while x < hi:
-			if measure() > measure(East):
-				swap(East)
-				last = x
-			move(East)
-			x += 1
+		pos = lo
+		while pos < hi:
+			if measure() > measure(forward):
+				swap(forward)
+				last = pos
+			move(forward)
+			pos += 1
 		hi = last
 		if lo >= hi:
 			break
 
-		# Backward pass: push the smallest cactus West
-		goto(hi, y)
+		# Backward pass: push the smallest to the near end
+		goto_on_line(index, hi, is_row)
 		last = hi
-		x = hi
-		while x > lo:
-			if measure(West) > measure():
-				swap(West)
-				last = x
-			move(West)
-			x -= 1
-		lo = last
-
-
-def sort_column(x):
-	lo = 0
-	hi = get_world_size() - 1
-	while lo < hi:
-		# Forward pass: push the biggest cactus North
-		goto(x, lo)
-		last = lo
-		y = lo
-		while y < hi:
-			if measure() > measure(North):
-				swap(North)
-				last = y
-			move(North)
-			y += 1
-		hi = last
-		if lo >= hi:
-			break
-
-		# Backward pass: push the smallest cactus South
-		goto(x, hi)
-		last = hi
-		y = hi
-		while y > lo:
-			if measure(South) > measure():
-				swap(South)
-				last = y
-			move(South)
-			y -= 1
+		pos = hi
+		while pos > lo:
+			if measure(back) > measure():
+				swap(back)
+				last = pos
+			move(back)
+			pos -= 1
 		lo = last
 
 
@@ -149,7 +118,6 @@ def wait_until_all_grown():
 			do_a_flip()
 
 
-# Progress goes to the Output window (quick_print doesn't slow the drone)
 while True:
 	quick_print("Planting")
 	if not plant_all():
@@ -159,14 +127,14 @@ while True:
 	size = get_world_size()
 	for y in range(size):
 		quick_print("Sorting row " + str(y + 1) + " of " + str(size))
-		sort_row(y)
+		sort_line(y, True)
 	for x in range(size):
 		quick_print("Sorting column " + str(x + 1) + " of " + str(size))
-		sort_column(x)
+		sort_line(x, False)
 
 	quick_print("Waiting for every cactus to finish growing")
 	wait_until_all_grown()
-	# The grid is sorted, so this one harvest takes the whole farm
+
 	before = num_items(Items.Cactus)
 	harvest()
 	quick_print("Harvested " + str(num_items(Items.Cactus) - before) + " cactus")
