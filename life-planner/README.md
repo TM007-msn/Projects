@@ -47,7 +47,7 @@ reminders Claude sets, and a morning digest at `DIGEST_TIME`. Without `NTFY_TOPI
 **Locally (Claude Desktop / Claude Code):** add an MCP server with the URL `http://localhost:8000/mcp`.
 Test the tools first with `npx @modelcontextprotocol/inspector`.
 
-**From your phone:** the Claude app needs a public HTTPS URL, which is what the deploy steps below give you.
+**From your phone:** the Claude app needs a public HTTPS URL, which [`SETUP.md`](SETUP.md) step 6 gives you.
 Add a custom connector pointing at `https://<your-host>/mcp`.
 
 > Auth caveat: when `PLANNER_TOKEN` is set, `/api` and `/mcp` require it as `Authorization: Bearer <token>`
@@ -58,17 +58,14 @@ Add a custom connector pointing at `https://<your-host>/mcp`.
 Things to try: *"Add my EC201 essay, due Friday 5pm, high priority, about 4 hours"*,
 *"What's overdue?"*, *"Remind me at 3pm to email my tutor"*, *"Undo that last change"*.
 
-## Deploy at home (Raspberry Pi or old laptop)
+## Host it permanently
 
-1. Install Docker, copy this folder over, then `cp .env.example .env` and fill it in (set `PLANNER_TOKEN`!).
-2. `docker compose up -d` gives you the dashboard at `http://<pi-ip>:8000` on your home Wi-Fi.
-3. To use it away from home and from the Claude app, create a free **Cloudflare Tunnel** (Zero Trust
-   dashboard → Networks → Tunnels) that points a hostname at `http://planner:8000`. Then put its token in
-   `TUNNEL_TOKEN`, the hostname in `PUBLIC_HOSTS`, and run `docker compose --profile tunnel up -d`.
-4. Protect the dashboard with **Cloudflare Access** (free; one-time email code). Exclude `/mcp` from Access,
-   since Claude can't do the email login; `/mcp` relies on `PLANNER_TOKEN` instead.
-5. Back up `data/planner.db` (e.g. a nightly cron job copying it to cloud storage).
-6. On your phone, open the dashboard and use "Add to Home Screen" to install it like an app.
+**Follow [`SETUP.md`](SETUP.md)**, a step-by-step guide for a spare Linux laptop: stop it sleeping, install
+Docker, start the planner, add **Tailscale Funnel** for a free public HTTPS address, connect Claude, and set
+up nightly backups (`scripts/backup.sh`).
+
+Alternative: if you own a domain on Cloudflare, `docker compose --profile tunnel up -d` runs a Cloudflare Tunnel
+instead (set `TUNNEL_TOKEN`). That route also lets you put Cloudflare Access in front of the dashboard.
 
 ## Layout
 
@@ -85,5 +82,6 @@ app/
   scheduler.py     reminder + digest jobs
   notify.py        ntfy client
 web/               dashboard (vanilla HTML/CSS/JS, installable PWA)
+scripts/backup.sh  nightly database backup
 tests/             pytest
 ```

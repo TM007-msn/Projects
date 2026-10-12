@@ -41,8 +41,15 @@ def mcp_routes():
     return mcp_app.routes
 
 
+def check_settings() -> None:
+    """Refuse to run publicly without a token: PUBLIC_HOSTS means the internet can reach /api and /mcp."""
+    if settings.public_hosts and not settings.token:
+        raise RuntimeError("PUBLIC_HOSTS is set, so PLANNER_TOKEN is required. Add a long random token to .env.")
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    check_settings()
     db.configure(settings.database_url)
     jobs = scheduler.start() if settings.scheduler_enabled else None
     async with mcp.session_manager.run():

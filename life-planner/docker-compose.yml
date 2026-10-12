@@ -1,5 +1,6 @@
-# docker compose up -d                    -> planner on http://<this-machine>:8000 (your home network only)
-# docker compose --profile tunnel up -d   -> also exposes it publicly through Cloudflare Tunnel
+# docker compose up -d   -> planner on http://<this-machine>:8000 (home network).
+# For a public HTTPS address use Tailscale Funnel on the host (see SETUP.md step 6).
+# Alternative if you own a domain on Cloudflare: docker compose --profile tunnel up -d
 services:
   planner:
     build: .
@@ -10,6 +11,7 @@ services:
     volumes:
       - ./data:/srv/data  # the SQLite database lives here: back this folder up
 
+  # Optional alternative to Tailscale Funnel; only starts with --profile tunnel.
   cloudflared:
     image: cloudflare/cloudflared:latest  # pin a specific tag once you have it working
     profiles: ["tunnel"]

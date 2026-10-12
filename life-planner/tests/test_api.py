@@ -1,4 +1,8 @@
+import pytest
+from fastapi.testclient import TestClient
+
 from app.config import settings
+from app.main import create_app
 
 
 def test_create_list_complete_via_api(client):
@@ -39,3 +43,14 @@ def test_token_is_required_when_configured(client, monkeypatch):
 
 def test_dashboard_is_served(client):
     assert "<html" in client.get("/").text.lower()
+
+
+def test_refuses_to_start_publicly_without_token(monkeypatch):
+    monkeypatch.setattr(settings, "public_hosts", ["planner.example.ts.net"])
+    monkeypatch.setattr(settings, "token", None)
+    with pytest.raises(RuntimeError, match="PLANNER_TOKEN is required"):
+        with TestClient(create_app()):
+            pass
+    monkeypatch.setattr(settings, "token", "s3cret")
+    with TestClient(create_app(), base_url="http://localhost") as client:
+        assert client.get("/api/health").status_code == 200
