@@ -1,0 +1,21 @@
+# docker compose up -d                    -> planner on http://<this-machine>:8000 (your home network only)
+# docker compose --profile tunnel up -d   -> also exposes it publicly through Cloudflare Tunnel
+services:
+  planner:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/srv/data  # the SQLite database lives here: back this folder up
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest  # pin a specific tag once you have it working
+    profiles: ["tunnel"]
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - planner

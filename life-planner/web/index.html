@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life Planner</title>
+  <meta name="theme-color" content="#2f6f5e">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Life Planner</h1>
+      <p id="today" class="muted"></p>
+    </div>
+    <button id="refresh" class="ghost" title="Refresh">↻</button>
+  </header>
+
+  <main>
+    <form id="add-form" class="card add">
+      <input name="title" placeholder="Add a task or deadline…" required autocomplete="off">
+      <div class="add-row">
+        <input name="due_at" type="datetime-local" aria-label="Due">
+        <input name="module_code" placeholder="Module" aria-label="Module code" size="7">
+        <select name="priority" aria-label="Priority">
+          <option value="1">High</option>
+          <option value="2" selected>Normal</option>
+          <option value="3">Low</option>
+        </select>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+
+    <div class="layout">
+      <section id="tasks" aria-live="polite"></section>
+
+      <aside class="card">
+        <h2>Recent changes</h2>
+        <p class="muted small">Everything you or the AI changed. Undo anything.</p>
+        <ol id="activity" class="activity"></ol>
+      </aside>
+    </div>
+  </main>
+
+  <dialog id="edit">
+    <form method="dialog" id="edit-form">
+      <h2>Edit task</h2>
+      <label>Title <input name="title" required></label>
+      <label>Due <input name="due_at" type="datetime-local"></label>
+      <label>Module <input name="module_code"></label>
+      <label>Priority
+        <select name="priority"><option value="1">High</option><option value="2">Normal</option><option value="3">Low</option></select>
+      </label>
+      <label>Estimate (mins) <input name="estimate_mins" type="number" min="0" step="15"></label>
+      <label>Notes <textarea name="notes" rows="3"></textarea></label>
+      <div class="dialog-actions">
+        <button type="button" id="delete-task" class="danger">Delete</button>
+        <span class="spacer"></span>
+        <button value="cancel" class="ghost" formnovalidate>Cancel</button>
+        <button value="save">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
