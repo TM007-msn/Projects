@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My corner of the internet</title>
+  <style>
+    :root { --bg: #f6f5f1; --card: #fff; --text: #1d2321; --muted: #69716d; --line: #e3e1da; --accent: #2f6f5e; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #141816; --card: #1d2220; --text: #e8ece9; --muted: #97a19c; --line: #2d3431; --accent: #6cc3a6; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); }
+    main { max-width: 640px; margin: 0 auto; padding: 56px 16px; }
+    h1 { font-size: 2rem; margin: 0 0 4px; }
+    .muted { color: var(--muted); margin-top: 0; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 24px 0; }
+    a { color: var(--accent); font-weight: 600; }
+    ul { padding-left: 20px; }
+    code { background: var(--bg); padding: 1px 6px; border-radius: 6px; font-size: .9em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello 👋</h1>
+    <p class="muted">Served from an old laptop at home, through a Cloudflare Tunnel.</p>
+
+    <div class="card">
+      <strong>My stuff</strong>
+      <ul>
+        <li><a href="//planner.{DOMAIN}" id="planner-link">Life planner</a></li>
+      </ul>
+    </div>
+
+    <p>To change this page, edit <code>homelab/sites/home/index.html</code> on the laptop. The change shows up
+      as soon as you save; there's nothing to restart.</p>
+  </main>
+  <script>
+    // Point the planner link at planner.<this domain>, whatever the domain is.
+    const domain = location.hostname.replace(/^www\./, "");
+    document.getElementById("planner-link").href = `${location.protocol}//planner.${domain}/`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+# The laptop's whole hosting setup. Run from this folder:  docker compose up -d
+#
+#   Browser -> Cloudflare (HTTPS + login wall) -> cloudflared (outbound tunnel, no port forwarding)
+#           -> caddy (picks a container by hostname) -> your sites and apps
+#
+# Settings live in .env (copy .env.example). Step-by-step setup: GUIDE.md
+name: homelab
+
+services:
+  # Reverse proxy: reads the hostname of each request and passes it to the right place (see Caddyfile).
+  caddy:
+    image: caddy:2.11
+    restart: unless-stopped
+    environment:
+      - DOMAIN=${DOMAIN:?Set DOMAIN in homelab/.env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./sites:/srv/sites:ro          # static websites, one folder each
+      - caddy_data:/data
+      - caddy_config:/config
+
+  # Keeps an outgoing, encrypted connection open to Cloudflare; visitors come back in through it.
+  cloudflared:
+    image: cloudflare/cloudflared:latest  # pin a specific tag once everything works
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN:?Set TUNNEL_TOKEN in homelab/.env}
+    depends_on:
+      - caddy
+
+  # The life planner (its own settings and database stay in ../life-planner).
+  planner:
+    build: ../life-planner
+    restart: unless-stopped
+    env_file: ../life-planner/.env
+    ports:
+      - "8000:8000"  # still reachable directly on home Wi-Fi at http://<laptop-ip>:8000
+    volumes:
+      - ../life-planner/data:/srv/data
+
+  # Example app container: a status page that checks your sites are up.
+  # To try it: uncomment these lines, the volume at the bottom, and its block in the Caddyfile,
+  # then add status.<your domain> to the tunnel and Access (GUIDE.md step 9).
+  # uptime-kuma:
+  #   image: louislam/uptime-kuma:1
+  #   restart: unless-stopped
+  #   volumes:
+  #     - uptime_kuma:/app/data
+
+volumes:
+  caddy_data:
+  caddy_config:
+  # uptime_kuma:

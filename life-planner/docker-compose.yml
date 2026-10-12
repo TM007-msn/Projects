@@ -1,6 +1,6 @@
-# docker compose up -d   -> planner on http://<this-machine>:8000 (home network).
-# For a public HTTPS address use Tailscale Funnel on the host (see SETUP.md step 6).
-# Alternative if you own a domain on Cloudflare: docker compose --profile tunnel up -d
+# Standalone planner: docker compose up -d  ->  http://<this-machine>:8000 (home network).
+# To put it online on your own domain behind a login wall, run it from ../homelab instead (see homelab/GUIDE.md).
+# For a quick public address without a domain, use Tailscale Funnel (SETUP.md step 6).
 services:
   planner:
     build: .
@@ -10,14 +10,3 @@ services:
       - "8000:8000"
     volumes:
       - ./data:/srv/data  # the SQLite database lives here: back this folder up
-
-  # Optional alternative to Tailscale Funnel; only starts with --profile tunnel.
-  cloudflared:
-    image: cloudflare/cloudflared:latest  # pin a specific tag once you have it working
-    profiles: ["tunnel"]
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
-    depends_on:
-      - planner

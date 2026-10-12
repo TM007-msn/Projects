@@ -61,11 +61,11 @@ Things to try: *"Add my EC201 essay, due Friday 5pm, high priority, about 4 hour
 ## Host it permanently
 
 **Follow [`SETUP.md`](SETUP.md)**, a step-by-step guide for a spare Linux laptop: stop it sleeping, install
-Docker, start the planner, add **Tailscale Funnel** for a free public HTTPS address, connect Claude, and set
-up nightly backups (`scripts/backup.sh`).
+Docker, start the planner, and set up nightly backups (`scripts/backup.sh`). To reach it from anywhere, either:
 
-Alternative: if you own a domain on Cloudflare, `docker compose --profile tunnel up -d` runs a Cloudflare Tunnel
-instead (set `TUNNEL_TOKEN`). That route also lets you put Cloudflare Access in front of the dashboard.
+- **Your own domain + login wall:** [`../homelab/GUIDE.md`](../homelab/GUIDE.md) (Cloudflare Tunnel + Access + Caddy).
+  This also lets the laptop host your own websites.
+- **No domain:** Tailscale Funnel (SETUP.md step 6).
 
 ## Layout
 

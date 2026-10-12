@@ -111,10 +111,18 @@ The notification should appear on your phone within a few seconds.
 If the page won't load from your phone but `curl` works on the laptop, check the laptop's firewall:
 `sudo ufw status`. If it's active, run `sudo ufw allow 8000/tcp`.
 
-## 6. Reach it from anywhere with Tailscale Funnel
+## 6. Reach it from anywhere
 
-Funnel gives the laptop a free public HTTPS address like `https://<laptop>.<tailnet>.ts.net` without buying
-a domain or changing router settings. You need it for the dashboard away from home and for the Claude app.
+You need a public HTTPS address for the dashboard away from home and for the Claude app. There are two routes,
+and neither needs port forwarding:
+
+- **Your own domain + a login wall (recommended):** about £8–10 a year for the domain; everything else is free.
+  The planner lives at `planner.yourdomain`, behind a Cloudflare login only you can pass, and the laptop can host
+  your own websites too. **Follow [`../homelab/GUIDE.md`](../homelab/GUIDE.md) and skip the rest of this step.**
+- **No domain yet: Tailscale Funnel.** Free and quick. You get an address like
+  `https://<laptop>.<tailnet>.ts.net` protected only by your token. Steps below.
+
+### Tailscale Funnel
 
 ```bash
 curl -fsSL https://tailscale.com/install.sh | sh
@@ -154,6 +162,8 @@ In the Claude app, add a **custom connector** with the URL:
 https://<your hostname>/mcp?token=<your PLANNER_TOKEN>
 ```
 
+`<your hostname>` is `planner.yourdomain` (homelab route) or your `*.ts.net` name (Funnel route).
+
 Then try: *"What's on my plate this week?"* or *"Add my stats problem sheet, due Wednesday 9am"*.
 
 **Caveat:** I'm not certain Claude's custom connectors accept a token in the URL like this. They may
@@ -182,6 +192,9 @@ somewhere else (USB stick, or sync it to Google Drive with `rclone`).
 
 ## Looking after it
 
+If you moved to the homelab setup, run these in `~/Projects/homelab` instead (see its GUIDE.md); backups
+still run from `life-planner/scripts/backup.sh`.
+
 | Task | Command (run in `~/Projects/life-planner`) |
 |---|---|
 | Update to the latest code | `git pull && docker compose up -d --build` |
@@ -196,8 +209,9 @@ AC loss", you don't need to do anything.
 
 ## Security, in short
 
-- Funnel makes the address **public on the internet**. The dashboard page itself is visible to anyone who finds
-  the URL, but it holds no data. Every task and reminder needs your `PLANNER_TOKEN`.
+- With Funnel the address is **public on the internet**. The dashboard page itself is visible to anyone who
+  finds the URL, but it holds no data; every task and reminder needs your `PLANNER_TOKEN`. The homelab route
+  adds a Cloudflare login wall in front as well.
 - Keep the token long and secret. If it leaks, put a new one in `.env`, run `docker compose up -d`, and update
   the Claude connector URL.
 - Install security updates on the laptop: `sudo apt update && sudo apt upgrade` every week or two, or turn on

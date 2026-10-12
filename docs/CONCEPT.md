@@ -17,7 +17,7 @@ you.** The AI is the input method and the planner; the website is mostly for gla
 3. **AI is pull, reminders are push.** Using Claude through MCP means no API bill, but Claude only acts when
    you open a chat. So anything proactive (reminders, the morning digest, habit nudges) is rule-based and
    runs on the server.
-4. **Free, open-source, self-hosted.** Python/FastAPI, SQLite, ntfy, Docker on a spare Linux laptop, Tailscale Funnel.
+4. **Free, open-source, self-hosted.** Python/FastAPI, SQLite, ntfy, Docker on a spare Linux laptop, Cloudflare Tunnel (or Tailscale Funnel), Caddy.
 5. **Import, don't retype.** Uni timetables, Moodle deadlines and Google Calendar all publish ICS feeds.
 
 ## Roadmap
@@ -27,7 +27,7 @@ you.** The AI is the input method and the planner; the website is mostly for gla
 | 2 | **Tasks & deadlines:** dashboard, MCP tools, activity log + undo, ntfy reminders, morning digest | Done. Use it for a week before building more |
 | 3 | **Timetable & calendar:** ICS import (timetable, Moodle → tasks, Google), merged week view, `find_free_slots`, study blocks, ICS feed out, `plan_my_week` prompt | Next |
 | 4 | **Habits & wellbeing:** habits, check-offs, streaks, evening nudge, `weekly_review` prompt | |
-| 5 | **Deploy:** spare Linux laptop + Tailscale Funnel, nightly backups ([`SETUP.md`](../life-planner/SETUP.md)); MCP OAuth if Claude connectors need it | Guide written |
+| 5 | **Deploy:** spare Linux laptop ([`SETUP.md`](../life-planner/SETUP.md)), own domain + Cloudflare Tunnel + Access via [`homelab/`](../homelab/GUIDE.md), nightly backups; MCP OAuth if Claude connectors need it | Guides written |
 
 ## Ideas bank (after v1)
 Money and budget (loan instalments, rent, weekly spend); two-way Google Calendar sync; a focus timer that

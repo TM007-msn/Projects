@@ -1,0 +1,33 @@
+# Caddy routes each request by its hostname. {$DOMAIN} comes from homelab/.env, e.g. yourname.co.uk
+#
+# Everything here is plain http:// on port 80, and that's correct: Cloudflare handles HTTPS for visitors,
+# and the tunnel from Cloudflare to this laptop is already encrypted. Caddy never faces the internet directly.
+
+# Your main website: static files from sites/home
+http://{$DOMAIN}, http://www.{$DOMAIN} {
+	root * /srv/sites/home
+	file_server
+	encode gzip
+}
+
+# The life planner. Caddy passes the original hostname through, which the planner checks (PUBLIC_HOSTS).
+http://planner.{$DOMAIN} {
+	reverse_proxy planner:8000
+}
+
+# Example: another static site. Make sites/blog/, then uncomment.
+# http://blog.{$DOMAIN} {
+# 	root * /srv/sites/blog
+# 	file_server
+# 	encode gzip
+# }
+
+# Example: an app container (see uptime-kuma in docker-compose.yml).
+# http://status.{$DOMAIN} {
+# 	reverse_proxy uptime-kuma:3001
+# }
+
+# Anything else gets a 404.
+http:// {
+	respond "Not found" 404
+}

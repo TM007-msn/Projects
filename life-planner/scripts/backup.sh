@@ -12,10 +12,18 @@ cd "$(dirname "$0")/.."
 mkdir -p backups
 target="backups/planner-$(date +%F).db"   # %F is YYYY-MM-DD, so files sort by date
 
-# Inside the running container: use SQLite's own backup API (safe even while the app is writing),
+# Find the running planner container, whether it was started from life-planner/ or homelab/.
+# Docker Compose labels every container with its service name, so we search by that label.
+container=$(docker ps -q --filter "label=com.docker.compose.service=planner" | head -n 1)
+if [ -z "$container" ]; then
+    echo "Backup failed: the planner container isn't running" >&2
+    exit 1
+fi
+
+# Inside the container: use SQLite's own backup API (safe even while the app is writing),
 # write the copy to /tmp, then print it to stdout. Outside, we save that output to the backups folder.
 # Streaming it out avoids file-permission problems with the root-owned data/ folder.
-docker compose exec -T planner sh -c '
+docker exec -i "$container" sh -c '
 python -c "
 import sqlite3
 source = sqlite3.connect(\"/srv/data/planner.db\")
