@@ -1,0 +1,29 @@
+# systemd *user* service for the Jarvis room voice daemon.
+#
+# Install:
+#   mkdir -p ~/.config/systemd/user
+#   cp jarvis-voice.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now jarvis-voice
+#   loginctl enable-linger "$USER"     # keep user services running without a login session
+#
+# Logs:  journalctl --user -u jarvis-voice -f
+
+[Unit]
+Description=Jarvis room voice (wake word -> Whisper -> OpenClaw -> Piper)
+After=network-online.target openclaw-gateway.service sound.target
+Wants=openclaw-gateway.service
+
+[Service]
+Type=simple
+# Provides OPENCLAW_GATEWAY_TOKEN. Keep this file chmod 600.
+EnvironmentFile=%h/.openclaw/.env
+WorkingDirectory=%h/openclaw-jarvis/voice
+ExecStart=%h/.venvs/jarvis-voice/bin/python jarvis_voice.py --config %h/openclaw-jarvis/voice/config.toml
+Restart=always
+RestartSec=5
+# Be nice to the Gateway: the voice loop is light, Whisper bursts briefly.
+Nice=5
+
+[Install]
+WantedBy=default.target

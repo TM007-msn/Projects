@@ -1,0 +1,123 @@
+// Jarvis: example ~/.openclaw/openclaw.json (JSON5: comments and trailing commas are fine).
+//
+// Merge these blocks into your existing config rather than replacing it. Then:
+//   openclaw config validate && openclaw gateway restart
+//
+// Placeholders look like <THIS>. Secrets do NOT go in this file; they live in
+// ~/.openclaw/.env (chmod 600) and are referenced as ${VAR_NAME}.
+{
+  // ---------------------------------------------------------------- gateway
+  gateway: {
+    mode: "local",
+    port: 18789,
+    bind: "loopback", // never "lan" or a public interface
+    auth: { mode: "token", token: "${OPENCLAW_GATEWAY_TOKEN}", allowTailscale: true },
+    tailscale: { mode: "serve" }, // dashboard + iOS app + Telegram Mini App over your tailnet only
+    controlUi: { enabled: true },
+    http: {
+      endpoints: {
+        // Used by the room-voice daemon on the same machine (loopback).
+        chatCompletions: { enabled: true },
+      },
+    },
+  },
+
+  // ---------------------------------------------------------------- owner + channels
+  commands: {
+    // Your numeric Telegram user ID (message @userinfobot to get it).
+    ownerAllowFrom: ["telegram:<TELEGRAM_USER_ID>"],
+  },
+  channels: {
+    telegram: {
+      enabled: true,
+      botToken: "${TELEGRAM_BOT_TOKEN}",
+      dmPolicy: "allowlist", // one-owner bot: only you can talk to it
+      allowFrom: ["<TELEGRAM_USER_ID>"],
+      groupPolicy: "allowlist",
+      groupAllowFrom: ["<TELEGRAM_USER_ID>"],
+      capabilities: { inlineButtons: "dm" }, // Done / Snooze / Cancel + approval buttons
+      execApprovals: { enabled: "auto", target: "dm" },
+    },
+  },
+
+  // One conversation everywhere: Telegram DMs, the iPhone app, the room speaker
+  // and scheduled check-ins all share Jarvis's main session (agent:main:main).
+  session: { dmScope: "main" },
+
+  // ---------------------------------------------------------------- agents
+  agents: {
+    ownership: "explicit",
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      userTimezone: "Europe/London",
+      systemAgent: { agentId: "main" },
+      model: {
+        // Everyday model; check `openclaw models list` and swap in newer IDs as they land.
+        primary: "anthropic/claude-sonnet-5-5",
+        fallbacks: ["openai/gpt-5.4"],
+      },
+      models: {
+        "anthropic/claude-sonnet-5-5": { alias: "sonnet" },
+        "anthropic/claude-opus-5": { alias: "opus" },
+      },
+      thinkingDefault: "low",
+      maxConcurrent: 3,
+      heartbeat: {
+        // Off for Phase 1. Every proactive job is an explicit automation
+        // (setup-automations.sh), which is cheaper and more predictable than an
+        // hourly "anything to do?" poll. Event wakes (automations, hooks,
+        // finished background jobs) still work with the cadence off.
+        // Phase 3: set every: "2h" with lightContext + isolatedSession and a
+        // monitor-scratch checklist (e.g. email triage). See guides/08-proactivity.md.
+        every: "0m",
+        target: "owner",
+        activeHours: { start: "07:00", end: "23:00" },
+      },
+    },
+    entries: {
+      // Jarvis: the one identity you talk to everywhere.
+      main: {
+        workspace: "~/.openclaw/workspace",
+        identity: { name: "Jarvis", theme: "proactive personal assistant", emoji: "🛰️" },
+        sandbox: { mode: "off" }, // needs your workspace scripts; protected by exec approvals instead
+        subagents: { allowAgents: ["researcher"] },
+      },
+      // Researcher: web only. No email, calendar, files outside its own workspace, or shell.
+      researcher: {
+        workspace: "~/.openclaw/workspace-researcher",
+        identity: { name: "Jarvis Research", emoji: "🔎" },
+        skills: [], // no skills: it cannot reach gog, commitments, etc.
+        tools: {
+          allow: ["web_search", "web_fetch", "read", "write"],
+          deny: ["exec", "process", "browser", "message", "gateway"],
+        },
+      },
+    },
+  },
+  bindings: [{ agentId: "main", match: { channel: "telegram", accountId: "*" } }],
+  talk: { agentId: "main" }, // iPhone Talk goes to Jarvis
+
+  // ---------------------------------------------------------------- tools
+  tools: {
+    exec: { timeoutSeconds: 1800 },
+    media: {
+      // Telegram voice notes are transcribed so you can talk to Jarvis from your phone.
+      audio: { enabled: true, maxBytes: 20971520, timeoutSeconds: 120 },
+    },
+  },
+
+  // ---------------------------------------------------------------- automations + hooks
+  cron: {
+    enabled: true,
+    sessionRetention: "24h",
+    skipMissedJobs: true, // after downtime, don't fire a pile of stale reminders
+  },
+  hooks: {
+    // iOS Shortcuts "arrive home" / "leave home" POST to /hooks/wake over Tailscale.
+    enabled: true,
+    path: "/hooks",
+    token: "${OPENCLAW_HOOKS_TOKEN}", // NOT the gateway token
+    allowedAgentIds: ["main"],
+    allowRequestSessionKey: false,
+  },
+}

@@ -1,0 +1,46 @@
+# Jarvis room voice: copy to config.toml and edit.
+# List audio devices with:  python3 -m sounddevice
+
+[audio]
+# Part of the device name. Use the XVF3800 for BOTH, so its echo canceller
+# can hear what Jarvis is saying (that's what makes barge-in work).
+input_device = "XVF3800"
+output_device = "XVF3800"
+
+[wake]
+model = "hey_jarvis"      # openWakeWord pretrained model
+threshold = 0.5           # raise to 0.6-0.7 if it triggers on TV/YouTube; lower if it misses you
+
+[listen]
+silence_ms = 700          # how long a pause ends your sentence
+max_seconds = 15
+no_speech_timeout = 5     # give up if you say nothing after the chime
+vad_aggressiveness = 2    # 0-3; higher ignores more background noise
+
+[stt]
+model = "small.en"        # "base.en" is ~2x faster but less accurate
+compute_type = "int8"
+cpu_threads = 4           # the OptiPlex 7060's i5-8500T has 6 cores
+
+[gateway]
+url = "http://127.0.0.1:18789"
+token_env = "OPENCLAW_GATEWAY_TOKEN"   # loaded from ~/.openclaw/.env by systemd
+session_key = "agent:main:main"        # same conversation as Telegram
+message_channel = "voice"              # AGENTS.md "Voice replies" rules apply
+agent = "openclaw/main"               # must name the agent (two are configured)
+timeout_seconds = 90
+
+[tts]
+# British voices: en_GB-alan-medium, en_GB-northern_english_male-medium,
+# en_GB-jenny_dioco-medium, en_GB-cori-high. See guides/11-voice-optiplex.md.
+piper_model = "~/.local/share/piper/en_GB-alan-medium.onnx"
+length_scale = 1.0        # >1 slower, <1 faster
+
+[server]
+host = "127.0.0.1"        # loopback only: the room-speak skill calls /say
+port = 8765
+
+[quiet_hours]
+start = "23:30"           # /say refuses (423) inside this window
+end = "07:00"
+mute_flag = "~/.openclaw/workspace/state/voice-muted"   # touch this file for quiet mode
