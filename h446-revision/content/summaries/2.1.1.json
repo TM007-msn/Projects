@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.1.1",
+  "key_points": [
+    {
+      "id": "sum-2.1.1-01",
+      "text": "Abstraction means removing details that aren't needed, so a problem becomes simpler to understand and solve. You may be asked how abstraction has been applied to a scenario, how it could be applied, or how it could be taken further.",
+      "spec_ids": [
+        "2.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.1-02",
+      "text": "Abstraction is needed because real situations are too complex to model fully: it reduces the processing, memory and programming effort needed, makes the solution easier to design and understand, and lets you focus on the core problem.",
+      "spec_ids": [
+        "2.1.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.1-03",
+      "text": "An abstraction differs from reality because details have been removed or simplified. Exam questions often ask what has been left out and why (for example, a route-planning model might ignore scenery, weather and road surface).",
+      "spec_ids": [
+        "2.1.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.1-04",
+      "text": "To devise an abstract model: decide what the problem needs to know, keep only those features, and represent them simply (for example, a graph of nodes and weighted edges for a road network).",
+      "spec_ids": [
+        "2.1.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.1-05",
+      "text": "Abstraction appears throughout computing: high-level languages hide machine code, the TCP/IP layers hide the layers beneath them, and subroutines hide how a task is done.",
+      "spec_ids": [
+        "2.1.1a",
+        "2.1.1b"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-abstraction",
+    "kw-abstract-model"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.1.1-01",
+      "text": "Abstraction vs decomposition: abstraction removes unnecessary detail; decomposition splits a problem into smaller parts. You usually use both.",
+      "keyword_ids": [
+        "kw-abstraction",
+        "kw-decomposition"
+      ],
+      "spec_ids": [
+        "2.1.1a"
+      ],
+      "verified": false
+    }
+  ]
+}

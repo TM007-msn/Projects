@@ -68,3 +68,11 @@ keywords, cards and tests. Good for understanding, not for marks.
 | Freedom of Information Act, Communications Act, Malicious Communications Act, Equality Act | Not on the spec. |
 | The Information Commissioner's Office (ICO) by name | Not mentioned in the sources. |
 | The "digital divide" | A common ethics topic, but not in the spec's list. |
+
+## Topic 2.1
+
+| Idea | Why it's here |
+|---|---|
+| Representational abstraction vs abstraction by generalisation | AQA terms; OCR just says abstraction. |
+| Race conditions, deadlock, semaphores, threads | Real problems with concurrency; the spec only asks for benefits and trade-offs. |
+| Prefetching, cache replacement policies (LRU etc.) | Caching is required at the level of benefits and drawbacks. |

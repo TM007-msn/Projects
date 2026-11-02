@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.1.5",
+  "key_points": [
+    {
+      "id": "sum-2.1.5-01",
+      "text": "Thinking concurrently means working out which parts of a problem can be done at the same time and which depend on the results of others (and so must wait).",
+      "spec_ids": [
+        "2.1.5a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.5-02",
+      "text": "Benefits: more tasks done in a given time, less time spent waiting (for example, for input or a file), and better use of the processor and of multiple cores.",
+      "spec_ids": [
+        "2.1.5b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.5-03",
+      "text": "Trade-offs: it is harder to design, program and debug; tasks that depend on each other can't run at the same time; and tasks sharing data must be coordinated so they don't interfere, which adds overhead.",
+      "spec_ids": [
+        "2.1.5b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.5-04",
+      "text": "For a scenario, be ready to say how concurrent processing could be applied to a specific program, why it would help, and what problems might arise.",
+      "spec_ids": [
+        "2.1.5a",
+        "2.1.5b"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-concurrent-processing"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.1.5-01",
+      "text": "Concurrent vs parallel: concurrent tasks overlap in time (possibly by switching on one processor); parallel tasks run at the same instant on separate processors or cores.",
+      "keyword_ids": [
+        "kw-concurrent-processing",
+        "kw-parallel-processing"
+      ],
+      "spec_ids": [
+        "2.1.5a"
+      ],
+      "verified": false
+    }
+  ]
+}

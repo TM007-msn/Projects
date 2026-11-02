@@ -3,6 +3,19 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 2.1
+
+**Not certain, check first**
+
+- **Few keywords on purpose.** 2.1 is about applying techniques to scenarios, so it's mostly key
+  points. Paper 2 marks come from applying these ideas, which flashcards alone won't cover; the
+  short exact-answer questions in Phase 5 are meant to help.
+- **Concurrent processing** is defined in OCR's sense (one task doesn't have to finish before
+  another starts), which includes switching between tasks on one processor, unlike parallel
+  processing.
+- **Precondition** has two senses in the guide: a condition an algorithm needs (e.g. sorted data)
+  and "what else you need to know before producing a solution". The summary covers both.
+
 ## Topic 1.5
 
 **Not certain, check first**

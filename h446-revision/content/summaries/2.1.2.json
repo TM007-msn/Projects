@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.1.2",
+  "key_points": [
+    {
+      "id": "sum-2.1.2-01",
+      "text": "Identify the inputs and outputs for a scenario, from a description, diagram or code. Outputs can be digital or hard copy.",
+      "spec_ids": [
+        "2.1.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.2-02",
+      "text": "Preconditions are what must already be true, or must be known, before a solution can work: for example, that a list is sorted, that an input is within a range, or what format data will arrive in. Stating them makes subroutines easier to reuse and test, and shows what checks the solution needs.",
+      "spec_ids": [
+        "2.1.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.2-03",
+      "text": "Caching keeps recently or frequently used data where it is faster to reach (such as web pages stored by a browser or proxy). Benefits: faster access and less load on the network or server. Drawbacks: cached data can go out of date, the cache uses storage, and deciding what to keep is complex.",
+      "spec_ids": [
+        "2.1.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.2-04",
+      "text": "Reusable program components (subroutines, classes, libraries) save development time, are already tested so have fewer errors, and keep programs consistent. For a scenario, identify the subroutines needed and which could be reused.",
+      "spec_ids": [
+        "2.1.2d"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-precondition",
+    "kw-caching",
+    "kw-reusable-component"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.1.2-01",
+      "text": "Caching vs cache: caching is the technique (in software or hardware); the cache in 1.1.1 is a specific piece of fast memory in the processor.",
+      "keyword_ids": [
+        "kw-caching",
+        "kw-cache"
+      ],
+      "spec_ids": [
+        "2.1.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.1.2-02",
+      "text": "Precondition vs input: an input is the data a solution receives; a precondition is a requirement that must hold before it runs (often about the input).",
+      "keyword_ids": [
+        "kw-precondition"
+      ],
+      "spec_ids": [
+        "2.1.2a",
+        "2.1.2b"
+      ],
+      "verified": false
+    }
+  ]
+}

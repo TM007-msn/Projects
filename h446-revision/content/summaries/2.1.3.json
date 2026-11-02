@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.1.3",
+  "key_points": [
+    {
+      "id": "sum-2.1.3-01",
+      "text": "Identify the components of a problem by decomposing it: break it down, step by step, into smaller parts. You may be asked to list the parts or complete a structure diagram from a description or pseudocode.",
+      "spec_ids": [
+        "2.1.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.3-02",
+      "text": "Identify the components of a solution: the parts of the program that solve each sub-problem, which can then be written and tested separately.",
+      "spec_ids": [
+        "2.1.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.3-03",
+      "text": "Determine the order of the steps: put a given list of steps in the order that produces a working program, or write the sequence as pseudocode, program code or a flowchart.",
+      "spec_ids": [
+        "2.1.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.3-04",
+      "text": "Identify sub-procedures: decide where a subroutine should be used (for example, a task done more than once, or a clear separate job) and write it, using parameters where appropriate. You may need to read or complete a structure diagram to find them.",
+      "spec_ids": [
+        "2.1.3d"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-decomposition",
+    "kw-structure-diagram"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.1.3-01",
+      "text": "Structure diagram vs flowchart: a structure diagram shows how a problem is broken into parts; a flowchart shows the order of steps and decisions in an algorithm.",
+      "keyword_ids": [
+        "kw-structure-diagram",
+        "kw-flowchart"
+      ],
+      "spec_ids": [
+        "2.1.3a",
+        "2.1.3c"
+      ],
+      "verified": false
+    }
+  ]
+}

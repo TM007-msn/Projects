@@ -1230,7 +1230,8 @@
         "2.1.2d"
       ],
       "related": [
-        "kw-linker"
+        "kw-linker",
+        "kw-reusable-component"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5216,6 +5217,156 @@
         "kw-unicode"
       ],
       "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-abstraction",
+      "term": "Abstraction",
+      "acronym": null,
+      "definition": "Removing unnecessary details from a problem so that you can focus on the parts that matter for solving it.",
+      "spec_ids": [
+        "2.1.1a",
+        "2.1.1b",
+        "2.2.2e"
+      ],
+      "related": [
+        "kw-abstract-model",
+        "kw-decomposition"
+      ],
+      "dont_confuse_with": "Decomposition: breaking a problem into smaller parts, rather than leaving details out.",
+      "verified": false
+    },
+    {
+      "id": "kw-abstract-model",
+      "term": "Abstract model",
+      "acronym": null,
+      "definition": "A simplified representation of a real situation that keeps only the features needed for the problem, such as a map of a train network that shows stations and connections but not distances.",
+      "spec_ids": [
+        "2.1.1c",
+        "2.1.1d"
+      ],
+      "related": [
+        "kw-abstraction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-precondition",
+      "term": "Precondition",
+      "acronym": null,
+      "definition": "A condition that must be true before an algorithm or subroutine is run for it to work correctly, such as a list being sorted before a binary search.",
+      "spec_ids": [
+        "2.1.2b",
+        "2.3.1f"
+      ],
+      "related": [],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-caching",
+      "term": "Caching",
+      "acronym": null,
+      "definition": "Storing data or instructions that have been used, or are likely to be needed, somewhere faster to access, so they don't have to be fetched or worked out again.",
+      "spec_ids": [
+        "2.1.2c"
+      ],
+      "related": [
+        "kw-cache"
+      ],
+      "dont_confuse_with": "Cache (1.1.1): the fast memory in the processor; caching is the general technique, used in hardware and software.",
+      "verified": false
+    },
+    {
+      "id": "kw-reusable-component",
+      "term": "Reusable program component",
+      "acronym": null,
+      "definition": "A self-contained piece of code, such as a subroutine, class or library, that can be used again in other parts of a program or in other programs.",
+      "spec_ids": [
+        "2.1.2d"
+      ],
+      "related": [
+        "kw-library"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-decomposition",
+      "term": "Decomposition",
+      "acronym": null,
+      "definition": "Breaking a problem down into smaller sub-problems that are easier to understand and solve, until each can be solved directly.",
+      "spec_ids": [
+        "2.1.3a",
+        "2.1.3b",
+        "2.2.2c"
+      ],
+      "related": [
+        "kw-structure-diagram",
+        "kw-abstraction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-structure-diagram",
+      "term": "Structure diagram",
+      "acronym": null,
+      "definition": "A diagram showing how a problem or program is broken down into smaller parts (sub-procedures), drawn as a hierarchy from top to bottom.",
+      "spec_ids": [
+        "2.1.3a",
+        "2.1.3d"
+      ],
+      "related": [
+        "kw-decomposition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-decision",
+      "term": "Decision",
+      "acronym": null,
+      "definition": "A point in an algorithm where a condition is tested and the result decides which path the program takes next.",
+      "spec_ids": [
+        "2.1.4a",
+        "2.1.4c"
+      ],
+      "related": [
+        "kw-condition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-condition",
+      "term": "Condition",
+      "acronym": null,
+      "definition": "A Boolean expression, such as x > 5 AND flag == false, that evaluates to true or false and controls a decision or loop.",
+      "spec_ids": [
+        "2.1.4b"
+      ],
+      "related": [
+        "kw-decision",
+        "kw-boolean"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-concurrent-processing",
+      "term": "Concurrent processing",
+      "acronym": null,
+      "definition": "Carrying out more than one task during the same period of time, with each task starting before the previous one has finished, either by switching between them or by running them in parallel.",
+      "spec_ids": [
+        "2.1.5a",
+        "2.1.5b"
+      ],
+      "related": [
+        "kw-parallel-processing"
+      ],
+      "dont_confuse_with": "Parallel processing: tasks running at exactly the same moment on separate processors or cores.",
       "verified": false
     }
   ]

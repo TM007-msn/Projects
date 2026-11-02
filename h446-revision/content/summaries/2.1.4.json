@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.1.4",
+  "key_points": [
+    {
+      "id": "sum-2.1.4-01",
+      "text": "Identify the decision points in an algorithm: where selection (if, switch/case) or a loop's condition decides what happens next.",
+      "spec_ids": [
+        "2.1.4a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.4-02",
+      "text": "Determine the logical conditions that affect each decision, written as Boolean expressions using comparison operators (==, !=, <, <=, >, >=) and logical operators (AND, OR, NOT).",
+      "spec_ids": [
+        "2.1.4b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.4-03",
+      "text": "Decisions create different routes through a program. Work out how each outcome affects the flow and the final result, and test every route (for example, with a trace table).",
+      "spec_ids": [
+        "2.1.4c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.1.4-04",
+      "text": "Flowcharts make decisions visible: each diamond is a decision with a true and a false path.",
+      "spec_ids": [
+        "2.1.4a",
+        "2.1.4c"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-decision",
+    "kw-condition"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.1.4-01",
+      "text": "Decision vs condition: the condition is the Boolean expression being tested; the decision is the point in the program where the result chooses the path.",
+      "keyword_ids": [
+        "kw-decision",
+        "kw-condition"
+      ],
+      "spec_ids": [
+        "2.1.4a",
+        "2.1.4b"
+      ],
+      "verified": false
+    }
+  ]
+}
