@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    image: h446-revision:latest
+    container_name: h446-revision
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      PORT: ${PORT:-8000}
+    ports:
+      # Binds on all host interfaces, so it's reachable over the LAN and Tailscale.
+      - "${PORT:-8000}:${PORT:-8000}"
+    volumes:
+      - ./data:/data              # SQLite progress database (back this up)
+      - ./content:/app/content:ro # revision content, editable without a rebuild

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#14181f">
+  <title>H446 Revision</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#/">H446</a>
+    <nav id="nav" aria-label="Main" hidden>
+      <a href="#/">Home</a>
+      <a href="#/spec">Spec map</a>
+      <button type="button" id="logout" class="nav-btn">Log out</button>
+    </nav>
+    <button type="button" id="theme-toggle" class="icon-btn" aria-label="Switch light or dark theme">◐</button>
+  </header>
+  <p id="sync-status" class="sync-status" role="status" hidden></p>
+  <main id="app" tabindex="-1">
+    <noscript>This app needs JavaScript.</noscript>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

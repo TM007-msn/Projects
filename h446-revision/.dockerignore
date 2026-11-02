@@ -1,0 +1,10 @@
+.git
+.env
+data
+tests
+tools
+spec
+docs
+**/__pycache__
+**/*.pyc
+content/_extracted

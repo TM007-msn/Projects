@@ -98,7 +98,114 @@ No keywords, summaries or app code.
 
 ---
 
-## Phase 1 (preview, detailed plan to follow after review)
+### Phase 0 addendum (after review)
 
-App shell, auth, Docker, SQLite events schema, spec map with 3-state self-rating, then keywords and
-summaries for topic 1.1 only.
+Taylor added the H446 specification (Version 3.0, April 2026). `tools/extract_pdfs.py` now also
+reads section 2c by splitting each text row at the column boundary (x≈292pt; rows whose words cross
+it are full-width headings). `spec_wording` comes from the specification, `guide_wording` is kept.
+Appendix 5d/5f is hand-transcribed in `tools/appendix_5d_5f.json` (the Boolean symbols don't survive
+text extraction, so they were read from the page images). Bulleted points 1.3.3b, 1.5.2a and
+2.2.2f gained `sub_items`.
+
+---
+
+## Phase 1: skeleton, spec tracker, topic 1.1 content
+
+### Files
+
+```text
+app/
+  main.py        FastAPI app: routes, static files, content route
+  config.py      env vars, validated at start-up
+  auth.py        scrypt password check, HMAC-signed session cookie, login rate limit
+  db.py          SQLite connection, schema + migrations (PRAGMA user_version)
+  events.py      /api/events: validate and insert-or-ignore
+  hashpw.py      CLI: python -m app.hashpw  -> prints a hash for APP_PASSWORD_HASH
+  static/        index.html, css/app.css, js/ (ES modules, see below), icons
+content/
+  spec.json, keywords.json, summaries/1.1.1.json ... 1.1.3.json
+  CONTENT_NOTES.md, BEYOND_SPEC.md
+tests/           pytest: auth, events, content validation
+tests/js/        node --test: pure frontend modules
+Dockerfile, docker-compose.yml, .env.example, requirements.txt, requirements-dev.txt
+```
+
+Frontend modules: `main.js` (boot + hash router), `api.js` (fetch helpers), `store.js` (content
+and events in memory, optimistic writes), `lib/derive.js` (pure: ratings, flags, verification from
+events), `lib/dom.js` (tiny element builder; all user text goes in via `textContent`), `views/`
+(login, home, spec map, summary), `ui/` (verify/flag controls, theme toggle).
+
+### Data model
+
+**SQLite: one append-only table.**
+
+```sql
+CREATE TABLE events (
+  id          TEXT PRIMARY KEY,  -- UUID made on the device
+  client_ts   TEXT NOT NULL,     -- ISO 8601 with offset, from the device
+  received_at TEXT NOT NULL,     -- server UTC, also the sync cursor in Phase 6
+  type        TEXT NOT NULL,     -- rating | verify | unverify | flag | unflag
+  target      TEXT NOT NULL,     -- spec point / sub-item id, or content item id
+  data        TEXT NOT NULL      -- JSON, e.g. {"value":"got"} or {"note":"..."}
+);
+```
+
+`POST /api/events` takes a batch and uses `INSERT OR IGNORE`, so resending the same events (retry,
+offline queue) is harmless. Nothing is ever updated or deleted. Current state is derived on the
+client: for each target, the event with the latest `client_ts` (ties broken by id) wins.
+
+- **Ratings:** `need` / `once` / `got` per point or sub-item. Last-reviewed date = that event's
+  `client_ts`. A point with sub-items isn't rated directly: it shows the lowest sub-item rating and
+  "n of m rated".
+- **Verification:** the JSON's `verified` flag, or a later `verify` event without a later
+  `unverify`. A script to write verifications back into the JSON comes with the README.
+- **Flags:** `flag` with an optional note; `unflag` clears it. Flagged items get a badge now and
+  are excluded from tests in Phase 5.
+
+**Content JSON.** `keywords.json` follows Taylor's example entry (id, term, acronym, definition,
+spec_ids, related, dont_confuse_with, verified), plus optional `"source": "checklist"`. Each
+`summaries/<subtopic>.json` holds 4 to 8 `key_points` (id, text, spec_ids, verified), the
+subtopic's `keyword_ids`, and `dont_confuse` notes (id, text, keyword ids, spec_ids, verified).
+Resource links aren't copied: the page reads them from `spec.json`.
+
+### Auth
+
+- `APP_PASSWORD_HASH`: scrypt (stdlib `hashlib`), stored as `scrypt:n:r:p:salt:hash` with
+  base64url parts. No `$` signs, because Docker Compose treats `$` in `.env` as a variable.
+- Session cookie: `expiry.signature` with HMAC-SHA256 using `SECRET_KEY`; HttpOnly, SameSite=Lax,
+  `Secure` when `COOKIE_SECURE=true`. Stateless, so changing `SECRET_KEY` logs out every device.
+- CSRF: SameSite=Lax plus POSTs must be `application/json` (a cross-site form can't send that
+  without a CORS preflight, and no CORS is enabled).
+- Login rate limit: 5 failures per IP per 15 minutes, in memory.
+- Public: `/`, static assets, `/api/health`, `/api/login`. Everything under `/api` and `/content`
+  needs the cookie.
+
+### Order of work
+
+1. Backend + pytest (auth, events, idempotency).
+2. Docker and compose.
+3. Frontend shell, login, spec map with ratings.
+4. 1.1 keywords and summaries, then the summary page (read mode and cover mode).
+5. Content validation test, browser check at phone width, commit.
+
+### Risks
+
+| Risk | Mitigation |
+|---|---|
+| Inaccurate definitions (the biggest risk) | Mark-scheme style, PDF wording where it exists, `verified:false`, flag button, uncertainties listed in `CONTENT_NOTES.md`. Anything beyond the spec goes to `BEYOND_SPEC.md`. |
+| Content that goes beyond the spec | Validation test: every `spec_ids` entry must exist in `spec.json`. |
+| Cookie forgery / auth bypass | HMAC with `compare_digest`; a test confirms every protected route returns 401 without the cookie. |
+| Path traversal on `/content/...` | Resolve the path and reject anything outside the content dir; tested. |
+| Device clocks disagree, so the wrong rating "wins" | Acceptable for one user; ties broken deterministically. Noted for Phase 6. |
+| XSS through flag notes | Notes rendered with `textContent` only. |
+| US spellings creeping in | Content test rejects a list of common US spellings in prose fields. |
+
+### Found during Phase 1 (affects later phases)
+
+- **Phase 6 needs HTTPS for offline use.** Service workers (required for an installable PWA and
+  offline caching) only run in a secure context: HTTPS or `localhost`. Plain `http://<lan-ip>` won't
+  work. The simplest free option is `tailscale serve`, which gives the server a real HTTPS
+  certificate on its Tailscale name. `crypto.randomUUID()` has the same restriction, which is why
+  event ids are built from `crypto.getRandomValues()`.
+- Until Phase 6, the offline queue is a small `localStorage` list: ratings made with no signal are
+  kept and resent automatically (shown as "n changes waiting to sync").

@@ -1,0 +1,9 @@
+{
+  "name": "h446-revision",
+  "private": true,
+  "type": "module",
+  "description": "Frontend unit tests only; there are no npm dependencies and no build step.",
+  "scripts": {
+    "test": "node --test \"tests/js/*.test.mjs\""
+  }
+}
