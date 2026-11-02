@@ -86,3 +86,14 @@ keywords, cards and tests. Good for understanding, not for marks.
 | Unit testing frameworks, version control in the IDE | Beyond "use an IDE to develop/debug". |
 | Intractable problems, P vs NP, the halting problem | Context for heuristics and computability, but not on the spec. |
 | Machine learning techniques as data mining methods | The spec only needs what data mining is and how it's used. |
+
+## Topic 2.3
+
+| Idea | Why it's here |
+|---|---|
+| Pre-order and in-order traversal | Only post-order and breadth-first are named. |
+| Admissible / consistent heuristics as terms | The idea is in the A* summary; the terms aren't in the sources. |
+| Big Omega and Big Theta notation | Only Big O is on the spec. |
+| Heap sort, shell sort, radix sort, selection sort | Only bubble, insertion, merge and quick sort are on the spec. |
+| Bellman-Ford, Floyd-Warshall, minimum spanning trees (Prim, Kruskal) | Only Dijkstra and A* are on the spec. |
+| Dijkstra's time complexity | Depends on implementation; not required. |

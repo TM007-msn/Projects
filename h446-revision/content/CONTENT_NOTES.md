@@ -3,6 +3,30 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 2.3
+
+**Not certain, check first**
+
+- **Bubble sort best case O(n)** assumes the "stop when a pass makes no swaps" version (as in the
+  summary's code). Without that check it is O(n²) in every case. Insertion sort's best case O(n) is
+  for already sorted data.
+- **Quick sort worst case** is given with the example "already sorted data with the first item as
+  pivot". That's true for that pivot choice; other pivot strategies change which inputs are worst.
+- **Dijkstra's Big O** is left out on purpose: it depends on how the priority queue is implemented,
+  and the spec doesn't ask for it.
+- **A\* "never overestimates"** (an admissible heuristic) is the condition for A* to guarantee the
+  shortest path. The guide doesn't use the word "admissible", so the summary describes it without
+  the term.
+- **Code examples** (binary search, bubble sort, factorials, the LMC program in 1.2.4) were checked
+  by translating them line by line into Python and running them on random data. `items.length` on
+  an array isn't in the OCR pseudocode guide (which only shows `.length` for strings), but it's the
+  usual way to write it.
+
+**Orderings**
+
+- Big O growth order (O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2^n)) is fixed.
+- Post-order (left, right, root) is fixed.
+
 ## Topic 2.2
 
 **Not certain, check first**

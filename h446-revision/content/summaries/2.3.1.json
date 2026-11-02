@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.3.1",
+  "key_points": [
+    {
+      "id": "sum-2.3.1-01",
+      "text": "Write algorithms as flowcharts, pseudocode or program code (OCR pseudocode is used in questions; your syntax doesn't need to be perfect). There are usually several ways to solve a task, and they differ in execution time and memory; compare them for a given data set, and compare how one algorithm performs on different data sets.",
+      "spec_ids": [
+        "2.3.1a",
+        "2.3.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.3.1-02",
+      "text": "Big O shows how time or space grows with input size n, keeping only the dominant term. From best to worst: constant O(1), logarithmic O(log n), linear O(n), polynomial O(n²) and higher, exponential O(2^n). Recognise and sketch each shape on a graph, and read and write the notation.",
+      "spec_ids": [
+        "2.3.1c",
+        "2.3.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.3.1-03",
+      "text": "Best, average and worst cases differ because they depend on the data (for example, sorted, random or reversed). Learn these complexities:",
+      "spec_ids": [
+        "2.3.1c",
+        "2.3.1d"
+      ],
+      "verified": false,
+      "code": "Algorithm        Best         Average      Worst\nLinear search    O(1)         O(n)         O(n)\nBinary search    O(1)         O(log n)     O(log n)\nBubble sort      O(n)         O(n²)        O(n²)\nInsertion sort   O(n)         O(n²)        O(n²)\nMerge sort       O(n log n)   O(n log n)   O(n log n)\nQuick sort       O(n log n)   O(n log n)   O(n²)"
+    },
+    {
+      "id": "sum-2.3.1-04",
+      "text": "Data structure algorithms: add to and remove from stacks, queues, trees and linked lists, including when built from a static array. Depth-first (post-order) traversal visits left subtree, right subtree, then the node (using recursion or a stack); breadth-first visits level by level using a queue. Recommend structures for scenarios (stack for undo, queue for buffers).",
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.3.1-05",
+      "text": "Linear search checks every item in turn: works on unsorted data, O(n). Binary search needs sorted data (a precondition) and halves the search area each step: O(log n), much faster on large data sets.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false,
+      "code": "function binarySearch(items, target)\n    low = 0\n    high = items.length - 1\n    while low <= high\n        mid = (low + high) DIV 2\n        if items[mid] == target then\n            return mid\n        elseif items[mid] < target then\n            low = mid + 1\n        else\n            high = mid - 1\n        endif\n    endwhile\n    return -1\nendfunction"
+    },
+    {
+      "id": "sum-2.3.1-06",
+      "text": "Bubble sort swaps adjacent items that are out of order, pass after pass, stopping when a pass makes no swaps. Insertion sort inserts each item into its place in a growing sorted section. Both are simple and sort in place (little extra memory), fast on nearly sorted data, but O(n²) on average.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false,
+      "code": "procedure bubbleSort(items:byRef)\n    do\n        swapped = false\n        for i = 0 to items.length - 2\n            if items[i] > items[i + 1] then\n                temp = items[i]\n                items[i] = items[i + 1]\n                items[i + 1] = temp\n                swapped = true\n            endif\n        next i\n    until swapped == false\nendprocedure"
+    },
+    {
+      "id": "sum-2.3.1-07",
+      "text": "Merge sort splits the list down to single items and merges them back in order: always O(n log n), but needs extra memory for the merged lists. Quick sort partitions round a pivot and sorts each side: usually O(n log n) and needs little extra memory, but O(n²) if the pivots are badly chosen (e.g. already sorted data with the first item as pivot).",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.3.1-08",
+      "text": "Dijkstra's algorithm finds the shortest distance from a start node to all other nodes in a weighted graph: visit the unvisited node with the smallest distance, update its neighbours if a shorter route is found, repeat. A* finds the shortest path to one goal, choosing the node with the lowest cost so far plus a heuristic estimate to the goal; with a good heuristic that never overestimates, it finds the shortest path while exploring fewer nodes.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-big-o",
+    "kw-time-complexity",
+    "kw-space-complexity",
+    "kw-constant-complexity",
+    "kw-linear-complexity",
+    "kw-polynomial-complexity",
+    "kw-exponential-complexity",
+    "kw-logarithmic-complexity",
+    "kw-best-case",
+    "kw-average-case",
+    "kw-worst-case",
+    "kw-linear-search",
+    "kw-binary-search",
+    "kw-bubble-sort",
+    "kw-insertion-sort",
+    "kw-merge-sort",
+    "kw-quick-sort",
+    "kw-pivot",
+    "kw-dijkstra",
+    "kw-a-star",
+    "kw-traversal",
+    "kw-depth-first-traversal",
+    "kw-post-order",
+    "kw-breadth-first-traversal"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.3.1-01",
+      "text": "Linear vs binary search: linear works on any data but checks items one by one; binary needs sorted data and halves the search area each time.",
+      "keyword_ids": [
+        "kw-linear-search",
+        "kw-binary-search"
+      ],
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.3.1-02",
+      "text": "Bubble vs insertion sort: bubble sort swaps neighbours in repeated passes; insertion sort takes each item and slots it into a sorted section.",
+      "keyword_ids": [
+        "kw-bubble-sort",
+        "kw-insertion-sort"
+      ],
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.3.1-03",
+      "text": "Merge vs quick sort: merge sort splits evenly and does the work when merging (always O(n log n), extra memory); quick sort does the work when partitioning round a pivot (O(n²) worst case, little extra memory).",
+      "keyword_ids": [
+        "kw-merge-sort",
+        "kw-quick-sort"
+      ],
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.3.1-04",
+      "text": "Dijkstra vs A*: Dijkstra finds shortest paths to every node with no sense of direction; A* heads for one goal using a heuristic.",
+      "keyword_ids": [
+        "kw-dijkstra",
+        "kw-a-star"
+      ],
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.3.1-05",
+      "text": "Depth-first vs breadth-first: depth-first goes deep down one branch first (stack or recursion); breadth-first goes level by level (queue).",
+      "keyword_ids": [
+        "kw-depth-first-traversal",
+        "kw-breadth-first-traversal"
+      ],
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.3.1-06",
+      "text": "Logarithmic vs exponential: O(log n) grows slower than linear; O(2^n) grows faster than any polynomial.",
+      "keyword_ids": [
+        "kw-logarithmic-complexity",
+        "kw-exponential-complexity"
+      ],
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "verified": false
+    }
+  ]
+}

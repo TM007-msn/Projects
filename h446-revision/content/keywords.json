@@ -4604,7 +4604,8 @@
         "2.3.1e"
       ],
       "related": [
-        "kw-binary-tree"
+        "kw-binary-tree",
+        "kw-binary-search"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5262,7 +5263,9 @@
         "2.1.2b",
         "2.3.1f"
       ],
-      "related": [],
+      "related": [
+        "kw-binary-search"
+      ],
       "dont_confuse_with": null,
       "verified": false
     },
@@ -5794,7 +5797,9 @@
         "2.2.2d"
       ],
       "related": [
-        "kw-decomposition"
+        "kw-decomposition",
+        "kw-binary-search",
+        "kw-merge-sort"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5808,7 +5813,8 @@
         "2.2.2f.1"
       ],
       "related": [
-        "kw-stack"
+        "kw-stack",
+        "kw-depth-first-traversal"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5836,7 +5842,9 @@
         "2.2.2f.3",
         "2.3.1f"
       ],
-      "related": [],
+      "related": [
+        "kw-a-star"
+      ],
       "dont_confuse_with": null,
       "verified": false
     },
@@ -5880,6 +5888,368 @@
       "related": [
         "kw-performance-modelling",
         "kw-abstraction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-big-o",
+      "term": "Big O notation",
+      "acronym": null,
+      "definition": "A way of describing how an algorithm's time or memory requirement grows as the size of its input (n) grows, keeping only the fastest-growing term and ignoring constants.",
+      "spec_ids": [
+        "2.3.1c",
+        "2.3.1d"
+      ],
+      "related": [
+        "kw-time-complexity",
+        "kw-space-complexity"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-time-complexity",
+      "term": "Time complexity",
+      "acronym": null,
+      "definition": "How the number of steps an algorithm takes grows as the size of its input grows.",
+      "spec_ids": [
+        "2.3.1b",
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-space-complexity",
+        "kw-big-o"
+      ],
+      "dont_confuse_with": "Space complexity: how the memory needed grows.",
+      "verified": false
+    },
+    {
+      "id": "kw-space-complexity",
+      "term": "Space complexity",
+      "acronym": null,
+      "definition": "How the amount of memory an algorithm needs grows as the size of its input grows.",
+      "spec_ids": [
+        "2.3.1b",
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-time-complexity",
+        "kw-big-o"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-constant-complexity",
+      "term": "Constant complexity",
+      "acronym": null,
+      "definition": "O(1): the time taken stays the same however large the input is, such as accessing an array item by its index.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-big-o"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-linear-complexity",
+      "term": "Linear complexity",
+      "acronym": null,
+      "definition": "O(n): the time taken grows in direct proportion to the size of the input, such as a linear search.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-big-o",
+        "kw-linear-search"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-polynomial-complexity",
+      "term": "Polynomial complexity",
+      "acronym": null,
+      "definition": "O(n^k), such as O(n²): the time taken grows in proportion to the input size raised to a fixed power, such as a bubble sort.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-big-o",
+        "kw-bubble-sort"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-exponential-complexity",
+      "term": "Exponential complexity",
+      "acronym": null,
+      "definition": "O(2^n): the time taken doubles with each extra item of input, so it becomes impractical even for fairly small inputs.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-big-o",
+        "kw-heuristic"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-logarithmic-complexity",
+      "term": "Logarithmic complexity",
+      "acronym": null,
+      "definition": "O(log n): the time taken grows very slowly, increasing by a constant amount each time the input doubles, such as a binary search.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-big-o",
+        "kw-binary-search"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-best-case",
+      "term": "Best case",
+      "acronym": null,
+      "definition": "The least time or memory an algorithm can need for an input of a given size, such as finding the target at the first position checked.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-worst-case",
+        "kw-average-case"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-average-case",
+      "term": "Average case",
+      "acronym": null,
+      "definition": "The time or memory an algorithm needs on typical inputs of a given size.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-best-case",
+        "kw-worst-case"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-worst-case",
+      "term": "Worst case",
+      "acronym": null,
+      "definition": "The most time or memory an algorithm can need for an input of a given size, such as a bubble sort on data in reverse order.",
+      "spec_ids": [
+        "2.3.1c"
+      ],
+      "related": [
+        "kw-best-case",
+        "kw-average-case"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-linear-search",
+      "term": "Linear search",
+      "acronym": null,
+      "definition": "A search that checks each item in turn from the start until the target is found or the end is reached; works on unsorted data.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-binary-search",
+        "kw-linear-complexity"
+      ],
+      "dont_confuse_with": "Binary search: needs sorted data, and halves the search area each step.",
+      "verified": false
+    },
+    {
+      "id": "kw-binary-search",
+      "term": "Binary search",
+      "acronym": null,
+      "definition": "A search on sorted data that checks the middle item and discards the half that can't contain the target, repeating until the target is found or nothing is left.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-linear-search",
+        "kw-precondition",
+        "kw-logarithmic-complexity",
+        "kw-divide-conquer"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-bubble-sort",
+      "term": "Bubble sort",
+      "acronym": null,
+      "definition": "A sort that repeatedly passes through the list comparing adjacent items and swapping them if they are in the wrong order, until a pass makes no swaps.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-insertion-sort",
+        "kw-polynomial-complexity"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-insertion-sort",
+      "term": "Insertion sort",
+      "acronym": null,
+      "definition": "A sort that builds a sorted section at the start of the list, taking each next item and inserting it into its correct position in that section.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-bubble-sort"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-merge-sort",
+      "term": "Merge sort",
+      "acronym": null,
+      "definition": "A divide and conquer sort that repeatedly splits the list in half until each part has one item, then merges the parts back together in order.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-quick-sort",
+        "kw-divide-conquer"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-quick-sort",
+      "term": "Quick sort",
+      "acronym": null,
+      "definition": "A divide and conquer sort that picks a pivot, moves smaller items before it and larger items after it, then sorts each side in the same way.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-pivot",
+        "kw-merge-sort"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pivot",
+      "term": "Pivot",
+      "acronym": null,
+      "definition": "The item chosen in quick sort to split the list: smaller items go before it and larger items after it.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-quick-sort"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-dijkstra",
+      "term": "Dijkstra's shortest path algorithm",
+      "acronym": null,
+      "definition": "An algorithm that finds the shortest path from a start node to every other node in a weighted graph, by repeatedly visiting the unvisited node with the smallest known distance and updating its neighbours' distances.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-a-star",
+        "kw-weighted-graph"
+      ],
+      "dont_confuse_with": "A*: aims for one goal node and uses a heuristic to guide the search.",
+      "verified": false
+    },
+    {
+      "id": "kw-a-star",
+      "term": "A* algorithm",
+      "acronym": null,
+      "definition": "A shortest path algorithm that finds a route to one goal node by always exploring the node with the lowest cost so far plus a heuristic estimate of the distance left to the goal.",
+      "spec_ids": [
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-dijkstra",
+        "kw-heuristic"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-traversal",
+      "term": "Traversal",
+      "acronym": null,
+      "definition": "Visiting every node in a tree or graph exactly once, in a set order.",
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-depth-first-traversal",
+        "kw-breadth-first-traversal"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-depth-first-traversal",
+      "term": "Depth-first traversal",
+      "acronym": null,
+      "definition": "A traversal that goes as far down one branch as possible before backtracking to explore the next, using recursion or a stack.",
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-post-order",
+        "kw-breadth-first-traversal",
+        "kw-backtracking"
+      ],
+      "dont_confuse_with": "Breadth-first: visits all nodes on one level before the next level.",
+      "verified": false
+    },
+    {
+      "id": "kw-post-order",
+      "term": "Post-order traversal",
+      "acronym": null,
+      "definition": "A depth-first tree traversal that visits a node's left subtree, then its right subtree, then the node itself.",
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-depth-first-traversal"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-breadth-first-traversal",
+      "term": "Breadth-first traversal",
+      "acronym": null,
+      "definition": "A traversal that visits the start node, then all its neighbours, then their neighbours and so on, level by level, using a queue.",
+      "spec_ids": [
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-depth-first-traversal",
+        "kw-queue"
       ],
       "dont_confuse_with": null,
       "verified": false
