@@ -1,0 +1,625 @@
+{
+  "source": "revision-checklist.pdf",
+  "topics": [
+    {
+      "number": 1,
+      "title": "Structure and function of the processor",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-1-structure-and-function-of-the-processor",
+      "statements": [
+        "Candidates need to have an understanding of the purpose and function of the core components of a processor.",
+        "Candidates need to understand the role and components of the ALU.",
+        "Candidates need to understand the purpose and function or registers within the processor, including the PC, accumulator, MAR, MDR and CIR.",
+        "Candidates need to understand the purpose, function and role of the data, address and control buses in the processor.",
+        "Candidates need to understand how assembly language makes use of registers, and how data and addressed are transferred between registers.",
+        "Candidates need to understand the purpose and stages within the FDE cycle.",
+        "Candidates need to understand how and when the registers are used within this cycle, and how and where data and addresses are transmitted to/from in each part of this cycle.",
+        "Candidates need to understand how the performance of the CPU can be affected by many factors.",
+        "Candidates need to understand how and why the performance is affected by the clock speed, the number of cores and the size and speed of the cache.",
+        "Candidates need to have an understanding of the Von Neumann and Harvard architectures. They should be aware of the different approaches the architectures take to storing instructions and data in memory and the benefits of each approach.",
+        "Candidates will not be asked about specific aspects of “contemporary processor architecture” unless explicitly named in the specification. They may, however, be asked to show an awareness of how contemporary processors differ from a pure Von Neumann architecture in more open questions."
+      ],
+      "additional_notes": [],
+      "pages": [
+        1
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Types of processor",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-2-types-of-processor",
+      "statements": [
+        "Candidates need to understand the differences between the CISC and RISC processors and the key features and benefits of each.",
+        "Candidates should be aware of the relative benefits of each architecture.",
+        "Candidates need to understand what is meant by a parallel system and the benefits and limitations of parallel processing.",
+        "Candidates need to understand that parallel processing can be achieved through different (i.e. multiple processors in the same computer or distributed or multiple cores in a CPU or GPU).",
+        "Candidates need to understand the benefits of a multicore system in terms of parallel processing and running multiple programs at the same time.",
+        "Candidates need to understand the purpose of GPUs and what applications they are used for (candidates need to understand how GPUs are used to aid graphics, but also other applications for example their use in modelling, data mining, etc.).",
+        "Candidates should understand the benefits and using GPUs and why they are suited to certain tasks (specialist instructions, multiple cores and SIMD processing)."
+      ],
+      "additional_notes": [],
+      "pages": [
+        2
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Input, output & storage",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-3-input-output-and-storage",
+      "statements": [
+        "Candidates need to have an understanding of a range of input, output and storage devices.",
+        "Candidates do not need to understand how the input and output devices work, but must be able to recommend appropriate devices for specific situations and be able to justify choices made.",
+        "Candidates need to understand that there are different types of storage device. They need to know about the characteristics of each type (magnetic, optical and flash) and understand the benefits and drawbacks of each, and be able to recommend an appropriate type of device for a given situation and justify the choice.",
+        "Candidates need to understand the purpose of ROM and RAM within a computer system, their characteristics, and the role they play in the running of a range of different computers e.g. mobile devices, embedded systems etc.",
+        "Candidates need to understand why there is a need for virtual storage, how virtual storage works and the benefits and drawbacks of using virtual storage. Virtual storage would be that which may appear to be local but is physically located elsewhere on the network/remotely/in the cloud."
+      ],
+      "additional_notes": [],
+      "pages": [
+        2
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Operating systems – systems software",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-4-operating-systems-systems-software",
+      "statements": [
+        "Candidates need to have an understanding of why an operating system is required, along with the different tasks it performs within a computer system (e.g. resource management, file management, interrupt handling, security, providing a platform for software to run, providing a user interface and providing utilities).",
+        "Candidates need to understand how operating systems manage memory. They need to understand the need for, purpose and function of paging to divide memory into usable fixed-size pages and how this aids in the transfer of memory for example virtual memory.",
+        "Candidates need to understand what is meant by segmentation and how memory is divided into segments to allow access to memory.",
+        "Candidates need to understand what is meant by virtual memory and why this is needed in a computer system.",
+        "Candidates need to understand how paging is used in virtual memory, and the benefits and drawbacks of having and using virtual memory in a computer system.",
+        "Candidates need to understand the purpose of interrupts within a computer system, why an interrupt might be generated and what happens within the CPU and memory in order to call an interrupt service routine.",
+        "Candidates need to understand the need for scheduling of tasks by an operating system and the benefits that scheduling brings.",
+        "Candidates need to understand that there are different scheduling algorithms, with each having benefits and drawbacks for tasks with specific characteristics.",
+        "Candidates need to understand how the following scheduling algorithms work; round robin, first come first served, multi-level feedback queue, shortest job first and shortest remaining time.",
+        "Candidates need to understand the different (and often overlapping) classifications of operating systems (distributed, embedded, multi-tasking, multi-user and real time), including the key features of each. They should be able to recommend (and justify) a type of operating system for a given scenario.",
+        "Candidates need to understand the role of the BIOS in a computer system, and the steps that the BIOS goes through to start a computer.",
+        "Candidates need to understand what is meant by ‘device drivers’ and why they are needed for communication between hardware and the operating system.",
+        "Candidates should be able to describe what is meant by a virtual machine, how they can be used to execute intermediate code, how they can be used to run a software driven machine inside a physical machine and the benefits and drawbacks of each approach."
+      ],
+      "additional_notes": [],
+      "pages": [
+        3
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Application generation",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-5-application-generation",
+      "statements": [
+        "Candidates need to understand the purpose of applications, and should have knowledge and experience of a range of different application software (for example database, word processor, web browser, graphics manipulation etc.).",
+        "Candidates should be able to recommend the use of specific and generic applications for given scenarios, justifying their use and function(s) for a scenario.",
+        "Candidates need to understand the purpose and role of utility software in a computer system.",
+        "Candidates should be familiar with a range of utility software (e.g. disk defragmentation, file management, device driver, system cleanup, security etc.)",
+        "Candidates need to be able to explain the differences between open and closed source software, the benefits and drawbacks to creator and user of each of the licensing models, and be able to recommend which is used (with justification) for a specific scenario.",
+        "Candidates need to understand the need for translators when writing programs.",
+        "Candidates need to have knowledge of the differences in operation of interpreters and compilers, from these they need to be able to assess the benefits and drawbacks of using each type, and recommend with justification which should be used in a specific scenario.",
+        "Candidates need to understand the role of an assembler and how it differs from interpreters and compilers.",
+        "Candidates need to understand that there are a number of stages involved in compilation.",
+        "Candidates need to understand how lexical analysis works and how the code is converted into tokens with the removal of unnecessary elements (e.g. comments and whitespace).",
+        "Candidates need to understand how syntax errors are identified and reported at the end of the syntax analysis.",
+        "Candidates need to understand how the abstract syntax tree will be fed into the next stage of code generation, and that the object code is then created.",
+        "Candidates need to understand why optimisation is important and how the results of lexical analysis feeds into syntax analysis, and how the tokens are checked to ensure they meet the during (and after) code generation.",
+        "Candidates need to understand what code libraries are, how they are used and the benefits and drawbacks from using libraries.",
+        "Candidates should have experience of using libraries to write programs."
+      ],
+      "additional_notes": [],
+      "pages": [
+        4
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Software development",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-6-software-development",
+      "statements": [
+        "Candidates need to understand the different models that can be followed to produce a program (explicitly the waterfall lifecycle, agile methodology, extreme programming, the spiral model and rapid application development).",
+        "Candidates need to understand the tasks, processes, benefits and drawbacks of each model and the similarities and differences between each.",
+        "Candidates need to understand where each model is most suitable to use, and be able to justify the use in a situation.",
+        "Candidates need to be able to write algorithms using flow charts, pseudocode and/ or program code.",
+        "Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in this.",
+        "Candidate’s code is not expected to be syntactically correct, but must use appropriate code structures."
+      ],
+      "additional_notes": [],
+      "pages": [
+        5
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Types of programming language",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-7-types-of-programming-language",
+      "statements": [
+        "Candidates need to understand that there are a variety of types of programming paradigms such as procedural, OOP, low-level, and that each has its strengths and weaknesses in specific scenarios, topics or areas.",
+        "Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc.",
+        "Candidates need to be experienced in using procedural programming features such as (but not limited to) variables, constants, selection, iteration, sequence, subroutines, string handling, file handling, Boolean and arithmetic operators.",
+        "Candidates need to be able to read, trace, amend and write procedural program code.",
+        "Candidates need to have an understanding of the purpose and need for assembly language. They need to be familiar with the instructions given in Appendix 5d. They should be able to read, write, trace and amend programs written in the Little Man Computer language.",
+        "Candidates need an understanding of addressing, which should be integrated with assembly language.",
+        "Candidates should have experience of using immediate, direct, indirect and indexed addressing in the writing, reading and tracing of programs written in assembly language.",
+        "Candidates need to understand object-oriented code (as specified in the pseudocode guide). They need to have an understanding of classes, objects, attributes and methods. They need to understand the difference between private and public attributes and methods.",
+        "Candidates need to understand encapsulation and the use of get and set methods to access private attributes.",
+        "Candidates need to understand the purpose and principles of inheritance.",
+        "Candidates need to have an understanding of polymorphism and how it can be used within a program.",
+        "Candidates need to be able to read, trace, amend and write code that makes use of these object-oriented"
+      ],
+      "additional_notes": [],
+      "pages": [
+        5
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Introduction to programming",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-8-introduction-to-programming",
+      "statements": [
+        "Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc. There is no substitute for practical experience when learning the content for this section.",
+        "Candidates need to understand how to control the flow of a program (sequence, iteration and selection).",
+        "Candidates need to understand the purpose and function of both variables and constants, and be able to read, trace and write code that makes use of both variables and constants.",
+        "Candidates need to understand the benefits of using constants over variables.",
+        "Candidates need to understand the role of sub-programs (procedures and functions) in a program, how these can be used to reduce the amount of code and improved the efficiency.",
+        "Candidates need to understand the differences between procedures and functions, and be able to read, write and trace programs using both procedures and functions.",
+        "Candidates need to have experience of using a range of arithmetic (+, -, /, *, MOD, DIV) operators, Boolean (AND, OR, NOT, ==, >, <, =, >=, <=, !=) operators and assignment operator (=).",
+        "Candidates need to be able to read, trace and write programs using these operators. Code in the exam will be written using the OCR pseudocode guide, so candidates need to be able to read and interpret this pseudocode – however, their answers can be in pseudocode, or program code.",
+        "Candidates need to have experience of using a range of string handling functions and need to be able to read, trace and write program code using and combining string handling techniques (selecting substrings, converting to upper/lowercase, converting between characters and their ASCII values. Any functions presented in a question which are not in pseudocode guide, will be specifically introduced.)",
+        "Candidates need to have experience of writing programs that write to and read from text files. Candidates’ understanding of procedural languages will largely be tested by asking candidates to read/write/trace/amend simple programs.",
+        "Candidates need to have an understanding of the purpose and need for assembly language. Candidates",
+        "need to be familiar with the instructions given in Appendix 5d.",
+        "Candidates should be able to read, write, trace and amend programs written in the Little Man Computer language."
+      ],
+      "additional_notes": [],
+      "pages": [
+        6
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Compression, encryption & hashing (Full A’Level ONLY)",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-9-compression-encryption-and-hashing",
+      "statements": [
+        "Candidates need to understand the need for compression, especially when transferring data via the Internet.",
+        "Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type.",
+        "Candidates need to be able to recommend a type of compression for a given scenario.",
+        "Candidates need to understand how run-length encoding can reduce the size of a file for example with a text file or image.",
+        "Candidates should understand how dictionary coding works by substituting entries with a unique code.",
+        "Candidates should have practical experience of using these algorithms with small example files.",
+        "Candidates should understand the need for encryption.",
+        "Candidates should understand how symmetric and asymmetric encryption work to encrypt and decrypt data.",
+        "Candidates should understand the need for and purpose of using hashing algorithms to store data.",
+        "Candidates should be aware of different uses for hashing, such as the storing of passwords."
+      ],
+      "additional_notes": [],
+      "pages": [
+        7
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Databases",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-10-databases",
+      "statements": [
+        "Candidates need to understand what is meant by a database.",
+        "Candidates should be familiar with basic database terminology such as fields, records and tables.",
+        "Candidates should know the difference between a flat file and a relational database, and be able to explain the benefits and limitations of each approach.",
+        "Candidates should have experience of setting up and using both a flat file, and relational database.",
+        "Candidates should know what is meant by a primary key, foreign key and secondary key and how each are used in a database.",
+        "Candidates should be able produce and follow Entity Relationship (ER) diagrams which include 1:1, 1:M and M:M relationships.",
+        "Candidates should be able to identify how tables should be linked.",
+        "Candidates need to have an awareness of a range of methods for capturing data (such as forms, OCR, OMR and sensors) selecting data (such as Query By Example and SQL), managing data (such as changing data by manipulating it – e.g. arithmetic functions, adding, editing, deleting the data) and exchanging data (with common formats such as CSV, JSON and XML). Candidates won’t be specifically asked about any one of these methods but may be asked to discuss/justify suitable methods as part of a more open question.",
+        "Candidates need to have an understanding of the need to interrogate data within a database.",
+        "Candidates should understand the purpose of indexing in a database and the benefits of using indexing to optimise the searching for data.",
+        "Candidates need to have experience of a range of methods for capturing data (such as forms – what do they collect, what do they look like – data mining, where does the data come from, how is it collected and analysed), selecting data (such as how to produce QBEs – adding fields, tables, criteria, sorting – selecting through Boolean expressions – AND, OR, NOT), managing data (such as changing data by manipulating it – e.g. arithmetic functions – , adding, editing, deleting the data) and exchanging data (such as methods of transferring data – electronic i.e. memory stick, e-mail, and non-electronic e.g. paper based – appropriate formats for the transfer of data and communication mediums to transfer data – such as the structure, is it in a table or a list).(such as forms, data mining), selecting data (such as producing QBEs, selecting through Boolean expressions), managing data (such as manipulation, adding, editing, deleting) and exchanging data (such as methods of transferring data, appropriate formats for the transfer of data and communication mediums to transfer data).",
+        "Candidates should have experience of using SQL to edit and modify data in a database. They should understand the need for SQL as a standard language.",
+        "Candidates should be able write and follow scripts using the SQL commands listed in appendix 5d.",
+        "Candidates need to understand what is meant by referential integrity, and why this is desirable in a database.",
+        "Candidates should understand what is meant by transaction processing, and scenarios where transaction processing takes place.",
+        "Candidates should understand the problems that arise from transaction processing, and how these can be overcome.",
+        "Candidates should understand the ACID rules for transaction processing, and why databases should be built to these standards.",
+        "Candidates should understand how record locking prevents the overriding of data, and understand how record locking takes place."
+      ],
+      "additional_notes": [],
+      "pages": [
+        8
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Networks",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-11-networks",
+      "statements": [
+        "Candidates need to understand the definition and purpose of a network.",
+        "Candidates need to understand the purpose of, and importance of using, protocols.",
+        "Candidates should be able to discuss examples of protocols that may be used in a network/ the internet (but will not be asked to recall information about any specific protocol).",
+        "Candidates should understand the term standard, and the purpose and need for standards in a network (or any situation where data is transferred).",
+        "Candidates need to understand the purpose and benefits of layering protocols, particularly within the TCP/IP stack. Candidates need to know the different layers within the TCP/IP stack and the purpose of each.",
+        "Candidates need to understand how data is transmitted on the Internet, the use of IP addresses and packets in the transfer of data. (NB: Candidates are not expected to be familiar with the OSI model).",
+        "Candidates are expected to understand the terms LAN and WAN.",
+        "Candidates need to understand how the Domain Name System is used to find the IP address of a URL.",
+        "Candidates need to understand the purpose, function, benefits and drawbacks of both packet and circuit switching.",
+        "Candidates need to understand the difference between a client-server and peer-to-peer network.",
+        "Candidates need to know the benefits and drawbacks of each type of network and be able to recommend one for a given scenario.",
+        "Candidates need to understand that there are a range of security issues and threats involved with networked computers.",
+        "Candidates need to be aware of threats such as hackers, viruses, unauthorised access, denial of service, spyware, SQL injection, phishing and pharming.",
+        "Candidates need to know about ways of minimising, or preventing these threats for example firewalls, secure passwords, anti-virus, anti-spyware etc.",
+        "Candidates need to have knowledge of the hardware required to connect to and/or build a network (e.g. modem, router, cable, NIC, Wireless Access Points, hub, switch etc).",
+        "Candidates need to understand the purpose of the hardware, but are not required to understand how they physically work."
+      ],
+      "additional_notes": [],
+      "pages": [
+        9
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Web technologies",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-12-web-technologies",
+      "statements": [
+        "Candidates need to understand the purpose of HTML, CSS and JavaScript.",
+        "Candidates need to know when each language/markup would be used, and what its purpose and function is.",
+        "Candidates should have experience of writing webpages using HTML, CSS and JavaScript.",
+        "Candidates need to be able to recognise the code in Appendix 5d, and be able to read, write, amend and interpret code using HTML, CSS and JavaScript.",
+        "Candidates need to understand the need for compression (when transferring data over a network).",
+        "Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type.",
+        "Candidates need to be able to recommend a type of compression for a given scenario.",
+        "Candidates should understand how and why search engine results are indexed. They should understand how PageRank ranks these results.",
+        "Candidates should understand how page rank works at a high level but are not expected to be able to code the algorithm.",
+        "Candidates need to understand the difference between server and client side processing, and should be aware of examples (for example Javascript code vs PHP code) of processing on both sides.",
+        "Candidates should be aware of the benefits and drawbacks of both types of processing."
+      ],
+      "additional_notes": [],
+      "pages": [
+        10
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Data types",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-13-data-types",
+      "statements": [
+        "Candidates need to have an understanding of programming data types such as integer, real, Boolean, character, string etc.",
+        "Candidates need to be able to choose appropriate data types for a situation or given data.",
+        "Candidates should have experience of programming solutions using these data types.",
+        "Candidates should have knowledge of how to convert from one data type to another (casting).",
+        "Candidates should understand how and why computers store data as binary, and that a binary number can have a variety of different interpretations depending on what is being stored (e.g. numeric, text, image, sound).",
+        "Candidates should be able to convert positive whole numbers to binary and from binary to denary.",
+        "Candidates should know how to store negative numbers using Sign and Magnitude and Two’s Complement.",
+        "Candidates should be able to convert denary numbers to sign and magnitude, and two’s complement – and vice-versa.",
+        "Candidates should be able to perform addition and subtraction on integer binary numbers. (These numbers could be positive or negative using two’s complement representation.)",
+        "Candidates need to have an understanding of the purpose and potential uses of hexadecimal for example where and why they are used instead of binary and the benefits of using hexadecimal over alternatives such as binary.",
+        "Candidates should be able to convert denary numbers to hexadecimal and vice-versa and from binary to hexadecimal and vice-versa.",
+        "Candidates should have an understanding of how (positive and negative) real numbers are represented in a binary floating-point representation, and should be able to convert between a denary number and a real binary number. (NB the representation used for the exam is the mantissa and exponent both represented using two’s complement.)",
+        "Candidates should understand the need for normalised floating point numbers.",
+        "Candidates should be able to normalise a floating point number.",
+        "Candidates should have an understanding of how characters are represented in binary.",
+        "Candidates should understand the need for a character set and how a computer makes use of a character set.",
+        "Candidates should be aware of the ASCII and UNICODE character sets and be able to explain the differences between these and the benefits of each.",
+        "Candidates should be able to use a character set, or part of a character set, to translate characters into binary and vice-versa. (Candidates are not expected to memorise any values in a character set)",
+        "Candidates should be able to normalise a floating point number.",
+        "Candidates should be able to perform addition and subtraction floating point arithmetic including addition and subtraction of both positive and negative numbers.",
+        "Candidates should be able to perform right and left logical shifts.",
+        "Candidates should understand the effect of right and left shifts on a binary numbers.",
+        "Candidates should understand the purpose of using masks with bitwise operators, and should have experience of applying masks using AND, OR and XOR."
+      ],
+      "additional_notes": [],
+      "pages": [
+        11
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Data structures",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-14-data-structures",
+      "statements": [
+        "Candidates should be able to describe what is meant by arrays (up to 3 dimensions), records, lists and tuples.",
+        "Candidates are expected to be able recognise when they can be used and incorporate them in their programs to store data.",
+        "Candidates should have an understanding of the purpose and use of a record structure to store data of different data types in a program.",
+        "Candidates should have experience of using records to store, search, manipulate and retrieve data.",
+        "Candidates should have an understanding of the purpose and use of a list to store data in a program.",
+        "Candidates should have experience of using lists to store, search, manipulate and retrieve data.",
+        "Candidates should have an understanding of the purpose and use of tuples to store data in a program.",
+        "Candidates should have experience of using tuples to store, search, manipulate and retrieve data.",
+        "Candidates need to have an understanding of the behaviour of stacks and queues (i.e. LIFO and FIFO).",
+        "Candidates need to have an understanding of the behaviour of linked-lists, graphs, stacks, queues, trees, binary search trees and hash tables.",
+        "Candidates need to be able be aware of how the aforementioned data structures can be implemented. We would recommend a general understanding of these principles that can be applied to a given scenario rather than trying to memorise code patterns.",
+        "Candidates should have experience of implementing these structures in a variety of contexts, for example through a procedural program, through a different data structure and through an object-oriented approach.",
+        "Candidates need to be able to read, trace and write code to implement features of these data structures. (Again we would recommend a general understanding backed up with practice implementing them, rather than trying to memorise code patterns)."
+      ],
+      "additional_notes": [],
+      "pages": [
+        12
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Boolean algebra",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-15-boolean-algebra",
+      "statements": [
+        "Candidates should be familiar with AND, OR, NOT and XOR. Candidates should be familiar with the logic of each Boolean operator, and the truth tables.",
+        "Candidates should be able to construct logic gate diagrams from a Boolean expression and viceversa.",
+        "Candidates should be able to construct truth tables from Boolean expressions and logic gate diagrams.",
+        "Candidates should have an understanding that Boolean expressions can be simplified and should have experience of simplifying expressions using Karnaugh maps.",
+        "Candidates should be able to create, complete and interpret Karnaugh maps to simplify Boolean expressions.",
+        "Candidates should be aware of the given De Morgan’s laws and should be able to apply these to a Boolean statement.",
+        "Candidates should have experience of manipulating and simplifying Boolean statements using these rules of distribution, commutation, association and double negation.",
+        "Candidates need to understand the purpose and principles of D type flip flops and how and where they are used in a computer. They should be able to recognise how they can be triggered by a clock pulse (see practice paper 2 for an example).",
+        "Candidates are not expected to memorise the logic gates that make up a D-type flip flop.",
+        "Candidates need to understand the purpose and function of an adder circuit, and the difference between a half and full adder. They should be able to recognise and draw the logic gates and truth tables for full and half adders."
+      ],
+      "additional_notes": [],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Computer related legislation",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-16-computer-related-legislation",
+      "statements": [
+        "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
+        "Candidates should be familiar with the purpose and role of the Data Protection Act.",
+        "Candidates will need to understand the different rules that are within the DPA and how these impact the use of computers and the storage of data by organisations. This should include what organisations can and cannot do.",
+        "Candidates need to understand the purpose and principles of the Computer Misuse Act, including the actions that it prohibits.",
+        "Candidates need to understand the purpose and principles of the Copyright and Patents Act, including the actions that it prohibits.",
+        "Candidates need to understand the purpose and principles of the Regulation of Investigatory Powers Act, and what this allows in interception and monitoring of electronic communication.",
+        "Candidates need to understand how the regulations impact organisations and the use of computers and electronic communication."
+      ],
+      "additional_notes": [
+        "We are aware the law is constantly changing and some of the mentioned laws/acts (most notably the DPA) are likely to change over the course of the specification. Answers will be accepted that use an interpretation of the law based on when the specification was started or when the examination was sat.",
+        "Please note, a question that requires an extended response can be asked from any area within the specification. These questions are assessed using a level of response framework, where the response requires specific areas to have been covered to allow it to reach that level. In this area of the specification, for example, a question may be asked on the social and ethical impacts of a specific technology in a specific scenario or context. To gain the highest level, candidates would need to discuss whichever moral or social elements are relevant in the question, and because there is a context, every point they make should be in the context given, or related after to the context. If the question requires a judgement, or conclusion, then this needs to be given and justified against the context given."
+      ],
+      "pages": [
+        14
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Ethical, moral & cultural issues",
+      "paper": 1,
+      "video_url": "http://student.craigndave.org/video/slr-17-ethical-moral-and-cultural-issues",
+      "statements": [
+        "Candidates need to understand what is meant by moral, social, ethical and cultural issues in relation to the use of computers.",
+        "Candidates need to understand how the use of computers, and the increasing use of computers in the work force has moral, social, ethical and cultural implications and risks to a variety of people such as the employees, employers, society and organisations.",
+        "Candidates need to understand how the use of computers to make decisions automatically has moral, social, ethical and cultural implications and risks to a variety of people such as those people who make the decisions, the people the decisions affect, and the need for additional collection of information to ensure the decisions are accurate and valid.",
+        "Candidates need to understand how the development of artificial intelligence has moral, social, ethical and cultural impacts on a variety of people.",
+        "Candidates need to understand how the environmental effects of computers (such as disposal, energy use) have moral, social, ethical and cultural implications.",
+        "Candidates need to understand how the Internet and censorship on the Internet has moral, social, ethical and cultural implications.",
+        "Candidates need to understand the moral, social, ethical and cultural implications of using computers to monitor behaviour (such as CCTV, tracking phone calls, GPS, monitoring emails).",
+        "Candidates need to understand the moral, social, ethical and cultural implications of using computers to analyse personal information (such as the gathering, storing and analysing of medical records)",
+        "Candidates need to understand how different cultures impact on the use of and creation of computers and programs. For example languages make use of different characters, and how this in turn impacts the use of character sets. Some languages read left to right, and others right to left.",
+        "Candidates should understand how colours have different meanings in different cultures for example red means danger in one culture, and luck in another.",
+        "Candidates need to consider how these will impact the creation of computer applications."
+      ],
+      "additional_notes": [
+        "In order to prepare for this section we would recommend candidates regularly keep abreast of technological developments in the news."
+      ],
+      "pages": [
+        15
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Thinking abstractly",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-18-thinking-abstractly",
+      "statements": [
+        "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs.",
+        "Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario.",
+        "Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied.",
+        "Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction.",
+        "Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
+      ],
+      "additional_notes": [],
+      "pages": [
+        16
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Thinking ahead",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-19-thinking-ahead",
+      "statements": [
+        "Candidates need to understand that situations require inputs and output, and that outputs can be both digital or in a hard copy format.",
+        "Candidates may be given a description, diagram, or code for a scenario, and they will need to demonstrate an understanding of what inputs and outputs are needed, and/or are used in that specific scenario.",
+        "For a description of a program, candidates need to be able to determine what else they need to know before they can produce a solution, for example what information is missing and what else will affect that solution.",
+        "Candidates need to understand the purpose, benefits and drawbacks of reusable program components.",
+        "Candidates should understand how these components can be reused, and for a given scenario/program they will need to be able to identify the subprograms that will be needed.",
+        "Candidates may then be required to write code for these reusable components.",
+        "Candidates need to have an understanding of the purpose of caching in programming, and how it can be used when writing a program.",
+        "Candidates need to be able to apply their knowledge of caching to a scenario to demonstrate an understanding of how it can be used.",
+        "Candidates need to understand the benefits and drawbacks of using caching in a program."
+      ],
+      "additional_notes": [],
+      "pages": [
+        16
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Thinking procedurally",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-20-thinking-procedurally",
+      "statements": [
+        "Candidates need to be able to deconstruct a program and identify the component parts that will make it up, for example listing the parts or completing a structure diagram.",
+        "Candidates may be given some component parts and be asked to complete these from a written description or pseudocode for a program.",
+        "Candidates need to be able to identify the steps that will need to take place to complete the algorithm or program, and be able to write these in a suitable format, or put a given list into the correct order to produce a working program.",
+        "Candidates may need to write pseudocode or draw a flow chart to show this sequencing of steps.",
+        "For a given scenario, candidates need to be able to identify where sub-procedures may be used, and then write appropriate pseudocode for these sub-procedures, making use of parameters where appropriate.",
+        "Candidates may be given a structure diagram that they will need to interpret, or complete to identify these sub-procedures."
+      ],
+      "additional_notes": [],
+      "pages": [
+        17
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Thinking logically",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-21-thinking-logically",
+      "statements": [
+        "Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place within an algorithm or program, and be able to understand what these decisions are and the impact of these decisions on the algorithm/program and the next (and final) outcomes from the algorithm/program.",
+        "Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outcomes."
+      ],
+      "additional_notes": [],
+      "pages": [
+        17
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Thinking concurrently (Full A’Level ONLY)",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-22-thinking-concurrently",
+      "statements": [
+        "Candidates need to understand what is meant by thinking concurrently. They need to be able to work out which parts of a program can be developed to take place (be processed) at the same time, and which parts are dependent on other parts.",
+        "Candidates need to understand the benefits and trade offs that are brought from concurrent processing, and be able to apply these to a given scenario."
+      ],
+      "additional_notes": [
+        "Candidates need to understand how concurrent processing could be applied to a specific program, why it would be applied to that program, and what problems might arise from using it."
+      ],
+      "pages": [
+        17
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Programming techniques",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-23-programming-techniques",
+      "statements": [
+        "Candidates need to be able to understand the constructs of sequence, iteration and branching.",
+        "Candidates must be able to use these constructs independently of each other, and combine them to produce a solution. These include the selection statements of if (include elseif and else) and select case statements. These include both condition based iteration (e.g. while, repeat until) and count controlled iteration (e.g. for) – as well as how condition based can be used as count controlled iteration.",
+        "Candidates need to be able to read code using these constructs, create code using these constructs and trace code (for example using a trace table).",
+        "Candidates need to understand the use and need for variables in a program, and must understand the difference, benefits and drawbacks of both global and local variables.",
+        "Candidates must be able to recognise where local and global variables are used, and the impact that these have on the program, for example the amount of memory used by the program.",
+        "Candidates need to understand how a program using global variables can be changed to use local variables – and vice-versa.",
+        "Candidates need to understand what is meant by modular code, and how this can be produced using functions and procedures.",
+        "Candidates need to understand the differences between functions and procedures and how each is used within a program.",
+        "Candidates need to be able to read, trace and write code using functions and procedures.",
+        "Candidates need to understand the purpose and use of parameters within a program, and how they are used in functions and procedures.",
+        "Candidates will need to be able to read, trace and write code that makes use of parameters.",
+        "Candidates need to understand the difference between passing a parameter by value and by reference, they need to understand the benefits and drawbacks of each, recommending which should be used for a given situation.",
+        "Candidates need to be able to read, trace and write code that makes use of parameters passed both by value and by reference.",
+        "Candidates should have had experience of using an IDE to produce code.",
+        "Candidates need to understand how an IDE can be used to produce code, and understand the range of features and tools that are within an IDE that can be used to help produce and debug a program.",
+        "Candidates need to have an understanding of the principle of recursion and the key features that produce a recursive algorithm such as a stopping condition. They need to be able to read and trace recursive functions, write recursive functions, and translate a recursive function to an iterative solution and vice-versa.",
+        "Candidates need to have an understanding of the benefits and drawbacks of using both a recursive and iterative solution.",
+        "Candidates need to understand the purpose of object-oriented code. They need to have an understanding of classes, objects, properties, attributes, methods. They need to understand the difference between private and public properties, attributes and methods.",
+        "Candidates need to understand encapsulation and the use of get and set methods to access private properties.",
+        "Candidates need to understand the purpose and principles of inheritance, super-classes, parent-classes and sub-classes.",
+        "Candidates need to have an understanding of polymorphism and how it can be applied to classes.",
+        "Candidates need to be able to read, trace and write code that makes use of these object-oriented techniques.",
+        "Candidates need to be able to interpret class diagrams to produce class definitions.",
+        "Candidates need to be able to identify where object-oriented programming can be used in a solution, and derive an object-oriented solution for a given scenario."
+      ],
+      "additional_notes": [],
+      "pages": [
+        18
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Computational methods",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-24-computational-methods",
+      "statements": [
+        "Candidates need to be able to determine if a problem can be solved using computational methods, such as decomposition, abstraction, calculations, storage of data.",
+        "Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution.",
+        "Candidates need to understand how divide and conquer can be used within a task to split the task down into smaller tasks that are then tackled.",
+        "Candidates also need to identify how tasks can be carried out simultaneously to produce a solution.",
+        "Candidates need to understand the purpose of backtracking within an algorithm, for example when traversing a tree.",
+        "Candidates need to be able to read, trace and write code that makes use of backtracking for a given scenario.",
+        "Candidates need to understand what is meant by data mining, and how data mining is used in a situation.",
+        "Candidates need to understand the complexities within data mining and how a program will search for and interrogate the data.",
+        "Candidates need to understand what is meant by heuristics, and how they can be used within a program (for example the A* algorithm).",
+        "Candidates should have some experience of programming a simple heuristic, and be able to apply their knowledge to a given scenario to explain the purpose and benefits of using heuristics in a solution.",
+        "Candidates need to understand the principles, and purpose of performance modelling, and how it is used in the production of software.",
+        "Candidates need to understand the principle of pipelining and how it is used within programming (for example the result from a process feeds into the next process).",
+        "Candidates need to understand how visualisation can be used to create a mental model of what a program will do or work, and that from this they can plan ahead what is going to happen or what they will need to do."
+      ],
+      "additional_notes": [],
+      "pages": [
+        19
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Algorithms",
+      "paper": 2,
+      "video_url": "http://student.craigndave.org/video/slr-26-algorithms",
+      "statements": [
+        "Candidates need to be able to write algorithms using flow charts, pseudocode and program code.",
+        "Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in syntax.",
+        "Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques.",
+        "Candidates need to understand that there are a range of possible solutions to a task, and that these algorithms may be different in respect to their execution time and the amount of memory they make use of.",
+        "Candidates need to be able to compare different algorithms for a given data set and demonstrate an understanding of which is more efficient in terms of speed and/or memory.",
+        "Candidates need to be able to compare the use of one or more algorithms against several different data sets, to determine how they will differ in their use of memory and speed of execution.",
+        "Candidates need to understand how the efficiency of an algorithm is measured using Big O notation.",
+        "Candidates need to understand the meaning of constant, linear, polynomial, exponential and logarithmic complexity. They need to be able to recognise and draw each of these complexities of using a graph and be able to read and write the notation.",
+        "Candidates need to know the best and worst case complexities for the searching and sorting methods.",
+        "Candidates need to understand the difference between best case, average case and worst case complexities and how and why these can differ for an algorithm.",
+        "Candidates need to have an understanding of the situations where queues, stacks, trees etc. can be used and be able to recommend and justify their use In specific scenarios or programs.",
+        "Candidates need to have an understanding of a stack as a dynamic data structure.",
+        "Candidates need to be able to add and remove items to a stack.",
+        "Candidates need to be able read, trace and write code to implement a stack structure (including adding and removing items).",
+        "Candidates need to understand how a stack can be implemented using a different data structure, such as a static array.",
+        "Candidates need to have an understanding of a queue as a dynamic data structure.",
+        "Candidates need to be able to add and remove data to/from a queue.",
+        "Candidates need to be able to read, trace and write code to implement a queue structure (including adding and removing items).",
+        "Candidates need to understand how a queue can be implemented using a different data structure, such as a static array.",
+        "Candidates need to have an understanding of a tree structure, both binary and multi branch trees.",
+        "Candidates need to be able to add and remove data to/from a tree.",
+        "Candidates need to be able to read, trace and write code to implement a tree structure (including adding and removing items).",
+        "Candidates need to understand how a tree can be implemented using a different data structure, such as a linked list.",
+        "Candidates need to understand why and how trees are traversed.",
+        "Candidates need to understand how a depth-first (post-order) traversal works, and be able to perform the traversal on a tree.",
+        "Candidates need to be able to read, trace and write code for a post-order traversal.",
+        "Candidates need to understand how a breadth-first traversal works, and be able to perform the search on a tree.",
+        "Candidates need to be able to read, trace and write code for a breadth-first traversal on a tree.",
+        "Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques.",
+        "Candidates need to have an understanding of a linked list as a dynamic data structure.",
+        "Candidates need to be able to add, remove and search for data to/from/in a linked list.",
+        "Candidates need to be able to read, trace and write code to implement a linked list (including adding, removing and search for items).",
+        "Candidates need to have an understanding of the need for searching and sorting algorithms.",
+        "Candidates need to have an understanding of pre-conditions required to perform a specific algorithm.",
+        "Candidates need to understand how a bubble sort works and be able to perform a bubble sort on a set of data.",
+        "Candidates need to be able to read, trace and write code to perform a bubble sort.",
+        "Candidates need to understand how a merge sort works and be able to perform a merge sort on a set of data.",
+        "Candidates need to be able to read, trace and write code to perform a merge sort.",
+        "Candidate need to understand how a quick sort works and be able to perform a quick sort on a set of data.",
+        "Candidates need to be able to read, trace and write code to perform a quick sort.",
+        "Candidates need to understand how Dijkstra’s shortest path algorithm works.",
+        "Candidates need to be able to calculate the shortest path in a graph or tree using Dijkstra’s shortest path algorithm.",
+        "Candidates need to be able to read and trace code that performs Dijkstra’s shortest path algorithm.",
+        "Candidates need to understand how the A* algorithm works.",
+        "Candidates need to be able to calculate the shortest path in a graph or tree using the A* algorithm.",
+        "Candidates need to be able to read and trace code that performs the A* algorithm.",
+        "Candidates need to understand how a binary search works and be able to perform a binary search on a set of data.",
+        "Candidates need to be able to read, trace and write code to perform a binary search.",
+        "Candidates need to understand how a linear search works and be able to perform a linear search on a set of data.",
+        "Candidates need to be able to read, trace and write code to perform a linear search."
+      ],
+      "additional_notes": [],
+      "pages": [
+        20,
+        21
+      ]
+    }
+  ]
+}

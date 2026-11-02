@@ -1,0 +1,710 @@
+CHECKLIST STATEMENT MATCHING (score = share of statement words found in paragraph)
+
+
+## Topic 1: Structure and function of the processor  -> 1.1.1
+  cl-01-01 [auto 1.00 para 1.1.1#0] -> 1.1.1a
+      Candidates need to have an understanding of the purpose and function of the core components of a processor.
+  cl-01-02 [auto 1.00 para 1.1.1#0] -> 1.1.1a
+      Candidates need to understand the role and components of the ALU.
+  cl-01-03 [auto 1.00 para 1.1.1#1] -> 1.1.1a
+      Candidates need to understand the purpose and function or registers within the processor, including the PC, accumulator, MAR, MDR and CIR.
+  cl-01-04 [auto 1.00 para 1.1.1#2] -> 1.1.1a
+      Candidates need to understand the purpose, function and role of the data, address and control buses in the processor.
+  cl-01-05 [auto 1.00 para 1.1.1#3] -> 1.1.1a
+      Candidates need to understand how assembly language makes use of registers, and how data and addressed are transferred between registers.
+  cl-01-06 [auto 1.00 para 1.1.1#4] -> 1.1.1b
+      Candidates need to understand the purpose and stages within the FDE cycle.
+  cl-01-07 [auto 1.00 para 1.1.1#5] -> 1.1.1b
+      Candidates need to understand how and when the registers are used within this cycle, and how and where data and addresses are transmitted to/from in e
+  cl-01-08 [auto 1.00 para 1.1.1#6] -> 1.1.1c
+      Candidates need to understand how the performance of the CPU can be affected by many factors.
+  cl-01-09 [auto 1.00 para 1.1.1#6] -> 1.1.1c
+      Candidates need to understand how and why the performance is affected by the clock speed, the number of cores and the size and speed of the cache.
+  cl-01-10 [auto 1.00 para 1.1.1#7] -> 1.1.1e
+      Candidates need to have an understanding of the Von Neumann and Harvard architectures. They should be aware of the different approaches the architectu
+  cl-01-11 [auto 1.00 para 1.1.1#8] -> 1.1.1e
+      Candidates will not be asked about specific aspects of “contemporary processor architecture” unless explicitly named in the specification. They may, h
+
+## Topic 2: Types of processor  -> 1.1.2
+  cl-02-01 [auto 1.00 para 1.1.2#0] -> 1.1.2a
+      Candidates need to understand the differences between the CISC and RISC processors and the key features and benefits of each.
+  cl-02-02 [auto 1.00 para 1.1.2#0] -> 1.1.2a
+      Candidates should be aware of the relative benefits of each architecture.
+  cl-02-03 [auto 1.00 para 1.1.2#2] -> 1.1.2c
+      Candidates need to understand what is meant by a parallel system and the benefits and limitations of parallel processing.
+  cl-02-04 [auto 1.00 para 1.1.2#3] -> 1.1.2c
+      Candidates need to understand that parallel processing can be achieved through different (i.e. multiple processors in the same computer or distributed
+  cl-02-05 [auto 1.00 para 1.1.2#4] -> 1.1.2c
+      Candidates need to understand the benefits of a multicore system in terms of parallel processing and running multiple programs at the same time.
+  cl-02-06 [auto 0.97 para 1.1.2#1] -> 1.1.2b
+      Candidates need to understand the purpose of GPUs and what applications they are used for (candidates need to understand how GPUs are used to aid grap
+  cl-02-07 [auto 1.00 para 1.1.2#1] -> 1.1.2b
+      Candidates should understand the benefits and using GPUs and why they are suited to certain tasks (specialist instructions, multiple cores and SIMD pr
+
+## Topic 3: Input, output & storage  -> 1.1.3
+  cl-03-01 [auto 1.00 para 1.1.3#0] -> 1.1.3a
+      Candidates need to have an understanding of a range of input, output and storage devices.
+  cl-03-02 [auto 1.00 para 1.1.3#0] -> 1.1.3a
+      Candidates do not need to understand how the input and output devices work, but must be able to recommend appropriate devices for specific situations 
+  cl-03-03 [auto 1.00 para 1.1.3#1] -> 1.1.3b
+      Candidates need to understand that there are different types of storage device. They need to know about the characteristics of each type (magnetic, op
+  cl-03-04 [auto 1.00 para 1.1.3#2] -> 1.1.3c
+      Candidates need to understand the purpose of ROM and RAM within a computer system, their characteristics, and the role they play in the running of a r
+  cl-03-05 [auto 1.00 para 1.1.3#3] -> 1.1.3d
+      Candidates need to understand why there is a need for virtual storage, how virtual storage works and the benefits and drawbacks of using virtual stora
+
+## Topic 4: Operating systems – systems software  -> 1.2.1
+  cl-04-01 [auto 1.00 para 1.2.1#0] -> 1.2.1a
+      Candidates need to have an understanding of why an operating system is required, along with the different tasks it performs within a computer system (
+  cl-04-02 [auto 1.00 para 1.2.1#1] -> 1.2.1b
+      Candidates need to understand how operating systems manage memory. They need to understand the need for, purpose and function of paging to divide memo
+  cl-04-03 [auto 1.00 para 1.2.1#1] -> 1.2.1b
+      Candidates need to understand what is meant by segmentation and how memory is divided into segments to allow access to memory.
+  cl-04-04 [auto 1.00 para 1.2.1#1] -> 1.2.1b
+      Candidates need to understand what is meant by virtual memory and why this is needed in a computer system.
+  cl-04-05 [auto 1.00 para 1.2.1#1] -> 1.2.1b
+      Candidates need to understand how paging is used in virtual memory, and the benefits and drawbacks of having and using virtual memory in a computer sy
+  cl-04-06 [auto 1.00 para 1.2.1#2] -> 1.2.1c
+      Candidates need to understand the purpose of interrupts within a computer system, why an interrupt might be generated and what happens within the CPU 
+  cl-04-07 [auto 1.00 para 1.2.1#3] -> 1.2.1d
+      Candidates need to understand the need for scheduling of tasks by an operating system and the benefits that scheduling brings.
+  cl-04-08 [auto 1.00 para 1.2.1#3] -> 1.2.1d
+      Candidates need to understand that there are different scheduling algorithms, with each having benefits and drawbacks for tasks with specific characte
+  cl-04-09 [auto 1.00 para 1.2.1#3] -> 1.2.1d
+      Candidates need to understand how the following scheduling algorithms work; round robin, first come first served, multi-level feedback queue, shortest
+  cl-04-10 [auto 1.00 para 1.2.1#4] -> 1.2.1e
+      Candidates need to understand the different (and often overlapping) classifications of operating systems (distributed, embedded, multi-tasking, multi-
+  cl-04-11 [auto 1.00 para 1.2.1#5] -> 1.2.1f
+      Candidates need to understand the role of the BIOS in a computer system, and the steps that the BIOS goes through to start a computer.
+  cl-04-12 [auto 1.00 para 1.2.1#6] -> 1.2.1g
+      Candidates need to understand what is meant by ‘device drivers’ and why they are needed for communication between hardware and the operating system.
+  cl-04-13 [auto 1.00 para 1.2.1#7] -> 1.2.1h
+      Candidates should be able to describe what is meant by a virtual machine, how they can be used to execute intermediate code, how they can be used to r
+
+## Topic 5: Application generation  -> 1.2.2
+  cl-05-01 [auto 1.00 para 1.2.2#0] -> 1.2.2a
+      Candidates need to understand the purpose of applications, and should have knowledge and experience of a range of different application software (for 
+  cl-05-02 [auto 1.00 para 1.2.2#0] -> 1.2.2a
+      Candidates should be able to recommend the use of specific and generic applications for given scenarios, justifying their use and function(s) for a sc
+  cl-05-03 [auto 1.00 para 1.2.2#1] -> 1.2.2b
+      Candidates need to understand the purpose and role of utility software in a computer system.
+  cl-05-04 [auto 1.00 para 1.2.2#2] -> 1.2.2b
+      Candidates should be familiar with a range of utility software (e.g. disk defragmentation, file management, device driver, system cleanup, security et
+  cl-05-05 [auto 1.00 para 1.2.2#3] -> 1.2.2c
+      Candidates need to be able to explain the differences between open and closed source software, the benefits and drawbacks to creator and user of each 
+  cl-05-06 [auto 1.00 para 1.2.2#4] -> 1.2.2d
+      Candidates need to understand the need for translators when writing programs.
+  cl-05-07 [auto 1.00 para 1.2.2#4] -> 1.2.2d
+      Candidates need to have knowledge of the differences in operation of interpreters and compilers, from these they need to be able to assess the benefit
+  cl-05-08 [auto 1.00 para 1.2.2#4] -> 1.2.2d
+      Candidates need to understand the role of an assembler and how it differs from interpreters and compilers.
+  cl-05-09 [auto 1.00 para 1.2.2#5] -> 1.2.2e
+      Candidates need to understand that there are a number of stages involved in compilation.
+  cl-05-10 [auto 1.00 para 1.2.2#6] -> 1.2.2e
+      Candidates need to understand how lexical analysis works and how the code is converted into tokens with the removal of unnecessary elements (e.g. comm
+  cl-05-11 [auto 1.00 para 1.2.2#7] -> 1.2.2e
+      Candidates need to understand how syntax errors are identified and reported at the end of the syntax analysis.
+  cl-05-12 [auto 1.00 para 1.2.2#7] -> 1.2.2e
+      Candidates need to understand how the abstract syntax tree will be fed into the next stage of code generation, and that the object code is then create
+  cl-05-13 [auto 1.00 para 1.2.2#7] -> 1.2.2e
+      Candidates need to understand why optimisation is important and how the results of lexical analysis feeds into syntax analysis, and how the tokens are
+  cl-05-14 [auto 1.00 para 1.2.2#8] -> 1.2.2f
+      Candidates need to understand what code libraries are, how they are used and the benefits and drawbacks from using libraries.
+  cl-05-15 [auto 1.00 para 1.2.2#8] -> 1.2.2f
+      Candidates should have experience of using libraries to write programs.
+
+## Topic 6: Software development  -> 1.2.3
+  cl-06-01 [override] -> 1.2.3a
+      Candidates need to understand the different models that can be followed to produce a program (explicitly the waterfall lifecycle, agile methodology, e
+  cl-06-02 [override] -> 1.2.3a, 1.2.3b
+      Candidates need to understand the tasks, processes, benefits and drawbacks of each model and the similarities and differences between each.
+  cl-06-03 [override] -> 1.2.3b
+      Candidates need to understand where each model is most suitable to use, and be able to justify the use in a situation.
+  cl-06-04 [auto 0.87 para 1.2.3#1] -> 1.2.3c
+      Candidates need to be able to write algorithms using flow charts, pseudocode and/ or program code.
+  cl-06-05 [auto 1.00 para 1.2.3#1] -> 1.2.3c
+      Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in this.
+  cl-06-06 [auto 1.00 para 1.2.3#1] -> 1.2.3c
+      Candidate’s code is not expected to be syntactically correct, but must use appropriate code structures.
+
+## Topic 7: Types of programming language  -> 1.2.4
+  cl-07-01 [auto 1.00 para 1.2.4#0] -> 1.2.4a
+      Candidates need to understand that there are a variety of types of programming paradigms such as procedural, OOP, low-level, and that each has its str
+  cl-07-02 [auto 1.00 para 1.2.4#1] -> 1.2.4b
+      Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc.
+  cl-07-03 [auto 1.00 para 1.2.4#1] -> 1.2.4b
+      Candidates need to be experienced in using procedural programming features such as (but not limited to) variables, constants, selection, iteration, se
+  cl-07-04 [auto 1.00 para 1.2.4#1] -> 1.2.4b
+      Candidates need to be able to read, trace, amend and write procedural program code.
+  cl-07-05 [auto 1.00 para 1.2.4#2] -> 1.2.4c
+      Candidates need to have an understanding of the purpose and need for assembly language. They need to be familiar with the instructions given in Append
+  cl-07-06 [auto 1.00 para 1.2.4#3] -> 1.2.4d
+      Candidates need an understanding of addressing, which should be integrated with assembly language.
+  cl-07-07 [auto 1.00 para 1.2.4#3] -> 1.2.4d
+      Candidates should have experience of using immediate, direct, indirect and indexed addressing in the writing, reading and tracing of programs written 
+  cl-07-08 [auto 1.00 para 1.2.4#4] -> 1.2.4e
+      Candidates need to understand object-oriented code (as specified in the pseudocode guide). They need to have an understanding of classes, objects, att
+  cl-07-09 [auto 1.00 para 1.2.4#4] -> 1.2.4e
+      Candidates need to understand encapsulation and the use of get and set methods to access private attributes.
+  cl-07-10 [auto 1.00 para 1.2.4#4] -> 1.2.4e
+      Candidates need to understand the purpose and principles of inheritance.
+  cl-07-11 [auto 1.00 para 1.2.4#4] -> 1.2.4e
+      Candidates need to have an understanding of polymorphism and how it can be used within a program.
+  cl-07-12 [auto 1.00 para 1.2.4#4] -> 1.2.4e
+      Candidates need to be able to read, trace, amend and write code that makes use of these object-oriented
+
+## Topic 8: Introduction to programming  -> None
+  cl-08-01 [override] -> 1.2.4b
+      Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc. There is no substitute for
+  cl-08-02 [override] -> 1.2.4b, 2.2.1a
+      Candidates need to understand how to control the flow of a program (sequence, iteration and selection).
+  cl-08-03 [override] -> 1.2.4b
+      Candidates need to understand the purpose and function of both variables and constants, and be able to read, trace and write code that makes use of bo
+  cl-08-04 [override] -> 1.2.4b
+      Candidates need to understand the benefits of using constants over variables.
+  cl-08-05 [override] -> 1.2.4b, 2.2.1d
+      Candidates need to understand the role of sub-programs (procedures and functions) in a program, how these can be used to reduce the amount of code and
+  cl-08-06 [override] -> 1.2.4b, 2.2.1d
+      Candidates need to understand the differences between procedures and functions, and be able to read, write and trace programs using both procedures an
+  cl-08-07 [override] -> 1.2.4b
+      Candidates need to have experience of using a range of arithmetic (+, -, /, *, MOD, DIV) operators, Boolean (AND, OR, NOT, ==, >, <, =, >=, <=, !=) op
+  cl-08-08 [override] -> 1.2.4b
+      Candidates need to be able to read, trace and write programs using these operators. Code in the exam will be written using the OCR pseudocode guide, s
+  cl-08-09 [override] -> 1.2.4b
+      Candidates need to have experience of using a range of string handling functions and need to be able to read, trace and write program code using and c
+  cl-08-10 [override] -> 1.2.4b
+      Candidates need to have experience of writing programs that write to and read from text files. Candidates’ understanding of procedural languages will 
+  cl-08-11 [auto 1.00 para 1.2.4#2] -> 1.2.4c
+      Candidates need to have an understanding of the purpose and need for assembly language. Candidates need to be familiar with the instructions given in 
+  cl-08-12 [auto 1.00 para 1.2.4#2] -> 1.2.4c
+      Candidates should be able to read, write, trace and amend programs written in the Little Man Computer language.
+
+## Topic 9: Compression, encryption & hashing (Full A’Level ONLY)  -> 1.3.1
+  cl-09-01 [auto 1.00 para 1.3.1#0] -> 1.3.1a
+      Candidates need to understand the need for compression, especially when transferring data via the Internet.
+  cl-09-02 [auto 1.00 para 1.3.1#0] -> 1.3.1a
+      Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type.
+  cl-09-03 [auto 1.00 para 1.3.1#0] -> 1.3.1a
+      Candidates need to be able to recommend a type of compression for a given scenario.
+  cl-09-04 [auto 1.00 para 1.3.1#1] -> 1.3.1b
+      Candidates need to understand how run-length encoding can reduce the size of a file for example with a text file or image.
+  cl-09-05 [auto 1.00 para 1.3.1#1] -> 1.3.1b
+      Candidates should understand how dictionary coding works by substituting entries with a unique code.
+  cl-09-06 [auto 1.00 para 1.3.1#1] -> 1.3.1b
+      Candidates should have practical experience of using these algorithms with small example files.
+  cl-09-07 [auto 1.00 para 1.3.1#2] -> 1.3.1c
+      Candidates should understand the need for encryption.
+  cl-09-08 [auto 1.00 para 1.3.1#2] -> 1.3.1c
+      Candidates should understand how symmetric and asymmetric encryption work to encrypt and decrypt data.
+  cl-09-09 [auto 1.00 para 1.3.1#3] -> 1.3.1d
+      Candidates should understand the need for and purpose of using hashing algorithms to store data.
+  cl-09-10 [auto 1.00 para 1.3.1#4] -> 1.3.1d
+      Candidates should be aware of different uses for hashing, such as the storing of passwords.
+
+## Topic 10: Databases  -> 1.3.2
+  cl-10-01 [override] -> 1.3.2a
+      Candidates need to understand what is meant by a database.
+  cl-10-02 [override] -> 1.3.2a
+      Candidates should be familiar with basic database terminology such as fields, records and tables.
+  cl-10-03 [override] -> 1.3.2a
+      Candidates should know the difference between a flat file and a relational database, and be able to explain the benefits and limitations of each appro
+  cl-10-04 [override] -> 1.3.2a
+      Candidates should have experience of setting up and using both a flat file, and relational database.
+  cl-10-05 [auto 1.00 para 1.3.2#1] -> 1.3.2a
+      Candidates should know what is meant by a primary key, foreign key and secondary key and how each are used in a database.
+  cl-10-06 [auto 0.94 para 1.3.2#1] -> 1.3.2a
+      Candidates should be able produce and follow Entity Relationship (ER) diagrams which include 1:1, 1:M and M:M relationships.
+  cl-10-07 [auto 1.00 para 1.3.2#1] -> 1.3.2a
+      Candidates should be able to identify how tables should be linked.
+  cl-10-08 [override] -> 1.3.2b
+      Candidates need to have an awareness of a range of methods for capturing data (such as forms, OCR, OMR and sensors) selecting data (such as Query By E
+  cl-10-09 [override] -> 1.3.2a, 1.3.2b
+      Candidates need to have an understanding of the need to interrogate data within a database.
+  cl-10-10 [override] -> 1.3.2a
+      Candidates should understand the purpose of indexing in a database and the benefits of using indexing to optimise the searching for data.
+  cl-10-11 [override] -> 1.3.2b
+      Candidates need to have experience of a range of methods for capturing data (such as forms – what do they collect, what do they look like – data minin
+  cl-10-12 [auto 1.00 para 1.3.2#3] -> 1.3.2d
+      Candidates should have experience of using SQL to edit and modify data in a database. They should understand the need for SQL as a standard language.
+  cl-10-13 [auto 1.00 para 1.3.2#3] -> 1.3.2d
+      Candidates should be able write and follow scripts using the SQL commands listed in appendix 5d.
+  cl-10-14 [auto 1.00 para 1.3.2#4] -> 1.3.2e
+      Candidates need to understand what is meant by referential integrity, and why this is desirable in a database.
+  cl-10-15 [auto 1.00 para 1.3.2#5] -> 1.3.2f
+      Candidates should understand what is meant by transaction processing, and scenarios where transaction processing takes place.
+  cl-10-16 [auto 1.00 para 1.3.2#5] -> 1.3.2f
+      Candidates should understand the problems that arise from transaction processing, and how these can be overcome.
+  cl-10-17 [auto 1.00 para 1.3.2#5] -> 1.3.2f
+      Candidates should understand the ACID rules for transaction processing, and why databases should be built to these standards.
+  cl-10-18 [auto 1.00 para 1.3.2#5] -> 1.3.2f
+      Candidates should understand how record locking prevents the overriding of data, and understand how record locking takes place.
+
+## Topic 11: Networks  -> 1.3.3
+  cl-11-01 [auto 1.00 para 1.3.3#0] -> 1.3.3a
+      Candidates need to understand the definition and purpose of a network.
+  cl-11-02 [auto 1.00 para 1.3.3#1] -> 1.3.3a
+      Candidates need to understand the purpose of, and importance of using, protocols.
+  cl-11-03 [auto 1.00 para 1.3.3#1] -> 1.3.3a
+      Candidates should be able to discuss examples of protocols that may be used in a network/ the internet (but will not be asked to recall information ab
+  cl-11-04 [auto 1.00 para 1.3.3#1] -> 1.3.3a
+      Candidates should understand the term standard, and the purpose and need for standards in a network (or any situation where data is transferred).
+  cl-11-05 [auto 1.00 para 1.3.3#2] -> 1.3.3b
+      Candidates need to understand the purpose and benefits of layering protocols, particularly within the TCP/IP stack. Candidates need to know the differ
+  cl-11-06 [auto 1.00 para 1.3.3#2] -> 1.3.3b
+      Candidates need to understand how data is transmitted on the Internet, the use of IP addresses and packets in the transfer of data. (NB: Candidates ar
+  cl-11-07 [auto 1.00 para 1.3.3#3] -> 1.3.3b
+      Candidates are expected to understand the terms LAN and WAN.
+  cl-11-08 [auto 0.94 para 1.3.3#4] -> 1.3.3b
+      Candidates need to understand how the Domain Name System is used to find the IP address of a URL.
+  cl-11-09 [auto 1.00 para 1.3.3#5] -> 1.3.3b
+      Candidates need to understand the purpose, function, benefits and drawbacks of both packet and circuit switching.
+  cl-11-10 [auto 1.00 para 1.3.3#8] -> 1.3.3e
+      Candidates need to understand the difference between a client-server and peer-to-peer network.
+  cl-11-11 [auto 1.00 para 1.3.3#9] -> 1.3.3e
+      Candidates need to know the benefits and drawbacks of each type of network and be able to recommend one for a given scenario.
+  cl-11-12 [auto 1.00 para 1.3.3#6] -> 1.3.3c
+      Candidates need to understand that there are a range of security issues and threats involved with networked computers.
+  cl-11-13 [auto 1.00 para 1.3.3#6] -> 1.3.3c
+      Candidates need to be aware of threats such as hackers, viruses, unauthorised access, denial of service, spyware, SQL injection, phishing and pharming
+  cl-11-14 [auto 1.00 para 1.3.3#6] -> 1.3.3c
+      Candidates need to know about ways of minimising, or preventing these threats for example firewalls, secure passwords, anti-virus, anti-spyware etc.
+  cl-11-15 [auto 1.00 para 1.3.3#7] -> 1.3.3d
+      Candidates need to have knowledge of the hardware required to connect to and/or build a network (e.g. modem, router, cable, NIC, Wireless Access Point
+  cl-11-16 [auto 1.00 para 1.3.3#7] -> 1.3.3d
+      Candidates need to understand the purpose of the hardware, but are not required to understand how they physically work.
+
+## Topic 12: Web technologies  -> 1.3.4
+  cl-12-01 [auto 1.00 para 1.3.4#0] -> 1.3.4a
+      Candidates need to understand the purpose of HTML, CSS and JavaScript.
+  cl-12-02 [override] -> 1.3.4a
+      Candidates need to know when each language/markup would be used, and what its purpose and function is.
+  cl-12-03 [auto 1.00 para 1.3.4#0] -> 1.3.4a
+      Candidates should have experience of writing webpages using HTML, CSS and JavaScript.
+  cl-12-04 [auto 1.00 para 1.3.4#0] -> 1.3.4a
+      Candidates need to be able to recognise the code in Appendix 5d, and be able to read, write, amend and interpret code using HTML, CSS and JavaScript.
+  cl-12-05 [auto 0.85 para 1.3.1#0  (CROSS-SUBTOPIC)] -> 1.3.1a
+      Candidates need to understand the need for compression (when transferring data over a network).
+  cl-12-06 [auto 1.00 para 1.3.1#0  (CROSS-SUBTOPIC)] -> 1.3.1a
+      Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type.
+  cl-12-07 [auto 1.00 para 1.3.1#0  (CROSS-SUBTOPIC)] -> 1.3.1a
+      Candidates need to be able to recommend a type of compression for a given scenario.
+  cl-12-08 [auto 1.00 para 1.3.4#1] -> 1.3.4b, 1.3.4c
+      Candidates should understand how and why search engine results are indexed. They should understand how PageRank ranks these results.
+  cl-12-09 [override] -> 1.3.4c
+      Candidates should understand how page rank works at a high level but are not expected to be able to code the algorithm.
+  cl-12-10 [auto 1.00 para 1.3.4#2] -> 1.3.4d
+      Candidates need to understand the difference between server and client side processing, and should be aware of examples (for example Javascript code v
+  cl-12-11 [auto 1.00 para 1.3.4#2] -> 1.3.4d
+      Candidates should be aware of the benefits and drawbacks of both types of processing.
+
+## Topic 13: Data types  -> 1.4.1
+  cl-13-01 [auto 1.00 para 1.4.1#0] -> 1.4.1a
+      Candidates need to have an understanding of programming data types such as integer, real, Boolean, character, string etc.
+  cl-13-02 [auto 1.00 para 1.4.1#0] -> 1.4.1a
+      Candidates need to be able to choose appropriate data types for a situation or given data.
+  cl-13-03 [auto 1.00 para 1.4.1#0] -> 1.4.1a
+      Candidates should have experience of programming solutions using these data types.
+  cl-13-04 [auto 0.93 para 1.4.1#0] -> 1.4.1a
+      Candidates should have knowledge of how to convert from one data type to another (casting).
+  cl-13-05 [auto 1.00 para 1.4.1#1] -> 1.4.1b
+      Candidates should understand how and why computers store data as binary, and that a binary number can have a variety of different interpretations depe
+  cl-13-06 [auto 1.00 para 1.4.1#2] -> 1.4.1b, 1.4.1f
+      Candidates should be able to convert positive whole numbers to binary and from binary to denary.
+  cl-13-07 [auto 1.00 para 1.4.1#3] -> 1.4.1c
+      Candidates should know how to store negative numbers using Sign and Magnitude and Two’s Complement.
+  cl-13-08 [auto 1.00 para 1.4.1#3] -> 1.4.1c
+      Candidates should be able to convert denary numbers to sign and magnitude, and two’s complement – and vice-versa.
+  cl-13-09 [auto 1.00 para 1.4.1#4] -> 1.4.1d
+      Candidates should be able to perform addition and subtraction on integer binary numbers. (These numbers could be positive or negative using two’s comp
+  cl-13-10 [override] -> 1.4.1e
+      Candidates need to have an understanding of the purpose and potential uses of hexadecimal for example where and why they are used instead of binary an
+  cl-13-11 [auto 1.00 para 1.4.1#5] -> 1.4.1e, 1.4.1f
+      Candidates should be able to convert denary numbers to hexadecimal and vice-versa and from binary to hexadecimal and vice-versa.
+  cl-13-12 [auto 1.00 para 1.4.1#6] -> 1.4.1g
+      Candidates should have an understanding of how (positive and negative) real numbers are represented in a binary floating-point representation, and sho
+  cl-13-13 [auto 1.00 para 1.4.1#7] -> 1.4.1g
+      Candidates should understand the need for normalised floating point numbers.
+  cl-13-14 [auto 1.00 para 1.4.1#7] -> 1.4.1g
+      Candidates should be able to normalise a floating point number.
+  cl-13-15 [auto 1.00 para 1.4.1#11] -> 1.4.1j
+      Candidates should have an understanding of how characters are represented in binary.
+  cl-13-16 [auto 1.00 para 1.4.1#11] -> 1.4.1j
+      Candidates should understand the need for a character set and how a computer makes use of a character set.
+  cl-13-17 [auto 0.89 para 1.4.1#11] -> 1.4.1j
+      Candidates should be aware of the ASCII and UNICODE character sets and be able to explain the differences between these and the benefits of each.
+  cl-13-18 [auto 1.00 para 1.4.1#11] -> 1.4.1j
+      Candidates should be able to use a character set, or part of a character set, to translate characters into binary and vice-versa. (Candidates are not 
+  cl-13-19 [auto 1.00 para 1.4.1#7] -> 1.4.1g
+      Candidates should be able to normalise a floating point number.
+  cl-13-20 [auto 1.00 para 1.4.1#8] -> 1.4.1h
+      Candidates should be able to perform addition and subtraction floating point arithmetic including addition and subtraction of both positive and negati
+  cl-13-21 [auto 1.00 para 1.4.1#9] -> 1.4.1i
+      Candidates should be able to perform right and left logical shifts.
+  cl-13-22 [auto 1.00 para 1.4.1#9] -> 1.4.1i
+      Candidates should understand the effect of right and left shifts on a binary numbers.
+  cl-13-23 [auto 1.00 para 1.4.1#10] -> 1.4.1i
+      Candidates should understand the purpose of using masks with bitwise operators, and should have experience of applying masks using AND, OR and XOR.
+
+## Topic 14: Data structures  -> 1.4.2
+  cl-14-01 [auto 1.00 para 1.4.2#0] -> 1.4.2a
+      Candidates should be able to describe what is meant by arrays (up to 3 dimensions), records, lists and tuples.
+  cl-14-02 [auto 1.00 para 1.4.2#0] -> 1.4.2a
+      Candidates are expected to be able recognise when they can be used and incorporate them in their programs to store data.
+  cl-14-03 [override] -> 1.4.2a
+      Candidates should have an understanding of the purpose and use of a record structure to store data of different data types in a program.
+  cl-14-04 [override] -> 1.4.2a
+      Candidates should have experience of using records to store, search, manipulate and retrieve data.
+  cl-14-05 [override] -> 1.4.2a
+      Candidates should have an understanding of the purpose and use of a list to store data in a program.
+  cl-14-06 [override] -> 1.4.2a
+      Candidates should have experience of using lists to store, search, manipulate and retrieve data.
+  cl-14-07 [override] -> 1.4.2a
+      Candidates should have an understanding of the purpose and use of tuples to store data in a program.
+  cl-14-08 [override] -> 1.4.2a
+      Candidates should have experience of using tuples to store, search, manipulate and retrieve data.
+  cl-14-09 [auto 0.75 para 1.4.2#1] -> 1.4.2b
+      Candidates need to have an understanding of the behaviour of stacks and queues (i.e. LIFO and FIFO).
+  cl-14-10 [auto 1.00 para 1.4.2#1] -> 1.4.2b
+      Candidates need to have an understanding of the behaviour of linked-lists, graphs, stacks, queues, trees, binary search trees and hash tables.
+  cl-14-11 [auto 1.00 para 1.4.2#2] -> 1.4.2c
+      Candidates need to be able be aware of how the aforementioned data structures can be implemented. We would recommend a general understanding of these 
+  cl-14-12 [auto 1.00 para 1.4.2#3] -> 1.4.2c
+      Candidates should have experience of implementing these structures in a variety of contexts, for example through a procedural program, through a diffe
+  cl-14-13 [auto 1.00 para 1.4.2#3] -> 1.4.2c
+      Candidates need to be able to read, trace and write code to implement features of these data structures. (Again we would recommend a general understan
+
+## Topic 15: Boolean algebra  -> 1.4.3
+  cl-15-01 [auto 1.00 para 1.4.3#0] -> 1.4.3a, 1.4.3d
+      Candidates should be familiar with AND, OR, NOT and XOR. Candidates should be familiar with the logic of each Boolean operator, and the truth tables.
+  cl-15-02 [auto 0.93 para 1.4.3#0] -> 1.4.3a, 1.4.3d
+      Candidates should be able to construct logic gate diagrams from a Boolean expression and viceversa.
+  cl-15-03 [auto 1.00 para 1.4.3#0] -> 1.4.3a, 1.4.3d
+      Candidates should be able to construct truth tables from Boolean expressions and logic gate diagrams.
+  cl-15-04 [auto 1.00 para 1.4.3#1] -> 1.4.3b
+      Candidates should have an understanding that Boolean expressions can be simplified and should have experience of simplifying expressions using Karnaug
+  cl-15-05 [auto 1.00 para 1.4.3#1] -> 1.4.3b
+      Candidates should be able to create, complete and interpret Karnaugh maps to simplify Boolean expressions.
+  cl-15-06 [auto 1.00 para 1.4.3#2] -> 1.4.3c
+      Candidates should be aware of the given De Morgan’s laws and should be able to apply these to a Boolean statement.
+  cl-15-07 [auto 1.00 para 1.4.3#2] -> 1.4.3c
+      Candidates should have experience of manipulating and simplifying Boolean statements using these rules of distribution, commutation, association and d
+  cl-15-08 [auto 1.00 para 1.4.3#3] -> 1.4.3e
+      Candidates need to understand the purpose and principles of D type flip flops and how and where they are used in a computer. They should be able to re
+  cl-15-09 [auto 1.00 para 1.4.3#3] -> 1.4.3e
+      Candidates are not expected to memorise the logic gates that make up a D-type flip flop.
+  cl-15-10 [auto 1.00 para 1.4.3#4] -> 1.4.3e
+      Candidates need to understand the purpose and function of an adder circuit, and the difference between a half and full adder. They should be able to r
+
+## Topic 16: Computer related legislation  -> 1.5.1
+  cl-16-01 [auto 1.00 para 1.5.1#0] -> 1.5.1a, 1.5.1b, 1.5.1c, 1.5.1d
+      Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.
+  cl-16-02 [auto 1.00 para 1.5.1#1] -> 1.5.1a
+      Candidates should be familiar with the purpose and role of the Data Protection Act.
+  cl-16-03 [auto 1.00 para 1.5.1#1] -> 1.5.1a
+      Candidates will need to understand the different rules that are within the DPA and how these impact the use of computers and the storage of data by or
+  cl-16-04 [auto 1.00 para 1.5.1#2] -> 1.5.1b
+      Candidates need to understand the purpose and principles of the Computer Misuse Act, including the actions that it prohibits.
+  cl-16-05 [auto 1.00 para 1.5.1#3] -> 1.5.1c
+      Candidates need to understand the purpose and principles of the Copyright and Patents Act, including the actions that it prohibits.
+  cl-16-06 [auto 1.00 para 1.5.1#4] -> 1.5.1d
+      Candidates need to understand the purpose and principles of the Regulation of Investigatory Powers Act, and what this allows in interception and monit
+  cl-16-07 [auto 1.00 para 1.5.1#5] -> 1.5.1a, 1.5.1b, 1.5.1c, 1.5.1d
+      Candidates need to understand how the regulations impact organisations and the use of computers and electronic communication.
+
+## Topic 17: Ethical, moral & cultural issues  -> 1.5.2
+  cl-17-01 [auto 1.00 para 1.5.2#1] -> 1.5.2a
+      Candidates need to understand what is meant by moral, social, ethical and cultural issues in relation to the use of computers.
+  cl-17-02 [auto 1.00 para 1.5.2#2] -> 1.5.2a
+      Candidates need to understand how the use of computers, and the increasing use of computers in the work force has moral, social, ethical and cultural 
+  cl-17-03 [auto 1.00 para 1.5.2#3] -> 1.5.2a
+      Candidates need to understand how the use of computers to make decisions automatically has moral, social, ethical and cultural implications and risks 
+  cl-17-04 [auto 1.00 para 1.5.2#4] -> 1.5.2a
+      Candidates need to understand how the development of artificial intelligence has moral, social, ethical and cultural impacts on a variety of people.
+  cl-17-05 [auto 1.00 para 1.5.2#5] -> 1.5.2a
+      Candidates need to understand how the environmental effects of computers (such as disposal, energy use) have moral, social, ethical and cultural impli
+  cl-17-06 [auto 1.00 para 1.5.2#6] -> 1.5.2a
+      Candidates need to understand how the Internet and censorship on the Internet has moral, social, ethical and cultural implications.
+  cl-17-07 [auto 1.00 para 1.5.2#7] -> 1.5.2a
+      Candidates need to understand the moral, social, ethical and cultural implications of using computers to monitor behaviour (such as CCTV, tracking pho
+  cl-17-08 [auto 1.00 para 1.5.2#8] -> 1.5.2a
+      Candidates need to understand the moral, social, ethical and cultural implications of using computers to analyse personal information (such as the gat
+  cl-17-09 [auto 1.00 para 1.5.2#9] -> 1.5.2a
+      Candidates need to understand how different cultures impact on the use of and creation of computers and programs. For example languages make use of di
+  cl-17-10 [auto 1.00 para 1.5.2#9] -> 1.5.2a
+      Candidates should understand how colours have different meanings in different cultures for example red means danger in one culture, and luck in anothe
+  cl-17-11 [auto 1.00 para 1.5.2#9] -> 1.5.2a
+      Candidates need to consider how these will impact the creation of computer applications.
+
+## Topic 18: Thinking abstractly  -> 2.1.1
+  cl-18-01 [override] -> 2.1.1a, 2.1.1b
+      Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs.
+  cl-18-02 [override] -> 2.1.1b, 2.1.1d
+      Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario.
+  cl-18-03 [override] -> 2.1.1d
+      Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applie
+  cl-18-04 [override] -> 2.1.1c
+      Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction.
+  cl-18-05 [override] -> 2.1.1c
+      Candidates may be given a scenario/example and be asked how the abstraction differs from the reality.
+
+## Topic 19: Thinking ahead  -> 2.1.2
+  cl-19-01 [auto 0.95 para 2.1.2#0] -> 2.1.2a
+      Candidates need to understand that situations require inputs and output, and that outputs can be both digital or in a hard copy format.
+  cl-19-02 [auto 0.86 para 2.1.2#0] -> 2.1.2a
+      Candidates may be given a description, diagram, or code for a scenario, and they will need to demonstrate an understanding of what inputs and outputs 
+  cl-19-03 [auto 0.78 para 2.1.2#1] -> 2.1.2b
+      For a description of a program, candidates need to be able to determine what else they need to know before they can produce a solution, for example wh
+  cl-19-04 [override] -> 2.1.2d
+      Candidates need to understand the purpose, benefits and drawbacks of reusable program components.
+  cl-19-05 [override] -> 2.1.2d
+      Candidates should understand how these components can be reused, and for a given scenario/program they will need to be able to identify the subprogram
+  cl-19-06 [override] -> 2.1.2d
+      Candidates may then be required to write code for these reusable components.
+  cl-19-07 [auto 1.00 para 2.1.2#2] -> 2.1.2c
+      Candidates need to have an understanding of the purpose of caching in programming, and how it can be used when writing a program.
+  cl-19-08 [auto 1.00 para 2.1.2#2] -> 2.1.2c
+      Candidates need to be able to apply their knowledge of caching to a scenario to demonstrate an understanding of how it can be used.
+  cl-19-09 [auto 1.00 para 2.1.2#2] -> 2.1.2c
+      Candidates need to understand the benefits and drawbacks of using caching in a program.
+
+## Topic 20: Thinking procedurally  -> 2.1.3
+  cl-20-01 [auto 0.76 para 2.1.3#0] -> 2.1.3a, 2.1.3b
+      Candidates need to be able to deconstruct a program and identify the component parts that will make it up, for example listing the parts or completing
+  cl-20-02 [auto 1.00 para 2.1.3#0] -> 2.1.3a, 2.1.3b
+      Candidates may be given some component parts and be asked to complete these from a written description or pseudocode for a program.
+  cl-20-03 [auto 1.00 para 2.1.3#1] -> 2.1.3c
+      Candidates need to be able to identify the steps that will need to take place to complete the algorithm or program, and be able to write these in a su
+  cl-20-04 [auto 0.75 para 2.1.3#1] -> 2.1.3c
+      Candidates may need to write pseudocode or draw a flow chart to show this sequencing of steps.
+  cl-20-05 [auto 0.88 para 2.1.3#2] -> 2.1.3d
+      For a given scenario, candidates need to be able to identify where sub-procedures may be used, and then write appropriate pseudocode for these sub-pro
+  cl-20-06 [auto 1.00 para 2.1.3#3] -> 2.1.3d
+      Candidates may be given a structure diagram that they will need to interpret, or complete to identify these sub-procedures.
+
+## Topic 21: Thinking logically  -> 2.1.4
+  cl-21-01 [auto 0.91 para 2.1.4#0] -> 2.1.4a, 2.1.4b, 2.1.4c
+      Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place with
+  cl-21-02 [override] -> 2.1.4c
+      Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outco
+
+## Topic 22: Thinking concurrently (Full A’Level ONLY)  -> 2.1.5
+  cl-22-01 [auto 1.00 para 2.1.5#0] -> 2.1.5a
+      Candidates need to understand what is meant by thinking concurrently. They need to be able to work out which parts of a program can be developed to ta
+  cl-22-02 [auto 1.00 para 2.1.5#1] -> 2.1.5b
+      Candidates need to understand the benefits and trade offs that are brought from concurrent processing, and be able to apply these to a given scenario.
+
+## Topic 23: Programming techniques  -> 2.2.1
+  cl-23-01 [auto 1.00 para 2.2.1#0] -> 2.2.1a
+      Candidates need to be able to understand the constructs of sequence, iteration and branching.
+  cl-23-02 [auto 1.00 para 2.2.1#0] -> 2.2.1a
+      Candidates must be able to use these constructs independently of each other, and combine them to produce a solution. These include the selection state
+  cl-23-03 [auto 1.00 para 2.2.1#2] -> 2.2.1a
+      Candidates need to be able to read code using these constructs, create code using these constructs and trace code (for example using a trace table).
+  cl-23-04 [auto 1.00 para 2.2.1#3] -> 2.2.1c
+      Candidates need to understand the use and need for variables in a program, and must understand the difference, benefits and drawbacks of both global a
+  cl-23-05 [auto 0.96 para 2.2.1#4] -> 2.2.1c
+      Candidates must be able to recognise where local and global variables are used, and the impact that these have on the program, for example the amount 
+  cl-23-06 [auto 1.00 para 2.2.1#4] -> 2.2.1c
+      Candidates need to understand how a program using global variables can be changed to use local variables – and vice-versa.
+  cl-23-07 [auto 1.00 para 2.2.1#5] -> 2.2.1d
+      Candidates need to understand what is meant by modular code, and how this can be produced using functions and procedures.
+  cl-23-08 [auto 1.00 para 2.2.1#5] -> 2.2.1d
+      Candidates need to understand the differences between functions and procedures and how each is used within a program.
+  cl-23-09 [auto 1.00 para 2.2.1#5] -> 2.2.1d
+      Candidates need to be able to read, trace and write code using functions and procedures.
+  cl-23-10 [auto 1.00 para 2.2.1#5] -> 2.2.1d
+      Candidates need to understand the purpose and use of parameters within a program, and how they are used in functions and procedures.
+  cl-23-11 [auto 0.94 para 2.2.1#5] -> 2.2.1d
+      Candidates will need to be able to read, trace and write code that makes use of parameters.
+  cl-23-12 [auto 1.00 para 2.2.1#6] -> 2.2.1d
+      Candidates need to understand the difference between passing a parameter by value and by reference, they need to understand the benefits and drawbacks
+  cl-23-13 [auto 1.00 para 2.2.1#6] -> 2.2.1d
+      Candidates need to be able to read, trace and write code that makes use of parameters passed both by value and by reference.
+  cl-23-14 [auto 1.00 para 2.2.1#7] -> 2.2.1e
+      Candidates should have had experience of using an IDE to produce code.
+  cl-23-15 [auto 1.00 para 2.2.1#7] -> 2.2.1e
+      Candidates need to understand how an IDE can be used to produce code, and understand the range of features and tools that are within an IDE that can b
+  cl-23-16 [auto 1.00 para 2.2.1#1] -> 2.2.1b
+      Candidates need to have an understanding of the principle of recursion and the key features that produce a recursive algorithm such as a stopping cond
+  cl-23-17 [auto 1.00 para 2.2.1#1] -> 2.2.1b
+      Candidates need to have an understanding of the benefits and drawbacks of using both a recursive and iterative solution.
+  cl-23-18 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to understand the purpose of object-oriented code. They need to have an understanding of classes, objects, properties, attributes, met
+  cl-23-19 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to understand encapsulation and the use of get and set methods to access private properties.
+  cl-23-20 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to understand the purpose and principles of inheritance, super-classes, parent-classes and sub-classes.
+  cl-23-21 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to have an understanding of polymorphism and how it can be applied to classes.
+  cl-23-22 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to be able to read, trace and write code that makes use of these object-oriented techniques.
+  cl-23-23 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to be able to interpret class diagrams to produce class definitions.
+  cl-23-24 [auto 1.00 para 2.2.1#8] -> 2.2.1f
+      Candidates need to be able to identify where object-oriented programming can be used in a solution, and derive an object-oriented solution for a given
+
+## Topic 24: Computational methods  -> 2.2.2
+  cl-24-01 [auto 1.00 para 2.2.2#0] -> 2.2.2a
+      Candidates need to be able to determine if a problem can be solved using computational methods, such as decomposition, abstraction, calculations, stor
+  cl-24-02 [auto 1.00 para 2.2.2#1] -> 2.2.2b, 2.2.2c, 2.2.2e
+      Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution.
+  cl-24-03 [auto 1.00 para 2.2.2#2] -> 2.2.2d
+      Candidates need to understand how divide and conquer can be used within a task to split the task down into smaller tasks that are then tackled.
+  cl-24-04 [auto 1.00 para 2.2.2#2] -> 2.2.2d
+      Candidates also need to identify how tasks can be carried out simultaneously to produce a solution.
+  cl-24-05 [auto 1.00 para 2.2.2#3] -> 2.2.2f
+      Candidates need to understand the purpose of backtracking within an algorithm, for example when traversing a tree.
+  cl-24-06 [auto 1.00 para 2.2.2#3] -> 2.2.2f
+      Candidates need to be able to read, trace and write code that makes use of backtracking for a given scenario.
+  cl-24-07 [auto 1.00 para 2.2.2#4] -> 2.2.2f
+      Candidates need to understand what is meant by data mining, and how data mining is used in a situation.
+  cl-24-08 [auto 1.00 para 2.2.2#4] -> 2.2.2f
+      Candidates need to understand the complexities within data mining and how a program will search for and interrogate the data.
+  cl-24-09 [auto 1.00 para 2.2.2#5] -> 2.2.2f
+      Candidates need to understand what is meant by heuristics, and how they can be used within a program (for example the A* algorithm).
+  cl-24-10 [auto 1.00 para 2.2.2#5] -> 2.2.2f
+      Candidates should have some experience of programming a simple heuristic, and be able to apply their knowledge to a given scenario to explain the purp
+  cl-24-11 [auto 1.00 para 2.2.2#6] -> 2.2.2f
+      Candidates need to understand the principles, and purpose of performance modelling, and how it is used in the production of software.
+  cl-24-12 [auto 1.00 para 2.2.2#7] -> 2.2.2f
+      Candidates need to understand the principle of pipelining and how it is used within programming (for example the result from a process feeds into the 
+  cl-24-13 [auto 1.00 para 2.2.2#8] -> 2.2.2f
+      Candidates need to understand how visualisation can be used to create a mental model of what a program will do or work, and that from this they can pl
+
+## Topic 26: Algorithms  -> 2.3.1
+  cl-26-01 [auto 1.00 para 2.3.1#0] -> 2.3.1a
+      Candidates need to be able to write algorithms using flow charts, pseudocode and program code.
+  cl-26-02 [auto 1.00 para 2.3.1#0] -> 2.3.1a
+      Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in syntax.
+  cl-26-03 [auto 1.00 para 2.3.1#0] -> 2.3.1a
+      Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques.
+  cl-26-04 [override] -> 2.3.1b
+      Candidates need to understand that there are a range of possible solutions to a task, and that these algorithms may be different in respect to their e
+  cl-26-05 [override] -> 2.3.1b, 2.3.1d
+      Candidates need to be able to compare different algorithms for a given data set and demonstrate an understanding of which is more efficient in terms o
+  cl-26-06 [override] -> 2.3.1b, 2.3.1d
+      Candidates need to be able to compare the use of one or more algorithms against several different data sets, to determine how they will differ in thei
+  cl-26-07 [override] -> 2.3.1c
+      Candidates need to understand how the efficiency of an algorithm is measured using Big O notation.
+  cl-26-08 [override] -> 2.3.1c
+      Candidates need to understand the meaning of constant, linear, polynomial, exponential and logarithmic complexity. They need to be able to recognise a
+  cl-26-09 [override] -> 2.3.1c, 2.3.1d
+      Candidates need to know the best and worst case complexities for the searching and sorting methods.
+  cl-26-10 [override] -> 2.3.1c
+      Candidates need to understand the difference between best case, average case and worst case complexities and how and why these can differ for an algor
+  cl-26-11 [auto 1.00 para 2.3.1#3] -> 2.3.1e
+      Candidates need to have an understanding of the situations where queues, stacks, trees etc. can be used and be able to recommend and justify their use
+  cl-26-12 [auto 1.00 para 2.3.1#4] -> 2.3.1e
+      Candidates need to have an understanding of a stack as a dynamic data structure.
+  cl-26-13 [auto 1.00 para 2.3.1#4] -> 2.3.1e
+      Candidates need to be able to add and remove items to a stack.
+  cl-26-14 [auto 1.00 para 2.3.1#4] -> 2.3.1e
+      Candidates need to be able read, trace and write code to implement a stack structure (including adding and removing items).
+  cl-26-15 [auto 1.00 para 2.3.1#4] -> 2.3.1e
+      Candidates need to understand how a stack can be implemented using a different data structure, such as a static array.
+  cl-26-16 [auto 1.00 para 2.3.1#5] -> 2.3.1e
+      Candidates need to have an understanding of a queue as a dynamic data structure.
+  cl-26-17 [auto 1.00 para 2.3.1#5] -> 2.3.1e
+      Candidates need to be able to add and remove data to/from a queue.
+  cl-26-18 [auto 1.00 para 2.3.1#5] -> 2.3.1e
+      Candidates need to be able to read, trace and write code to implement a queue structure (including adding and removing items).
+  cl-26-19 [auto 1.00 para 2.3.1#5] -> 2.3.1e
+      Candidates need to understand how a queue can be implemented using a different data structure, such as a static array.
+  cl-26-20 [auto 1.00 para 2.3.1#6] -> 2.3.1e
+      Candidates need to have an understanding of a tree structure, both binary and multi branch trees.
+  cl-26-21 [auto 1.00 para 2.3.1#6] -> 2.3.1e
+      Candidates need to be able to add and remove data to/from a tree.
+  cl-26-22 [auto 1.00 para 2.3.1#6] -> 2.3.1e
+      Candidates need to be able to read, trace and write code to implement a tree structure (including adding and removing items).
+  cl-26-23 [auto 1.00 para 2.3.1#6] -> 2.3.1e
+      Candidates need to understand how a tree can be implemented using a different data structure, such as a linked list.
+  cl-26-24 [auto 1.00 para 2.3.1#7] -> 2.3.1e
+      Candidates need to understand why and how trees are traversed.
+  cl-26-25 [auto 1.00 para 2.3.1#7] -> 2.3.1e
+      Candidates need to understand how a depth-first (post-order) traversal works, and be able to perform the traversal on a tree.
+  cl-26-26 [auto 1.00 para 2.3.1#7] -> 2.3.1e
+      Candidates need to be able to read, trace and write code for a post-order traversal.
+  cl-26-27 [auto 1.00 para 2.3.1#7] -> 2.3.1e
+      Candidates need to understand how a breadth-first traversal works, and be able to perform the search on a tree.
+  cl-26-28 [auto 1.00 para 2.3.1#7] -> 2.3.1e
+      Candidates need to be able to read, trace and write code for a breadth-first traversal on a tree.
+  cl-26-29 [auto 1.00 para 2.3.1#0] -> 2.3.1a
+      Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques.
+  cl-26-30 [auto 1.00 para 2.3.1#8] -> 2.3.1e
+      Candidates need to have an understanding of a linked list as a dynamic data structure.
+  cl-26-31 [auto 1.00 para 2.3.1#8] -> 2.3.1e
+      Candidates need to be able to add, remove and search for data to/from/in a linked list.
+  cl-26-32 [auto 1.00 para 2.3.1#8] -> 2.3.1e
+      Candidates need to be able to read, trace and write code to implement a linked list (including adding, removing and search for items).
+  cl-26-33 [auto 1.00 para 2.3.1#9] -> 2.3.1f
+      Candidates need to have an understanding of the need for searching and sorting algorithms.
+  cl-26-34 [auto 1.00 para 2.3.1#9] -> 2.3.1f
+      Candidates need to have an understanding of pre-conditions required to perform a specific algorithm.
+  cl-26-35 [auto 1.00 para 2.3.1#10] -> 2.3.1f
+      Candidates need to understand how a bubble sort works and be able to perform a bubble sort on a set of data.
+  cl-26-36 [auto 1.00 para 2.3.1#10] -> 2.3.1f
+      Candidates need to be able to read, trace and write code to perform a bubble sort.
+  cl-26-37 [auto 1.00 para 2.3.1#11] -> 2.3.1f
+      Candidates need to understand how a merge sort works and be able to perform a merge sort on a set of data.
+  cl-26-38 [auto 1.00 para 2.3.1#11] -> 2.3.1f
+      Candidates need to be able to read, trace and write code to perform a merge sort.
+  cl-26-39 [auto 1.00 para 2.3.1#12] -> 2.3.1f
+      Candidate need to understand how a quick sort works and be able to perform a quick sort on a set of data.
+  cl-26-40 [auto 1.00 para 2.3.1#12] -> 2.3.1f
+      Candidates need to be able to read, trace and write code to perform a quick sort.
+  cl-26-41 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to understand how Dijkstra’s shortest path algorithm works.
+  cl-26-42 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to be able to calculate the shortest path in a graph or tree using Dijkstra’s shortest path algorithm.
+  cl-26-43 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to be able to read and trace code that performs Dijkstra’s shortest path algorithm.
+  cl-26-44 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to understand how the A* algorithm works.
+  cl-26-45 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to be able to calculate the shortest path in a graph or tree using the A* algorithm.
+  cl-26-46 [auto 1.00 para 2.3.1#13] -> 2.3.1f
+      Candidates need to be able to read and trace code that performs the A* algorithm.
+  cl-26-47 [auto 1.00 para 2.3.1#15] -> 2.3.1f
+      Candidates need to understand how a binary search works and be able to perform a binary search on a set of data.
+  cl-26-48 [auto 1.00 para 2.3.1#15] -> 2.3.1f
+      Candidates need to be able to read, trace and write code to perform a binary search.
+  cl-26-49 [auto 1.00 para 2.3.1#16] -> 2.3.1f
+      Candidates need to understand how a linear search works and be able to perform a linear search on a set of data.
+  cl-26-50 [auto 1.00 para 2.3.1#16] -> 2.3.1f
+      Candidates need to be able to read, trace and write code to perform a linear search.
+
+
+MERGED CHECKLIST ROWS
+Topic 8: rejoined ' assembly language. Candidates' + 'need to be familiar with the i'
+
+
+URL NOTES
+1.1.1: printed URL has no identical link target: https://youtu.be/UdHK35N-Kuo
+1.2.4: printed URL has no identical link target: http://www.teach-ict.com/as_as_computing/ocr/H447/F453/3_3_8/lowlevel/miniweb/index.htm
+1.2.4:     link target not printed as such:      http://www.teach- ict.com/as_as_computing/ocr/H447/F453/3_3_8/lowlevel/miniweb/index.htm
+1.4.1: printed URL has no identical link target: http://www.bbc.co.uk/education/guides/zjfgjxs/revision/5
+1.4.1:     link target not printed as such:      https://www.bbc.com/bitesize/guides/zjfgjxs/revision/5
+1.4.3: printed URL has no identical link target: https://youtu.be/uTUV-VnKAdM
+1.4.3: printed URL has no identical link target: https://youtu.be/hfIkW-D3hrM
+1.4.3: printed URL has no identical link target: https://youtu.be/osI68WZz_CM
+1.4.3: printed URL has no identical link target: https://youtu.be/KiU2PA3t8oc
+1.4.3: printed URL has no identical link target: https://youtu.be/x_wZjDSKHPk
+1.4.3:     link target not printed as such:      https://www.youtube.com/watch?v=uTUV-VnKAdM&feature=youtu.be
+1.4.3:     link target not printed as such:      https://www.youtube.com/watch?v=hfIkW-D3hrM&feature=youtu.be
+1.4.3:     link target not printed as such:      https://www.youtube.com/watch?v=osI68WZz_CM&feature=youtu.be
+1.4.3:     link target not printed as such:      https://www.youtube.com/watch?v=KiU2PA3t8oc&feature=youtu.be
+1.4.3:     link target not printed as such:      https://www.youtube.com/watch?v=x_wZjDSKHPk&feature=youtu.be
+2.1.1: printed URL has no identical link target: http://www.bbc.co.uk/education/guides/zttrcdm/revision
+2.1.1:     link target not printed as such:      https://www.bbc.com/bitesize/guides/zttrcdm/revision/1
+2.2.1: printed URL has no identical link target: https://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concepts
+2.2.1:     link target not printed as such:      https://www.codeproject.com/Articles/22769/Introduction-to-Object- Oriented-Programming-Concepts
+2.2.2: printed URL has no identical link target: https://youtu.be/rubdV99bbyo
+
+
+POINTS WITH NO CLARIFICATION PARAGRAPH OF THEIR OWN
+  1.1.1d: The use of pipelining in a processor to improve efficiency.
+  2.1.2d: The need for reusable program components.
+
+POINTS WITH NO CHECKLIST STATEMENT
+  1.1.1d: The use of pipelining in a processor to improve efficiency.
+  1.3.2c: Normalisation to 3NF.
