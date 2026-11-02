@@ -44,3 +44,17 @@ keywords, cards and tests. Good for understanding, not for marks.
 | Outer, left and right joins | Appendix 5d says there's no expectation to know them. |
 | BCNF and higher normal forms | The spec stops at 3NF. |
 | The PageRank formula and damping factor | "High level" only. |
+
+## Topic 1.4
+
+| Idea | Why it's here |
+|---|---|
+| Arithmetic shifts and rotations (circular shifts) | The guide only mentions logical shifts. |
+| Floating point underflow, precision vs range trade-off in detail, IEEE 754 | The spec uses its own two's complement mantissa/exponent format. |
+| Octal, binary-coded decimal (BCD), fixed point representation | Not on the spec. |
+| UTF-8 / UTF-16 / UTF-32 encodings by name | ASCII vs Unicode is enough. |
+| Absorption, identity and complement laws | Only De Morgan, distribution, association, commutation and double negation are listed. |
+| NAND, NOR and XNOR gates | Only AND, OR, NOT and XOR are in appendix 5d. |
+| SR and JK flip-flops, the gates inside a D-type | The guide says the D-type's gates needn't be memorised; other flip-flops aren't mentioned. |
+| Pre-order and in-order traversal | Only depth-first (post-order) and breadth-first are on the spec. |
+| Priority queues, heaps, sets, dictionaries/maps | Not on the spec. |

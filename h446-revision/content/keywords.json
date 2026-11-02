@@ -2316,7 +2316,8 @@
       ],
       "related": [
         "kw-hash-function",
-        "kw-encryption"
+        "kw-encryption",
+        "kw-hash-table"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -2331,7 +2332,9 @@
         "1.4.2b"
       ],
       "related": [
-        "kw-hashing"
+        "kw-hashing",
+        "kw-hash-table",
+        "kw-collision"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -3687,6 +3690,1186 @@
       ],
       "related": [
         "kw-client-side"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-primitive-data-type",
+      "term": "Primitive data type",
+      "acronym": null,
+      "definition": "A basic data type built into a programming language: integer, real (floating point), character, string or Boolean.",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "related": [
+        "kw-integer",
+        "kw-real",
+        "kw-character",
+        "kw-string",
+        "kw-boolean"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-integer",
+      "term": "Integer",
+      "acronym": null,
+      "definition": "A data type for whole numbers, positive or negative, with no fractional part.",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "related": [
+        "kw-real"
+      ],
+      "dont_confuse_with": "Real: numbers that can have a fractional part.",
+      "verified": false
+    },
+    {
+      "id": "kw-real",
+      "term": "Real",
+      "acronym": null,
+      "definition": "A data type for numbers that can have a fractional part, stored in floating point form; also called float.",
+      "spec_ids": [
+        "1.4.1a",
+        "1.4.1g"
+      ],
+      "related": [
+        "kw-integer",
+        "kw-floating-point"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-character",
+      "term": "Character",
+      "acronym": null,
+      "definition": "A data type for a single letter, digit, symbol or other character from a character set.",
+      "spec_ids": [
+        "1.4.1a",
+        "1.4.1j"
+      ],
+      "related": [
+        "kw-string",
+        "kw-character-set"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-string",
+      "term": "String",
+      "acronym": null,
+      "definition": "A data type for a sequence of characters, such as a name or a sentence.",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "related": [
+        "kw-character"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-boolean",
+      "term": "Boolean",
+      "acronym": null,
+      "definition": "A data type with only two possible values: true or false.",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "related": [
+        "kw-conjunction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-casting",
+      "term": "Casting",
+      "acronym": null,
+      "definition": "Converting a value from one data type to another, such as int(\"3\") returning the integer 3 or str(3) returning the string \"3\".",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "related": [
+        "kw-primitive-data-type"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-binary",
+      "term": "Binary",
+      "acronym": null,
+      "definition": "A base 2 number system that uses only the digits 0 and 1, which computers use to store all data.",
+      "spec_ids": [
+        "1.4.1b"
+      ],
+      "related": [
+        "kw-denary",
+        "kw-hexadecimal",
+        "kw-bit"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-denary",
+      "term": "Denary",
+      "acronym": null,
+      "definition": "The base 10 number system, using the digits 0 to 9; also called decimal.",
+      "spec_ids": [
+        "1.4.1b",
+        "1.4.1f"
+      ],
+      "related": [
+        "kw-binary",
+        "kw-hexadecimal"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-bit",
+      "term": "Bit",
+      "acronym": null,
+      "definition": "A single binary digit, 0 or 1; the smallest unit of data.",
+      "spec_ids": [
+        "1.4.1b"
+      ],
+      "related": [
+        "kw-byte",
+        "kw-nibble"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-nibble",
+      "term": "Nibble",
+      "acronym": null,
+      "definition": "A group of 4 bits, which can be shown as a single hexadecimal digit.",
+      "spec_ids": [
+        "1.4.1e",
+        "1.4.1f"
+      ],
+      "related": [
+        "kw-hexadecimal",
+        "kw-byte"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-byte",
+      "term": "Byte",
+      "acronym": null,
+      "definition": "A group of 8 bits.",
+      "spec_ids": [
+        "1.4.1b"
+      ],
+      "related": [
+        "kw-bit",
+        "kw-nibble"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-msb",
+      "term": "Most significant bit",
+      "acronym": "MSB",
+      "definition": "The leftmost bit of a binary number, with the largest place value; in signed representations it shows whether the number is negative.",
+      "spec_ids": [
+        "1.4.1c"
+      ],
+      "related": [
+        "kw-sign-magnitude",
+        "kw-twos-complement"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sign-magnitude",
+      "term": "Sign and magnitude",
+      "acronym": null,
+      "definition": "A way of representing signed binary integers in which the most significant bit is the sign (0 positive, 1 negative) and the remaining bits are the size of the number.",
+      "spec_ids": [
+        "1.4.1c"
+      ],
+      "related": [
+        "kw-twos-complement",
+        "kw-msb"
+      ],
+      "dont_confuse_with": "Two's complement: the MSB has a negative place value, so arithmetic works normally.",
+      "verified": false
+    },
+    {
+      "id": "kw-twos-complement",
+      "term": "Two's complement",
+      "acronym": null,
+      "definition": "A way of representing signed binary integers in which the most significant bit has a negative place value (−128 in 8 bits); to negate a number, invert all its bits and add 1.",
+      "spec_ids": [
+        "1.4.1c",
+        "1.4.1d",
+        "1.4.1g"
+      ],
+      "related": [
+        "kw-sign-magnitude",
+        "kw-msb"
+      ],
+      "dont_confuse_with": "Sign and magnitude: the MSB is only a sign flag.",
+      "verified": false
+    },
+    {
+      "id": "kw-overflow",
+      "term": "Overflow",
+      "acronym": null,
+      "definition": "When the result of a calculation is too large to be stored in the number of bits available.",
+      "spec_ids": [
+        "1.4.1d",
+        "1.4.1h"
+      ],
+      "related": [
+        "kw-twos-complement"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-hexadecimal",
+      "term": "Hexadecimal",
+      "acronym": null,
+      "definition": "A base 16 number system using the digits 0 to 9 and the letters A to F (10 to 15); each hex digit represents exactly 4 bits.",
+      "spec_ids": [
+        "1.4.1e",
+        "1.4.1f"
+      ],
+      "related": [
+        "kw-binary",
+        "kw-nibble",
+        "kw-denary"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-floating-point",
+      "term": "Floating point",
+      "acronym": null,
+      "definition": "A way of representing real numbers in binary as a mantissa and an exponent, where the value is mantissa × 2^exponent.",
+      "spec_ids": [
+        "1.4.1g",
+        "1.4.1h"
+      ],
+      "related": [
+        "kw-mantissa",
+        "kw-exponent",
+        "kw-normalisation-fp"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-mantissa",
+      "term": "Mantissa",
+      "acronym": null,
+      "definition": "The part of a floating point number that holds its significant digits, with the binary point after the first (sign) bit; in the exam it is in two's complement.",
+      "spec_ids": [
+        "1.4.1g"
+      ],
+      "related": [
+        "kw-exponent",
+        "kw-floating-point"
+      ],
+      "dont_confuse_with": "Exponent: says how far to move the binary point.",
+      "verified": false
+    },
+    {
+      "id": "kw-exponent",
+      "term": "Exponent",
+      "acronym": null,
+      "definition": "The part of a floating point number that says how many places to move the binary point (right if positive, left if negative); in the exam it is in two's complement.",
+      "spec_ids": [
+        "1.4.1g"
+      ],
+      "related": [
+        "kw-mantissa",
+        "kw-floating-point"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-normalisation-fp",
+      "term": "Normalisation (floating point)",
+      "acronym": null,
+      "definition": "Adjusting a floating point number so the mantissa has no unnecessary leading digits: it starts 01 for a positive number or 10 for a negative number, giving the maximum precision for the bits available.",
+      "spec_ids": [
+        "1.4.1g"
+      ],
+      "related": [
+        "kw-mantissa",
+        "kw-floating-point"
+      ],
+      "dont_confuse_with": "Normalisation (databases): organising tables to reduce redundancy; unrelated.",
+      "verified": false
+    },
+    {
+      "id": "kw-logical-shift",
+      "term": "Logical shift",
+      "acronym": null,
+      "definition": "Moving every bit in a binary number left or right by a number of places, filling the gaps with 0s; a left shift multiplies by 2 per place and a right shift divides by 2 per place (bits shifted off the end are lost).",
+      "spec_ids": [
+        "1.4.1i"
+      ],
+      "related": [
+        "kw-mask"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-mask",
+      "term": "Mask",
+      "acronym": null,
+      "definition": "A binary pattern combined with a value using a bitwise operator to change or test particular bits: AND with 0 clears a bit, OR with 1 sets a bit, and XOR with 1 flips a bit.",
+      "spec_ids": [
+        "1.4.1i"
+      ],
+      "related": [
+        "kw-logical-shift",
+        "kw-conjunction",
+        "kw-disjunction",
+        "kw-exclusive-disjunction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-character-set",
+      "term": "Character set",
+      "acronym": null,
+      "definition": "A defined list of characters that a computer can represent, each with a unique binary code.",
+      "spec_ids": [
+        "1.4.1j"
+      ],
+      "related": [
+        "kw-ascii",
+        "kw-unicode"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ascii",
+      "term": "American Standard Code for Information Interchange",
+      "acronym": "ASCII",
+      "definition": "A character set using 7 bits per character, so it represents 128 characters: English letters, digits, punctuation and control codes.",
+      "spec_ids": [
+        "1.4.1j"
+      ],
+      "related": [
+        "kw-unicode",
+        "kw-character-set"
+      ],
+      "dont_confuse_with": "Unicode: many more bits, so it covers every language.",
+      "verified": false
+    },
+    {
+      "id": "kw-unicode",
+      "term": "Unicode",
+      "acronym": null,
+      "definition": "A character set that uses up to 32 bits per character, so it can represent characters from all the world's writing systems as well as symbols and emoji; its first 128 codes match ASCII.",
+      "spec_ids": [
+        "1.4.1j",
+        "1.5.2a.9"
+      ],
+      "related": [
+        "kw-ascii",
+        "kw-character-set"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-array",
+      "term": "Array",
+      "acronym": null,
+      "definition": "A static data structure holding a fixed number of items of the same data type under one name, each accessed by its index (starting at 0 in OCR pseudocode).",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "related": [
+        "kw-multidimensional-array",
+        "kw-list"
+      ],
+      "dont_confuse_with": "List: can change size and can hold items of different types.",
+      "verified": false
+    },
+    {
+      "id": "kw-multidimensional-array",
+      "term": "Multi-dimensional array",
+      "acronym": null,
+      "definition": "An array with more than one index for each item, such as a 2D array (rows and columns, e.g. board[0,0]) or a 3D array.",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "related": [
+        "kw-array"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-record-ds",
+      "term": "Record (data structure)",
+      "acronym": null,
+      "definition": "A data structure that groups related items of data, called fields, which can be of different data types, under one name.",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "related": [
+        "kw-array",
+        "kw-tuple"
+      ],
+      "dont_confuse_with": "Array: every item is the same data type.",
+      "verified": false,
+      "source": "checklist"
+    },
+    {
+      "id": "kw-list",
+      "term": "List",
+      "acronym": null,
+      "definition": "A data structure holding an ordered collection of items that can grow or shrink, with items added, removed or changed while the program runs.",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "related": [
+        "kw-array",
+        "kw-tuple"
+      ],
+      "dont_confuse_with": "Tuple: ordered but can't be changed once created.",
+      "verified": false
+    },
+    {
+      "id": "kw-tuple",
+      "term": "Tuple",
+      "acronym": null,
+      "definition": "An ordered collection of items that is immutable: once it has been created, its items can't be changed, added or removed.",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "related": [
+        "kw-list",
+        "kw-record-ds"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-static-ds",
+      "term": "Static data structure",
+      "acronym": null,
+      "definition": "A data structure whose size is fixed when it is created, such as an array.",
+      "spec_ids": [
+        "1.4.2a",
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-dynamic-ds"
+      ],
+      "dont_confuse_with": "Dynamic data structure: can change size while the program runs.",
+      "verified": false
+    },
+    {
+      "id": "kw-dynamic-ds",
+      "term": "Dynamic data structure",
+      "acronym": null,
+      "definition": "A data structure that can grow and shrink while the program is running, using memory only as it is needed.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-static-ds",
+        "kw-linked-list"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-stack",
+      "term": "Stack",
+      "acronym": null,
+      "definition": "A last in, first out (LIFO) data structure: items are pushed onto and popped off the top only.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-lifo",
+        "kw-push",
+        "kw-pop",
+        "kw-queue"
+      ],
+      "dont_confuse_with": "Queue: first in, first out; added at the back, removed from the front.",
+      "verified": false
+    },
+    {
+      "id": "kw-lifo",
+      "term": "Last in, first out",
+      "acronym": "LIFO",
+      "definition": "The rule followed by a stack: the most recently added item is the first to be removed.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-stack",
+        "kw-fifo"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "source": "checklist"
+    },
+    {
+      "id": "kw-push",
+      "term": "Push",
+      "acronym": null,
+      "definition": "Adding an item to the top of a stack (after checking the stack isn't full).",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-pop",
+        "kw-stack"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pop",
+      "term": "Pop",
+      "acronym": null,
+      "definition": "Removing and returning the item at the top of a stack (after checking the stack isn't empty).",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-push",
+        "kw-peek",
+        "kw-stack"
+      ],
+      "dont_confuse_with": "Peek: returns the top item without removing it.",
+      "verified": false
+    },
+    {
+      "id": "kw-peek",
+      "term": "Peek",
+      "acronym": null,
+      "definition": "Returning the item at the top of a stack without removing it.",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-pop",
+        "kw-stack"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-queue",
+      "term": "Queue",
+      "acronym": null,
+      "definition": "A first in, first out (FIFO) data structure: items are added (enqueued) at the back and removed (dequeued) from the front.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-fifo",
+        "kw-enqueue",
+        "kw-dequeue",
+        "kw-circular-queue",
+        "kw-stack"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-fifo",
+      "term": "First in, first out",
+      "acronym": "FIFO",
+      "definition": "The rule followed by a queue: the item added earliest is the first to be removed.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-queue",
+        "kw-lifo"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "source": "checklist"
+    },
+    {
+      "id": "kw-enqueue",
+      "term": "Enqueue",
+      "acronym": null,
+      "definition": "Adding an item to the back of a queue (after checking the queue isn't full).",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-dequeue",
+        "kw-queue"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-dequeue",
+      "term": "Dequeue",
+      "acronym": null,
+      "definition": "Removing and returning the item at the front of a queue (after checking the queue isn't empty).",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-enqueue",
+        "kw-queue"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-circular-queue",
+      "term": "Circular queue",
+      "acronym": null,
+      "definition": "A queue stored in a fixed-size array in which the front and rear pointers wrap around to the start when they reach the end, so freed spaces are reused.",
+      "spec_ids": [
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-queue",
+        "kw-array"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-linked-list",
+      "term": "Linked list",
+      "acronym": null,
+      "definition": "A dynamic data structure made of nodes, each holding data and a pointer to the next node; a start pointer gives the first node.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-node",
+        "kw-pointer",
+        "kw-array"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-node",
+      "term": "Node",
+      "acronym": null,
+      "definition": "One item in a linked list, tree or graph, holding data and links (pointers or edges) to other items.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-pointer",
+        "kw-linked-list",
+        "kw-edge"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pointer",
+      "term": "Pointer",
+      "acronym": null,
+      "definition": "A value that holds the address or index of another item, such as the next node in a linked list.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "related": [
+        "kw-node",
+        "kw-linked-list"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-graph",
+      "term": "Graph",
+      "acronym": null,
+      "definition": "A data structure made of nodes (vertices) connected by edges, used to represent networks such as roads or social connections.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-edge",
+        "kw-directed-graph",
+        "kw-weighted-graph",
+        "kw-adjacency-matrix"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-edge",
+      "term": "Edge",
+      "acronym": null,
+      "definition": "A connection between two nodes in a graph or tree; also called an arc.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-graph",
+        "kw-node"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-directed-graph",
+      "term": "Directed graph",
+      "acronym": null,
+      "definition": "A graph whose edges have a direction, so they can only be followed one way.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-undirected-graph",
+        "kw-graph"
+      ],
+      "dont_confuse_with": "Undirected graph: edges can be followed both ways.",
+      "verified": false
+    },
+    {
+      "id": "kw-undirected-graph",
+      "term": "Undirected graph",
+      "acronym": null,
+      "definition": "A graph whose edges have no direction, so each can be followed both ways.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-directed-graph",
+        "kw-graph"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-weighted-graph",
+      "term": "Weighted graph",
+      "acronym": null,
+      "definition": "A graph in which each edge has a value (weight), such as a distance, time or cost.",
+      "spec_ids": [
+        "1.4.2b",
+        "2.3.1f"
+      ],
+      "related": [
+        "kw-graph"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-adjacency-matrix",
+      "term": "Adjacency matrix",
+      "acronym": null,
+      "definition": "A 2D array showing which nodes of a graph are connected, with a row and column for each node (holding the weight, or 1, where an edge exists).",
+      "spec_ids": [
+        "1.4.2c"
+      ],
+      "related": [
+        "kw-adjacency-list",
+        "kw-graph"
+      ],
+      "dont_confuse_with": "Adjacency list: stores only each node's neighbours.",
+      "verified": false
+    },
+    {
+      "id": "kw-adjacency-list",
+      "term": "Adjacency list",
+      "acronym": null,
+      "definition": "A way of storing a graph in which each node has a list of the nodes it is connected to (and the edge weights).",
+      "spec_ids": [
+        "1.4.2c"
+      ],
+      "related": [
+        "kw-adjacency-matrix",
+        "kw-graph"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-tree",
+      "term": "Tree",
+      "acronym": null,
+      "definition": "A data structure of nodes connected by edges in a hierarchy, with one root node at the top and no cycles; each node except the root has exactly one parent.",
+      "spec_ids": [
+        "1.4.2b",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-root",
+        "kw-leaf",
+        "kw-binary-tree",
+        "kw-graph"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-root",
+      "term": "Root node",
+      "acronym": null,
+      "definition": "The node at the top of a tree, which has no parent.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-tree",
+        "kw-leaf"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-leaf",
+      "term": "Leaf node",
+      "acronym": null,
+      "definition": "A node in a tree that has no children.",
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-tree",
+        "kw-root"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-binary-tree",
+      "term": "Binary tree",
+      "acronym": null,
+      "definition": "A tree in which each node has at most two children, a left child and a right child.",
+      "spec_ids": [
+        "1.4.2b",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-bst",
+        "kw-tree"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-bst",
+      "term": "Binary search tree",
+      "acronym": "BST",
+      "definition": "A binary tree in which every node's left subtree holds smaller values and its right subtree holds larger values, so it can be searched quickly.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c",
+        "2.3.1e"
+      ],
+      "related": [
+        "kw-binary-tree"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-hash-table",
+      "term": "Hash table",
+      "acronym": null,
+      "definition": "A data structure that stores each item at a position worked out by applying a hash function to its key, so items can be found in a single step if there are no collisions.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "related": [
+        "kw-hash-function",
+        "kw-collision"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-collision",
+      "term": "Collision",
+      "acronym": null,
+      "definition": "When a hash function gives the same position for two different keys; handled, for example, by placing the item in the next free position (linear probing) or chaining items together in a list.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "related": [
+        "kw-hash-table",
+        "kw-hash-function"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-conjunction",
+      "term": "Conjunction",
+      "acronym": "AND",
+      "definition": "The Boolean operation that is true only when both inputs are true; written A ∧ B.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-disjunction",
+        "kw-truth-table"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-disjunction",
+      "term": "Disjunction",
+      "acronym": "OR",
+      "definition": "The Boolean operation that is true when at least one input is true; written A ∨ B.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-conjunction",
+        "kw-exclusive-disjunction"
+      ],
+      "dont_confuse_with": "XOR: true when exactly one input is true, not both.",
+      "verified": false
+    },
+    {
+      "id": "kw-negation",
+      "term": "Negation",
+      "acronym": "NOT",
+      "definition": "The Boolean operation that reverses its input, so true becomes false and false becomes true; written ¬A.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-conjunction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-exclusive-disjunction",
+      "term": "Exclusive disjunction",
+      "acronym": "XOR",
+      "definition": "The Boolean operation that is true when exactly one of its two inputs is true; written A ⊻ B.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-disjunction",
+        "kw-half-adder"
+      ],
+      "dont_confuse_with": "OR: also true when both inputs are true.",
+      "verified": false
+    },
+    {
+      "id": "kw-equivalence",
+      "term": "Equivalence",
+      "acronym": null,
+      "definition": "The Boolean relation that is true when both sides have the same value; written ≡ (↔ is also accepted).",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-de-morgan"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-truth-table",
+      "term": "Truth table",
+      "acronym": null,
+      "definition": "A table showing the output of a logic circuit or Boolean expression for every combination of inputs (2^n rows for n inputs).",
+      "spec_ids": [
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-logic-gate"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-logic-gate",
+      "term": "Logic gate",
+      "acronym": null,
+      "definition": "An electronic component that performs a Boolean operation, such as AND, OR, NOT or XOR, on one or more inputs.",
+      "spec_ids": [
+        "1.4.3d"
+      ],
+      "related": [
+        "kw-truth-table"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-karnaugh-map",
+      "term": "Karnaugh map",
+      "acronym": null,
+      "definition": "A grid of a Boolean expression's outputs, with inputs labelled in Gray code order (00, 01, 11, 10), used to simplify the expression by grouping adjacent 1s.",
+      "spec_ids": [
+        "1.4.3b"
+      ],
+      "related": [
+        "kw-de-morgan"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-de-morgan",
+      "term": "De Morgan's laws",
+      "acronym": null,
+      "definition": "Rules for negating a combined expression: ¬(A ∧ B) ≡ ¬A ∨ ¬B, and ¬(A ∨ B) ≡ ¬A ∧ ¬B (break the bar, change the sign).",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-double-negation",
+        "kw-distribution"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-distribution",
+      "term": "Distribution",
+      "acronym": null,
+      "definition": "The Boolean rule A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C), and likewise A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C).",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-association",
+        "kw-commutation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-association",
+      "term": "Association",
+      "acronym": null,
+      "definition": "The Boolean rule that brackets can be regrouped when the same operator is used throughout: (A ∧ B) ∧ C ≡ A ∧ (B ∧ C), and the same for ∨.",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-commutation",
+        "kw-distribution"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-commutation",
+      "term": "Commutation",
+      "acronym": null,
+      "definition": "The Boolean rule that the order of inputs to ∧ or ∨ doesn't matter: A ∧ B ≡ B ∧ A, and A ∨ B ≡ B ∨ A.",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-association"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-double-negation",
+      "term": "Double negation",
+      "acronym": null,
+      "definition": "The Boolean rule that negating twice gives the original value: ¬¬A ≡ A.",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "related": [
+        "kw-de-morgan"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-d-type-flip-flop",
+      "term": "D-type flip-flop",
+      "acronym": null,
+      "definition": "A logic circuit that stores one bit: on the rising edge of the clock pulse its output takes the value of its data input, and it holds that value until the next clock pulse.",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "related": [
+        "kw-clock-speed"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-half-adder",
+      "term": "Half adder",
+      "acronym": null,
+      "definition": "A logic circuit that adds two bits, giving a sum (A XOR B) and a carry (A AND B).",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "related": [
+        "kw-full-adder",
+        "kw-exclusive-disjunction"
+      ],
+      "dont_confuse_with": "Full adder: also adds a carry in, so adders can be chained.",
+      "verified": false
+    },
+    {
+      "id": "kw-full-adder",
+      "term": "Full adder",
+      "acronym": null,
+      "definition": "A logic circuit that adds two bits and a carry in, giving a sum and a carry out; full adders can be chained to add binary numbers of any length.",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "related": [
+        "kw-half-adder"
       ],
       "dont_confuse_with": null,
       "verified": false

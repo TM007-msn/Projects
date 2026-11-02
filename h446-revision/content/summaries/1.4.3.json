@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.4.3",
+  "key_points": [
+    {
+      "id": "sum-1.4.3-01",
+      "text": "Exam notation: ∧ (AND, conjunction), ∨ (OR, disjunction), ¬ (NOT, negation), ⊻ (XOR, exclusive disjunction), ≡ (equivalence). You can answer using alternatives: AND or . for ∧; OR or + for ∨; NOT, ~ or an overbar for ¬; XOR or ⊕ for ⊻; ↔ for ≡.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-02",
+      "text": "Define problems in Boolean logic by turning conditions into variables: for example, \"the alarm sounds if the door is open and the system is armed, or the panic button is pressed\" becomes (D ∧ A) ∨ P.",
+      "spec_ids": [
+        "1.4.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-03",
+      "text": "Convert between Boolean expressions, logic gate diagrams and truth tables in any direction. A truth table with n inputs has 2^n rows; working through intermediate columns avoids mistakes.",
+      "spec_ids": [
+        "1.4.3a",
+        "1.4.3d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-04",
+      "text": "Karnaugh maps: label rows and columns in Gray code order (00, 01, 11, 10), fill in the outputs, then group the 1s in rectangles of 1, 2, 4 or 8, as large as possible. Groups can overlap and wrap around the edges. Each group gives one term, made of the variables that stay the same throughout it.",
+      "spec_ids": [
+        "1.4.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-05",
+      "text": "Rules for simplifying: De Morgan's laws, distribution, association, commutation and double negation. Show each step when you use them.",
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "verified": false,
+      "code": "De Morgan:      ¬(A ∧ B) ≡ ¬A ∨ ¬B      ¬(A ∨ B) ≡ ¬A ∧ ¬B\nDistribution:   A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C)\n                A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)\nAssociation:    (A ∧ B) ∧ C ≡ A ∧ (B ∧ C)\nCommutation:    A ∧ B ≡ B ∧ A\nDouble negation: ¬¬A ≡ A"
+    },
+    {
+      "id": "sum-1.4.3-06",
+      "text": "A D-type flip-flop stores one bit. When the clock pulse rises, the output (Q) takes the value of the data input (D); between pulses it holds that value whatever D does. Flip-flops are used to build registers and memory. You don't need to memorise the gates inside it.",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-07",
+      "text": "A half adder adds two bits: Sum = A ⊻ B, Carry = A ∧ B. It can't take a carry in, so it can only add the least significant bits.",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.3-08",
+      "text": "A full adder adds A, B and a carry in: Sum = A ⊻ B ⊻ Cin, Carry out = (A ∧ B) ∨ (Cin ∧ (A ⊻ B)). It can be built from two half adders and an OR gate, and full adders are chained (carry out to carry in) to add whole binary numbers.",
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-conjunction",
+    "kw-disjunction",
+    "kw-negation",
+    "kw-exclusive-disjunction",
+    "kw-equivalence",
+    "kw-truth-table",
+    "kw-logic-gate",
+    "kw-karnaugh-map",
+    "kw-de-morgan",
+    "kw-distribution",
+    "kw-association",
+    "kw-commutation",
+    "kw-double-negation",
+    "kw-d-type-flip-flop",
+    "kw-half-adder",
+    "kw-full-adder"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.4.3-01",
+      "text": "OR vs XOR: OR is true if either or both inputs are true; XOR is true only if exactly one is.",
+      "keyword_ids": [
+        "kw-disjunction",
+        "kw-exclusive-disjunction"
+      ],
+      "spec_ids": [
+        "1.4.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.3-02",
+      "text": "Half vs full adder: a half adder has two inputs (no carry in); a full adder has three (including carry in).",
+      "keyword_ids": [
+        "kw-half-adder",
+        "kw-full-adder"
+      ],
+      "spec_ids": [
+        "1.4.3e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.3-03",
+      "text": "Association vs commutation: association regroups brackets; commutation swaps the order of inputs.",
+      "keyword_ids": [
+        "kw-association",
+        "kw-commutation"
+      ],
+      "spec_ids": [
+        "1.4.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.3-04",
+      "text": "Karnaugh map order: columns go 00, 01, 11, 10 (Gray code), not 00, 01, 10, 11, so neighbouring cells differ by one bit.",
+      "keyword_ids": [
+        "kw-karnaugh-map"
+      ],
+      "spec_ids": [
+        "1.4.3b"
+      ],
+      "verified": false
+    }
+  ]
+}

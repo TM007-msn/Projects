@@ -3,6 +3,26 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 1.4
+
+**Not certain, check first**
+
+- **D-type flip-flop trigger.** Defined as changing on the **rising** edge of the clock pulse.
+  That's the usual A level description, and the guide only says "triggered by a clock pulse". If
+  your class notes say "falling edge" or just "on the clock pulse", accept those.
+- **Unicode "up to 32 bits".** True for UTF-32 and as the maximum for UTF-8; some books say "16
+  bits" (an older simplification).
+- **List vs array.** OCR doesn't define "list" precisely. I've followed the usual meaning (ordered,
+  can change size and contents); in Python, lists can also mix data types.
+- **Collision handling.** Linear probing and chaining are named as examples; the guide doesn't
+  list methods.
+
+**Orderings**
+
+- Floating point addition steps (equalise exponents → add mantissas → normalise) are a fixed
+  order.
+- Karnaugh map Gray code order (00, 01, 11, 10) is fixed.
+
 ## Topic 1.3
 
 **Not certain, check first**

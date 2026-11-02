@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.4.2",
+  "key_points": [
+    {
+      "id": "sum-1.4.2-01",
+      "text": "Arrays hold a fixed number of items of one type, indexed from 0 in OCR pseudocode, in up to 3 dimensions (e.g. array board[8,8]). Records group fields of different types. Lists are ordered and can change; tuples are ordered but immutable.",
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-02",
+      "text": "Static structures (arrays) have a fixed size: simple and fast to index, but space may be wasted or run out. Dynamic structures (linked lists, trees) grow and shrink as needed, but use extra memory for pointers and can't be indexed directly.",
+      "spec_ids": [
+        "1.4.2a",
+        "1.4.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-03",
+      "text": "Stack (LIFO): push adds to the top, pop removes from the top, peek looks at the top, using a top pointer. Check for full before pushing (overflow) and empty before popping (underflow). Uses: undo, storing return addresses for subroutine calls, backtracking.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false,
+      "code": "array stack[10]\ntop = -1\n\nprocedure push(item)\n    if top == 9 then\n        print(\"Stack full\")\n    else\n        top = top + 1\n        stack[top] = item\n    endif\nendprocedure"
+    },
+    {
+      "id": "sum-1.4.2-04",
+      "text": "Queue (FIFO): enqueue at the rear, dequeue from the front, using front and rear pointers. In an array, a circular queue wraps the pointers round so freed space is reused. Uses: print queues, keyboard buffers, breadth-first traversal.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-05",
+      "text": "Linked list: each node holds data and a pointer to the next node; a start pointer marks the first. To add or remove an item, change the pointers rather than moving data. When implemented in an array, a free-space pointer tracks unused nodes.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-06",
+      "text": "Graphs are nodes connected by edges, which may be directed and/or weighted. An adjacency matrix is quick to check for an edge but wastes space when there are few edges; an adjacency list saves space but is slower to check for a particular edge.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-07",
+      "text": "Trees have a root, branches and leaves, with no cycles. In a binary search tree, smaller values go to the left and larger values to the right: to add an item, compare from the root and go left or right until there's a free space.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.2-08",
+      "text": "Hash tables use a hash function on the key to work out where an item is stored, so lookups are very fast. When two keys hash to the same place (a collision), the item goes in the next free space or is chained in a list at that position.",
+      "spec_ids": [
+        "1.4.2b",
+        "1.4.2c"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-array",
+    "kw-multidimensional-array",
+    "kw-record-ds",
+    "kw-list",
+    "kw-tuple",
+    "kw-static-ds",
+    "kw-dynamic-ds",
+    "kw-stack",
+    "kw-lifo",
+    "kw-push",
+    "kw-pop",
+    "kw-peek",
+    "kw-queue",
+    "kw-fifo",
+    "kw-enqueue",
+    "kw-dequeue",
+    "kw-circular-queue",
+    "kw-linked-list",
+    "kw-node",
+    "kw-pointer",
+    "kw-graph",
+    "kw-edge",
+    "kw-directed-graph",
+    "kw-undirected-graph",
+    "kw-weighted-graph",
+    "kw-adjacency-matrix",
+    "kw-adjacency-list",
+    "kw-tree",
+    "kw-root",
+    "kw-leaf",
+    "kw-binary-tree",
+    "kw-bst",
+    "kw-hash-table",
+    "kw-collision"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.4.2-01",
+      "text": "Stack vs queue: a stack removes the newest item first (LIFO); a queue removes the oldest item first (FIFO).",
+      "keyword_ids": [
+        "kw-stack",
+        "kw-queue"
+      ],
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.2-02",
+      "text": "Array vs list: an array has a fixed size and one data type; a list can change size.",
+      "keyword_ids": [
+        "kw-array",
+        "kw-list"
+      ],
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.2-03",
+      "text": "List vs tuple: both are ordered, but a list can be changed and a tuple can't.",
+      "keyword_ids": [
+        "kw-list",
+        "kw-tuple"
+      ],
+      "spec_ids": [
+        "1.4.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.2-04",
+      "text": "Tree vs graph: a tree is a graph with a root, a hierarchy and no cycles; a general graph can have cycles and no root.",
+      "keyword_ids": [
+        "kw-tree",
+        "kw-graph"
+      ],
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.2-05",
+      "text": "Binary tree vs binary search tree: any binary tree has up to two children per node; a BST also keeps smaller values left and larger values right.",
+      "keyword_ids": [
+        "kw-binary-tree",
+        "kw-bst"
+      ],
+      "spec_ids": [
+        "1.4.2b"
+      ],
+      "verified": false
+    }
+  ]
+}

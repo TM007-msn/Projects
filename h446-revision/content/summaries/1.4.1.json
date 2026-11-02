@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.4.1",
+  "key_points": [
+    {
+      "id": "sum-1.4.1-01",
+      "text": "Primitive data types: integer (whole numbers), real/float (with a fractional part), character, string and Boolean. Choose the type that fits the data (for example, store a phone number as a string because it may start with 0 and isn't used in calculations). Casting converts between types: int(\"3\"), str(3), float(\"3.14\").",
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-02",
+      "text": "Computers store everything in binary because their switches have two states. The same bit pattern can mean different things (a number, a character, part of an image or sound) depending on how it is interpreted. To convert binary to denary, add up the place values (128, 64, 32, 16, 8, 4, 2, 1) wherever there is a 1.",
+      "spec_ids": [
+        "1.4.1b",
+        "1.4.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-03",
+      "text": "Negative numbers: sign and magnitude uses the MSB as a sign (8-bit range −127 to +127, with two zeros, and you can't just add two numbers). Two's complement gives the MSB a value of −128 (8-bit range −128 to +127); to negate, invert the bits and add 1. To subtract, add the two's complement of the second number; a result too big for the bits is an overflow.",
+      "spec_ids": [
+        "1.4.1c",
+        "1.4.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-04",
+      "text": "Hexadecimal is base 16 (0–9, A–F). Each hex digit is exactly one nibble (4 bits), so converting is easy: split binary into groups of 4 from the right. Hex is shorter and easier for people to read and remember than binary, with fewer mistakes, so it's used for things like colour codes and memory addresses.",
+      "spec_ids": [
+        "1.4.1e",
+        "1.4.1f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-05",
+      "text": "Floating point: value = mantissa × 2^exponent, with both in two's complement. Normalised numbers start 01 (positive) or 10 (negative), which gives the most precision for the bits available and one unique representation for each number. Example: mantissa 0.1010000, exponent 0011 (3): move the point 3 places right to get 0101.0000 = 5.",
+      "spec_ids": [
+        "1.4.1g"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-06",
+      "text": "Floating point addition and subtraction: make the exponents the same (adjust the smaller one and shift its mantissa), add the mantissas (to subtract, add the two's complement of the second mantissa), then normalise the result.",
+      "spec_ids": [
+        "1.4.1h"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.4.1-07",
+      "text": "Logical shifts move bits left (×2 per place) or right (÷2 per place), filling with 0s; bits that fall off the end are lost. Masks: AND with a mask keeps the bits where the mask is 1 and clears the rest; OR sets bits to 1; XOR flips bits.",
+      "spec_ids": [
+        "1.4.1i"
+      ],
+      "verified": false,
+      "code": "  10110110\nAND 00001111   (mask: keep the lower nibble)\n= 00000110"
+    },
+    {
+      "id": "sum-1.4.1-08",
+      "text": "A character set gives each character a unique binary code. ASCII uses 7 bits (128 characters, enough for English). Unicode uses up to 32 bits, so it covers all languages and symbols, but each character can take more storage. You don't need to memorise any codes, but you need to use a given table.",
+      "spec_ids": [
+        "1.4.1j"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-primitive-data-type",
+    "kw-integer",
+    "kw-real",
+    "kw-character",
+    "kw-string",
+    "kw-boolean",
+    "kw-casting",
+    "kw-binary",
+    "kw-denary",
+    "kw-bit",
+    "kw-nibble",
+    "kw-byte",
+    "kw-msb",
+    "kw-sign-magnitude",
+    "kw-twos-complement",
+    "kw-overflow",
+    "kw-hexadecimal",
+    "kw-floating-point",
+    "kw-mantissa",
+    "kw-exponent",
+    "kw-normalisation-fp",
+    "kw-logical-shift",
+    "kw-mask",
+    "kw-character-set",
+    "kw-ascii",
+    "kw-unicode"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.4.1-01",
+      "text": "Sign and magnitude vs two's complement: in sign and magnitude the MSB is just a sign flag; in two's complement it has a negative place value, so normal binary addition works.",
+      "keyword_ids": [
+        "kw-sign-magnitude",
+        "kw-twos-complement"
+      ],
+      "spec_ids": [
+        "1.4.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.1-02",
+      "text": "Mantissa vs exponent: the mantissa holds the digits; the exponent says where the binary point goes.",
+      "keyword_ids": [
+        "kw-mantissa",
+        "kw-exponent"
+      ],
+      "spec_ids": [
+        "1.4.1g"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.1-03",
+      "text": "Character vs string: a character is one symbol; a string is a sequence of characters.",
+      "keyword_ids": [
+        "kw-character",
+        "kw-string"
+      ],
+      "spec_ids": [
+        "1.4.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.4.1-04",
+      "text": "ASCII vs Unicode: ASCII is 7 bits and 128 characters; Unicode uses up to 32 bits and covers every language. Unicode's first 128 codes are the same as ASCII's.",
+      "keyword_ids": [
+        "kw-ascii",
+        "kw-unicode"
+      ],
+      "spec_ids": [
+        "1.4.1j"
+      ],
+      "verified": false
+    }
+  ]
+}
