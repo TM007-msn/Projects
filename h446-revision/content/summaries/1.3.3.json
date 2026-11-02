@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.3.3",
+  "key_points": [
+    {
+      "id": "sum-1.3.3-01",
+      "text": "Protocols are rules for communication; standards are agreed specifications. Both let hardware and software from different manufacturers work together. You can discuss example protocols but won't be asked to recall details of a specific one.",
+      "spec_ids": [
+        "1.3.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-02",
+      "text": "Protocol layering splits communication into layers, each doing one job and only talking to the layers next to it. Benefits: each layer can be developed and changed separately, and problems are easier to find.",
+      "spec_ids": [
+        "1.3.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-03",
+      "text": "The TCP/IP stack, top to bottom: application (the app's protocol, e.g. HTTP), transport (splits data into numbered packets, adds port numbers, re-sends lost packets), internet (adds IP addresses, routes packets), link (moves the data across the physical network). You don't need the OSI model.",
+      "spec_ids": [
+        "1.3.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-04",
+      "text": "DNS: when you enter a URL, a DNS server is asked for the domain's IP address. If it doesn't know, it asks other DNS servers. The IP address is returned and your browser contacts that server. LANs cover a small area on the organisation's own infrastructure; WANs cover a large area using third-party infrastructure.",
+      "spec_ids": [
+        "1.3.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-05",
+      "text": "Packet switching: packets take any available route and are reassembled in order; efficient use of the network and resilient to failures, but packets can arrive late or out of order. Circuit switching: a dedicated path for the whole communication; reliable and in order (good for real-time calls) but wastes capacity when the line is idle.",
+      "spec_ids": [
+        "1.3.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-06",
+      "text": "Threats include hackers and unauthorised access, viruses and spyware, denial of service, SQL injection, phishing and pharming. Protection includes firewalls, proxy servers, encryption, strong passwords, anti-virus and anti-spyware, and validating user input.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-07",
+      "text": "Network hardware: NIC (connects a device), switch (sends packets to the right device on the LAN), hub (sends to every device), router (forwards packets between networks), modem (converts digital data for telephone or cable lines), WAP (connects wireless devices), plus cables. You need their purpose, not how they work.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.3-08",
+      "text": "Client-server: central management, security and backups, but the server is expensive and is a single point of failure. Peer-to-peer: cheap and easy to set up, no single point of failure, but harder to manage and secure, and backups are each user's job.",
+      "spec_ids": [
+        "1.3.3e"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-network",
+    "kw-protocol",
+    "kw-standard",
+    "kw-protocol-layering",
+    "kw-tcp-ip-stack",
+    "kw-application-layer",
+    "kw-transport-layer",
+    "kw-internet-layer",
+    "kw-link-layer",
+    "kw-ip-address",
+    "kw-packet",
+    "kw-dns",
+    "kw-url",
+    "kw-lan",
+    "kw-wan",
+    "kw-packet-switching",
+    "kw-circuit-switching",
+    "kw-firewall",
+    "kw-proxy-server",
+    "kw-malware",
+    "kw-virus",
+    "kw-spyware",
+    "kw-dos",
+    "kw-sql-injection",
+    "kw-phishing",
+    "kw-pharming",
+    "kw-anti-malware",
+    "kw-nic",
+    "kw-switch",
+    "kw-hub",
+    "kw-router",
+    "kw-modem",
+    "kw-wap",
+    "kw-client-server",
+    "kw-peer-to-peer"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.3.3-01",
+      "text": "Protocol vs standard: a protocol is a set of rules for communication; a standard is any agreed specification (a protocol can become a standard).",
+      "keyword_ids": [
+        "kw-protocol",
+        "kw-standard"
+      ],
+      "spec_ids": [
+        "1.3.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.3-02",
+      "text": "Phishing vs pharming: phishing tricks you with a fake message; pharming sends you to a fake site even when you type the real address.",
+      "keyword_ids": [
+        "kw-phishing",
+        "kw-pharming"
+      ],
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.3-03",
+      "text": "Router vs switch: a router forwards packets between networks using IP addresses; a switch forwards them between devices on one network.",
+      "keyword_ids": [
+        "kw-router",
+        "kw-switch"
+      ],
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.3-04",
+      "text": "Packet vs circuit switching: packet switching shares routes between many communications; circuit switching reserves one path for one communication.",
+      "keyword_ids": [
+        "kw-packet-switching",
+        "kw-circuit-switching"
+      ],
+      "spec_ids": [
+        "1.3.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.3-05",
+      "text": "Firewall vs proxy server: a firewall filters traffic by rules; a proxy makes requests on your behalf (and can also filter).",
+      "keyword_ids": [
+        "kw-firewall",
+        "kw-proxy-server"
+      ],
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "verified": false
+    }
+  ]
+}

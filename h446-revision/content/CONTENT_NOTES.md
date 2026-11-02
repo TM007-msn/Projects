@@ -3,6 +3,30 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 1.3
+
+**Not certain, check first**
+
+- **SQL wildcards.** The spec says learners should know `*` and `%` as wildcards. I've used `*` for
+  "all fields" (`SELECT *`) and `%` inside `LIKE` patterns. Some databases (Microsoft Access) use
+  `*` inside `LIKE` too; the summary doesn't rely on that.
+- **PageRank detail.** The guide says "how PageRank works at a high level". I've described it in
+  words (number and importance of incoming links, influence shared across outgoing links) and left
+  the formula and damping factor out (see BEYOND_SPEC). If your class used the formula, it may
+  come up as an interpretation question.
+- **Secondary key** is defined the OCR way (an indexed non-primary field used for fast searching).
+  Some books use it to mean any candidate key that isn't the primary key.
+- **Redundancy in 1.3.2f** is taken to mean fault-tolerance redundancy, because it's listed with
+  transaction processing and record locking. Data redundancy (removed by normalisation) is a
+  separate keyword.
+- **XML** (1.3.2b) is checklist-only, tagged `"source": "checklist"`.
+
+**Orderings**
+
+- The TCP/IP stack order is fixed (application, transport, internet, link) and is safe for an
+  ordering item.
+- Normalisation steps (1NF → 2NF → 3NF) are fixed.
+
 ## Topic 1.2
 
 **Not certain, check first**

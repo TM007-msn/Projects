@@ -2124,6 +2124,1572 @@
       ],
       "dont_confuse_with": null,
       "verified": false
+    },
+    {
+      "id": "kw-compression",
+      "term": "Compression",
+      "acronym": null,
+      "definition": "Reducing the size of a file so it takes up less storage space and can be transferred faster, for example over the Internet.",
+      "spec_ids": [
+        "1.3.1a"
+      ],
+      "related": [
+        "kw-lossy",
+        "kw-lossless"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lossy",
+      "term": "Lossy compression",
+      "acronym": null,
+      "definition": "Compression that permanently removes some data, usually detail people are unlikely to notice, so the original file can't be exactly restored.",
+      "spec_ids": [
+        "1.3.1a"
+      ],
+      "related": [
+        "kw-lossless",
+        "kw-compression"
+      ],
+      "dont_confuse_with": "Lossless compression: the original can be rebuilt exactly.",
+      "verified": false
+    },
+    {
+      "id": "kw-lossless",
+      "term": "Lossless compression",
+      "acronym": null,
+      "definition": "Compression that reduces file size without losing any data, so the original file can be restored exactly.",
+      "spec_ids": [
+        "1.3.1a",
+        "1.3.1b"
+      ],
+      "related": [
+        "kw-lossy",
+        "kw-rle",
+        "kw-dictionary-coding"
+      ],
+      "dont_confuse_with": "Lossy compression: some data is removed for good.",
+      "verified": false
+    },
+    {
+      "id": "kw-rle",
+      "term": "Run length encoding",
+      "acronym": "RLE",
+      "definition": "Lossless compression that replaces a run of repeated values with one copy of the value and a count, for example AAAAABB becomes 5A2B.",
+      "spec_ids": [
+        "1.3.1b"
+      ],
+      "related": [
+        "kw-dictionary-coding",
+        "kw-lossless"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-dictionary-coding",
+      "term": "Dictionary coding",
+      "acronym": null,
+      "definition": "Lossless compression that replaces repeated entries (such as words or patterns) with a short unique code, storing a dictionary of codes so the file can be rebuilt.",
+      "spec_ids": [
+        "1.3.1b"
+      ],
+      "related": [
+        "kw-rle",
+        "kw-lossless"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-encryption",
+      "term": "Encryption",
+      "acronym": null,
+      "definition": "Scrambling data using an algorithm and a key so that it can't be understood by anyone who doesn't have the key to decrypt it.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-symmetric-encryption",
+        "kw-asymmetric-encryption",
+        "kw-hashing"
+      ],
+      "dont_confuse_with": "Hashing: one-way; a hash can't be turned back into the original data.",
+      "verified": false
+    },
+    {
+      "id": "kw-plaintext",
+      "term": "Plaintext",
+      "acronym": null,
+      "definition": "Data before it is encrypted, or after it has been decrypted.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-ciphertext"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ciphertext",
+      "term": "Ciphertext",
+      "acronym": null,
+      "definition": "Data after it has been encrypted.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-plaintext"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-symmetric-encryption",
+      "term": "Symmetric encryption",
+      "acronym": null,
+      "definition": "Encryption in which the same key is used to encrypt and decrypt, so the key must be shared securely between sender and receiver.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-asymmetric-encryption"
+      ],
+      "dont_confuse_with": "Asymmetric encryption: uses a pair of different keys.",
+      "verified": false
+    },
+    {
+      "id": "kw-asymmetric-encryption",
+      "term": "Asymmetric encryption",
+      "acronym": null,
+      "definition": "Encryption that uses a pair of keys: data encrypted with the receiver's public key can only be decrypted with the receiver's private key.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-public-key",
+        "kw-private-key",
+        "kw-symmetric-encryption"
+      ],
+      "dont_confuse_with": "Symmetric encryption: one shared key for both.",
+      "verified": false
+    },
+    {
+      "id": "kw-public-key",
+      "term": "Public key",
+      "acronym": null,
+      "definition": "The key in an asymmetric key pair that is shared openly and used by others to encrypt data for the key's owner.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-private-key",
+        "kw-asymmetric-encryption"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-private-key",
+      "term": "Private key",
+      "acronym": null,
+      "definition": "The key in an asymmetric key pair that is kept secret by its owner and used to decrypt data encrypted with the matching public key.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "related": [
+        "kw-public-key",
+        "kw-asymmetric-encryption"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-hashing",
+      "term": "Hashing",
+      "acronym": null,
+      "definition": "Applying a hash function to data to produce a fixed-size value; it is one-way, so the original data can't be worked out from the hash.",
+      "spec_ids": [
+        "1.3.1d"
+      ],
+      "related": [
+        "kw-hash-function",
+        "kw-encryption"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-hash-function",
+      "term": "Hash function",
+      "acronym": null,
+      "definition": "An algorithm that turns input data of any size into a fixed-size value (the hash), always giving the same hash for the same input.",
+      "spec_ids": [
+        "1.3.1d",
+        "1.4.2b"
+      ],
+      "related": [
+        "kw-hashing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-database",
+      "term": "Database",
+      "acronym": null,
+      "definition": "A structured, persistent store of data, organised so that it can be easily searched, sorted and updated.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-flat-file",
+        "kw-relational-database"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-flat-file",
+      "term": "Flat file database",
+      "acronym": null,
+      "definition": "A database that stores all its data in a single table.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-relational-database",
+        "kw-data-redundancy"
+      ],
+      "dont_confuse_with": "Relational database: data split across linked tables.",
+      "verified": false
+    },
+    {
+      "id": "kw-relational-database",
+      "term": "Relational database",
+      "acronym": null,
+      "definition": "A database that stores data in separate tables, one per entity, linked to each other by primary and foreign keys.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-flat-file",
+        "kw-foreign-key",
+        "kw-normalisation-db"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-db-table",
+      "term": "Table",
+      "acronym": null,
+      "definition": "A set of records about one type of entity in a database, arranged in rows (records) and columns (fields).",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-db-record",
+        "kw-field"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-db-record",
+      "term": "Record (database)",
+      "acronym": null,
+      "definition": "One row in a database table, holding all the data about one item.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-field",
+        "kw-db-table"
+      ],
+      "dont_confuse_with": "Field: one column, a single item of data in each record.",
+      "verified": false
+    },
+    {
+      "id": "kw-field",
+      "term": "Field",
+      "acronym": null,
+      "definition": "One column in a database table, holding a single item of data (an attribute) for each record.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-db-record",
+        "kw-db-table"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-entity",
+      "term": "Entity",
+      "acronym": null,
+      "definition": "A thing about which data is stored in a database, such as a customer or a product; each entity usually has its own table.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-erd",
+        "kw-db-table"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-primary-key",
+      "term": "Primary key",
+      "acronym": null,
+      "definition": "A field (or combination of fields) that uniquely identifies each record in a table.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-foreign-key",
+        "kw-secondary-key",
+        "kw-composite-key"
+      ],
+      "dont_confuse_with": "Foreign key: refers to the primary key of another table.",
+      "verified": false
+    },
+    {
+      "id": "kw-foreign-key",
+      "term": "Foreign key",
+      "acronym": null,
+      "definition": "A field in one table that is the primary key of another table, used to link the two tables.",
+      "spec_ids": [
+        "1.3.2a",
+        "1.3.2e"
+      ],
+      "related": [
+        "kw-primary-key",
+        "kw-referential-integrity"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-secondary-key",
+      "term": "Secondary key",
+      "acronym": null,
+      "definition": "A field other than the primary key that is indexed so records can be searched for or sorted by it quickly.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-primary-key",
+        "kw-index-db"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-composite-key",
+      "term": "Composite key",
+      "acronym": null,
+      "definition": "A primary key made up of two or more fields that together uniquely identify each record.",
+      "spec_ids": [
+        "1.3.2a",
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-primary-key",
+        "kw-2nf"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-erd",
+      "term": "Entity relationship diagram",
+      "acronym": "ERD",
+      "definition": "A diagram showing the entities in a database and the relationships between them: one-to-one, one-to-many or many-to-many.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-entity",
+        "kw-many-to-many"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-many-to-many",
+      "term": "Many-to-many relationship",
+      "acronym": null,
+      "definition": "A relationship in which each record in one table can link to many records in another and vice versa; it is implemented with a link table between the two.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-erd",
+        "kw-foreign-key"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-normalisation-db",
+      "term": "Normalisation (databases)",
+      "acronym": null,
+      "definition": "Organising a relational database into tables in a series of steps (1NF, 2NF, 3NF) to reduce data redundancy and avoid inconsistencies.",
+      "spec_ids": [
+        "1.3.2a",
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-1nf",
+        "kw-2nf",
+        "kw-3nf",
+        "kw-data-redundancy"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-1nf",
+      "term": "First normal form",
+      "acronym": "1NF",
+      "definition": "A table is in 1NF when every field holds a single (atomic) value, there are no repeating groups of fields, and each record has a unique primary key.",
+      "spec_ids": [
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-2nf",
+        "kw-normalisation-db"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-2nf",
+      "term": "Second normal form",
+      "acronym": "2NF",
+      "definition": "A table is in 2NF when it is in 1NF and has no partial dependencies: every non-key field depends on the whole primary key, not just part of a composite key.",
+      "spec_ids": [
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-1nf",
+        "kw-3nf",
+        "kw-composite-key"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-3nf",
+      "term": "Third normal form",
+      "acronym": "3NF",
+      "definition": "A table is in 3NF when it is in 2NF and has no transitive (non-key) dependencies: every non-key field depends only on the primary key.",
+      "spec_ids": [
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-2nf",
+        "kw-normalisation-db"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-data-redundancy",
+      "term": "Data redundancy",
+      "acronym": null,
+      "definition": "Unnecessary repetition of the same data in a database, which wastes space and can lead to inconsistent copies; normalisation removes it.",
+      "spec_ids": [
+        "1.3.2a",
+        "1.3.2c"
+      ],
+      "related": [
+        "kw-normalisation-db",
+        "kw-flat-file"
+      ],
+      "dont_confuse_with": "Redundancy (fault tolerance): deliberately keeping duplicate copies so the system survives a failure.",
+      "verified": false
+    },
+    {
+      "id": "kw-index-db",
+      "term": "Index (database)",
+      "acronym": null,
+      "definition": "A data structure that stores the position of each record by the value of a key field, so records can be found quickly without searching the whole table.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "related": [
+        "kw-secondary-key",
+        "kw-primary-key"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-qbe",
+      "term": "Query By Example",
+      "acronym": "QBE",
+      "definition": "A way of selecting data by filling in a visual grid with the fields, tables, criteria and sort order wanted, instead of writing SQL.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-sql"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ocr-capture",
+      "term": "Optical character recognition",
+      "acronym": "OCR",
+      "definition": "A method of capturing data by scanning printed or handwritten text and converting it into editable text.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-omr"
+      ],
+      "dont_confuse_with": "OMR: detects marks in set positions, such as multiple-choice answer sheets, rather than reading text.",
+      "verified": false
+    },
+    {
+      "id": "kw-omr",
+      "term": "Optical mark recognition",
+      "acronym": "OMR",
+      "definition": "A method of capturing data by detecting marks made in fixed positions on a form, such as a multiple-choice answer sheet or lottery ticket.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-ocr-capture"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-csv",
+      "term": "Comma separated values",
+      "acronym": "CSV",
+      "definition": "A plain text format for exchanging tabular data, with one record per line and fields separated by commas.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-json",
+        "kw-xml"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-json",
+      "term": "JavaScript Object Notation",
+      "acronym": "JSON",
+      "definition": "A plain text format for exchanging data as attribute-value pairs and arrays, easy for people to read and for programs to parse.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-csv",
+        "kw-xml"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-xml",
+      "term": "Extensible Markup Language",
+      "acronym": "XML",
+      "definition": "A plain text format for exchanging data in which each item is enclosed in descriptive, user-defined tags.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "related": [
+        "kw-json",
+        "kw-csv"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "source": "checklist"
+    },
+    {
+      "id": "kw-sql",
+      "term": "Structured Query Language",
+      "acronym": "SQL",
+      "definition": "A standard language used to create, query and change the data in relational databases.",
+      "spec_ids": [
+        "1.3.2b",
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-select",
+        "kw-qbe"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-select",
+      "term": "SELECT",
+      "acronym": null,
+      "definition": "SQL command that returns the chosen fields FROM one or more tables, optionally WHERE a condition is true; SELECTs can be nested.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-where",
+        "kw-sql-join"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-where",
+      "term": "WHERE",
+      "acronym": null,
+      "definition": "SQL clause that limits a command to the records meeting a condition, which can combine tests with AND and OR.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-select",
+        "kw-sql-like"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-like",
+      "term": "LIKE",
+      "acronym": null,
+      "definition": "SQL operator used in a WHERE clause to match a pattern containing wildcards, for example WHERE Surname LIKE \"Sm%\".",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-wildcard",
+        "kw-sql-where"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-wildcard",
+      "term": "Wildcard (SQL)",
+      "acronym": null,
+      "definition": "A character that stands for other characters in SQL: * selects all fields, and % matches any sequence of characters in a LIKE pattern.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-like"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-join",
+      "term": "JOIN",
+      "acronym": null,
+      "definition": "SQL clause that combines records from two tables where a field matches, such as a foreign key and the primary key it refers to (an inner join).",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-select",
+        "kw-foreign-key"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-insert",
+      "term": "INSERT",
+      "acronym": null,
+      "definition": "SQL command that adds a new record to a table: INSERT INTO table (fields) VALUES (values).",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-delete"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-delete",
+      "term": "DELETE",
+      "acronym": null,
+      "definition": "SQL command that removes the records meeting a condition from a table: DELETE FROM table WHERE condition.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-drop",
+        "kw-sql-insert"
+      ],
+      "dont_confuse_with": "DROP: removes the whole table, not just records.",
+      "verified": false
+    },
+    {
+      "id": "kw-sql-drop",
+      "term": "DROP",
+      "acronym": null,
+      "definition": "SQL command that deletes a whole table (or database), including its structure and all its data: DROP TABLE table.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "related": [
+        "kw-sql-delete"
+      ],
+      "dont_confuse_with": "DELETE: removes records but keeps the table.",
+      "verified": false
+    },
+    {
+      "id": "kw-referential-integrity",
+      "term": "Referential integrity",
+      "acronym": null,
+      "definition": "The rule that every foreign key value must match an existing primary key in the linked table, so there are no references to records that don't exist.",
+      "spec_ids": [
+        "1.3.2e"
+      ],
+      "related": [
+        "kw-foreign-key",
+        "kw-primary-key"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-transaction",
+      "term": "Transaction",
+      "acronym": null,
+      "definition": "A single logical operation on a database, possibly made up of several steps, that must be completed in full or not at all.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-acid",
+        "kw-transaction-processing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-transaction-processing",
+      "term": "Transaction processing",
+      "acronym": null,
+      "definition": "Handling database operations as transactions so the data stays correct even when many users change it at once or a failure happens part-way.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-transaction",
+        "kw-acid",
+        "kw-record-locking"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-acid",
+      "term": "ACID",
+      "acronym": null,
+      "definition": "The four properties that make transactions reliable: Atomicity, Consistency, Isolation and Durability.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-atomicity",
+        "kw-consistency",
+        "kw-isolation",
+        "kw-durability"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-atomicity",
+      "term": "Atomicity",
+      "acronym": null,
+      "definition": "The ACID property that a transaction is either completed in full or not at all; a part-finished transaction is rolled back.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-acid"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-consistency",
+      "term": "Consistency",
+      "acronym": null,
+      "definition": "The ACID property that a transaction takes the database from one valid state to another, never breaking its rules (such as referential integrity).",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-acid",
+        "kw-referential-integrity"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-isolation",
+      "term": "Isolation",
+      "acronym": null,
+      "definition": "The ACID property that transactions running at the same time don't affect each other; the result is the same as running them one after another.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-acid",
+        "kw-record-locking"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-durability",
+      "term": "Durability",
+      "acronym": null,
+      "definition": "The ACID property that once a transaction is completed, its changes are saved permanently and survive a system failure.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-acid"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-record-locking",
+      "term": "Record locking",
+      "acronym": null,
+      "definition": "Preventing other users from changing a record while one user is updating it, so that one update doesn't overwrite another.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-isolation",
+        "kw-transaction-processing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-redundancy-fault",
+      "term": "Redundancy (fault tolerance)",
+      "acronym": null,
+      "definition": "Keeping duplicate copies of data or hardware, often in different places, so the system keeps working and no data is lost if one part fails.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "related": [
+        "kw-durability"
+      ],
+      "dont_confuse_with": "Data redundancy: unwanted repetition of data, removed by normalisation.",
+      "verified": false
+    },
+    {
+      "id": "kw-network",
+      "term": "Network",
+      "acronym": null,
+      "definition": "Two or more computers or devices connected together so they can communicate and share resources.",
+      "spec_ids": [
+        "1.3.3a"
+      ],
+      "related": [
+        "kw-lan",
+        "kw-wan",
+        "kw-protocol"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-protocol",
+      "term": "Protocol",
+      "acronym": null,
+      "definition": "A set of rules that governs how data is transmitted and received between devices, such as its format, addressing and error checking.",
+      "spec_ids": [
+        "1.3.3a"
+      ],
+      "related": [
+        "kw-standard",
+        "kw-protocol-layering"
+      ],
+      "dont_confuse_with": "Standard: an agreed specification that many manufacturers follow so that different hardware and software work together.",
+      "verified": false
+    },
+    {
+      "id": "kw-standard",
+      "term": "Standard",
+      "acronym": null,
+      "definition": "An agreed specification (for hardware, software or data formats) that manufacturers and developers follow so that products from different companies work together.",
+      "spec_ids": [
+        "1.3.3a"
+      ],
+      "related": [
+        "kw-protocol"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-protocol-layering",
+      "term": "Protocol layering",
+      "acronym": null,
+      "definition": "Dividing network communication into layers, each with its own protocols that handle one part of the job and only interact with the layers directly above and below.",
+      "spec_ids": [
+        "1.3.3b",
+        "1.3.3b.3"
+      ],
+      "related": [
+        "kw-tcp-ip-stack",
+        "kw-protocol"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-tcp-ip-stack",
+      "term": "TCP/IP stack",
+      "acronym": null,
+      "definition": "The set of four protocol layers used on the Internet: application, transport, internet and link.",
+      "spec_ids": [
+        "1.3.3b",
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-application-layer",
+        "kw-transport-layer",
+        "kw-internet-layer",
+        "kw-link-layer"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-application-layer",
+      "term": "Application layer",
+      "acronym": null,
+      "definition": "The top layer of the TCP/IP stack: protocols used by applications to send and receive data, such as HTTP, SMTP and FTP.",
+      "spec_ids": [
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-transport-layer"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-transport-layer",
+      "term": "Transport layer",
+      "acronym": null,
+      "definition": "The TCP/IP layer that splits data into packets, numbers them, adds port numbers and handles error checking and re-sending of lost packets (TCP).",
+      "spec_ids": [
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-application-layer",
+        "kw-internet-layer",
+        "kw-packet"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-internet-layer",
+      "term": "Internet layer",
+      "acronym": null,
+      "definition": "The TCP/IP layer that adds source and destination IP addresses to each packet and routes packets across networks (IP).",
+      "spec_ids": [
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-ip-address",
+        "kw-router"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-link-layer",
+      "term": "Link layer",
+      "acronym": null,
+      "definition": "The bottom TCP/IP layer, which sends the data across the physical network between devices on the same network, using their hardware (MAC) addresses.",
+      "spec_ids": [
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-internet-layer",
+        "kw-nic"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ip-address",
+      "term": "IP address",
+      "acronym": null,
+      "definition": "A unique numerical address that identifies a device on a network, used to route packets to the right destination.",
+      "spec_ids": [
+        "1.3.3b.1"
+      ],
+      "related": [
+        "kw-dns",
+        "kw-internet-layer"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-packet",
+      "term": "Packet",
+      "acronym": null,
+      "definition": "A small unit of data sent across a network, made up of a header (including source and destination addresses and a sequence number), the payload and a trailer for error checking.",
+      "spec_ids": [
+        "1.3.3b",
+        "1.3.3b.5"
+      ],
+      "related": [
+        "kw-packet-switching"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-dns",
+      "term": "Domain Name System",
+      "acronym": "DNS",
+      "definition": "A system of servers that translates domain names (as in a URL) into IP addresses.",
+      "spec_ids": [
+        "1.3.3b.2"
+      ],
+      "related": [
+        "kw-ip-address",
+        "kw-url"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-url",
+      "term": "Uniform Resource Locator",
+      "acronym": "URL",
+      "definition": "The full address of a resource on the web, including the protocol and domain name, for example https://www.ocr.org.uk/index.html.",
+      "spec_ids": [
+        "1.3.3b.2",
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-dns"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lan",
+      "term": "Local Area Network",
+      "acronym": "LAN",
+      "definition": "A network covering a small geographical area, such as one building or site, where the organisation usually owns the infrastructure.",
+      "spec_ids": [
+        "1.3.3b.4"
+      ],
+      "related": [
+        "kw-wan"
+      ],
+      "dont_confuse_with": "WAN: covers a large area and usually uses infrastructure owned by third parties.",
+      "verified": false
+    },
+    {
+      "id": "kw-wan",
+      "term": "Wide Area Network",
+      "acronym": "WAN",
+      "definition": "A network covering a large geographical area, connecting LANs together using third-party infrastructure such as telephone lines or satellites; the Internet is the largest WAN.",
+      "spec_ids": [
+        "1.3.3b.4"
+      ],
+      "related": [
+        "kw-lan"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-packet-switching",
+      "term": "Packet switching",
+      "acronym": null,
+      "definition": "Sending data as packets that may each take a different route across the network and are put back in order at the destination.",
+      "spec_ids": [
+        "1.3.3b.5"
+      ],
+      "related": [
+        "kw-circuit-switching",
+        "kw-packet"
+      ],
+      "dont_confuse_with": "Circuit switching: a dedicated path is set up for the whole communication.",
+      "verified": false
+    },
+    {
+      "id": "kw-circuit-switching",
+      "term": "Circuit switching",
+      "acronym": null,
+      "definition": "Setting up a dedicated communication path between two devices for the whole of a communication, as in a traditional telephone call.",
+      "spec_ids": [
+        "1.3.3b.5"
+      ],
+      "related": [
+        "kw-packet-switching"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-firewall",
+      "term": "Firewall",
+      "acronym": null,
+      "definition": "Hardware or software that monitors traffic between networks and blocks packets that don't meet set rules, such as those from blocked IP addresses or ports.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-proxy-server"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-proxy-server",
+      "term": "Proxy server",
+      "acronym": null,
+      "definition": "A server that sits between a user's device and the Internet, making requests on the user's behalf; it hides the user's IP address and can filter and cache content.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-firewall"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-malware",
+      "term": "Malware",
+      "acronym": null,
+      "definition": "Software designed to cause harm or gain unauthorised access, such as viruses and spyware.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-virus",
+        "kw-spyware",
+        "kw-anti-malware"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-virus",
+      "term": "Virus",
+      "acronym": null,
+      "definition": "Malware that attaches itself to other files or programs and spreads when they are run or shared.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-malware"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-spyware",
+      "term": "Spyware",
+      "acronym": null,
+      "definition": "Malware that secretly monitors what a user does, such as recording keystrokes, and sends the information to a third party.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-malware"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-dos",
+      "term": "Denial of service attack",
+      "acronym": "DoS",
+      "definition": "An attack that floods a server or network with so many requests that legitimate users can't access it.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-firewall"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sql-injection",
+      "term": "SQL injection",
+      "acronym": null,
+      "definition": "An attack in which SQL code is typed into an input box on a website so that the database runs it, for example to reveal or delete data.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-sql"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-phishing",
+      "term": "Phishing",
+      "acronym": null,
+      "definition": "Sending fake messages, such as emails that appear to come from a bank, to trick people into giving away personal details like passwords.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-pharming"
+      ],
+      "dont_confuse_with": "Pharming: redirects users to a fake website even when they type the correct address.",
+      "verified": false
+    },
+    {
+      "id": "kw-pharming",
+      "term": "Pharming",
+      "acronym": null,
+      "definition": "Redirecting users from a genuine website to a fake one, for example by changing DNS records or the hosts file, so they enter their details into it.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-phishing",
+        "kw-dns"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-anti-malware",
+      "term": "Anti-malware software",
+      "acronym": null,
+      "definition": "Software, such as anti-virus and anti-spyware, that scans for, detects and removes malware.",
+      "spec_ids": [
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-malware"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-nic",
+      "term": "Network interface card",
+      "acronym": "NIC",
+      "definition": "Hardware that lets a device connect to a network; each NIC has a unique hardware (MAC) address.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-switch",
+        "kw-wap"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-switch",
+      "term": "Switch",
+      "acronym": null,
+      "definition": "A device that connects devices on a LAN and sends each packet only to the device it is addressed to.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-hub",
+        "kw-router"
+      ],
+      "dont_confuse_with": "Hub: sends every packet to every device.",
+      "verified": false
+    },
+    {
+      "id": "kw-hub",
+      "term": "Hub",
+      "acronym": null,
+      "definition": "A device that connects devices on a LAN and sends every packet it receives to all of them.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-switch"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-router",
+      "term": "Router",
+      "acronym": null,
+      "definition": "A device that forwards packets between different networks, choosing a route towards each packet's destination IP address.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-switch",
+        "kw-ip-address"
+      ],
+      "dont_confuse_with": "Switch: forwards packets within one network.",
+      "verified": false
+    },
+    {
+      "id": "kw-modem",
+      "term": "Modem",
+      "acronym": null,
+      "definition": "A device that converts digital data into signals that can be carried over a telephone or cable line, and converts them back.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-router"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-wap",
+      "term": "Wireless access point",
+      "acronym": "WAP",
+      "definition": "A device that lets wireless devices connect to a wired network.",
+      "spec_ids": [
+        "1.3.3d"
+      ],
+      "related": [
+        "kw-nic",
+        "kw-switch"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-client-server",
+      "term": "Client-server network",
+      "acronym": null,
+      "definition": "A network in which central servers provide resources and services (such as files, email or web pages) to client devices that request them.",
+      "spec_ids": [
+        "1.3.3e"
+      ],
+      "related": [
+        "kw-peer-to-peer"
+      ],
+      "dont_confuse_with": "Peer-to-peer: no central server; every device is equal.",
+      "verified": false
+    },
+    {
+      "id": "kw-peer-to-peer",
+      "term": "Peer-to-peer network",
+      "acronym": "P2P",
+      "definition": "A network with no central server, in which every device is equal and shares its resources directly with the others.",
+      "spec_ids": [
+        "1.3.3e"
+      ],
+      "related": [
+        "kw-client-server"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-html",
+      "term": "HyperText Markup Language",
+      "acronym": "HTML",
+      "definition": "The markup language that defines the structure and content of a web page using tags.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-css",
+        "kw-javascript"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-css",
+      "term": "Cascading Style Sheets",
+      "acronym": "CSS",
+      "definition": "A language that describes how HTML elements are presented, such as their colour, font and size.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-html",
+        "kw-css-class",
+        "kw-css-id"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-javascript",
+      "term": "JavaScript",
+      "acronym": null,
+      "definition": "A programming language used to make web pages interactive, usually run in the browser (client side).",
+      "spec_ids": [
+        "1.3.4a",
+        "1.3.4d"
+      ],
+      "related": [
+        "kw-html",
+        "kw-client-side"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-css-class",
+      "term": "CSS class",
+      "acronym": null,
+      "definition": "A named style, written with a full stop (such as .infoBox), that can be applied to any number of elements using class=\"infoBox\".",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-css-id"
+      ],
+      "dont_confuse_with": "CSS identifier: styles one unique element, written with #.",
+      "verified": false
+    },
+    {
+      "id": "kw-css-id",
+      "term": "CSS identifier",
+      "acronym": null,
+      "definition": "A style written with a hash (such as #menu) that applies to the one element with that id, as in id=\"menu\".",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-css-class"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-inline-css",
+      "term": "Inline style",
+      "acronym": null,
+      "definition": "CSS written directly in an element's style attribute, such as <h1 style=\"color:blue;\">, affecting only that element.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-external-css"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-external-css",
+      "term": "External style sheet",
+      "acronym": null,
+      "definition": "A separate .css file linked to pages with the <link> tag, so the same styles can be applied across a whole website.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "related": [
+        "kw-inline-css"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-search-engine-indexing",
+      "term": "Search engine indexing",
+      "acronym": null,
+      "definition": "Collecting and storing information about web pages, found by web crawlers, in an index so that search results can be returned quickly.",
+      "spec_ids": [
+        "1.3.4b"
+      ],
+      "related": [
+        "kw-web-crawler",
+        "kw-pagerank"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-web-crawler",
+      "term": "Web crawler",
+      "acronym": null,
+      "definition": "A program (also called a spider) that visits web pages and follows their links, collecting information about each page for a search engine's index.",
+      "spec_ids": [
+        "1.3.4b"
+      ],
+      "related": [
+        "kw-search-engine-indexing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pagerank",
+      "term": "PageRank",
+      "acronym": null,
+      "definition": "An algorithm that ranks web pages by how many pages link to them and how important those linking pages are.",
+      "spec_ids": [
+        "1.3.4c"
+      ],
+      "related": [
+        "kw-search-engine-indexing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-client-side",
+      "term": "Client-side processing",
+      "acronym": null,
+      "definition": "Processing carried out on the user's device, usually by JavaScript in the browser, for example checking a form before it is sent.",
+      "spec_ids": [
+        "1.3.4d"
+      ],
+      "related": [
+        "kw-server-side",
+        "kw-javascript"
+      ],
+      "dont_confuse_with": "Server-side processing: carried out on the web server before the page is sent.",
+      "verified": false
+    },
+    {
+      "id": "kw-server-side",
+      "term": "Server-side processing",
+      "acronym": null,
+      "definition": "Processing carried out on the web server, for example in PHP, such as searching a database and building the page that is sent back.",
+      "spec_ids": [
+        "1.3.4d"
+      ],
+      "related": [
+        "kw-client-side"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
     }
   ]
 }

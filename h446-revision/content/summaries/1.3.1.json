@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.3.1",
+  "key_points": [
+    {
+      "id": "sum-1.3.1-01",
+      "text": "Compression makes files smaller, so they use less storage and transfer faster over the Internet (less bandwidth, quicker downloads).",
+      "spec_ids": [
+        "1.3.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-02",
+      "text": "Lossy compression removes data permanently, giving much smaller files; suits images, audio and video where some loss isn't noticed. Lossless compression keeps all the data; essential for text, program code and anything that must be restored exactly. Recommend one by asking whether exact data matters.",
+      "spec_ids": [
+        "1.3.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-03",
+      "text": "Run length encoding stores a run of repeated values as the value and a count (AAAAABB → 5A2B). It works well on data with long runs, such as simple images, but can make data with few repeats bigger.",
+      "spec_ids": [
+        "1.3.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-04",
+      "text": "Dictionary coding replaces repeated entries with short codes and stores a dictionary to translate them back. The dictionary is stored with the file, so it only saves space when entries repeat enough.",
+      "spec_ids": [
+        "1.3.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-05",
+      "text": "Encryption keeps data confidential when stored or sent: intercepted ciphertext is useless without the key.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-06",
+      "text": "Symmetric encryption uses one shared key: fast, but the key has to be exchanged securely, and anyone who intercepts it can decrypt everything. Asymmetric encryption uses a public key to encrypt and a matching private key to decrypt, so no secret key ever needs sending, but it is slower.",
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.1-07",
+      "text": "Hashing is one-way. Passwords are stored as hashes: when a user logs in, their entry is hashed and compared with the stored hash, so the real password is never stored. Other uses: checking that data hasn't been changed, and finding data quickly in a hash table.",
+      "spec_ids": [
+        "1.3.1d"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-compression",
+    "kw-lossy",
+    "kw-lossless",
+    "kw-rle",
+    "kw-dictionary-coding",
+    "kw-encryption",
+    "kw-plaintext",
+    "kw-ciphertext",
+    "kw-symmetric-encryption",
+    "kw-asymmetric-encryption",
+    "kw-public-key",
+    "kw-private-key",
+    "kw-hashing",
+    "kw-hash-function"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.3.1-01",
+      "text": "Encryption vs hashing: encryption is two-way (decrypt with the key); hashing is one-way.",
+      "keyword_ids": [
+        "kw-encryption",
+        "kw-hashing"
+      ],
+      "spec_ids": [
+        "1.3.1c",
+        "1.3.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.1-02",
+      "text": "Compression vs encryption: compression makes data smaller; encryption makes it unreadable. Neither does the other's job.",
+      "keyword_ids": [
+        "kw-compression",
+        "kw-encryption"
+      ],
+      "spec_ids": [
+        "1.3.1a",
+        "1.3.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.1-03",
+      "text": "Public vs private key: data is encrypted with the receiver's public key and decrypted with the receiver's private key.",
+      "keyword_ids": [
+        "kw-public-key",
+        "kw-private-key"
+      ],
+      "spec_ids": [
+        "1.3.1c"
+      ],
+      "verified": false
+    }
+  ]
+}

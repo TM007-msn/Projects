@@ -35,6 +35,8 @@ US_SPELLINGS = [
     "recognize", "minimize", "maximize", "summarize", "analyze", "center", "modeling", "modeled",
     "favor", "labeled", "catalog", "fiber", "defense", "artifact",
 ]
+# Items that quote code where US spelling is correct (CSS's `color` property).
+SPELLING_EXEMPT = {"kw-inline-css", "sum-1.3.4-03"}
 US_RE = re.compile(r"\b(" + "|".join(re.escape(w) for w in US_SPELLINGS) + r")\b", re.I)
 
 
@@ -153,5 +155,7 @@ def test_british_spelling_in_prose():
     for s in SUMMARIES:
         texts += [(i["id"], i["text"]) for i in s["key_points"] + s["dont_confuse"]]
     for item_id, text in texts:
+        if item_id in SPELLING_EXEMPT:
+            continue
         m = US_RE.search(text)
         assert not m, f"{item_id}: US spelling '{m.group(0)}'"

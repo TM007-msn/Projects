@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.3.4",
+  "key_points": [
+    {
+      "id": "sum-1.3.4-01",
+      "text": "HTML gives a page its structure and content, CSS controls how it looks, and JavaScript makes it interactive. You need to read, write, amend and interpret code in all three.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.4-02",
+      "text": "HTML tags to know: <html>, <head>, <title>, <body>, <link> (links a CSS file), <h1>/<h2>/<h3>, <p>, <img> (src, alt, height, width), <a> (href), <div>, <form>, <input> (type=\"text\" with a name, or type=\"submit\"), <ol>, <ul>, <li>, <script>.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.4-03",
+      "text": "CSS can be inline (style attribute) or in an external style sheet, styling elements (h1), classes (.infoBox) or identifiers (#menu). Properties to know: background-color, border-color, border-style, border-width, color (named or hex), font-family, font-size, height, width.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "verified": false,
+      "code": "<h1 style=\"color:blue;\">Hello</h1>\n\nh1 { color: blue; }\n.infoBox { background-color: green; }\n#menu { background-color: #A2441B; }"
+    },
+    {
+      "id": "sum-1.3.4-04",
+      "text": "JavaScript in the exam uses the same structures as the pseudocode guide. Output is by changing an element's contents, writing to the document or an alert box; input comes from form values. It isn't used for OOP or file handling in questions.",
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "verified": false,
+      "code": "chosenElement = document.getElementById(\"example\");\nchosenElement.innerHTML = \"Hello World\";\ndocument.write(\"Hello World\");\nalert(\"Hello World\");"
+    },
+    {
+      "id": "sum-1.3.4-05",
+      "text": "Search engine indexing: web crawlers visit pages and follow links, recording information such as keywords and where they appear. The index is searched (not the live web) when someone searches, which is why results come back quickly.",
+      "spec_ids": [
+        "1.3.4b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.4-06",
+      "text": "PageRank ranks pages by the number and importance of the pages linking to them: a link from a highly ranked page counts for more, and each page's influence is shared between all its outgoing links. Search results are ordered partly by this rank. You don't need to code it.",
+      "spec_ids": [
+        "1.3.4c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.4-07",
+      "text": "Client-side processing (e.g. JavaScript) runs in the browser: quick feedback and less load on the server, but the code can be seen, changed or disabled, so it can't be trusted for security. Server-side processing (e.g. PHP) runs on the server: secure and can use the database, but every request adds load and needs a round trip.",
+      "spec_ids": [
+        "1.3.4d"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-html",
+    "kw-css",
+    "kw-javascript",
+    "kw-css-class",
+    "kw-css-id",
+    "kw-inline-css",
+    "kw-external-css",
+    "kw-search-engine-indexing",
+    "kw-web-crawler",
+    "kw-pagerank",
+    "kw-client-side",
+    "kw-server-side"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.3.4-01",
+      "text": "CSS class vs identifier: a class (.name) can style many elements; an identifier (#name) styles one unique element.",
+      "keyword_ids": [
+        "kw-css-class",
+        "kw-css-id"
+      ],
+      "spec_ids": [
+        "1.3.4a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.4-02",
+      "text": "Client-side vs server-side: client side runs on the user's device and can't be trusted for validation alone; server side runs on the server and is where secure checks and database access happen.",
+      "keyword_ids": [
+        "kw-client-side",
+        "kw-server-side"
+      ],
+      "spec_ids": [
+        "1.3.4d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.4-03",
+      "text": "Indexing vs PageRank: indexing finds pages that match the search; PageRank decides the order they're shown in.",
+      "keyword_ids": [
+        "kw-search-engine-indexing",
+        "kw-pagerank"
+      ],
+      "spec_ids": [
+        "1.3.4b",
+        "1.3.4c"
+      ],
+      "verified": false
+    }
+  ]
+}

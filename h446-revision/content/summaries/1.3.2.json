@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.3.2",
+  "key_points": [
+    {
+      "id": "sum-1.3.2-01",
+      "text": "A flat file database keeps everything in one table: simple, but data is repeated, which wastes space and leads to inconsistencies. A relational database splits data into linked tables, one per entity, reducing redundancy and making it easier to keep data consistent.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-02",
+      "text": "Keys: the primary key uniquely identifies each record; a foreign key links to another table's primary key; a secondary key is indexed for fast searching. An index stores where records are by key value, so searches don't need to check every record. ER diagrams show 1:1, 1:M and M:M relationships; an M:M relationship needs a link table.",
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-03",
+      "text": "Data is captured (forms, OCR, OMR, sensors), selected (QBE, SQL), managed (adding, editing, deleting, calculating) and exchanged (CSV, JSON, XML; electronically or on paper). Questions here are open: justify a suitable method for the scenario.",
+      "spec_ids": [
+        "1.3.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-04",
+      "text": "Normalisation: 1NF means atomic fields, no repeating groups and a primary key. 2NF also means no partial dependencies (non-key fields depend on the whole composite key). 3NF also means no transitive dependencies (non-key fields depend only on the key). Benefits: less redundancy, fewer inconsistencies, easier updates.",
+      "spec_ids": [
+        "1.3.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-05",
+      "text": "SQL you need: SELECT ... FROM ... WHERE (with AND, OR, LIKE and wildcards * and %), nested SELECTs, JOIN (inner join), INSERT INTO ... VALUES, DELETE FROM ... WHERE, and DROP TABLE.",
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "verified": false,
+      "code": "SELECT Name, Price FROM Product\nWHERE Price < 10 AND Category = \"Books\"\n\nSELECT Customer.Name, Orders.OrderDate\nFROM Customer JOIN Orders\nON Customer.CustomerID = Orders.CustomerID\n\nINSERT INTO Product (ProductID, Name, Price)\nVALUES (17, \"Pen\", 1.50)\n\nDELETE FROM Product WHERE Price = 0"
+    },
+    {
+      "id": "sum-1.3.2-06",
+      "text": "Referential integrity means every foreign key matches an existing primary key, so there are no orphan records (for example, an order for a customer who doesn't exist). The DBMS enforces it by refusing changes that would break it.",
+      "spec_ids": [
+        "1.3.2e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-07",
+      "text": "Transaction processing keeps data correct when many users work at once or something fails. ACID: Atomicity (all or nothing), Consistency (rules are never broken), Isolation (simultaneous transactions don't interfere), Durability (completed changes survive failures).",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.3.2-08",
+      "text": "Record locking stops two users updating the same record at the same time, so one change can't overwrite another; a locked record can be read but not changed until it is released. Redundancy (duplicate copies of data and hardware, often in different places) lets the system carry on if something fails.",
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-database",
+    "kw-flat-file",
+    "kw-relational-database",
+    "kw-db-table",
+    "kw-db-record",
+    "kw-field",
+    "kw-entity",
+    "kw-primary-key",
+    "kw-foreign-key",
+    "kw-secondary-key",
+    "kw-composite-key",
+    "kw-erd",
+    "kw-many-to-many",
+    "kw-normalisation-db",
+    "kw-1nf",
+    "kw-2nf",
+    "kw-3nf",
+    "kw-data-redundancy",
+    "kw-index-db",
+    "kw-qbe",
+    "kw-ocr-capture",
+    "kw-omr",
+    "kw-csv",
+    "kw-json",
+    "kw-xml",
+    "kw-sql",
+    "kw-sql-select",
+    "kw-sql-where",
+    "kw-sql-like",
+    "kw-sql-wildcard",
+    "kw-sql-join",
+    "kw-sql-insert",
+    "kw-sql-delete",
+    "kw-sql-drop",
+    "kw-referential-integrity",
+    "kw-transaction",
+    "kw-transaction-processing",
+    "kw-acid",
+    "kw-atomicity",
+    "kw-consistency",
+    "kw-isolation",
+    "kw-durability",
+    "kw-record-locking",
+    "kw-redundancy-fault"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.3.2-01",
+      "text": "Primary key vs foreign key: a primary key identifies records in its own table; a foreign key points to the primary key of another table.",
+      "keyword_ids": [
+        "kw-primary-key",
+        "kw-foreign-key"
+      ],
+      "spec_ids": [
+        "1.3.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.2-02",
+      "text": "Data redundancy vs redundancy (fault tolerance): data redundancy is unwanted repetition, removed by normalisation; redundancy in 1.3.2f is deliberate duplication to survive failures.",
+      "keyword_ids": [
+        "kw-data-redundancy",
+        "kw-redundancy-fault"
+      ],
+      "spec_ids": [
+        "1.3.2c",
+        "1.3.2f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.2-03",
+      "text": "DELETE vs DROP: DELETE removes records; DROP removes the whole table.",
+      "keyword_ids": [
+        "kw-sql-delete",
+        "kw-sql-drop"
+      ],
+      "spec_ids": [
+        "1.3.2d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.2-04",
+      "text": "2NF vs 3NF: 2NF removes dependencies on part of a composite key; 3NF removes dependencies between non-key fields.",
+      "keyword_ids": [
+        "kw-2nf",
+        "kw-3nf"
+      ],
+      "spec_ids": [
+        "1.3.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.3.2-05",
+      "text": "Atomicity vs durability: atomicity is all-or-nothing while a transaction runs; durability is about keeping the result once it has finished.",
+      "keyword_ids": [
+        "kw-atomicity",
+        "kw-durability"
+      ],
+      "spec_ids": [
+        "1.3.2f"
+      ],
+      "verified": false
+    }
+  ]
+}
