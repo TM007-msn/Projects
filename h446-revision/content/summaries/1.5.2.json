@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.5.2",
+  "key_points": [
+    {
+      "id": "sum-1.5.2-01",
+      "text": "Extended answers on this topic are marked by levels: discuss the moral, social (ethical) and cultural issues for the different people affected (users, employees, employers, organisations, society), keep every point tied to the scenario, and if asked for a judgement, give one and justify it. Keep up with technology news for examples.",
+      "spec_ids": [
+        "1.5.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-02",
+      "text": "Computers in the workforce: automation replaces some jobs (especially repetitive ones) and creates others (developing and maintaining systems), raises productivity and safety, and needs workers to retrain. Effects fall differently on employees, employers and communities.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.1"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-03",
+      "text": "Automated decision making and AI are fast, consistent and work at scale, but decisions are only as good as their data and rules (bias), can be hard to explain or challenge, and raise the question of who is responsible when they are wrong. More data has to be collected to make decisions accurate.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.2",
+        "1.5.2a.3"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-04",
+      "text": "Environmental effects: manufacturing uses scarce materials and energy, devices and data centres use a lot of electricity, and e-waste contains toxic materials, often shipped to poorer countries. On the other hand, technology can cut travel and paper use and help monitor the environment.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.4"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-05",
+      "text": "Censorship and the Internet: blocking content can protect people (e.g. children, or from illegal material), but it restricts freedom of speech and access to information, and who decides what is blocked differs between governments, organisations and cultures.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.5"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-06",
+      "text": "Monitoring behaviour (CCTV, phone and GPS tracking, email monitoring) and analysing personal information (such as medical records) can improve safety, crime detection, healthcare and services, but they reduce privacy, need personal data to be kept secure, and the data can be misused or used without proper consent.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.6",
+        "1.5.2a.7"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-07",
+      "text": "Piracy and offensive communications: copying is easy and cheap, which harms creators' income (and is illegal under the CDPA); online anonymity makes abuse and harassment easier, and policing it raises questions of free speech.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.8"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.2-08",
+      "text": "Cultural issues in design: languages use different characters (so Unicode is needed), some read right to left (so layouts must adapt), and colours carry different meanings in different cultures. Applications for different cultures need to take all of these into account.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.9"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-moral-issue",
+    "kw-ethical-issue",
+    "kw-cultural-issue",
+    "kw-automation",
+    "kw-automated-decision-making",
+    "kw-ai",
+    "kw-e-waste",
+    "kw-censorship",
+    "kw-surveillance",
+    "kw-piracy",
+    "kw-offensive-communications",
+    "kw-colour-paradigm"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.5.2-01",
+      "text": "Moral vs ethical: moral is about an individual's sense of right and wrong; ethical (social) is about the effect on society and its shared values.",
+      "keyword_ids": [
+        "kw-moral-issue",
+        "kw-ethical-issue"
+      ],
+      "spec_ids": [
+        "1.5.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.5.2-02",
+      "text": "Automation vs AI: automation is machines doing set tasks people used to do; AI is a system performing tasks that need intelligence, such as learning or recognising patterns.",
+      "keyword_ids": [
+        "kw-automation",
+        "kw-ai"
+      ],
+      "spec_ids": [
+        "1.5.2a.1",
+        "1.5.2a.3"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.5.2-03",
+      "text": "Censorship vs surveillance: censorship controls what you can see or publish; surveillance watches what you do.",
+      "keyword_ids": [
+        "kw-censorship",
+        "kw-surveillance"
+      ],
+      "spec_ids": [
+        "1.5.2a.5",
+        "1.5.2a.6"
+      ],
+      "verified": false
+    }
+  ]
+}

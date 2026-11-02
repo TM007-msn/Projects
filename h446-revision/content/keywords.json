@@ -4873,6 +4873,350 @@
       ],
       "dont_confuse_with": null,
       "verified": false
+    },
+    {
+      "id": "kw-dpa",
+      "term": "Data Protection Act 1998",
+      "acronym": "DPA",
+      "definition": "The law that controls how organisations collect, store and use personal data, through eight principles, and gives individuals rights over data held about them.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "related": [
+        "kw-personal-data",
+        "kw-data-subject",
+        "kw-data-controller"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-personal-data",
+      "term": "Personal data",
+      "acronym": null,
+      "definition": "Data about a living person who can be identified from it, such as their name, address or medical records.",
+      "spec_ids": [
+        "1.5.1a",
+        "1.5.2a.7"
+      ],
+      "related": [
+        "kw-dpa",
+        "kw-data-subject"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-data-subject",
+      "term": "Data subject",
+      "acronym": null,
+      "definition": "The living person whom personal data is about.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "related": [
+        "kw-data-controller",
+        "kw-personal-data"
+      ],
+      "dont_confuse_with": "Data controller: the organisation that decides how the data is used.",
+      "verified": false
+    },
+    {
+      "id": "kw-data-controller",
+      "term": "Data controller",
+      "acronym": null,
+      "definition": "The person or organisation that decides why and how personal data is processed, and is responsible for following the Data Protection Act.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "related": [
+        "kw-data-subject",
+        "kw-dpa"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-subject-access-request",
+      "term": "Subject access request",
+      "acronym": null,
+      "definition": "A request from a data subject to see the personal data an organisation holds about them, which the organisation must answer.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "related": [
+        "kw-data-subject",
+        "kw-dpa"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-cma",
+      "term": "Computer Misuse Act 1990",
+      "acronym": "CMA",
+      "definition": "The law that makes it illegal to access computer material without authorisation, to do so intending to commit further offences, or to make unauthorised changes to computer material.",
+      "spec_ids": [
+        "1.5.1b"
+      ],
+      "related": [
+        "kw-unauthorised-access"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-unauthorised-access",
+      "term": "Unauthorised access",
+      "acronym": null,
+      "definition": "Using a computer system or its data without permission, for example by guessing someone's password; an offence under the Computer Misuse Act.",
+      "spec_ids": [
+        "1.5.1b",
+        "1.3.3c"
+      ],
+      "related": [
+        "kw-cma"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-cdpa",
+      "term": "Copyright Design and Patents Act 1988",
+      "acronym": "CDPA",
+      "definition": "The law that protects the creators of original work, including software, from having it copied, distributed or adapted without permission, and protects inventions through patents.",
+      "spec_ids": [
+        "1.5.1c"
+      ],
+      "related": [
+        "kw-copyright",
+        "kw-patent",
+        "kw-piracy"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-copyright",
+      "term": "Copyright",
+      "acronym": null,
+      "definition": "The legal right of the creator of an original work, such as software, music or text, to control how it is copied and distributed; it applies automatically.",
+      "spec_ids": [
+        "1.5.1c"
+      ],
+      "related": [
+        "kw-patent",
+        "kw-cdpa"
+      ],
+      "dont_confuse_with": "Patent: protects an invention or new process and must be applied for.",
+      "verified": false
+    },
+    {
+      "id": "kw-patent",
+      "term": "Patent",
+      "acronym": null,
+      "definition": "A legal right, which must be applied for, that stops others making, using or selling a new invention for a set period.",
+      "spec_ids": [
+        "1.5.1c"
+      ],
+      "related": [
+        "kw-copyright",
+        "kw-cdpa"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ripa",
+      "term": "Regulation of Investigatory Powers Act 2000",
+      "acronym": "RIPA",
+      "definition": "The law that allows authorised public bodies, such as the police and security services, to intercept and monitor communications and require access to encrypted data.",
+      "spec_ids": [
+        "1.5.1d"
+      ],
+      "related": [
+        "kw-surveillance"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-moral-issue",
+      "term": "Moral issue",
+      "acronym": null,
+      "definition": "An issue about what an individual believes is right or wrong.",
+      "spec_ids": [
+        "1.5.2a"
+      ],
+      "related": [
+        "kw-ethical-issue",
+        "kw-cultural-issue"
+      ],
+      "dont_confuse_with": "Ethical (social) issue: what society as a whole considers right or wrong.",
+      "verified": false
+    },
+    {
+      "id": "kw-ethical-issue",
+      "term": "Ethical issue",
+      "acronym": null,
+      "definition": "An issue about what society as a whole considers right or wrong, and about the effects on society; the OCR guide pairs ethical with social.",
+      "spec_ids": [
+        "1.5.2a"
+      ],
+      "related": [
+        "kw-moral-issue",
+        "kw-cultural-issue"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-cultural-issue",
+      "term": "Cultural issue",
+      "acronym": null,
+      "definition": "An issue about how technology affects, or is affected by, the beliefs, customs, languages and practices of different groups of people.",
+      "spec_ids": [
+        "1.5.2a",
+        "1.5.2a.9"
+      ],
+      "related": [
+        "kw-moral-issue",
+        "kw-ethical-issue"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-automation",
+      "term": "Automation",
+      "acronym": null,
+      "definition": "Using computers and machines to carry out tasks that were previously done by people.",
+      "spec_ids": [
+        "1.5.2a.1"
+      ],
+      "related": [
+        "kw-automated-decision-making",
+        "kw-ai"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-automated-decision-making",
+      "term": "Automated decision making",
+      "acronym": null,
+      "definition": "Decisions made by a computer system from data and set rules or models, without a person making each decision, such as approving loans or flagging fraud.",
+      "spec_ids": [
+        "1.5.2a.2"
+      ],
+      "related": [
+        "kw-ai",
+        "kw-automation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ai",
+      "term": "Artificial intelligence",
+      "acronym": "AI",
+      "definition": "The ability of a computer system to carry out tasks that normally need human intelligence, such as recognising speech, making decisions or learning from data.",
+      "spec_ids": [
+        "1.5.2a.3"
+      ],
+      "related": [
+        "kw-automated-decision-making"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-e-waste",
+      "term": "E-waste",
+      "acronym": null,
+      "definition": "Discarded electronic devices, which contain toxic materials and valuable metals and must be recycled or disposed of safely.",
+      "spec_ids": [
+        "1.5.2a.4"
+      ],
+      "related": [
+        "kw-automation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-censorship",
+      "term": "Censorship",
+      "acronym": null,
+      "definition": "Controlling or blocking what information people can access or publish, for example a government or organisation filtering websites.",
+      "spec_ids": [
+        "1.5.2a.5"
+      ],
+      "related": [
+        "kw-surveillance"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-surveillance",
+      "term": "Surveillance",
+      "acronym": null,
+      "definition": "Monitoring people's behaviour, for example with CCTV, by tracking phone calls and GPS location, or by monitoring emails and Internet use.",
+      "spec_ids": [
+        "1.5.2a.6"
+      ],
+      "related": [
+        "kw-ripa",
+        "kw-censorship"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-piracy",
+      "term": "Piracy",
+      "acronym": null,
+      "definition": "Illegally copying or distributing copyrighted material, such as software, films or music.",
+      "spec_ids": [
+        "1.5.2a.8",
+        "1.5.1c"
+      ],
+      "related": [
+        "kw-cdpa",
+        "kw-copyright"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-offensive-communications",
+      "term": "Offensive communications",
+      "acronym": null,
+      "definition": "Messages or content that are abusive, threatening or grossly offensive, such as online harassment or trolling.",
+      "spec_ids": [
+        "1.5.2a.8"
+      ],
+      "related": [
+        "kw-censorship"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-colour-paradigm",
+      "term": "Colour paradigms",
+      "acronym": null,
+      "definition": "The meanings and associations colours carry, which differ between cultures; for example, red can mean danger in one culture and luck in another.",
+      "spec_ids": [
+        "1.5.2a.9"
+      ],
+      "related": [
+        "kw-cultural-issue",
+        "kw-unicode"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
     }
   ]
 }

@@ -3,6 +3,22 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 1.5
+
+**Not certain, check first**
+
+- **DPA 1998 principles** are paraphrased closely, not quoted from the Act. The eight principles
+  and their order are correct as far as I know.
+- **CMA offences**: the three original 1990 offences are given. The 2006 amendment (making or
+  supplying tools for misuse) and the penalties aren't included, because I can't be sure which
+  version your course expects.
+- **RIPA** is summarised at the level of the guide ("what this allows in the interception and
+  monitoring of electronic communication").
+- **1.5.2 key points** are my framing of the issues: the guide gives topics, not answers. They're
+  starting points for extended answers, not model answers.
+
+**Orderings:** none in this topic.
+
 ## Topic 1.4
 
 **Not certain, check first**

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.5.1",
+  "key_points": [
+    {
+      "id": "sum-1.5.1-01",
+      "text": "Computer laws exist to protect people's privacy and data, protect creators' work, deter and punish misuse, and set out what the authorities may do. They affect how organisations collect, store and share data and how computers can be used.",
+      "spec_ids": [
+        "1.5.1a",
+        "1.5.1b",
+        "1.5.1c",
+        "1.5.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-02",
+      "text": "Data Protection Act 1998, eight principles: personal data must be processed fairly and lawfully; obtained only for specified purposes; adequate, relevant and not excessive; accurate and up to date; not kept longer than necessary; processed in line with data subjects' rights; kept secure; and not transferred outside the EEA without adequate protection.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-03",
+      "text": "Under the DPA, data subjects can see the data held about them (subject access request), have inaccurate data corrected and stop data being used for direct marketing. Organisations can't collect more than they need, use it for another purpose, keep it insecurely or keep it indefinitely. There are exemptions, for example for national security and crime prevention.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-04",
+      "text": "Computer Misuse Act 1990 offences: unauthorised access to computer material (e.g. using someone else's login); unauthorised access with intent to commit or facilitate a further offence (e.g. hacking in to steal money); unauthorised modification of computer material (e.g. deleting files or spreading a virus).",
+      "spec_ids": [
+        "1.5.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-05",
+      "text": "Copyright Design and Patents Act 1988: copying, distributing, adapting or selling someone else's work (including software, music and films) without permission is illegal, as is using software without a valid licence. Copyright is automatic; patents protect new inventions and have to be applied for.",
+      "spec_ids": [
+        "1.5.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-06",
+      "text": "Regulation of Investigatory Powers Act 2000: authorised bodies (police, security services and some others), usually with a warrant, can intercept communications, monitor Internet use and require communications providers to hand over data or install interception equipment. People can be required to hand over encryption keys.",
+      "spec_ids": [
+        "1.5.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-07",
+      "text": "Impact on organisations: they have to put security measures, procedures and staff training in place, keep data only as long as needed, answer subject access requests, and may be required to provide access to communications. Breaking the laws can lead to fines, prosecution and reputational damage.",
+      "spec_ids": [
+        "1.5.1a",
+        "1.5.1b",
+        "1.5.1c",
+        "1.5.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.5.1-08",
+      "text": "Law changes: the DPA 1998 has since been replaced in the UK by the Data Protection Act 2018 and UK GDPR. OCR accepts answers based on the law when the specification started or when you sit the exam, so the 1998 principles are still a safe answer.",
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-dpa",
+    "kw-personal-data",
+    "kw-data-subject",
+    "kw-data-controller",
+    "kw-subject-access-request",
+    "kw-cma",
+    "kw-unauthorised-access",
+    "kw-cdpa",
+    "kw-copyright",
+    "kw-patent",
+    "kw-ripa"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.5.1-01",
+      "text": "DPA vs CMA: the DPA is about how organisations handle personal data; the CMA is about people accessing or changing computer material without permission.",
+      "keyword_ids": [
+        "kw-dpa",
+        "kw-cma"
+      ],
+      "spec_ids": [
+        "1.5.1a",
+        "1.5.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.5.1-02",
+      "text": "Copyright vs patent: copyright protects a creative work and is automatic; a patent protects an invention and must be applied for.",
+      "keyword_ids": [
+        "kw-copyright",
+        "kw-patent"
+      ],
+      "spec_ids": [
+        "1.5.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.5.1-03",
+      "text": "Data subject vs data controller: the subject is the person the data is about; the controller is the organisation responsible for it.",
+      "keyword_ids": [
+        "kw-data-subject",
+        "kw-data-controller"
+      ],
+      "spec_ids": [
+        "1.5.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.5.1-04",
+      "text": "RIPA vs DPA: RIPA lets authorities intercept and monitor communications; the DPA limits what organisations do with personal data.",
+      "keyword_ids": [
+        "kw-ripa",
+        "kw-dpa"
+      ],
+      "spec_ids": [
+        "1.5.1a",
+        "1.5.1d"
+      ],
+      "verified": false
+    }
+  ]
+}

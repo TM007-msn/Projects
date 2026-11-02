@@ -58,3 +58,13 @@ keywords, cards and tests. Good for understanding, not for marks.
 | SR and JK flip-flops, the gates inside a D-type | The guide says the D-type's gates needn't be memorised; other flip-flops aren't mentioned. |
 | Pre-order and in-order traversal | Only depth-first (post-order) and breadth-first are on the spec. |
 | Priority queues, heaps, sets, dictionaries/maps | Not on the spec. |
+
+## Topic 1.5
+
+| Idea | Why it's here |
+|---|---|
+| UK GDPR and the Data Protection Act 2018 in detail | The spec names the 1998 Act; the newer law is only mentioned as context. |
+| Investigatory Powers Act 2016 | Replaced parts of RIPA; not on the spec. |
+| Freedom of Information Act, Communications Act, Malicious Communications Act, Equality Act | Not on the spec. |
+| The Information Commissioner's Office (ICO) by name | Not mentioned in the sources. |
+| The "digital divide" | A common ethics topic, but not in the spec's list. |
