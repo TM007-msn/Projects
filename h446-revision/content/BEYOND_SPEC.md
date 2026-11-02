@@ -76,3 +76,13 @@ keywords, cards and tests. Good for understanding, not for marks.
 | Representational abstraction vs abstraction by generalisation | AQA terms; OCR just says abstraction. |
 | Race conditions, deadlock, semaphores, threads | Real problems with concurrency; the spec only asks for benefits and trade-offs. |
 | Prefetching, cache replacement policies (LRU etc.) | Caching is required at the level of benefits and drawbacks. |
+
+## Topic 2.2
+
+| Idea | Why it's here |
+|---|---|
+| Tail recursion, memoisation | Ways to make recursion efficient; not on the spec. |
+| Run-time errors and exception handling (try/except) | Not in the pseudocode guide. |
+| Unit testing frameworks, version control in the IDE | Beyond "use an IDE to develop/debug". |
+| Intractable problems, P vs NP, the halting problem | Context for heuristics and computability, but not on the spec. |
+| Machine learning techniques as data mining methods | The spec only needs what data mining is and how it's used. |

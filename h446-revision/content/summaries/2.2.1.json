@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.2.1",
+  "key_points": [
+    {
+      "id": "sum-2.2.1-01",
+      "text": "The three constructs are sequence, selection (if/elseif/else and switch/case) and iteration: count-controlled (for ... next) and condition-controlled (while ... endwhile, do ... until). A condition-controlled loop can be used as a count-controlled one by updating a counter yourself. Read, write and trace code using them, for example with a trace table.",
+      "spec_ids": [
+        "2.2.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.1-02",
+      "text": "Recursion: a subroutine calls itself on a smaller problem until it reaches a base case. Every recursive call is stored on the call stack until it returns.",
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "verified": false,
+      "code": "function factorial(n)\n    if n == 0 then\n        return 1\n    else\n        return n * factorial(n - 1)\n    endif\nendfunction"
+    },
+    {
+      "id": "sum-2.2.1-03",
+      "text": "Recursion vs iteration: recursion can be shorter and more natural for problems that are recursive by nature (such as tree traversal), but it uses more memory (one stack frame per call), can be slower, and can cause a stack overflow. Iteration uses less memory but can be harder to write for these problems. Any recursive function can be rewritten iteratively.",
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "verified": false,
+      "code": "function factorial(n)\n    result = 1\n    for i = 1 to n\n        result = result * i\n    next i\n    return result\nendfunction"
+    },
+    {
+      "id": "sum-2.2.1-04",
+      "text": "Global variables can be used anywhere but use memory for the whole run and can be changed by mistake from anywhere, making bugs hard to find. Local variables exist only in their subroutine: memory is freed when it ends, the same name can be reused safely, and subroutines are self-contained and reusable. Pass values in as parameters to replace globals.",
+      "spec_ids": [
+        "2.2.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.1-05",
+      "text": "Modular code splits a program into subroutines: functions return a value, procedures don't. Benefits: easier to read, test and debug, subroutines can be reused, and different people can work on different modules.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.1-06",
+      "text": "Parameters passed by value receive a copy (the original can't be changed); by reference they receive the address (changes affect the original). By value is safer; by reference avoids copying large data and lets a subroutine return more than one result. In OCR pseudocode, assume by value unless byVal/byRef is shown.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "verified": false,
+      "code": "procedure addOne(x:byVal, y:byRef)\n    x = x + 1\n    y = y + 1\nendprocedure\n\na = 5\nb = 5\naddOne(a, b)\nprint(a)   // 5: a copy was changed\nprint(b)   // 6: the original was changed"
+    },
+    {
+      "id": "sum-2.2.1-07",
+      "text": "IDE features that help write code: an editor with syntax highlighting, auto-complete and indentation. Features that help debug: error messages with line numbers, breakpoints, stepping through code line by line, and variable watches.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.1-08",
+      "text": "Object-oriented techniques: classes with attributes and methods, objects created by a constructor, encapsulation with private attributes and get/set methods, inheritance from a superclass, and polymorphism. Interpret class diagrams to write class definitions, and identify where OOP suits a scenario.",
+      "spec_ids": [
+        "2.2.1f"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-sequence",
+    "kw-selection",
+    "kw-iteration",
+    "kw-count-controlled",
+    "kw-condition-controlled",
+    "kw-trace-table",
+    "kw-recursion",
+    "kw-base-case",
+    "kw-stack-overflow",
+    "kw-global-variable",
+    "kw-local-variable",
+    "kw-scope",
+    "kw-modularity",
+    "kw-subroutine",
+    "kw-function",
+    "kw-procedure",
+    "kw-parameter",
+    "kw-by-value",
+    "kw-by-reference",
+    "kw-ide",
+    "kw-breakpoint",
+    "kw-stepping",
+    "kw-watch",
+    "kw-syntax-error",
+    "kw-logic-error"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.2.1-01",
+      "text": "Function vs procedure: a function returns a value; a procedure doesn't.",
+      "keyword_ids": [
+        "kw-function",
+        "kw-procedure"
+      ],
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.1-02",
+      "text": "By value vs by reference: by value passes a copy; by reference passes the original's address, so the original can change.",
+      "keyword_ids": [
+        "kw-by-value",
+        "kw-by-reference"
+      ],
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.1-03",
+      "text": "Local vs global: a local variable only exists inside its subroutine; a global can be used anywhere.",
+      "keyword_ids": [
+        "kw-local-variable",
+        "kw-global-variable"
+      ],
+      "spec_ids": [
+        "2.2.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.1-04",
+      "text": "Recursion vs iteration: recursion repeats by calling itself; iteration repeats with a loop.",
+      "keyword_ids": [
+        "kw-recursion",
+        "kw-iteration"
+      ],
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.1-05",
+      "text": "Syntax error vs logic error: a syntax error stops the code being translated; a logic error lets it run but gives wrong results.",
+      "keyword_ids": [
+        "kw-syntax-error",
+        "kw-logic-error"
+      ],
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "verified": false
+    }
+  ]
+}

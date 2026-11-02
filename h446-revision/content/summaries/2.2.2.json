@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "subtopic": "2.2.2",
+  "key_points": [
+    {
+      "id": "sum-2.2.2-01",
+      "text": "A problem can be solved by computational methods if it can be broken down and solved by an algorithm in a finite number of steps, using decomposition, abstraction, calculation and stored data, in a reasonable time with the resources available.",
+      "spec_ids": [
+        "2.2.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-02",
+      "text": "Problem recognition: from a scenario, identify what the actual problem is. Then decompose it into smaller sub-problems and use abstraction to remove details that don't matter, before designing a solution.",
+      "spec_ids": [
+        "2.2.2b",
+        "2.2.2c",
+        "2.2.2e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-03",
+      "text": "Divide and conquer repeatedly splits a problem into smaller ones of the same kind (binary search halves the data each time; merge sort and quick sort split, sort and combine). Parts may also be done at the same time.",
+      "spec_ids": [
+        "2.2.2d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-04",
+      "text": "Backtracking tries one path at a time and, at a dead end, goes back to the last decision to try another option, as when solving a maze or traversing a tree depth first. Read, trace and write code that uses it.",
+      "spec_ids": [
+        "2.2.2f",
+        "2.2.2f.1"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-05",
+      "text": "Data mining searches large data sets for previously unknown patterns, for example shopping habits or fraud. It can find useful insights, but it needs a lot of processing and raises privacy concerns.",
+      "spec_ids": [
+        "2.2.2f",
+        "2.2.2f.2"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-06",
+      "text": "Heuristics give a good-enough answer quickly when an exact answer would take too long, as with A*'s estimated distance to the goal. Trade-off: speed over guaranteed accuracy.",
+      "spec_ids": [
+        "2.2.2f",
+        "2.2.2f.3"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-07",
+      "text": "Performance modelling predicts how a system will behave (such as under heavy load) using models or simulations, so problems are found before building or testing the real thing, which might be costly, dangerous or impossible.",
+      "spec_ids": [
+        "2.2.2f",
+        "2.2.2f.4"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-2.2.2-08",
+      "text": "Pipelining (problem solving): the output of one process feeds into the next, so several stages work at once on different items. Visualisation presents data or a design graphically, to spot patterns or build a mental model of what a program will do and plan ahead.",
+      "spec_ids": [
+        "2.2.2f",
+        "2.2.2f.5",
+        "2.2.2f.6"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-computable",
+    "kw-problem-recognition",
+    "kw-divide-conquer",
+    "kw-backtracking",
+    "kw-data-mining",
+    "kw-heuristic",
+    "kw-performance-modelling",
+    "kw-pipelining-ps",
+    "kw-visualisation"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-2.2.2-01",
+      "text": "Divide and conquer vs decomposition: decomposition breaks a problem into different sub-tasks; divide and conquer splits it into smaller versions of the same problem.",
+      "keyword_ids": [
+        "kw-divide-conquer",
+        "kw-decomposition"
+      ],
+      "spec_ids": [
+        "2.2.2c",
+        "2.2.2d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.2-02",
+      "text": "Pipelining in 2.2.2 vs 1.1.1: the same idea (output of one stage feeds the next while other stages work on other items), applied to processes in a program rather than the stages of the FDE cycle.",
+      "keyword_ids": [
+        "kw-pipelining-ps",
+        "kw-pipelining"
+      ],
+      "spec_ids": [
+        "2.2.2f.5"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-2.2.2-03",
+      "text": "Heuristic vs algorithm: an algorithm follows exact steps to a correct answer; a heuristic is a shortcut that gives a good-enough answer faster.",
+      "keyword_ids": [
+        "kw-heuristic",
+        "kw-algorithm"
+      ],
+      "spec_ids": [
+        "2.2.2f.3"
+      ],
+      "verified": false
+    }
+  ]
+}

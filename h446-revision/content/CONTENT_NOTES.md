@@ -3,6 +3,19 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 2.2
+
+**Not certain, check first**
+
+- **"Computable problem"** is defined to include "in a reasonable time with available resources",
+  following the guide's practical framing ("features that make a problem solvable by computational
+  methods"). Strictly, computability theory only needs a finite number of steps; the definition
+  says both.
+- **Pipelining (problem solving)** follows the guide's description ("the result from a process
+  feeds into the next process").
+- **Syntax error / logic error** are included under 2.2.1e (debugging with an IDE). The spec doesn't
+  name error types, but you can't discuss debugging without them.
+
 ## Topic 2.1
 
 **Not certain, check first**

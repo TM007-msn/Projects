@@ -2121,7 +2121,9 @@
         "2.2.1c"
       ],
       "related": [
-        "kw-constant"
+        "kw-constant",
+        "kw-local-variable",
+        "kw-global-variable"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5287,7 +5289,8 @@
         "2.1.2d"
       ],
       "related": [
-        "kw-library"
+        "kw-library",
+        "kw-subroutine"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5319,7 +5322,8 @@
         "2.1.3d"
       ],
       "related": [
-        "kw-decomposition"
+        "kw-decomposition",
+        "kw-subroutine"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5334,7 +5338,8 @@
         "2.1.4c"
       ],
       "related": [
-        "kw-condition"
+        "kw-condition",
+        "kw-selection"
       ],
       "dont_confuse_with": null,
       "verified": false
@@ -5367,6 +5372,516 @@
         "kw-parallel-processing"
       ],
       "dont_confuse_with": "Parallel processing: tasks running at exactly the same moment on separate processors or cores.",
+      "verified": false
+    },
+    {
+      "id": "kw-sequence",
+      "term": "Sequence",
+      "acronym": null,
+      "definition": "Instructions carried out one after another, in the order they are written.",
+      "spec_ids": [
+        "2.2.1a"
+      ],
+      "related": [
+        "kw-selection",
+        "kw-iteration"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-selection",
+      "term": "Selection",
+      "acronym": null,
+      "definition": "A programming construct that chooses which instructions to run depending on whether a condition is true, using if/elseif/else or switch/case; also called branching.",
+      "spec_ids": [
+        "2.2.1a",
+        "2.1.4c"
+      ],
+      "related": [
+        "kw-sequence",
+        "kw-iteration",
+        "kw-condition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-iteration",
+      "term": "Iteration",
+      "acronym": null,
+      "definition": "A programming construct that repeats a block of instructions, either a set number of times or until a condition is met.",
+      "spec_ids": [
+        "2.2.1a"
+      ],
+      "related": [
+        "kw-count-controlled",
+        "kw-condition-controlled",
+        "kw-recursion"
+      ],
+      "dont_confuse_with": "Recursion: a subroutine calling itself, rather than a loop.",
+      "verified": false
+    },
+    {
+      "id": "kw-count-controlled",
+      "term": "Count-controlled iteration",
+      "acronym": null,
+      "definition": "A loop that repeats a set number of times, such as for i=0 to 7 ... next i.",
+      "spec_ids": [
+        "2.2.1a"
+      ],
+      "related": [
+        "kw-condition-controlled",
+        "kw-iteration"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-condition-controlled",
+      "term": "Condition-controlled iteration",
+      "acronym": null,
+      "definition": "A loop that repeats while (or until) a condition is true, such as while ... endwhile or do ... until.",
+      "spec_ids": [
+        "2.2.1a"
+      ],
+      "related": [
+        "kw-count-controlled",
+        "kw-iteration"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-trace-table",
+      "term": "Trace table",
+      "acronym": null,
+      "definition": "A table used to follow an algorithm by hand, recording the value of each variable (and any output) as each line runs.",
+      "spec_ids": [
+        "2.2.1a",
+        "2.1.4c"
+      ],
+      "related": [
+        "kw-iteration"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-recursion",
+      "term": "Recursion",
+      "acronym": null,
+      "definition": "When a subroutine calls itself, with each call working on a smaller version of the problem until a base case is reached.",
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "related": [
+        "kw-base-case",
+        "kw-stack-overflow",
+        "kw-iteration"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-base-case",
+      "term": "Base case",
+      "acronym": null,
+      "definition": "The stopping condition in a recursive subroutine: the case that returns a result without making another recursive call.",
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "related": [
+        "kw-recursion"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-stack-overflow",
+      "term": "Stack overflow",
+      "acronym": null,
+      "definition": "An error when the call stack runs out of memory, for example because a recursive subroutine calls itself too many times or never reaches its base case.",
+      "spec_ids": [
+        "2.2.1b"
+      ],
+      "related": [
+        "kw-recursion",
+        "kw-stack"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-global-variable",
+      "term": "Global variable",
+      "acronym": null,
+      "definition": "A variable declared in the main program (with global in OCR pseudocode) that can be accessed and changed from anywhere in the program.",
+      "spec_ids": [
+        "2.2.1c"
+      ],
+      "related": [
+        "kw-local-variable",
+        "kw-scope"
+      ],
+      "dont_confuse_with": "Local variable: only exists inside its subroutine.",
+      "verified": false
+    },
+    {
+      "id": "kw-local-variable",
+      "term": "Local variable",
+      "acronym": null,
+      "definition": "A variable declared inside a subroutine that only exists, and can only be used, while that subroutine is running.",
+      "spec_ids": [
+        "2.2.1c"
+      ],
+      "related": [
+        "kw-global-variable",
+        "kw-scope"
+      ],
+      "dont_confuse_with": "Global variable: accessible from anywhere in the program.",
+      "verified": false
+    },
+    {
+      "id": "kw-scope",
+      "term": "Scope",
+      "acronym": null,
+      "definition": "The part of a program in which a variable can be accessed.",
+      "spec_ids": [
+        "2.2.1c"
+      ],
+      "related": [
+        "kw-local-variable",
+        "kw-global-variable"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-modularity",
+      "term": "Modularity",
+      "acronym": null,
+      "definition": "Writing a program as separate, self-contained modules (such as subroutines), each doing one task, that can be written and tested independently.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-subroutine",
+        "kw-decomposition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-subroutine",
+      "term": "Subroutine",
+      "acronym": null,
+      "definition": "A named block of code that carries out a specific task and can be called from elsewhere in the program; either a function or a procedure.",
+      "spec_ids": [
+        "2.2.1d",
+        "2.1.3d"
+      ],
+      "related": [
+        "kw-function",
+        "kw-procedure",
+        "kw-parameter"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-function",
+      "term": "Function",
+      "acronym": null,
+      "definition": "A subroutine that returns a value to the code that called it.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-procedure",
+        "kw-subroutine"
+      ],
+      "dont_confuse_with": "Procedure: carries out a task but doesn't return a value.",
+      "verified": false
+    },
+    {
+      "id": "kw-procedure",
+      "term": "Procedure",
+      "acronym": null,
+      "definition": "A subroutine that carries out a task but doesn't return a value.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-function",
+        "kw-subroutine"
+      ],
+      "dont_confuse_with": "Function: returns a value.",
+      "verified": false
+    },
+    {
+      "id": "kw-parameter",
+      "term": "Parameter",
+      "acronym": null,
+      "definition": "A variable listed in a subroutine's definition that receives a value (argument) passed in when the subroutine is called.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-by-value",
+        "kw-by-reference"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-by-value",
+      "term": "Passing by value",
+      "acronym": null,
+      "definition": "Passing a copy of the argument's value to a subroutine, so changes made to the parameter don't affect the original variable.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-by-reference",
+        "kw-parameter"
+      ],
+      "dont_confuse_with": "Passing by reference: the subroutine can change the original variable.",
+      "verified": false
+    },
+    {
+      "id": "kw-by-reference",
+      "term": "Passing by reference",
+      "acronym": null,
+      "definition": "Passing the address of the argument to a subroutine, so changes made to the parameter also change the original variable.",
+      "spec_ids": [
+        "2.2.1d"
+      ],
+      "related": [
+        "kw-by-value",
+        "kw-parameter"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ide",
+      "term": "Integrated development environment",
+      "acronym": "IDE",
+      "definition": "Software that provides tools for writing, running and debugging programs in one place, such as an editor, error reporting, breakpoints and variable watches.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "related": [
+        "kw-breakpoint",
+        "kw-stepping",
+        "kw-watch"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-breakpoint",
+      "term": "Breakpoint",
+      "acronym": null,
+      "definition": "A point set in an IDE where the program pauses when it runs, so the programmer can inspect variable values at that moment.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "related": [
+        "kw-stepping",
+        "kw-watch"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-stepping",
+      "term": "Stepping",
+      "acronym": null,
+      "definition": "Running a program one line at a time in an IDE, to see exactly which lines run and how values change.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "related": [
+        "kw-breakpoint",
+        "kw-watch"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-watch",
+      "term": "Variable watch",
+      "acronym": null,
+      "definition": "An IDE tool that shows the value of chosen variables as the program runs, to help find where a value goes wrong.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "related": [
+        "kw-breakpoint",
+        "kw-stepping"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-syntax-error",
+      "term": "Syntax error",
+      "acronym": null,
+      "definition": "An error where code breaks the rules (grammar) of the language, so it can't be translated, such as a misspelt keyword or missing bracket.",
+      "spec_ids": [
+        "2.2.1e",
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-logic-error",
+        "kw-syntax-analysis"
+      ],
+      "dont_confuse_with": "Logic error: the program runs but gives the wrong result.",
+      "verified": false
+    },
+    {
+      "id": "kw-logic-error",
+      "term": "Logic error",
+      "acronym": null,
+      "definition": "An error in a program's design that lets it run but makes it produce the wrong result, such as using < instead of <=.",
+      "spec_ids": [
+        "2.2.1e"
+      ],
+      "related": [
+        "kw-syntax-error",
+        "kw-trace-table"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-computable",
+      "term": "Computable problem",
+      "acronym": null,
+      "definition": "A problem that can be solved by an algorithm in a finite number of steps; in practice it also needs to be solvable in a reasonable time with the resources available.",
+      "spec_ids": [
+        "2.2.2a"
+      ],
+      "related": [
+        "kw-decomposition",
+        "kw-abstraction"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-problem-recognition",
+      "term": "Problem recognition",
+      "acronym": null,
+      "definition": "Identifying, from a description of a scenario, what the actual problem is and what needs to be solved.",
+      "spec_ids": [
+        "2.2.2b"
+      ],
+      "related": [
+        "kw-decomposition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-divide-conquer",
+      "term": "Divide and conquer",
+      "acronym": null,
+      "definition": "Solving a problem by repeatedly splitting it into smaller sub-problems of the same type, solving those, and combining the results, as in binary search and merge sort.",
+      "spec_ids": [
+        "2.2.2d"
+      ],
+      "related": [
+        "kw-decomposition"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-backtracking",
+      "term": "Backtracking",
+      "acronym": null,
+      "definition": "Solving a problem by trying a path step by step and, when a path fails, going back to the last decision point to try a different option.",
+      "spec_ids": [
+        "2.2.2f.1"
+      ],
+      "related": [
+        "kw-stack"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-data-mining",
+      "term": "Data mining",
+      "acronym": null,
+      "definition": "Searching through large amounts of data to find patterns, relationships and trends that weren't previously known.",
+      "spec_ids": [
+        "2.2.2f.2"
+      ],
+      "related": [
+        "kw-heuristic"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-heuristic",
+      "term": "Heuristic",
+      "acronym": null,
+      "definition": "A rule-of-thumb approach that finds a good enough solution quickly when finding the perfect one would take too long, such as the estimate used in the A* algorithm.",
+      "spec_ids": [
+        "2.2.2f.3",
+        "2.3.1f"
+      ],
+      "related": [],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-performance-modelling",
+      "term": "Performance modelling",
+      "acronym": null,
+      "definition": "Using mathematical models or simulations to predict how a system will perform (for example, under heavy load) without having to test the real system.",
+      "spec_ids": [
+        "2.2.2f.4"
+      ],
+      "related": [
+        "kw-visualisation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pipelining-ps",
+      "term": "Pipelining (problem solving)",
+      "acronym": null,
+      "definition": "Splitting a task into stages where the output of one stage is the input to the next, so different stages can work on different items at the same time.",
+      "spec_ids": [
+        "2.2.2f.5"
+      ],
+      "related": [
+        "kw-pipelining",
+        "kw-concurrent-processing"
+      ],
+      "dont_confuse_with": "Pipelining (1.1.1): the processor overlapping fetch, decode and execute; the same idea applied to hardware.",
+      "verified": false
+    },
+    {
+      "id": "kw-visualisation",
+      "term": "Visualisation",
+      "acronym": null,
+      "definition": "Presenting data or a problem visually, such as in a graph or diagram, to make patterns easier to see or to build a mental model of how a program will work.",
+      "spec_ids": [
+        "2.2.2f.6"
+      ],
+      "related": [
+        "kw-performance-modelling",
+        "kw-abstraction"
+      ],
+      "dont_confuse_with": null,
       "verified": false
     }
   ]
