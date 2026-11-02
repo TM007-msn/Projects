@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "content" / "_extracted"
 OUT = ROOT / "content" / "spec.json"
 REPORT = ROOT / "content" / "_extracted" / "mapping_report.txt"
+APPENDIX = ROOT / "tools" / "appendix_5d_5f.json"
 
 # --- 1. Clarification paragraph -> point letters, per subtopic -------------
 # Index = paragraph number in content/_extracted/clarification.json.
@@ -152,6 +153,20 @@ def norm_url(u):
     return u.rstrip("/").replace("http://", "").replace("https://", "")
 
 
+def sub_items(point_id, wording):
+    """Bulleted points (1.3.3b, 1.5.2a, 2.2.2f) become sub-items such as
+    1.5.2a.3 so the tracker can rate them separately. 'text' is verbatim;
+    'label' is a tidied short name for buttons."""
+    bullets = [ln[1:].strip() for ln in wording.split("\n") if ln.startswith("•")]
+    items = []
+    for n, text in enumerate(bullets, start=1):
+        label = text.rstrip(".")
+        if label.endswith(" to solve problems"):   # 2.2.2f's last bullet carries the stem's ending
+            label = label[: -len(" to solve problems")]
+        items.append({"id": f"{point_id}.{n}", "text": text, "label": label[:1].upper() + label[1:]})
+    return items
+
+
 def parse_cross_links(labels):
     out = []
     for label in labels:
@@ -255,18 +270,30 @@ def main():
             for pid in points:
                 point_statements.setdefault(pid, []).append(stmt)
 
-    # Build output.
+    # Build output. Wording, titles and headings come from the official
+    # specification; the guide's wording is kept alongside for reference.
+    official = json.loads((RAW / "specification.json").read_text())
+    appendices = json.loads(APPENDIX.read_text())
+    off_subs = {s["id"]: s for s in official["subtopics"]}
+    if set(off_subs) != set(subtopics):
+        raise SystemExit("Specification and guide disagree on subtopic ids")
+    for sid, s in subtopics.items():
+        a = [p["letter"] for p in off_subs[sid]["points"]]
+        b = [p["letter"] for p in s["points"]]
+        if a != b:
+            raise SystemExit(f"{sid}: point letters differ: spec {a} vs guide {b}")
+
     topics_out, subtopics_out, points_out = [], [], []
-    for tid, title in guide["topics"].items():
+    for tid, t in official["topics"].items():
         comp = int(tid[0])
-        first = next(s for s in guide["subtopics"] if s["topic"] == tid)
         topics_out.append({
-            "id": tid, "component": comp, "paper": comp, "title": title,
-            "heading": first["topic_heading"],
+            "id": tid, "component": comp, "paper": comp, "title": t["title"],
+            "heading": t["heading"],
         })
 
     for sid, s in subtopics.items():
         comp = int(sid[0])
+        off = off_subs[sid]
         cl = cl_topic_for_sub.get(sid)
         checklist_ref = None
         if cl:
@@ -277,29 +304,35 @@ def main():
         cross = parse_cross_links(s["cross_topic_links"])
         subtopics_out.append({
             "id": sid, "component": comp, "paper": comp, "topic": s["topic"],
-            "title": s["title"],
+            "title": off["title"],
+            "guide_title": s["title"],
             "clarification": s["clarification_paragraphs"],
             "cross_topic_links": cross,
             "resource_urls": s["resource_urls"],
             "checklist_topic": checklist_ref,
             "guide_pages": s["pages"],
+            "spec_pages": off["pages"],
             "point_ids": [f"{sid}{p['letter']}" for p in s["points"]],
         })
         mapping = PARAGRAPH_POINTS[sid]
-        for p in s["points"]:
+        guide_wording = {p["letter"]: p["wording"] for p in s["points"]}
+        for p in off["points"]:
             pid = f"{sid}{p['letter']}"
             para_idx = [i for i, letters in enumerate(mapping) if p["letter"] in letters]
             shared = sorted({f"{sid}{l}" for i in para_idx for l in mapping[i]} - {pid})
-            points_out.append({
+            point = {
                 "id": pid,
                 "component": comp,
                 "paper": comp,
                 "topic": s["topic"],
-                "topic_title": guide["topics"][s["topic"]],
+                "topic_title": official["topics"][s["topic"]]["title"],
                 "subtopic": sid,
-                "subtopic_title": s["title"],
+                "subtopic_title": off["title"],
                 "letter": p["letter"],
                 "spec_wording": p["wording"],
+                "guide_wording": guide_wording[p["letter"]],
+                "appendix_refs": sorted(set(re.findall(r"appendix (5[a-z])", p["wording"], re.I))),
+                "sub_items": sub_items(pid, p["wording"]),
                 "clarification": [s["clarification_paragraphs"][i] for i in para_idx],
                 "clarification_mapping": "inferred",
                 "clarification_shared_with": shared,
@@ -307,30 +340,44 @@ def main():
                 "cross_topic_links": cross,
                 "resource_urls": s["resource_urls"],
                 "video_url": checklist_ref["video_url"] if checklist_ref else None,
-            })
+            }
+            if off.get("unlettered"):
+                point["unlettered_in_spec"] = True
+            points_out.append(point)
 
     spec = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_by": "tools/extract_pdfs.py + tools/build_spec.py",
         "sources": {
+            "specification": {"file": "spec/ocr-h446-specification.pdf",
+                              "title": f"Cambridge OCR A Level Computer Science H446 Specification, {official['version']}",
+                              "role": "Authoritative: spec wording, titles, headings and appendices."},
             "guide": {"file": "spec/ocr-h446-clarification-guide.pdf",
-                      "title": "OCR A Level Computer Science H446 Subject content clarification, Version 1 (© OCR 2017)"},
+                      "title": "OCR A Level Computer Science H446 Subject content clarification, Version 1 (© OCR 2017)",
+                      "role": "Clarification text, cross-topic links and resource URLs."},
             "checklist": {"file": "spec/revision-checklist.pdf",
-                          "title": "Craig'n'Dave OCR A-Level Computer Science Revision check list"},
+                          "title": "Craig'n'Dave OCR A-Level Computer Science Revision check list",
+                          "role": "Checklist statements and video links."},
         },
         "notes": [
+            "spec_wording is from the specification; guide_wording is the clarification guide's version of the same point.",
             "Clarification text and resource URLs are given by OCR per subtopic; the split of "
             "clarification paragraphs onto lettered points is inferred (see tools/build_spec.py).",
             "resource_urls and cross_topic_links on each point are the subtopic's, repeated for convenience.",
-            "Paper 1 = Component 1, Paper 2 = Component 2.",
+            "sub_items split bulleted points for finer self-rating in the tracker; they roll up to their point.",
+            "1.5.2 has no letter in the specification; it is given id 1.5.2a (as in the guide).",
+            "Paper 1 = Component 01, Paper 2 = Component 02.",
         ],
         "papers": [
-            {"paper": 1, "component": 1, "checklist_heading": "Paper 1 – 2 h 30 min – 140 marks"},
-            {"paper": 2, "component": 2, "checklist_heading": "Paper 2 – 2 h 30 min – 140 marks"},
+            {"paper": 1, "component": 1, "title": "Computer systems",
+             "checklist_heading": "Paper 1 – 2 h 30 min – 140 marks"},
+            {"paper": 2, "component": 2, "title": "Algorithms and programming",
+             "checklist_heading": "Paper 2 – 2 h 30 min – 140 marks"},
         ],
         "topics": topics_out,
         "subtopics": subtopics_out,
         "points": points_out,
+        "appendices": {"5d": appendices["5d"], "5f": appendices["5f"], "errata": appendices["errata"]},
         "checklist_unmapped": unmapped,
     }
     OUT.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")

@@ -1,30 +1,42 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_by": "tools/extract_pdfs.py + tools/build_spec.py",
   "sources": {
+    "specification": {
+      "file": "spec/ocr-h446-specification.pdf",
+      "title": "Cambridge OCR A Level Computer Science H446 Specification, Version 3.0 (April 2026)",
+      "role": "Authoritative: spec wording, titles, headings and appendices."
+    },
     "guide": {
       "file": "spec/ocr-h446-clarification-guide.pdf",
-      "title": "OCR A Level Computer Science H446 Subject content clarification, Version 1 (© OCR 2017)"
+      "title": "OCR A Level Computer Science H446 Subject content clarification, Version 1 (© OCR 2017)",
+      "role": "Clarification text, cross-topic links and resource URLs."
     },
     "checklist": {
       "file": "spec/revision-checklist.pdf",
-      "title": "Craig'n'Dave OCR A-Level Computer Science Revision check list"
+      "title": "Craig'n'Dave OCR A-Level Computer Science Revision check list",
+      "role": "Checklist statements and video links."
     }
   },
   "notes": [
+    "spec_wording is from the specification; guide_wording is the clarification guide's version of the same point.",
     "Clarification text and resource URLs are given by OCR per subtopic; the split of clarification paragraphs onto lettered points is inferred (see tools/build_spec.py).",
     "resource_urls and cross_topic_links on each point are the subtopic's, repeated for convenience.",
-    "Paper 1 = Component 1, Paper 2 = Component 2."
+    "sub_items split bulleted points for finer self-rating in the tracker; they roll up to their point.",
+    "1.5.2 has no letter in the specification; it is given id 1.5.2a (as in the guide).",
+    "Paper 1 = Component 01, Paper 2 = Component 02."
   ],
   "papers": [
     {
       "paper": 1,
       "component": 1,
+      "title": "Computer systems",
       "checklist_heading": "Paper 1 – 2 h 30 min – 140 marks"
     },
     {
       "paper": 2,
       "component": 2,
+      "title": "Algorithms and programming",
       "checklist_heading": "Paper 2 – 2 h 30 min – 140 marks"
     }
   ],
@@ -62,7 +74,7 @@
       "component": 1,
       "paper": 1,
       "title": "Legal, moral, cultural and ethical issues",
-      "heading": "The individual (moral), social (ethical) and cultural opportunities and risks of digital technology. Legislation surrounding the use of computers and ethical issues that can or may in the future arise from the use of computers"
+      "heading": "The individual moral, social, ethical and cultural opportunities and risks of digital technology. Legislation surrounding the use of computers and ethical issues that can or may in the future arise from the use of computers"
     },
     {
       "id": "2.1",
@@ -93,6 +105,7 @@
       "paper": 1,
       "topic": "1.1",
       "title": "Structure and function of the processor",
+      "guide_title": "Structure and function of the processor",
       "clarification": [
         "Candidates need to have an understanding of the purpose and function of the core components of a processor. Candidates need to understand the role and components of the ALU.",
         "Candidates need to understand the purpose and function or registers within the processor, including the PC, accumulator, MAR, MDR and CIR.",
@@ -133,6 +146,9 @@
       "guide_pages": [
         3
       ],
+      "spec_pages": [
+        12
+      ],
       "point_ids": [
         "1.1.1a",
         "1.1.1b",
@@ -147,6 +163,7 @@
       "paper": 1,
       "topic": "1.1",
       "title": "Types of processor",
+      "guide_title": "Types of processor",
       "clarification": [
         "Candidates need to understand the differences between the CISC and RISC processors and the key features and benefits of each. They should be aware of the relative benefits of each architecture.",
         "Candidates need to understand the purpose of GPUs and what applications they are used for (candidates need to understand how GPUs are used to aid graphics, but also other applications for example their use in modeling, data mining, etc.). Candidates should understand the benefits and using GPUs and why they are suited to certain tasks (specialist instructions, multiple cores and SIMD processing).",
@@ -176,6 +193,9 @@
       "guide_pages": [
         4
       ],
+      "spec_pages": [
+        12
+      ],
       "point_ids": [
         "1.1.2a",
         "1.1.2b",
@@ -188,6 +208,7 @@
       "paper": 1,
       "topic": "1.1",
       "title": "Input, output and storage",
+      "guide_title": "Input, output and storage",
       "clarification": [
         "Candidates need to have an understanding of a range of input, output and storage devices. Candidates do not need to understand how the input and output devices work, but must be able to recommend appropriate devices for specific situations and be able to justify choices made.",
         "Candidates need to understand that there are different types of storage device. They need to know about the characteristics of each type (magnetic, optical and flash) and understand the benefits and drawbacks of each, and be able to recommend an appropriate type of device for a given situation and justify the choice.",
@@ -214,6 +235,9 @@
       "guide_pages": [
         4
       ],
+      "spec_pages": [
+        12
+      ],
       "point_ids": [
         "1.1.3a",
         "1.1.3b",
@@ -226,7 +250,8 @@
       "component": 1,
       "paper": 1,
       "topic": "1.2",
-      "title": "Operating Systems",
+      "title": "Systems Software",
+      "guide_title": "Operating Systems",
       "clarification": [
         "Candidates need to have an understanding of why an operating system is required, along with the different tasks it performs within a computer system (e.g. resource management, file management, interrupt handling, security, providing a platform for software to run, providing a user interface and providing utilities).",
         "Candidates need to understand how operating systems manage memory. They need to understand the need for, purpose and function of paging to divide memory into usable fixed-size pages and how this aids in the transfer of memory for example virtual memory. Candidates need to understand what is meant by segmentation and how memory is divided into segments to allow access to memory. Candidates need to understand what is meant by virtual memory and why this is needed in a computer system. Candidates need to understand how paging is used in virtual memory, and the benefits and drawbacks of having and using virtual memory in a computer system.",
@@ -271,6 +296,9 @@
       "guide_pages": [
         5
       ],
+      "spec_pages": [
+        13
+      ],
       "point_ids": [
         "1.2.1a",
         "1.2.1b",
@@ -287,7 +315,8 @@
       "component": 1,
       "paper": 1,
       "topic": "1.2",
-      "title": "Applications generation",
+      "title": "Applications Generation",
+      "guide_title": "Applications generation",
       "clarification": [
         "Candidates need to understand the purpose of applications, and should have knowledge and experience of a range of different application software (for example database, word processor, web browser, graphics manipulation etc.). Candidates should be able to recommend the use of specific and generic applications for given scenarios, justifying their use and function(s) for a scenario.",
         "Candidates need to understand the purpose and role of utility software in a computer system.",
@@ -324,6 +353,9 @@
       "guide_pages": [
         6
       ],
+      "spec_pages": [
+        13
+      ],
       "point_ids": [
         "1.2.2a",
         "1.2.2b",
@@ -339,6 +371,7 @@
       "paper": 1,
       "topic": "1.2",
       "title": "Software Development",
+      "guide_title": "Software Development",
       "clarification": [
         "Candidates need to understand the following models that can be followed to produce a software system; the waterfall lifecycle, agile methodologies (specifically extreme programming); the spiral model and rapid application development). Candidates need to understand the tasks, processes, benefits and drawbacks of each model and the similarities and differences between each. They need to understand where each model is most suitable to use, and be able to justify the use in a situation.",
         "Candidates need to be able to write algorithms using pseudocode and/or program code. Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in this syntax. Candidate’s code is not expected to be syntactically correct, but must use appropriate code structures."
@@ -359,6 +392,9 @@
       "guide_pages": [
         7
       ],
+      "spec_pages": [
+        13
+      ],
       "point_ids": [
         "1.2.3a",
         "1.2.3b",
@@ -371,6 +407,7 @@
       "paper": 1,
       "topic": "1.2",
       "title": "Types of Programming Language",
+      "guide_title": "Types of Programming Language",
       "clarification": [
         "Candidates need to understand that there are a variety of types of programming paradigms such as procedural, OOP, low-level, and that each has its strengths and weaknesses in specific scenarios, topics or areas.",
         "Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc. Candidates need to be experienced in using procedural programming features such as (but not limited to) variables, constants, selection, iteration, sequence, subroutines, string handling, file handling, Boolean and arithmetic operators. Candidates need to be able to read, trace, amend and write procedural program code.",
@@ -411,6 +448,9 @@
       "guide_pages": [
         7
       ],
+      "spec_pages": [
+        13
+      ],
       "point_ids": [
         "1.2.4a",
         "1.2.4b",
@@ -425,6 +465,7 @@
       "paper": 1,
       "topic": "1.3",
       "title": "Compression, Encryption and Hashing",
+      "guide_title": "Compression, Encryption and Hashing",
       "clarification": [
         "Candidates need to understand the need for compression, especially when transferring data via the Internet. Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type. Candidates need to be able to recommend a type of compression for a given scenario.",
         "Candidates need to understand how run-length encoding can reduce the size of a file for example with a text file or image. Candidates should understand how dictionary coding works by substituting entries with a unique code. Candidates should have practical experience of using these algorithms with small example files.",
@@ -454,6 +495,9 @@
       "guide_pages": [
         8
       ],
+      "spec_pages": [
+        14
+      ],
       "point_ids": [
         "1.3.1a",
         "1.3.1b",
@@ -467,6 +511,7 @@
       "paper": 1,
       "topic": "1.3",
       "title": "Databases",
+      "guide_title": "Databases",
       "clarification": [
         "Candidates need to understand what is meant by a database. Candidates should be familiar with basic database terminology such as fields, records and tables. Candidates should know the difference between a flat file and a relational database, and be able to explain the benefits and limitations of each approach. Candidates should be able to use Normalisation to produce a suitable database schema and explain the benefits of doing so. They should be able to normalise up to 3NF. Candidates should know and be able to apply the criteria for 1NF, 2NF and 3NF.",
         "Candidates should know what is meant by a primary key, foreign key and secondary key and how each are used in a database. Candidates should be able produce and follow Entity relationship diagrams which include 1:1, 1:M and M:M relationships. They should be able to identify how tables should be linked.",
@@ -493,6 +538,9 @@
       "guide_pages": [
         9
       ],
+      "spec_pages": [
+        14
+      ],
       "point_ids": [
         "1.3.2a",
         "1.3.2b",
@@ -508,6 +556,7 @@
       "paper": 1,
       "topic": "1.3",
       "title": "Networks",
+      "guide_title": "Networks",
       "clarification": [
         "Candidates need to understand the definition and purpose of a network.",
         "Candidates need to understand the purpose of, and importance of using protocols. They should be able to discuss examples of protocols that may be used in a network/the internet (but will not be asked to recall information about any specific protocol). Candidates should understand the term standard and the purpose and need for standards in a network (or any situation where data is transferred).",
@@ -540,6 +589,9 @@
       "guide_pages": [
         10
       ],
+      "spec_pages": [
+        14
+      ],
       "point_ids": [
         "1.3.3a",
         "1.3.3b",
@@ -554,6 +606,7 @@
       "paper": 1,
       "topic": "1.3",
       "title": "Web Technologies",
+      "guide_title": "Web Technologies",
       "clarification": [
         "Candidates need to understand the purpose of HTML, CSS and JavaScript. Candidates should have experience of writing webpages using HTML, CSS and JavaScript. Candidates need to be able to recognise the code in Appendix 5d, and be able to read, write, amend and interpret code using HTML, CSS and JavaScript.",
         "Candidates should understand how and why search engine results are indexed. They should understand how PageRank ranks these results. Candidates should understand how page rank works at a high level but are not expected to be able to code the algorithm.",
@@ -583,6 +636,9 @@
       "guide_pages": [
         11
       ],
+      "spec_pages": [
+        14
+      ],
       "point_ids": [
         "1.3.4a",
         "1.3.4b",
@@ -596,6 +652,7 @@
       "paper": 1,
       "topic": "1.4",
       "title": "Data Types",
+      "guide_title": "Data Types",
       "clarification": [
         "Candidates need to have an understanding of programming data types such as integer, real, Boolean, character string etc. Candidates need to be able to choose appropriate data types for a situation or given data. Candidates should have experience of programming solutions using these data types. Candidates should have knowledge of how to convert from one data type to another.",
         "Candidates should understand how and why computers store data as binary using switches, and that a binary number can have a variety of different interpretations depending on what is being stored (e.g. numeric, text, image, sound).",
@@ -635,6 +692,9 @@
       "guide_pages": [
         12
       ],
+      "spec_pages": [
+        15
+      ],
       "point_ids": [
         "1.4.1a",
         "1.4.1b",
@@ -654,6 +714,7 @@
       "paper": 1,
       "topic": "1.4",
       "title": "Data Structures",
+      "guide_title": "Data Structures",
       "clarification": [
         "Candidates should be able to describe what is meant by arrays (up to 3 dimensions), records, lists and tuples. They are expected to be able recognise when they can be used and incorporate them in their programs to store data.",
         "Candidates need to have an understanding of the behaviour of linked-lists, graphs, stacks, queues, trees, binary search trees and hash tables.",
@@ -693,6 +754,9 @@
       "guide_pages": [
         13
       ],
+      "spec_pages": [
+        15
+      ],
       "point_ids": [
         "1.4.2a",
         "1.4.2b",
@@ -705,6 +769,7 @@
       "paper": 1,
       "topic": "1.4",
       "title": "Boolean Algebra",
+      "guide_title": "Boolean Algebra",
       "clarification": [
         "Candidates should be familiar with AND, OR, NOT and XOR. Candidates should be familiar with the logic of each Boolean operator, and the truth tables. Candidates should be able to construct logic gate diagrams from a Boolean expression and vice-versa. Candidates should be able to construct truth tables from Boolean expressions and logic gate diagrams.",
         "Candidates should have an understanding that Boolean expressions can be simplified and should have experience of simplifying expressions using Karnaugh maps. Candidates should be able to create, complete and interpret Karnaugh maps to simplify Boolean expressions.",
@@ -738,6 +803,9 @@
       "guide_pages": [
         14
       ],
+      "spec_pages": [
+        15
+      ],
       "point_ids": [
         "1.4.3a",
         "1.4.3b",
@@ -752,6 +820,7 @@
       "paper": 1,
       "topic": "1.5",
       "title": "Computing related legislation",
+      "guide_title": "Computing related legislation",
       "clarification": [
         "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
         "Candidates should be familiar with the purpose and role of the Data Protection Act, candidates will need to understand the different rules that are within the DPA and how these impact the use of computers and the storage of data by organisations, this should include what organisations can and cannot do.",
@@ -779,6 +848,9 @@
       "guide_pages": [
         15
       ],
+      "spec_pages": [
+        16
+      ],
       "point_ids": [
         "1.5.1a",
         "1.5.1b",
@@ -791,7 +863,8 @@
       "component": 1,
       "paper": 1,
       "topic": "1.5",
-      "title": "Ethical, moral and cultural issues",
+      "title": "Moral and ethical Issues",
+      "guide_title": "Ethical, moral and cultural issues",
       "clarification": [
         "In order to prepare for this section we would recommend candidates regularly keep abreast of technological developments in the news.",
         "Candidates need to understand what is meant by moral, social, ethical and cultural issues in relation to the use of computers.",
@@ -823,6 +896,9 @@
       "guide_pages": [
         16
       ],
+      "spec_pages": [
+        16
+      ],
       "point_ids": [
         "1.5.2a"
       ]
@@ -833,6 +909,7 @@
       "paper": 2,
       "topic": "2.1",
       "title": "Thinking abstractly",
+      "guide_title": "Thinking abstractly",
       "clarification": [
         "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs. Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario. Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied. Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction. Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
       ],
@@ -867,6 +944,9 @@
       "guide_pages": [
         17
       ],
+      "spec_pages": [
+        17
+      ],
       "point_ids": [
         "2.1.1a",
         "2.1.1b",
@@ -880,6 +960,7 @@
       "paper": 2,
       "topic": "2.1",
       "title": "Thinking ahead",
+      "guide_title": "Thinking ahead",
       "clarification": [
         "Candidates need to understand that situations/programs require input and output, and that the outputs can be in digital and/or hard copy format. Candidates may be given a description, diagram, or pseudocode for a scenario, and they will need to demonstrate an understanding of the inputs and outputs required and/or are used in that scenario.",
         "For a description (or similar) of a program, candidates need to be able to determine what additional conditions they need to know before they can produce a solution, and how this information may affect the solution.",
@@ -917,6 +998,9 @@
       "guide_pages": [
         17
       ],
+      "spec_pages": [
+        17
+      ],
       "point_ids": [
         "2.1.2a",
         "2.1.2b",
@@ -930,6 +1014,7 @@
       "paper": 2,
       "topic": "2.1",
       "title": "Thinking procedurally",
+      "guide_title": "Thinking procedurally",
       "clarification": [
         "Candidates need to be able to deconstruct a program and identify its component parts, for example listing the parts or completing a structure chart. Candidates may be given some component parts and be asked to add to, or complete these from a written description of pseudocode code for a program.",
         "Candidates need to be able to identify the steps that will take place to complete an algorithm, or program, and be able to write these in a suitable format (such as a flowchart or pseudocode), and put a given list into the correct order to produce a working program. Candidates may need to write pseudocode, code, or draw a flowchart to show a sequence of steps.",
@@ -967,6 +1052,9 @@
       "guide_pages": [
         18
       ],
+      "spec_pages": [
+        17
+      ],
       "point_ids": [
         "2.1.3a",
         "2.1.3b",
@@ -980,6 +1068,7 @@
       "paper": 2,
       "topic": "2.1",
       "title": "Thinking logically",
+      "guide_title": "Thinking logically",
       "clarification": [
         "Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place within an algorithm or program. They need to understand what these decisions are, and the impact of these decisions (and the outcomes) on the algorithm/program. Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outcomes."
       ],
@@ -1014,6 +1103,9 @@
       "guide_pages": [
         18
       ],
+      "spec_pages": [
+        17
+      ],
       "point_ids": [
         "2.1.4a",
         "2.1.4b",
@@ -1026,6 +1118,7 @@
       "paper": 2,
       "topic": "2.1",
       "title": "Thinking concurrently",
+      "guide_title": "Thinking concurrently",
       "clarification": [
         "Candidates need to understand what is meant by thinking concurrently. They need to be able to work out which parts of a program can be developed to take place (be processed) at the same time, and which parts are dependent on other parts.",
         "Candidates need to understand the benefits and trade offs that are brought from concurrent processing, and be able to apply these to a given scenario.",
@@ -1063,6 +1156,9 @@
       "guide_pages": [
         18
       ],
+      "spec_pages": [
+        17
+      ],
       "point_ids": [
         "2.1.5a",
         "2.1.5b"
@@ -1074,6 +1170,7 @@
       "paper": 2,
       "topic": "2.2",
       "title": "Programming techniques",
+      "guide_title": "Programming techniques",
       "clarification": [
         "Candidates need to understand the constructs of sequence, iteration and branching. They must be able to use these constructs independently of each other, and combine them to produce a solution. These include the selection statements of IF (including ELSEIF and ELSE) and select case statements. These also include both condition based iteration (e.g. while, repeat until) and count controlled iteration (e.g. FOR) – as well as how condition based iteration can be used as count controlled.",
         "Candidates need to have an understanding of the principle of recursion and the key features that produce a recursive algorithm such as a stopping condition. They need to be able to read and trace recursive functions, write recursive functions, and translate a recursive function to an iterative solution and vice-versa. Candidates need to have an understanding of the benefits and drawbacks of using both a recursive and iterative solution.",
@@ -1122,6 +1219,9 @@
         19,
         20
       ],
+      "spec_pages": [
+        18
+      ],
       "point_ids": [
         "2.2.1a",
         "2.2.1b",
@@ -1137,6 +1237,7 @@
       "paper": 2,
       "topic": "2.2",
       "title": "Computational methods",
+      "guide_title": "Computational methods",
       "clarification": [
         "Candidates need to be able to determine if a problem can be solved using computational methods, such as decomposition, abstraction, calculations, storage of data.",
         "Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution.",
@@ -1185,6 +1286,9 @@
       "guide_pages": [
         21
       ],
+      "spec_pages": [
+        18
+      ],
       "point_ids": [
         "2.2.2a",
         "2.2.2b",
@@ -1200,6 +1304,7 @@
       "paper": 2,
       "topic": "2.3",
       "title": "Algorithms",
+      "guide_title": "Algorithms",
       "clarification": [
         "Candidates need to be able to write algorithms using flow charts, pseudocode and program code. Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in syntax. Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques.",
         "Candidates need to understand that there are a range of possible solutions to a task, and that these algorithms may be different in respect to their execution time and the amount of memory they make use of. Candidates need to be able to compare different algorithms for a given data set and demonstrate an understanding of which is more efficient in terms of speed and/or memory. Candidates need to be able to compare the use of one or more algorithms against several different data sets, to determine how they will differ in their use of memory and speed of execution.",
@@ -1265,6 +1370,9 @@
         22,
         23
       ],
+      "spec_pages": [
+        18
+      ],
       "point_ids": [
         "2.3.1a",
         "2.3.1b",
@@ -1285,7 +1393,10 @@
       "subtopic": "1.1.1",
       "subtopic_title": "Structure and function of the processor",
       "letter": "a",
-      "spec_wording": "The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory Data Register; MDR, Current Instruction Register; CIR). Buses: data, address and control: How this relates to assembly language programs.",
+      "spec_wording": "The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory Data Register; MDR, Current Instruction Register; CIR). Buses: data, address and control: how this relates to assembly language programs.",
+      "guide_wording": "The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory Data Register; MDR, Current Instruction Register; CIR). Buses: data, address and control: How this relates to assembly language programs.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the purpose and function of the core components of a processor. Candidates need to understand the role and components of the ALU.",
         "Candidates need to understand the purpose and function or registers within the processor, including the PC, accumulator, MAR, MDR and CIR.",
@@ -1347,7 +1458,10 @@
       "subtopic": "1.1.1",
       "subtopic_title": "Structure and function of the processor",
       "letter": "b",
-      "spec_wording": "The Fetch-Decode-Execute Cycle, including its effect on registers.",
+      "spec_wording": "The Fetch-Decode-Execute Cycle; including its effects on registers.",
+      "guide_wording": "The Fetch-Decode-Execute Cycle, including its effect on registers.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose and stages within the FDE cycle.",
         "Candidates need to understand how and when the registers are used within this cycle, and how and where data and addresses are transmitted to/from in each part of this cycle."
@@ -1396,6 +1510,9 @@
       "subtopic_title": "Structure and function of the processor",
       "letter": "c",
       "spec_wording": "The factors affecting the performance of the CPU: clock speed, number of cores, cache.",
+      "guide_wording": "The factors affecting the performance of the CPU: clock speed, number of cores, cache.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand how the performance of the CPU can be affected by many factors. Candidates need to understand how and why the performance is affected by the clock speed, the number of cores and the size and speed of the cache."
       ],
@@ -1443,6 +1560,9 @@
       "subtopic_title": "Structure and function of the processor",
       "letter": "d",
       "spec_wording": "The use of pipelining in a processor to improve efficiency.",
+      "guide_wording": "The use of pipelining in a processor to improve efficiency.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [],
       "clarification_mapping": "inferred",
       "clarification_shared_with": [],
@@ -1479,6 +1599,9 @@
       "subtopic_title": "Structure and function of the processor",
       "letter": "e",
       "spec_wording": "Von Neumann, Harvard and contemporary processor architecture.",
+      "guide_wording": "Von Neumann, Harvard and contemporary processor architecture.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the Von Neumann and Harvard architectures. They should be aware of the different approaches the architectures take to storing instructions and data in memory and the benefits of each approach.",
         "Candidates will not be asked about specific aspects of “contemporary processor architecture” unless explicitly named in the specification. They may, however, be asked to show an awareness of how contemporary processors differ from a pure Von Neumann architecture in more open questions."
@@ -1526,7 +1649,10 @@
       "subtopic": "1.1.2",
       "subtopic_title": "Types of processor",
       "letter": "a",
-      "spec_wording": "The differences between, and uses of, CISC and RISC processors.",
+      "spec_wording": "The differences between and uses of CISC and RISC processors.",
+      "guide_wording": "The differences between, and uses of, CISC and RISC processors.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the differences between the CISC and RISC processors and the key features and benefits of each. They should be aware of the relative benefits of each architecture."
       ],
@@ -1567,6 +1693,9 @@
       "subtopic_title": "Types of processor",
       "letter": "b",
       "spec_wording": "GPUs and their uses (including those not related to graphics).",
+      "guide_wording": "GPUs and their uses (including those not related to graphics).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of GPUs and what applications they are used for (candidates need to understand how GPUs are used to aid graphics, but also other applications for example their use in modeling, data mining, etc.). Candidates should understand the benefits and using GPUs and why they are suited to certain tasks (specialist instructions, multiple cores and SIMD processing)."
       ],
@@ -1607,6 +1736,9 @@
       "subtopic_title": "Types of processor",
       "letter": "c",
       "spec_wording": "Multicore and Parallel systems.",
+      "guide_wording": "Multicore and Parallel systems.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by a parallel system and the benefits and limitations of parallel processing.",
         "Candidates need to understand that parallel processing can be achieved through different (i.e. multiple processors in the same computer or distributed across multiple cores in a CPU or GPU).",
@@ -1652,7 +1784,10 @@
       "subtopic": "1.1.3",
       "subtopic_title": "Input, output and storage",
       "letter": "a",
-      "spec_wording": "How different input output and storage devices can be applied as a solution of different problems.",
+      "spec_wording": "How different input, output and storage devices can be applied to the solution of different problems.",
+      "guide_wording": "How different input output and storage devices can be applied as a solution of different problems.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of a range of input, output and storage devices. Candidates do not need to understand how the input and output devices work, but must be able to recommend appropriate devices for specific situations and be able to justify choices made."
       ],
@@ -1691,6 +1826,9 @@
       "subtopic_title": "Input, output and storage",
       "letter": "b",
       "spec_wording": "The uses of magnetic, flash and optical storage devices.",
+      "guide_wording": "The uses of magnetic, flash and optical storage devices.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are different types of storage device. They need to know about the characteristics of each type (magnetic, optical and flash) and understand the benefits and drawbacks of each, and be able to recommend an appropriate type of device for a given situation and justify the choice."
       ],
@@ -1725,6 +1863,9 @@
       "subtopic_title": "Input, output and storage",
       "letter": "c",
       "spec_wording": "RAM and ROM.",
+      "guide_wording": "RAM and ROM.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of ROM and RAM within a computer system, their characteristics, and the role they play in the running of a range of different computers e.g. mobile devices, embedded systems etc."
       ],
@@ -1759,6 +1900,9 @@
       "subtopic_title": "Input, output and storage",
       "letter": "d",
       "spec_wording": "Virtual storage.",
+      "guide_wording": "Virtual storage.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand why there is a need for virtual storage, how virtual storage works and the benefits and drawbacks of using virtual storage. Virtual storage would be that which may appear to be local but is physically located elsewhere on the network/remotely/in the cloud."
       ],
@@ -1790,9 +1934,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "a",
       "spec_wording": "The need for, function and purpose of operating systems.",
+      "guide_wording": "The need for, function and purpose of operating systems.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of why an operating system is required, along with the different tasks it performs within a computer system (e.g. resource management, file management, interrupt handling, security, providing a platform for software to run, providing a user interface and providing utilities)."
       ],
@@ -1838,9 +1985,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "b",
-      "spec_wording": "Memory management (paging, segmentation and virtual memory).",
+      "spec_wording": "Memory Management (paging, segmentation and virtual memory).",
+      "guide_wording": "Memory management (paging, segmentation and virtual memory).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand how operating systems manage memory. They need to understand the need for, purpose and function of paging to divide memory into usable fixed-size pages and how this aids in the transfer of memory for example virtual memory. Candidates need to understand what is meant by segmentation and how memory is divided into segments to allow access to memory. Candidates need to understand what is meant by virtual memory and why this is needed in a computer system. Candidates need to understand how paging is used in virtual memory, and the benefits and drawbacks of having and using virtual memory in a computer system."
       ],
@@ -1898,9 +2048,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "c",
-      "spec_wording": "Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the fetch decode execute cycle.",
+      "spec_wording": "Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the Fetch-Decode-Execute Cycle.",
+      "guide_wording": "Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the fetch decode execute cycle.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of interrupts within a computer system, why an interrupt might be generated and what happens within the CPU and memory in order to call an interrupt service routine."
       ],
@@ -1946,9 +2099,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "d",
       "spec_wording": "Scheduling: round robin, first come first served, multi-level feedback queues, shortest job first and shortest remaining time.",
+      "guide_wording": "Scheduling: round robin, first come first served, multi-level feedback queues, shortest job first and shortest remaining time.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the need for scheduling of tasks by an operating system and the benefits that scheduling brings. Candidates need to understand that there are different scheduling algorithms, with each having benefits and drawbacks for tasks with specific characteristics. Candidates need to understand how the following scheduling algorithms work; round robin, first come first served, multi-level feedback queue, shortest job first and shortest remaining time."
       ],
@@ -2002,9 +2158,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "e",
-      "spec_wording": "Distributed, embedded, multi-tasking, multi-user and real time operating systems.",
+      "spec_wording": "Distributed, embedded, multi-tasking, multi-user and Real Time operating systems.",
+      "guide_wording": "Distributed, embedded, multi-tasking, multi-user and real time operating systems.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the different (and often overlapping) classifications of operating systems (distributed, embedded, multi-tasking, multi-user and real time), including the key features of each. They should be able to recommend (and justify) a type of operating system for a given scenario."
       ],
@@ -2050,9 +2209,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "f",
       "spec_wording": "BIOS.",
+      "guide_wording": "BIOS.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the role of the BIOS in a computer system, and the steps that the BIOS goes through to start a computer."
       ],
@@ -2098,9 +2260,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "g",
       "spec_wording": "Device drivers.",
+      "guide_wording": "Device drivers.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by ‘device drivers’ and why they are needed for communication between hardware and the operating system."
       ],
@@ -2146,9 +2311,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.1",
-      "subtopic_title": "Operating Systems",
+      "subtopic_title": "Systems Software",
       "letter": "h",
       "spec_wording": "Virtual machines, any instance where software is used to take on the function of a machine, including executing intermediate code or running an operating system within another.",
+      "guide_wording": "Virtual machines, any instance where software is used to take on the function of a machine, including executing intermediate code or running an operating system within another.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to describe what is meant by a virtual machine, how they can be used to execute intermediate code, how they can be used to run a software driven machine inside a physical machine and the benefits and drawbacks of each approach."
       ],
@@ -2194,9 +2362,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "a",
       "spec_wording": "The nature of applications, justifying suitable applications for a specific purpose.",
+      "guide_wording": "The nature of applications, justifying suitable applications for a specific purpose.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of applications, and should have knowledge and experience of a range of different application software (for example database, word processor, web browser, graphics manipulation etc.). Candidates should be able to recommend the use of specific and generic applications for given scenarios, justifying their use and function(s) for a scenario."
       ],
@@ -2237,9 +2408,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "b",
       "spec_wording": "Utilities.",
+      "guide_wording": "Utilities.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose and role of utility software in a computer system.",
         "Candidates should be familiar with a range of utility software (e.g. disk defragmentation, file management, device driver, system cleanup, security etc.)"
@@ -2281,9 +2455,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "c",
       "spec_wording": "Open source vs closed source.",
+      "guide_wording": "Open source vs closed source.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to explain the differences between open and closed source software, the benefits and drawbacks to creator and user of each of the licensing models, and be able to recommend which is used (with justification) for a specific scenario."
       ],
@@ -2320,9 +2497,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "d",
-      "spec_wording": "Translators: interpreters, compilers and assemblers.",
+      "spec_wording": "Translators:Interpreters, compilers and assemblers.",
+      "guide_wording": "Translators: interpreters, compilers and assemblers.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the need for translators when writing programs. They need to have knowledge of the differences in operation of interpreters and compilers, from these they need to be able to assess the benefits and drawbacks of using each type, and recommend with justification which should be used in a specific scenario. Candidates need to understand the role of an assembler and how it differs from interpreters and compilers."
       ],
@@ -2367,9 +2547,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "e",
-      "spec_wording": "Stages of compilation (Lexical analysis, Syntax analysis, Code generation and Optimisation).",
+      "spec_wording": "Stages of compilation (lexical analysis, syntax analysis, code generation and optimisation).",
+      "guide_wording": "Stages of compilation (Lexical analysis, Syntax analysis, Code generation and Optimisation).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are a number of stages involved in compilation.",
         "Candidates need to understand how lexical analysis works and how the code is converted into tokens with the removal of unnecessary elements (e.g. comments and whitespace).",
@@ -2424,9 +2607,12 @@
       "topic": "1.2",
       "topic_title": "Software and software development",
       "subtopic": "1.2.2",
-      "subtopic_title": "Applications generation",
+      "subtopic_title": "Applications Generation",
       "letter": "f",
       "spec_wording": "Linkers and loaders and use of libraries.",
+      "guide_wording": "Linkers and loaders and use of libraries.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what code libraries are, how they are used and the benefits and drawbacks from using libraries. Candidates should have experience of using libraries to write programs. Candidates should understand how libraries are used during compilation, and how linkers and loaders are used to combine the code and library code into the final executable file."
       ],
@@ -2470,6 +2656,9 @@
       "subtopic_title": "Software Development",
       "letter": "a",
       "spec_wording": "Understand the waterfall lifecycle, agile methodologies, extreme programming, the spiral model and rapid application development.",
+      "guide_wording": "Understand the waterfall lifecycle, agile methodologies, extreme programming, the spiral model and rapid application development.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the following models that can be followed to produce a software system; the waterfall lifecycle, agile methodologies (specifically extreme programming); the spiral model and rapid application development). Candidates need to understand the tasks, processes, benefits and drawbacks of each model and the similarities and differences between each. They need to understand where each model is most suitable to use, and be able to justify the use in a situation."
       ],
@@ -2506,6 +2695,9 @@
       "subtopic_title": "Software Development",
       "letter": "b",
       "spec_wording": "The relative merits and drawbacks of different methodologies and when they might be used.",
+      "guide_wording": "The relative merits and drawbacks of different methodologies and when they might be used.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the following models that can be followed to produce a software system; the waterfall lifecycle, agile methodologies (specifically extreme programming); the spiral model and rapid application development). Candidates need to understand the tasks, processes, benefits and drawbacks of each model and the similarities and differences between each. They need to understand where each model is most suitable to use, and be able to justify the use in a situation."
       ],
@@ -2542,6 +2734,9 @@
       "subtopic_title": "Software Development",
       "letter": "c",
       "spec_wording": "Writing and following algorithms.",
+      "guide_wording": "Writing and following algorithms.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to write algorithms using pseudocode and/or program code. Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in this syntax. Candidate’s code is not expected to be syntactically correct, but must use appropriate code structures."
       ],
@@ -2580,6 +2775,9 @@
       "subtopic_title": "Types of Programming Language",
       "letter": "a",
       "spec_wording": "Need for and characteristics of a variety of programming paradigms.",
+      "guide_wording": "Need for and characteristics of a variety of programming paradigms.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are a variety of types of programming paradigms such as procedural, OOP, low-level, and that each has its strengths and weaknesses in specific scenarios, topics or areas."
       ],
@@ -2627,6 +2825,9 @@
       "subtopic_title": "Types of Programming Language",
       "letter": "b",
       "spec_wording": "Procedural languages.",
+      "guide_wording": "Procedural languages.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have knowledge and experience of using a procedural programming language for example Python, VB.NET etc. Candidates need to be experienced in using procedural programming features such as (but not limited to) variables, constants, selection, iteration, sequence, subroutines, string handling, file handling, Boolean and arithmetic operators. Candidates need to be able to read, trace, amend and write procedural program code."
       ],
@@ -2722,6 +2923,11 @@
       "subtopic_title": "Types of Programming Language",
       "letter": "c",
       "spec_wording": "Assembly language (including following and writing simple programs with the Little Man Computer instruction set). See appendix 5d.",
+      "guide_wording": "Assembly language (including following and writing simple programs with the Little Man Computer instruction set). See appendix 5d.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the purpose and need for assembly language. They need to be familiar with the instructions given in Appendix 5d. They should be able to read, write, trace and amend programs written in the Little Man Computer language."
       ],
@@ -2777,6 +2983,9 @@
       "subtopic_title": "Types of Programming Language",
       "letter": "d",
       "spec_wording": "Modes of addressing memory (immediate, direct, indirect and indexed).",
+      "guide_wording": "Modes of addressing memory (immediate, direct, indirect and indexed).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need an understanding of addressing, which should be integrated with assembly language. Candidates should have experience of using immediate, direct, indirect and indexed addressing in the writing, reading and tracing of programs written in assembly language."
       ],
@@ -2827,7 +3036,12 @@
       "subtopic": "1.2.4",
       "subtopic_title": "Types of Programming Language",
       "letter": "e",
-      "spec_wording": "Object-oriented languages (See appendix 5d for pseudocode style) with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism.",
+      "spec_wording": "Object-oriented languages (see appendix 5d for pseudocode style) with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism.",
+      "guide_wording": "Object-oriented languages (See appendix 5d for pseudocode style) with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand object-oriented code (as specified in the pseudocode guide). They need to have an understanding of classes, objects, attributes and methods. They need to understand the difference between private and public attributes and methods. Candidates need to understand encapsulation and the use of get and set methods to access private attributes. Candidates need to understand the purpose and principles of inheritance. Candidates need to have an understanding of polymorphism and how it can be used within a program. Candidates need to be able to read, trace, amend and write code that makes use of these object-oriented techniques."
       ],
@@ -2891,6 +3105,9 @@
       "subtopic_title": "Compression, Encryption and Hashing",
       "letter": "a",
       "spec_wording": "Lossy vs Lossless compression.",
+      "guide_wording": "Lossy vs Lossless compression.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the need for compression, especially when transferring data via the Internet. Candidates need to understand the difference between lossy and lossless compression, and the benefits and drawbacks of each type. Candidates need to be able to recommend a type of compression for a given scenario."
       ],
@@ -2947,6 +3164,9 @@
       "subtopic_title": "Compression, Encryption and Hashing",
       "letter": "b",
       "spec_wording": "Run length encoding and dictionary coding for lossless compression.",
+      "guide_wording": "Run length encoding and dictionary coding for lossless compression.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand how run-length encoding can reduce the size of a file for example with a text file or image. Candidates should understand how dictionary coding works by substituting entries with a unique code. Candidates should have practical experience of using these algorithms with small example files."
       ],
@@ -2991,6 +3211,9 @@
       "subtopic_title": "Compression, Encryption and Hashing",
       "letter": "c",
       "spec_wording": "Symmetric and asymmetric encryption.",
+      "guide_wording": "Symmetric and asymmetric encryption.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand the need for encryption. Candidates should understand how symmetric and asymmetric encryption work to encrypt and decrypt data."
       ],
@@ -3031,6 +3254,9 @@
       "subtopic_title": "Compression, Encryption and Hashing",
       "letter": "d",
       "spec_wording": "Different uses of hashing.",
+      "guide_wording": "Different uses of hashing.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand the need for and purpose of using hashing algorithms to store data.",
         "Candidates should be aware of different uses for hashing, such as the storing of passwords."
@@ -3071,7 +3297,12 @@
       "subtopic": "1.3.2",
       "subtopic_title": "Databases",
       "letter": "a",
-      "spec_wording": "Relational database, flat file, primary key, foreign key, secondary key, entity relationship modeling, normalisation and indexing. See appendix 5g.",
+      "spec_wording": "Relational database, flat file, primary key, foreign key, secondary key, entity relationship modelling, normalisation and indexing. See appendix 5f.",
+      "guide_wording": "Relational database, flat file, primary key, foreign key, secondary key, entity relationship modeling, normalisation and indexing. See appendix 5g.",
+      "appendix_refs": [
+        "5f"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by a database. Candidates should be familiar with basic database terminology such as fields, records and tables. Candidates should know the difference between a flat file and a relational database, and be able to explain the benefits and limitations of each approach. Candidates should be able to use Normalisation to produce a suitable database schema and explain the benefits of doing so. They should be able to normalise up to 3NF. Candidates should know and be able to apply the criteria for 1NF, 2NF and 3NF.",
         "Candidates should know what is meant by a primary key, foreign key and secondary key and how each are used in a database. Candidates should be able produce and follow Entity relationship diagrams which include 1:1, 1:M and M:M relationships. They should be able to identify how tables should be linked.",
@@ -3141,6 +3372,9 @@
       "subtopic_title": "Databases",
       "letter": "b",
       "spec_wording": "Methods of capturing, selecting, managing and exchanging data.",
+      "guide_wording": "Methods of capturing, selecting, managing and exchanging data.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an awareness of a range of methods for capturing data (such as forms, OCR, OMR and sensors) selecting data (such as Query By Example and SQL), managing data (such as changing data by manipulating it – e.g. arithmetic functions, adding, editing, deleting the data) and exchanging data (with commons formats such as CSV and JSON). Candidates won’t be specifically asked about any one of these methods but may be asked to discuss/justify suitable methods as part of a more open question. Candidates need to have an understanding of the need to interrogate data within a database. Candidates should understand the purpose of indexing in a database and the benefits of using indexing to optimise the searching for data. Candidates need to have experience of a range of methods for capturing data (such as forms – what do they collect, what do they look like - data mining, where does the data come from, how is it collected and analysed), selecting data (such as how to produce QBEs – adding fields, tables, criteria, sorting - selecting through Boolean expressions – AND, OR, NOT), managing data (such as changing data by manipulating it – e.g. arithmetic functions - , adding, editing, deleting the data) and exchanging data (such as methods of transferring data – electronic i.e. memory stick, e-mail, and non-electronic e.g. paper based - appropriate formats for the transfer of data and communication mediums to transfer data – such as the structure, is it in a table or a list).(such as forms, data mining), selecting data (such as producing QBEs, selecting through Boolean expressions), managing data (such as manipulation, adding, editing, deleting) and exchanging data (such as methods of transferring data, appropriate formats for the transfer of data and communication mediums to transfer data)."
       ],
@@ -3183,6 +3417,9 @@
       "subtopic_title": "Databases",
       "letter": "c",
       "spec_wording": "Normalisation to 3NF.",
+      "guide_wording": "Normalisation to 3NF.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by a database. Candidates should be familiar with basic database terminology such as fields, records and tables. Candidates should know the difference between a flat file and a relational database, and be able to explain the benefits and limitations of each approach. Candidates should be able to use Normalisation to produce a suitable database schema and explain the benefits of doing so. They should be able to normalise up to 3NF. Candidates should know and be able to apply the criteria for 1NF, 2NF and 3NF."
       ],
@@ -3211,7 +3448,12 @@
       "subtopic": "1.3.2",
       "subtopic_title": "Databases",
       "letter": "d",
-      "spec_wording": "SQL - Interpret and modify. See appendix 5d.",
+      "spec_wording": "SQL – Interpret and modify. See appendix 5d.",
+      "guide_wording": "SQL - Interpret and modify. See appendix 5d.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates should have experience of using SQL to edit and modify data in a database. They should understand the need for SQL as a standard language. Candidates should be able write and follow scripts using the SQL commands listed in appendix 5d."
       ],
@@ -3247,7 +3489,10 @@
       "subtopic": "1.3.2",
       "subtopic_title": "Databases",
       "letter": "e",
-      "spec_wording": "Referential Integrity.",
+      "spec_wording": "Referential integrity.",
+      "guide_wording": "Referential Integrity.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by referential integrity, and why this is desirable in a database."
       ],
@@ -3280,6 +3525,9 @@
       "subtopic_title": "Databases",
       "letter": "f",
       "spec_wording": "Transaction processing, ACID (Atomicity, Consistency, Isolation, Durability), record locking and redundancy.",
+      "guide_wording": "Transaction processing, ACID (Atomicity, Consistency, Isolation, Durability), record locking and redundancy.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand what is meant by transaction processing, and scenarios where transaction processing takes place. Candidates should understand the problems that arise from transaction processing, and how these can be overcome. Candidates should understand the ACID rules for transaction processing, and why databases should be built to these standards. Candidates should understand how record locking prevents the overriding of data, and understand how record locking takes place."
       ],
@@ -3324,6 +3572,9 @@
       "subtopic_title": "Networks",
       "letter": "a",
       "spec_wording": "Characteristics of networks and the importance of protocols and standards.",
+      "guide_wording": "Characteristics of networks and the importance of protocols and standards.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the definition and purpose of a network.",
         "Candidates need to understand the purpose of, and importance of using protocols. They should be able to discuss examples of protocols that may be used in a network/the internet (but will not be asked to recall information about any specific protocol). Candidates should understand the term standard and the purpose and need for standards in a network (or any situation where data is transferred)."
@@ -3371,6 +3622,35 @@
       "subtopic_title": "Networks",
       "letter": "b",
       "spec_wording": "The internet structure:\n• The TCP/IP Stack.\n• DNS\n• Protocol layering.\n• LANs and WANs.\n• Packet and circuit switching.",
+      "guide_wording": "The internet structure:\n• The TCP/IP Stack.\n• DNS\n• Protocol layering.\n• LANs and WANs.\n• Packet and circuit switching.",
+      "appendix_refs": [],
+      "sub_items": [
+        {
+          "id": "1.3.3b.1",
+          "text": "The TCP/IP Stack.",
+          "label": "The TCP/IP Stack"
+        },
+        {
+          "id": "1.3.3b.2",
+          "text": "DNS",
+          "label": "DNS"
+        },
+        {
+          "id": "1.3.3b.3",
+          "text": "Protocol layering.",
+          "label": "Protocol layering"
+        },
+        {
+          "id": "1.3.3b.4",
+          "text": "LANs and WANs.",
+          "label": "LANs and WANs"
+        },
+        {
+          "id": "1.3.3b.5",
+          "text": "Packet and circuit switching.",
+          "label": "Packet and circuit switching"
+        }
+      ],
       "clarification": [
         "Candidates need to understand the purpose and benefits of layering protocols, particularly within the TCP/IP stack. Candidates need to know the different layers within the TCP/IP stack and the purpose of each. Candidates need to understand how data is transmitted on the Internet, the use of IP addresses and packets in the transfer of data. (NB Candidates are not expected to be familiar with the OSI model).",
         "Candidates are expected to understand the terms LAN and WAN.",
@@ -3424,6 +3704,9 @@
       "subtopic_title": "Networks",
       "letter": "c",
       "spec_wording": "Network security and threats, use of firewalls, proxies and encryption.",
+      "guide_wording": "Network security and threats, use of firewalls, proxies and encryption.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are a range of security issues and threats involved with networked computers. Candidates need to be aware of threats such as hackers, viruses, unauthorised access, denial of service, spyware, SQL injection, phishing and pharming. Candidates need to know about ways of minimising, or preventing these threats for example firewalls, secure passwords, anti-virus, anti-spyware etc."
       ],
@@ -3466,6 +3749,9 @@
       "subtopic_title": "Networks",
       "letter": "d",
       "spec_wording": "Network hardware.",
+      "guide_wording": "Network hardware.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have knowledge of the hardware required to connect to and/or build a network (e.g. modem, router, cable, NIC, Wireless Access Points, hub, switch etc). Candidates need to understand the purpose of the hardware, but are not required to understand how they physically work."
       ],
@@ -3504,6 +3790,9 @@
       "subtopic_title": "Networks",
       "letter": "e",
       "spec_wording": "Client-server and peer to peer.",
+      "guide_wording": "Client-server and peer to peer.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the difference between a client-server and peer-to-peer network.",
         "Candidates need to know the benefits and drawbacks of each type of network and be able to recommend one for a given scenario."
@@ -3543,6 +3832,11 @@
       "subtopic_title": "Web Technologies",
       "letter": "a",
       "spec_wording": "HTML, CSS and JavaScript. See appendix 5d.",
+      "guide_wording": "HTML, CSS and JavaScript. See appendix 5d.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of HTML, CSS and JavaScript. Candidates should have experience of writing webpages using HTML, CSS and JavaScript. Candidates need to be able to recognise the code in Appendix 5d, and be able to read, write, amend and interpret code using HTML, CSS and JavaScript."
       ],
@@ -3593,6 +3887,9 @@
       "subtopic_title": "Web Technologies",
       "letter": "b",
       "spec_wording": "Search engine indexing.",
+      "guide_wording": "Search engine indexing.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand how and why search engine results are indexed. They should understand how PageRank ranks these results. Candidates should understand how page rank works at a high level but are not expected to be able to code the algorithm."
       ],
@@ -3633,6 +3930,9 @@
       "subtopic_title": "Web Technologies",
       "letter": "c",
       "spec_wording": "PageRank algorithm.",
+      "guide_wording": "PageRank algorithm.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand how and why search engine results are indexed. They should understand how PageRank ranks these results. Candidates should understand how page rank works at a high level but are not expected to be able to code the algorithm."
       ],
@@ -3677,6 +3977,9 @@
       "subtopic_title": "Web Technologies",
       "letter": "d",
       "spec_wording": "Server and client side processing.",
+      "guide_wording": "Server and client side processing.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the difference between server and client side processing, and should be aware of examples (for example Javascript code vs PHP code) of processing on both sides. Candidates should be aware of the benefits and drawbacks of both types of processing."
       ],
@@ -3718,7 +4021,10 @@
       "subtopic": "1.4.1",
       "subtopic_title": "Data Types",
       "letter": "a",
-      "spec_wording": "Primitive data types, integer, real/ floating point, character, string and Boolean.",
+      "spec_wording": "Primitive data types, integer, real/floating point, character, string and Boolean.",
+      "guide_wording": "Primitive data types, integer, real/ floating point, character, string and Boolean.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of programming data types such as integer, real, Boolean, character string etc. Candidates need to be able to choose appropriate data types for a situation or given data. Candidates should have experience of programming solutions using these data types. Candidates should have knowledge of how to convert from one data type to another."
       ],
@@ -3770,6 +4076,9 @@
       "subtopic_title": "Data Types",
       "letter": "b",
       "spec_wording": "Represent positive integers in binary.",
+      "guide_wording": "Represent positive integers in binary.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should understand how and why computers store data as binary using switches, and that a binary number can have a variety of different interpretations depending on what is being stored (e.g. numeric, text, image, sound).",
         "Candidates should be able to convert positive whole numbers to binary and from binary to decimal/denary."
@@ -3816,6 +4125,9 @@
       "subtopic_title": "Data Types",
       "letter": "c",
       "spec_wording": "Use of sign and magnitude and two’s complement to represent negative numbers in binary.",
+      "guide_wording": "Use of sign and magnitude and two’s complement to represent negative numbers in binary.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should know how to store negative numbers using Sign and Magnitude and two’s complement. Candidates should be able to convert denary numbers to sign and magnitude, and two’s complement – and vice-versa."
       ],
@@ -3859,6 +4171,9 @@
       "subtopic_title": "Data Types",
       "letter": "d",
       "spec_wording": "Addition and subtraction of binary integers.",
+      "guide_wording": "Addition and subtraction of binary integers.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to perform addition and subtraction on integer binary numbers. (These numbers could be positive or negative using two’s complement representation.)"
       ],
@@ -3898,6 +4213,9 @@
       "subtopic_title": "Data Types",
       "letter": "e",
       "spec_wording": "Represent positive integers in hexadecimal.",
+      "guide_wording": "Represent positive integers in hexadecimal.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the purpose and potential uses of Hexadecimal for example where and why they are used instead of binary and the benefits of using Hexadecimal over alternatives such as binary. Candidates should be able to convert denary numbers to hexadecimal and vice-versa and from binary to hexadecimal and vice-versa."
       ],
@@ -3942,7 +4260,10 @@
       "subtopic": "1.4.1",
       "subtopic_title": "Data Types",
       "letter": "f",
-      "spec_wording": "Convert positive integers between Binary Hexadecimal and denary.",
+      "spec_wording": "Convert positive integers between binary hexadecimal and denary.",
+      "guide_wording": "Convert positive integers between Binary Hexadecimal and denary.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to convert positive whole numbers to binary and from binary to decimal/denary.",
         "Candidates need to have an understanding of the purpose and potential uses of Hexadecimal for example where and why they are used instead of binary and the benefits of using Hexadecimal over alternatives such as binary. Candidates should be able to convert denary numbers to hexadecimal and vice-versa and from binary to hexadecimal and vice-versa."
@@ -3990,6 +4311,9 @@
       "subtopic_title": "Data Types",
       "letter": "g",
       "spec_wording": "Representation and normalisation of floating point numbers in binary.",
+      "guide_wording": "Representation and normalisation of floating point numbers in binary.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should have an understanding of how (positive and negative) real numbers are represented in a binary floating-point representation, and should be able to convert between a denary number and a real binary number. (NB the representation used for the exam is the mantissa and exponent both represented using two’s complement.)",
         "Candidates should understand the need for normalised floating point numbers. Candidates should be able to normalise a floating point number."
@@ -4042,6 +4366,9 @@
       "subtopic_title": "Data Types",
       "letter": "h",
       "spec_wording": "Floating point arithmetic, positive and negative numbers, addition and subtraction.",
+      "guide_wording": "Floating point arithmetic, positive and negative numbers, addition and subtraction.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to perform addition and subtraction floating point arithmetic including addition and subtraction of both positive and negative numbers."
       ],
@@ -4081,6 +4408,9 @@
       "subtopic_title": "Data Types",
       "letter": "i",
       "spec_wording": "Bitwise manipulation and masks: shifts, combining with AND, OR, and XOR.",
+      "guide_wording": "Bitwise manipulation and masks: shifts, combining with AND, OR, and XOR.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to perform right and left logical shifts. Candidates should understand the effect of right and left shifts on a binary numbers.",
         "Candidates should understand the purpose of using masks with bitwise operators, and should have experience of applying masks using AND, OR and XOR."
@@ -4129,6 +4459,9 @@
       "subtopic_title": "Data Types",
       "letter": "j",
       "spec_wording": "How character sets (ASCII and UNICODE) are used to represent text.",
+      "guide_wording": "How character sets (ASCII and UNICODE) are used to represent text.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should have an understanding of how characters are represented in a computer and in binary. Candidates should understand the need for a character set and how a computer makes use of a character set. Candidates should be aware of the ASCII and UNICODE character sets and be able to explain the differences between these and how these impact what can be stored. Candidates should be able to use a character set, or part of a character set, to translate characters into binary and vice-versa. (Candidates are not expected to memorise any values in a character set)."
       ],
@@ -4180,6 +4513,9 @@
       "subtopic_title": "Data Structures",
       "letter": "a",
       "spec_wording": "Arrays (of up to 3 dimensions), records, lists, tuples.",
+      "guide_wording": "Arrays (of up to 3 dimensions), records, lists, tuples.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be able to describe what is meant by arrays (up to 3 dimensions), records, lists and tuples. They are expected to be able recognise when they can be used and incorporate them in their programs to store data."
       ],
@@ -4255,6 +4591,9 @@
       "subtopic_title": "Data Structures",
       "letter": "b",
       "spec_wording": "The following structures to store data: linked-list, graph (directed and undirected), stack, queue, tree, binary search tree, hash table.",
+      "guide_wording": "The following structures to store data: linked-list, graph (directed and undirected), stack, queue, tree, binary search tree, hash table.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the behaviour of linked-lists, graphs, stacks, queues, trees, binary search trees and hash tables."
       ],
@@ -4305,7 +4644,10 @@
       "subtopic": "1.4.2",
       "subtopic_title": "Data Structures",
       "letter": "c",
-      "spec_wording": "How to create, traverse, add data to and remove data from the data structures mentioned above. (This can be either using arrays and procedural programming or an object-oriented approach).",
+      "spec_wording": "How to create, traverse, add data to and remove data from the data structures mentioned above. (NB this can be either using arrays and procedural programming or an object-oriented approach).",
+      "guide_wording": "How to create, traverse, add data to and remove data from the data structures mentioned above. (This can be either using arrays and procedural programming or an object-oriented approach).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able be aware of how the aforementioned data structures can be implemented. We would recommend a general understanding of these principles that can be applied to a given scenario rather than trying to memorise code patterns.",
         "Candidates should have experience of implementing these structures in a variety of contexts, for example through a procedural program, through a different data structure and through an object-oriented approach. Candidates need to be able to read, trace and write code to implement features of these data structures. (Again we would recommend a general understanding backed up with practice implementing them, rather than trying to memorise code patterns)."
@@ -4362,6 +4704,11 @@
       "subtopic_title": "Boolean Algebra",
       "letter": "a",
       "spec_wording": "Define problems using Boolean logic. See appendix 5d.",
+      "guide_wording": "Define problems using Boolean logic. See appendix 5d.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates should be familiar with AND, OR, NOT and XOR. Candidates should be familiar with the logic of each Boolean operator, and the truth tables. Candidates should be able to construct logic gate diagrams from a Boolean expression and vice-versa. Candidates should be able to construct truth tables from Boolean expressions and logic gate diagrams."
       ],
@@ -4412,6 +4759,9 @@
       "subtopic_title": "Boolean Algebra",
       "letter": "b",
       "spec_wording": "Manipulate Boolean expressions, including the use of Karnaugh maps to simplify Boolean expressions.",
+      "guide_wording": "Manipulate Boolean expressions, including the use of Karnaugh maps to simplify Boolean expressions.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should have an understanding that Boolean expressions can be simplified and should have experience of simplifying expressions using Karnaugh maps. Candidates should be able to create, complete and interpret Karnaugh maps to simplify Boolean expressions."
       ],
@@ -4456,6 +4806,9 @@
       "subtopic_title": "Boolean Algebra",
       "letter": "c",
       "spec_wording": "Use the following rules to derive or simplify statements in Boolean algebra: De Morgan’s Laws, distribution, association, commutation, double negation.",
+      "guide_wording": "Use the following rules to derive or simplify statements in Boolean algebra: De Morgan’s Laws, distribution, association, commutation, double negation.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should be aware of the given De Morgan’s laws and should be able to apply these to a Boolean statement. Candidates should have experience of manipulating and simplifying Boolean statements using these rules of distribution, commutation, association and double negation."
       ],
@@ -4500,6 +4853,11 @@
       "subtopic_title": "Boolean Algebra",
       "letter": "d",
       "spec_wording": "Using logic gate diagrams and truth tables. See appendix 5d.",
+      "guide_wording": "Using logic gate diagrams and truth tables. See appendix 5d.",
+      "appendix_refs": [
+        "5d"
+      ],
+      "sub_items": [],
       "clarification": [
         "Candidates should be familiar with AND, OR, NOT and XOR. Candidates should be familiar with the logic of each Boolean operator, and the truth tables. Candidates should be able to construct logic gate diagrams from a Boolean expression and vice-versa. Candidates should be able to construct truth tables from Boolean expressions and logic gate diagrams."
       ],
@@ -4550,6 +4908,9 @@
       "subtopic_title": "Boolean Algebra",
       "letter": "e",
       "spec_wording": "The logic associated with D type flip flops, half and full adders.",
+      "guide_wording": "The logic associated with D type flip flops, half and full adders.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose and principles of D type flip flops and how and where they are used in a computer. They should be able to recognise how they can be triggered by a clock pulse (see practice paper 2 for an example). Candidates are not expected to memorise the logic gates that make up a D-type flip flop.",
         "Candidates need to understand the purpose and function of an adder circuit, and the difference between a half and full adder. They should be able to recognise and draw the logic gates and truth tables for full and half adders."
@@ -4598,7 +4959,10 @@
       "subtopic": "1.5.1",
       "subtopic_title": "Computing related legislation",
       "letter": "a",
-      "spec_wording": "Data Protection Act 1998.",
+      "spec_wording": "The Data Protection Act 1998.",
+      "guide_wording": "Data Protection Act 1998.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
         "Candidates should be familiar with the purpose and role of the Data Protection Act, candidates will need to understand the different rules that are within the DPA and how these impact the use of computers and the storage of data by organisations, this should include what organisations can and cannot do.",
@@ -4646,7 +5010,10 @@
       "subtopic": "1.5.1",
       "subtopic_title": "Computing related legislation",
       "letter": "b",
-      "spec_wording": "Computer Misuse Act 1990.",
+      "spec_wording": "The Computer Misuse Act 1990.",
+      "guide_wording": "Computer Misuse Act 1990.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
         "Candidates need to understand the purpose and principles of the Computer Misuse Act, including the actions that it prohibits.",
@@ -4690,7 +5057,10 @@
       "subtopic": "1.5.1",
       "subtopic_title": "Computing related legislation",
       "letter": "c",
-      "spec_wording": "Copyright and Patents Act 1988.",
+      "spec_wording": "The Copyright Design and Patents Act 1988.",
+      "guide_wording": "Copyright and Patents Act 1988.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
         "Candidates need to understand the purpose and principles of the Copyright and Patents Act, including the actions that it prohibits.",
@@ -4734,7 +5104,10 @@
       "subtopic": "1.5.1",
       "subtopic_title": "Computing related legislation",
       "letter": "d",
-      "spec_wording": "Regulation of Investigatory Powers Act 2000.",
+      "spec_wording": "The Regulation of Investigatory Powers Act 2000.",
+      "guide_wording": "Regulation of Investigatory Powers Act 2000.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the need for and purpose of laws relating to the use of computers.",
         "Candidates need to understand the purpose and principles of the Regulation of Investigatory Powers Act, and what this allows in the interception and monitoring of electronic communication.",
@@ -4776,9 +5149,58 @@
       "topic": "1.5",
       "topic_title": "Legal, moral, cultural and ethical issues",
       "subtopic": "1.5.2",
-      "subtopic_title": "Ethical, moral and cultural issues",
+      "subtopic_title": "Moral and ethical Issues",
       "letter": "a",
-      "spec_wording": "The individual (moral), social (ethical) and cultural opportunities and risks of digital technology:\n• Computers in the workforce\n• Automated decision making\n• Artificial intelligence\n• Environmental effects\n• Censorship and the Internet\n• Monitor behavior\n• Analyse personal information\n• Piracy and offensive communications\n• Layout, colour paradigms and character sets.",
+      "spec_wording": "The individual moral, social, ethical and cultural opportunities and risks of digital technology:\n• Computers in the workforce.\n• Automated decision making.\n• Artificial intelligence.\n• Environmental effects.\n• Censorship and the Internet.\n• Monitor behaviour.\n• Analyse personal information.\n• Piracy and offensive communications.\n• Layout, colour paradigms and character sets.",
+      "guide_wording": "The individual (moral), social (ethical) and cultural opportunities and risks of digital technology:\n• Computers in the workforce\n• Automated decision making\n• Artificial intelligence\n• Environmental effects\n• Censorship and the Internet\n• Monitor behavior\n• Analyse personal information\n• Piracy and offensive communications\n• Layout, colour paradigms and character sets.",
+      "appendix_refs": [],
+      "sub_items": [
+        {
+          "id": "1.5.2a.1",
+          "text": "Computers in the workforce.",
+          "label": "Computers in the workforce"
+        },
+        {
+          "id": "1.5.2a.2",
+          "text": "Automated decision making.",
+          "label": "Automated decision making"
+        },
+        {
+          "id": "1.5.2a.3",
+          "text": "Artificial intelligence.",
+          "label": "Artificial intelligence"
+        },
+        {
+          "id": "1.5.2a.4",
+          "text": "Environmental effects.",
+          "label": "Environmental effects"
+        },
+        {
+          "id": "1.5.2a.5",
+          "text": "Censorship and the Internet.",
+          "label": "Censorship and the Internet"
+        },
+        {
+          "id": "1.5.2a.6",
+          "text": "Monitor behaviour.",
+          "label": "Monitor behaviour"
+        },
+        {
+          "id": "1.5.2a.7",
+          "text": "Analyse personal information.",
+          "label": "Analyse personal information"
+        },
+        {
+          "id": "1.5.2a.8",
+          "text": "Piracy and offensive communications.",
+          "label": "Piracy and offensive communications"
+        },
+        {
+          "id": "1.5.2a.9",
+          "text": "Layout, colour paradigms and character sets.",
+          "label": "Layout, colour paradigms and character sets"
+        }
+      ],
       "clarification": [
         "In order to prepare for this section we would recommend candidates regularly keep abreast of technological developments in the news.",
         "Candidates need to understand what is meant by moral, social, ethical and cultural issues in relation to the use of computers.",
@@ -4847,7 +5269,8 @@
         "http://www.informationisbeautiful.net/visualizations/colours-in-cultures/",
         "http://www.empower-yourself-with-color-psychology.com/cultural-color.html"
       ],
-      "video_url": "http://student.craigndave.org/video/slr-17-ethical-moral-and-cultural-issues"
+      "video_url": "http://student.craigndave.org/video/slr-17-ethical-moral-and-cultural-issues",
+      "unlettered_in_spec": true
     },
     {
       "id": "2.1.1a",
@@ -4859,6 +5282,9 @@
       "subtopic_title": "Thinking abstractly",
       "letter": "a",
       "spec_wording": "The nature of abstraction.",
+      "guide_wording": "The nature of abstraction.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs. Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario. Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied. Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction. Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
       ],
@@ -4908,6 +5334,9 @@
       "subtopic_title": "Thinking abstractly",
       "letter": "b",
       "spec_wording": "The need for abstraction.",
+      "guide_wording": "The need for abstraction.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs. Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario. Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied. Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction. Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
       ],
@@ -4961,6 +5390,9 @@
       "subtopic_title": "Thinking abstractly",
       "letter": "c",
       "spec_wording": "The differences between an abstraction and reality.",
+      "guide_wording": "The differences between an abstraction and reality.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs. Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario. Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied. Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction. Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
       ],
@@ -5014,6 +5446,9 @@
       "subtopic_title": "Thinking abstractly",
       "letter": "d",
       "spec_wording": "Devise an abstract model for a variety of situations.",
+      "guide_wording": "Devise an abstract model for a variety of situations.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the term abstraction and its purpose in the design and creation of computer programs. Candidates need to understand the benefits of abstraction and apply these benefits to a specific scenario. Candidates may be given a scenario and be asked how abstraction can be applied to it, how it has been applied or how further abstraction can be applied. Candidates need to have an understanding of how reality differs to abstraction and understand the differences between reality and abstraction. Candidates may be given a scenario/example and be asked how the abstraction differs from the reality."
       ],
@@ -5067,6 +5502,9 @@
       "subtopic_title": "Thinking ahead",
       "letter": "a",
       "spec_wording": "Identify the inputs and outputs for a given situation.",
+      "guide_wording": "Identify the inputs and outputs for a given situation.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that situations/programs require input and output, and that the outputs can be in digital and/or hard copy format. Candidates may be given a description, diagram, or pseudocode for a scenario, and they will need to demonstrate an understanding of the inputs and outputs required and/or are used in that scenario."
       ],
@@ -5117,6 +5555,9 @@
       "subtopic_title": "Thinking ahead",
       "letter": "b",
       "spec_wording": "Determine the preconditions for devising a solution to a problem.",
+      "guide_wording": "Determine the preconditions for devising a solution to a problem.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "For a description (or similar) of a program, candidates need to be able to determine what additional conditions they need to know before they can produce a solution, and how this information may affect the solution."
       ],
@@ -5163,6 +5604,9 @@
       "subtopic_title": "Thinking ahead",
       "letter": "c",
       "spec_wording": "The nature, benefits and drawbacks of caching.",
+      "guide_wording": "The nature, benefits and drawbacks of caching.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the purpose of caching in programming, and how it can be used when writing a program. Candidates need to be able to apply their knowledge of caching to a scenario to demonstrate an understanding of how it can be used. Candidates need to understand the benefits and drawbacks of using caching in a program."
       ],
@@ -5217,6 +5661,9 @@
       "subtopic_title": "Thinking ahead",
       "letter": "d",
       "spec_wording": "The need for reusable program components.",
+      "guide_wording": "The need for reusable program components.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [],
       "clarification_mapping": "inferred",
       "clarification_shared_with": [],
@@ -5269,6 +5716,9 @@
       "subtopic_title": "Thinking procedurally",
       "letter": "a",
       "spec_wording": "Identify the components of a problem.",
+      "guide_wording": "Identify the components of a problem.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to deconstruct a program and identify its component parts, for example listing the parts or completing a structure chart. Candidates may be given some component parts and be asked to add to, or complete these from a written description of pseudocode code for a program."
       ],
@@ -5320,6 +5770,9 @@
       "subtopic_title": "Thinking procedurally",
       "letter": "b",
       "spec_wording": "Identify the components of a solution to a problem.",
+      "guide_wording": "Identify the components of a solution to a problem.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to deconstruct a program and identify its component parts, for example listing the parts or completing a structure chart. Candidates may be given some component parts and be asked to add to, or complete these from a written description of pseudocode code for a program."
       ],
@@ -5371,6 +5824,9 @@
       "subtopic_title": "Thinking procedurally",
       "letter": "c",
       "spec_wording": "Determine the order of the steps needed to solve a problem.",
+      "guide_wording": "Determine the order of the steps needed to solve a problem.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to identify the steps that will take place to complete an algorithm, or program, and be able to write these in a suitable format (such as a flowchart or pseudocode), and put a given list into the correct order to produce a working program. Candidates may need to write pseudocode, code, or draw a flowchart to show a sequence of steps."
       ],
@@ -5420,6 +5876,9 @@
       "subtopic_title": "Thinking procedurally",
       "letter": "d",
       "spec_wording": "Identify sub-procedures necessary to solve a problem.",
+      "guide_wording": "Identify sub-procedures necessary to solve a problem.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the use and purpose of sub-procedures in a program. They need to be able to identify where sub-procedures may be used, and write appropriate pseudocode, code and/or flowchart(s) for these sub-procedures, making use of parameters where appropriate.",
         "Candidates may be given a structure diagram that they will need to interpret, or complete, to identify these sub-procedures."
@@ -5470,6 +5929,9 @@
       "subtopic_title": "Thinking logically",
       "letter": "a",
       "spec_wording": "Identify the points in a solution where a decision has to be taken.",
+      "guide_wording": "Identify the points in a solution where a decision has to be taken.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place within an algorithm or program. They need to understand what these decisions are, and the impact of these decisions (and the outcomes) on the algorithm/program. Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outcomes."
       ],
@@ -5518,6 +5980,9 @@
       "subtopic_title": "Thinking logically",
       "letter": "b",
       "spec_wording": "Determine the logical conditions that affect the outcome of a decision.",
+      "guide_wording": "Determine the logical conditions that affect the outcome of a decision.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place within an algorithm or program. They need to understand what these decisions are, and the impact of these decisions (and the outcomes) on the algorithm/program. Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outcomes."
       ],
@@ -5566,6 +6031,9 @@
       "subtopic_title": "Thinking logically",
       "letter": "c",
       "spec_wording": "Determine how decisions affect flow through a program.",
+      "guide_wording": "Determine how decisions affect flow through a program.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that decisions are made within programs, and they need to be able to identify where these decisions will take place within an algorithm or program. They need to understand what these decisions are, and the impact of these decisions (and the outcomes) on the algorithm/program. Candidates need to understand that there can be many different routes through a program, and understand how decisions influence these routes and outcomes."
       ],
@@ -5618,6 +6086,9 @@
       "subtopic_title": "Thinking concurrently",
       "letter": "a",
       "spec_wording": "Determine the parts of a problem that can be tackled at the same time.",
+      "guide_wording": "Determine the parts of a problem that can be tackled at the same time.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by thinking concurrently. They need to be able to work out which parts of a program can be developed to take place (be processed) at the same time, and which parts are dependent on other parts."
       ],
@@ -5661,7 +6132,10 @@
       "subtopic": "2.1.5",
       "subtopic_title": "Thinking concurrently",
       "letter": "b",
-      "spec_wording": "Outline the benefits and tradeoffs that might result from concurrent processing in a particular situation.",
+      "spec_wording": "Outline the benefits and trade offs that might result from concurrent processing in a particular situation.",
+      "guide_wording": "Outline the benefits and tradeoffs that might result from concurrent processing in a particular situation.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the benefits and trade offs that are brought from concurrent processing, and be able to apply these to a given scenario.",
         "For example, candidates need to understand how concurrent processing could be applied to a specific program, why it would be applied to that program, and what problems might arise from using it."
@@ -5707,6 +6181,9 @@
       "subtopic_title": "Programming techniques",
       "letter": "a",
       "spec_wording": "Programming constructs: sequence, iteration, branching.",
+      "guide_wording": "Programming constructs: sequence, iteration, branching.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the constructs of sequence, iteration and branching. They must be able to use these constructs independently of each other, and combine them to produce a solution. These include the selection statements of IF (including ELSEIF and ELSE) and select case statements. These also include both condition based iteration (e.g. while, repeat until) and count controlled iteration (e.g. FOR) – as well as how condition based iteration can be used as count controlled.",
         "Candidates need to be able to read, create and trace code (for example using a trace table) that use these three constructs."
@@ -5770,6 +6247,9 @@
       "subtopic_title": "Programming techniques",
       "letter": "b",
       "spec_wording": "Recursion, how it can be used and compares to an iterative approach.",
+      "guide_wording": "Recursion, how it can be used and compares to an iterative approach.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the principle of recursion and the key features that produce a recursive algorithm such as a stopping condition. They need to be able to read and trace recursive functions, write recursive functions, and translate a recursive function to an iterative solution and vice-versa. Candidates need to have an understanding of the benefits and drawbacks of using both a recursive and iterative solution."
       ],
@@ -5824,6 +6304,9 @@
       "subtopic_title": "Programming techniques",
       "letter": "c",
       "spec_wording": "Global and local variables.",
+      "guide_wording": "Global and local variables.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the use and need for variables in a program and must understand the difference, benefits and drawbacks of both global and local variables.",
         "Candidates must be able to recognise where local and global variables are used and the impact that these have on a program, for example the amount of memory used. Candidates need to understand how a program using global variables can be changed to use local variables – and vice-versa."
@@ -5883,6 +6366,9 @@
       "subtopic_title": "Programming techniques",
       "letter": "d",
       "spec_wording": "Modularity, functions and procedures, parameter passing by value and by reference.",
+      "guide_wording": "Modularity, functions and procedures, parameter passing by value and by reference.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand what is meant by modular code, and how this can be produced using functions and procedures. Candidates need to understand the differences between functions and procedures and how each is used within a program. Candidates need to be able to read, trace and write code that uses functions and procedures. Candidates need to understand the purpose and use of parameters within a program, and how they are used in functions and procedures. Candidates need to be able to read, trace and write code that makes use of parameters.",
         "Candidates need to understand the difference between passing a parameter by value and by reference, and they need to understand the benefits and drawbacks of each – recommending which should be used for a given situation. Candidates need to be able to read, trace and write code that makes use of parameters passed both by value and by reference."
@@ -5965,7 +6451,10 @@
       "subtopic": "2.2.1",
       "subtopic_title": "Programming techniques",
       "letter": "e",
-      "spec_wording": "Use of an IDE to develop/ debug a program.",
+      "spec_wording": "Use of an IDE to develop/debug a program.",
+      "guide_wording": "Use of an IDE to develop/ debug a program.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates should have had experience of using an IDE to produce code. Candidates need to understand how an IDE can be used to produce code, and understand the range of features and tools that are within an IDE, that can be used to help produce and debug a program."
       ],
@@ -6019,7 +6508,10 @@
       "subtopic": "2.2.1",
       "subtopic_title": "Programming techniques",
       "letter": "f",
-      "spec_wording": "Use of object oriented techniques",
+      "spec_wording": "Use of object oriented techniques.",
+      "guide_wording": "Use of object oriented techniques",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand the purpose of object-oriented code. They need to have an understanding of classes, objects, properties, attributes, methods. They need to understand the difference between private and public properties, attributes and methods. Candidates need to understand encapsulation and the use of get and set methods to access private properties. Candidates need to understand the purpose and principles of inheritance, super-classes, parent-classes and sub-classes. Candidates need to have an understanding of polymorphism and how it can be applied to classes. Candidates need to be able to read, trace and write code that makes use of these object-oriented techniques. Candidates need to be able to interpret class diagrams to produce class definitions. Candidates need to be able to identify where object-oriented programming can be used in a solution, and derive an object-oriented solution for a given scenario."
       ],
@@ -6094,6 +6586,9 @@
       "subtopic_title": "Computational methods",
       "letter": "a",
       "spec_wording": "Features that make a problem solvable by computational methods.",
+      "guide_wording": "Features that make a problem solvable by computational methods.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to determine if a problem can be solved using computational methods, such as decomposition, abstraction, calculations, storage of data."
       ],
@@ -6144,7 +6639,10 @@
       "subtopic": "2.2.2",
       "subtopic_title": "Computational methods",
       "letter": "b",
-      "spec_wording": "Problem Recognition.",
+      "spec_wording": "Problem recognition.",
+      "guide_wording": "Problem Recognition.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution."
       ],
@@ -6198,7 +6696,10 @@
       "subtopic": "2.2.2",
       "subtopic_title": "Computational methods",
       "letter": "c",
-      "spec_wording": "Problem Decomposition.",
+      "spec_wording": "Problem decomposition.",
+      "guide_wording": "Problem Decomposition.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution."
       ],
@@ -6253,6 +6754,9 @@
       "subtopic_title": "Computational methods",
       "letter": "d",
       "spec_wording": "Use of divide and conquer.",
+      "guide_wording": "Use of divide and conquer.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand how divide and conquer can be used within a task to split the task down into smaller tasks that are then tackled. Candidates also need to identify how tasks can be carried out simultaneously to produce a solution."
       ],
@@ -6308,6 +6812,9 @@
       "subtopic_title": "Computational methods",
       "letter": "e",
       "spec_wording": "Use of abstraction.",
+      "guide_wording": "Use of abstraction.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to recognise a problem from a description of a scenario, decompose the problem and use abstraction to design a solution."
       ],
@@ -6362,6 +6869,40 @@
       "subtopic_title": "Computational methods",
       "letter": "f",
       "spec_wording": "Learners should apply their knowledge of:\n• backtracking\n• data mining\n• heuristics\n• performance modelling\n• pipelining\n• visualisation to solve problems.",
+      "guide_wording": "Learners should apply their knowledge of:\n• backtracking\n• data mining\n• heuristics\n• performance modelling\n• pipelining\n• visualisation to solve problems.",
+      "appendix_refs": [],
+      "sub_items": [
+        {
+          "id": "2.2.2f.1",
+          "text": "backtracking",
+          "label": "Backtracking"
+        },
+        {
+          "id": "2.2.2f.2",
+          "text": "data mining",
+          "label": "Data mining"
+        },
+        {
+          "id": "2.2.2f.3",
+          "text": "heuristics",
+          "label": "Heuristics"
+        },
+        {
+          "id": "2.2.2f.4",
+          "text": "performance modelling",
+          "label": "Performance modelling"
+        },
+        {
+          "id": "2.2.2f.5",
+          "text": "pipelining",
+          "label": "Pipelining"
+        },
+        {
+          "id": "2.2.2f.6",
+          "text": "visualisation to solve problems.",
+          "label": "Visualisation"
+        }
+      ],
       "clarification": [
         "Candidates need to understand the purpose of backtracking within an algorithm, for example when traversing a tree. Candidates need to be able to read, trace and write code that makes use of backtracking for a given scenario.",
         "Candidates need to understand what is meant by data mining, and how data mining is used in a situation. Candidates need to understand the complexities within data mining and how a program will search for and interrogate the data.",
@@ -6450,6 +6991,9 @@
       "subtopic_title": "Algorithms",
       "letter": "a",
       "spec_wording": "Analysis and design of algorithms for a given situation.",
+      "guide_wording": "Analysis and design of algorithms for a given situation.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to be able to write algorithms using flow charts, pseudocode and program code. Candidates need to be able to follow the code as shown in the OCR pseudocode guide, but are not expected to write code in syntax. Candidates’ code is not expected to be syntactically perfect, but must use appropriate structures and techniques."
       ],
@@ -6521,6 +7065,9 @@
       "subtopic_title": "Algorithms",
       "letter": "b",
       "spec_wording": "The suitability of different algorithms for a given task and data set, in terms of execution time and space.",
+      "guide_wording": "The suitability of different algorithms for a given task and data set, in terms of execution time and space.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are a range of possible solutions to a task, and that these algorithms may be different in respect to their execution time and the amount of memory they make use of. Candidates need to be able to compare different algorithms for a given data set and demonstrate an understanding of which is more efficient in terms of speed and/or memory. Candidates need to be able to compare the use of one or more algorithms against several different data sets, to determine how they will differ in their use of memory and speed of execution."
       ],
@@ -6589,7 +7136,10 @@
       "subtopic": "2.3.1",
       "subtopic_title": "Algorithms",
       "letter": "c",
-      "spec_wording": "Measures and methods to determine the efficiency of different algorithms, Big O notation. (Constant, linear, polynomial, exponential and logarithmic complexity)",
+      "spec_wording": "Measures and methods to determine the efficiency of different algorithms, Big O notation (constant, linear, polynomial, exponential and logarithmic complexity).",
+      "guide_wording": "Measures and methods to determine the efficiency of different algorithms, Big O notation. (Constant, linear, polynomial, exponential and logarithmic complexity)",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand how the efficiency of an algorithm is measured using Big O notation. Candidates need to understand the meaning of constant, linear, polynomial, exponential and logarithmic complexity. They need to be able to recognise and draw each of these complexities of using a graph and be able to read and write the notation. Candidates need to know the best and worst case complexities for the searching and sorting methods. Candidates need to understand the difference between best case, average case and worst case complexities and how and why these can differ for an algorithm."
       ],
@@ -6663,6 +7213,9 @@
       "subtopic_title": "Algorithms",
       "letter": "d",
       "spec_wording": "Comparison of the complexity of algorithms.",
+      "guide_wording": "Comparison of the complexity of algorithms.",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to understand that there are a range of possible solutions to a task, and that these algorithms may be different in respect to their execution time and the amount of memory they make use of. Candidates need to be able to compare different algorithms for a given data set and demonstrate an understanding of which is more efficient in terms of speed and/or memory. Candidates need to be able to compare the use of one or more algorithms against several different data sets, to determine how they will differ in their use of memory and speed of execution.",
         "Candidates need to understand how the efficiency of an algorithm is measured using Big O notation. Candidates need to understand the meaning of constant, linear, polynomial, exponential and logarithmic complexity. They need to be able to recognise and draw each of these complexities of using a graph and be able to read and write the notation. Candidates need to know the best and worst case complexities for the searching and sorting methods. Candidates need to understand the difference between best case, average case and worst case complexities and how and why these can differ for an algorithm."
@@ -6733,7 +7286,10 @@
       "subtopic": "2.3.1",
       "subtopic_title": "Algorithms",
       "letter": "e",
-      "spec_wording": "Algorithms for the main data structures, (Stacks, queues, trees, linked lists, depth-first (post-order) and breadth-first traversal of trees).",
+      "spec_wording": "Algorithms for the main data structures, (stacks, queues, trees, linked lists, depth-first (post-order) and breadth-first traversal of trees).",
+      "guide_wording": "Algorithms for the main data structures, (Stacks, queues, trees, linked lists, depth-first (post-order) and breadth-first traversal of trees).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the situations where queues, stacks, trees etc. can be used and be able to recommend and justify their use In specific scenarios or programs.",
         "Candidates need to have an understanding of a stack as a dynamic data structure. Candidates need to be able to add and remove items to a stack. Candidates need to be able read, trace and write code to implement a stack structure (including adding and removing items). Candidates need to understand how a stack can be implemented using a different data structure, such as a static array.",
@@ -6877,7 +7433,10 @@
       "subtopic": "2.3.1",
       "subtopic_title": "Algorithms",
       "letter": "f",
-      "spec_wording": "Standard algorithms (Bubble sort, insertion sort, merge sort, quick sort, Dijkstra’s shortest path algorithm, A* algorithm, binary search and linear search).",
+      "spec_wording": "Standard algorithms (bubble sort, insertion sort, merge sort, quick sort, Dijkstra’s shortest path algorithm, A* algorithm, binary search and linear search).",
+      "guide_wording": "Standard algorithms (Bubble sort, insertion sort, merge sort, quick sort, Dijkstra’s shortest path algorithm, A* algorithm, binary search and linear search).",
+      "appendix_refs": [],
+      "sub_items": [],
       "clarification": [
         "Candidates need to have an understanding of the need for searching and sorting algorithms. Candidates need to have an understanding of pre-conditions required to perform a specific algorithm.",
         "Candidates need to understand how a bubble sort works and be able to perform a bubble sort on a set of data. Candidates need to be able to read, trace and write code to perform a bubble sort.",
@@ -7003,5 +7562,546 @@
       "video_url": "http://student.craigndave.org/video/slr-26-algorithms"
     }
   ],
+  "appendices": {
+    "5d": {
+      "title": "Languages and Boolean logic guide for use in external assessments",
+      "intro": "The tables below show languages and logic that will be used in the external assessments and indicates the limits and scope of each. Centres are free to go beyond these parameters.",
+      "pseudocode": {
+        "intro": "The following guide shows the format pseudocode will appear in the examined components. It is provided to allow you to give learners familiarity before the exam. Learners are not expected to memorise the syntax of this pseudocode and when asked may provide answers in any style of pseudocode they choose providing its meaning could be reasonably inferred by a competent programmer.",
+        "sections": [
+          {
+            "title": "Variables",
+            "text": "Variables are assigned using the = operator. A variable is declared the first time a value is assigned. It assumes the data type of the value it is given. Variables declared inside a function or procedure are local to that subroutine. Variables in the main program can be made global with the keyword global.",
+            "code": "x=3\nname=\"Bob\"\nglobal userid = 123"
+          },
+          {
+            "title": "Casting",
+            "text": "Variables can be typecast using the int str and float functions.",
+            "code": "str(3) returns \"3\"\nint (\"3\") returns 3\nfloat (\"3.14\") returns 3.14"
+          },
+          {
+            "title": "Outputting to Screen",
+            "text": "",
+            "code": "print(string)\n\nExample\nprint(\"hello\")"
+          },
+          {
+            "title": "Taking Input from User",
+            "text": "",
+            "code": "variable=input(prompt to user)\n\nExample\nname=input(\"Please enter your name\")"
+          },
+          {
+            "title": "Iteration – Count Controlled",
+            "text": "Will print hello 8 times (0–7 inclusive).",
+            "code": "for i=0 to 7\n    print(\"Hello\")\nnext i"
+          },
+          {
+            "title": "Iteration – Condition Controlled",
+            "text": "",
+            "code": "while answer!=\"computer\"\n    answer=input(\"What is the password?\")\nendwhile\n\ndo\n    answer=input(\"What is the password?\")\nuntil answer==\"computer\""
+          },
+          {
+            "title": "Logical Operators",
+            "text": "AND OR NOT",
+            "code": "while x<=5 AND flag==false"
+          },
+          {
+            "title": "Comparison Operators",
+            "table": [
+              [
+                "==",
+                "Equal to"
+              ],
+              [
+                "!=",
+                "Not equal to"
+              ],
+              [
+                "<",
+                "Less than"
+              ],
+              [
+                "<=",
+                "Less than or equal to"
+              ],
+              [
+                ">",
+                "Greater than"
+              ],
+              [
+                ">=",
+                "Greater than or equal to"
+              ]
+            ]
+          },
+          {
+            "title": "Arithmetic Operators",
+            "table": [
+              [
+                "+",
+                "Addition e.g. x=6+5 gives 11"
+              ],
+              [
+                "-",
+                "Subtraction e.g. x=6-5 gives 1"
+              ],
+              [
+                "*",
+                "Multiplication e.g. x=12*2 gives 24"
+              ],
+              [
+                "/",
+                "Division e.g. x=12/2 gives 6"
+              ],
+              [
+                "MOD",
+                "Modulus e.g. 12MOD5 gives 2"
+              ],
+              [
+                "DIV",
+                "Quotient e.g. 17DIV5 gives 3"
+              ],
+              [
+                "^",
+                "Exponentiation e.g. 3^4 gives 81"
+              ]
+            ]
+          },
+          {
+            "title": "Selection",
+            "text": "Selection will be carried out with if/else and switch/case",
+            "code": "if entry==\"a\" then\n    print(\"You selected A\")\nelseif entry==\"b\" then\n    print(\"You selected B\")\nelse\n    print(\"Unrecognised selection\")\nendif\n\nswitch entry:\n    case \"A\":\n        print(\"You selected A\")\n    case \"B\":1\n        print(\"You selected B\")\n    default:\n        print(\"Unrecognised selection\")\nendswitch"
+          },
+          {
+            "title": "String Handling",
+            "text": "To get the length of a string: stringname.length. To get a substring: stringname.subString(startingPosition, numberOfCharacters). NB The string will start with the 0th character.",
+            "code": "someText=\"Computer Science\"\nprint(someText.length)\nprint(someText.substring(3,3))\n\nWill display\n16\nput"
+          },
+          {
+            "title": "Subroutines",
+            "text": "Unless stated values passed to subroutines can be assumed to be passed by value. If this is relevant to the question byVal and byRef will be used. In the case below x is passed by value and y is passed by reference.",
+            "code": "function triple(number)\n    return number*3\nendfunction\n\nCalled from main program\ny=triple(7)\n\nprocedure greeting(name)\n    print(\"hello\"+name)\nendprocedure\n\nCalled from main program\ngreeting(\"Hamish\")\n\nprocedure foobar(x:byVal, y:byRef)\n    …\n    …\nendprocedure"
+          },
+          {
+            "title": "Arrays",
+            "text": "Arrays will be 0 based and declared with the keyword array.",
+            "code": "array names[5]\nnames[0]=\"Ahmad\"\nnames[1]=\"Ben\"\nnames[2]=\"Catherine\"\nnames[3]=\"Dana\"\nnames[4]=\"Elijah\"\nprint(names[3])\n\nExample of 2D array:\nArray board[8,8]\nboard[0,0]=\"rook\""
+          },
+          {
+            "title": "Reading to and Writing from Files",
+            "text": "To open a file to read from openRead is used and readLine to return a line of text from the file. The following program makes x the first line of sample.txt. endOfFile() is used to determine the end of the file. The following program will print out the contents of sample.txt. To open a file to write to openWrite is used and writeLine to add a line of text to the file. In the program below hello world is made the contents of sample.txt (any previous contents are overwritten).",
+            "code": "myFile = openRead(\"sample.txt\")\nx = myFile.readLine()\nmyFile.close()\n\nmyFile = openRead(\"sample.txt\")\nwhile NOT myFile.endOfFile()\n    print(myFile.readLine())\nendwhile\nmyFile.close()\n\nmyFile = openWrite(\"sample.txt\")\nmyFile.writeLine(\"Hello World\")\nmyFile.close()"
+          },
+          {
+            "title": "Comments",
+            "text": "Comments are denoted by //",
+            "code": "print(\"Hello World\") //This is a comment"
+          },
+          {
+            "title": "Object-Oriented: Methods and Attributes",
+            "text": "Object oriented code will match the pseudocode listed above with the following extensions. Methods and attributes can be assumed to be public unless otherwise stated. Where the access level is relevant to the question it will always be explicit in the code denoted by the keywords public and private. Methods will always be instance methods, learners aren’t expected to be aware of static methods. They will be called using object.method so",
+            "code": "private attempts = 3\n\npublic procedure setAttempts(number)\n    attempts=number\nendprocedure\n\npublic function getAttempts()\n    return attempts\nendfunction\n\nplayer.setAttempts(5)\nprint(player.getAttempts())"
+          },
+          {
+            "title": "Object-Oriented: Constructors and Inheritance",
+            "text": "Constructors will be procedures with the name new. Inheritance is denoted by the inherits keyword, superclass methods will be called with the keyword super. i.e. super.methodName(parameters) in the case of the constructor this would be super.new(). To create an instance of an object the following format is used: objectName = new className(parameters)",
+            "code": "class Pet\n    private name\n    public procedure new(givenName)\n        name=givenName\n    endprocedure\nendclass\n\nclass Dog inherits Pet\n    private breed\n    public procedure new(givenName, givenBreed)\n        super.new(givenName)\n        breed=givenBreed\n    endprocedure\nendclass\n\nmyDog = new Dog(\"Fido\", \"Scottish Terrier\")"
+          }
+        ]
+      },
+      "html": {
+        "intro": "Learners are expected to have an awareness of the following tags. Any other tags used will be introduced in the question.",
+        "tags": [
+          [
+            "<html>",
+            ""
+          ],
+          [
+            "<link>",
+            "to link to a CSS file"
+          ],
+          [
+            "<head>",
+            ""
+          ],
+          [
+            "<title>",
+            ""
+          ],
+          [
+            "<body>",
+            ""
+          ],
+          [
+            "<h1> <h2> <h3>",
+            ""
+          ],
+          [
+            "<img>",
+            "including the src, alt, height and width attributes."
+          ],
+          [
+            "<a>",
+            "including the href attribute."
+          ],
+          [
+            "<div>",
+            ""
+          ],
+          [
+            "<form>",
+            ""
+          ],
+          [
+            "<input>",
+            "where the input is a textbox (i.e. has the attribute type=\"text\" and another attribute name to identify it) or a submit button (i.e. has the attribute type=\"submit\")"
+          ],
+          [
+            "<p>",
+            ""
+          ],
+          [
+            "<li>",
+            ""
+          ],
+          [
+            "<ol>",
+            ""
+          ],
+          [
+            "<ul>",
+            ""
+          ],
+          [
+            "<script>",
+            ""
+          ]
+        ],
+        "outro": "Any other elements used will be explained in the question."
+      },
+      "css": {
+        "intro": "Learners are expected to be able to use CSS directly inside elements using the style attribute and external style sheets. In the style sheets they should be able to use CSS to define the styling of elements, classes and Identifiers.",
+        "code": "<h1 style=\"color:blue;\">\n\nh1{\n    color:blue;\n}\n\n.infoBox{\n    background-color: green;\n}\n\n#menu{\n    background-color: #A2441B;\n}",
+        "properties_intro": "They are expected to be familiar with the following properties.",
+        "properties": [
+          "background-color",
+          "border-color",
+          "border-style",
+          "border-width",
+          "color with named and hex colours",
+          "font-family",
+          "font-size",
+          "height",
+          "width"
+        ],
+        "outro": "Any other properties used will be explained in the question."
+      },
+      "javascript": {
+        "intro": "Learners are expected to be able to follow and write basic JavaScript code. It is hoped they will get practical experience of JavaScript in their study of the course. They will not be expected to commit exact details of syntax to memory. Questions in the exam will not penalise learners for minor inaccuracies in syntax. Learners will be expected to be familiar with the JavaScript equivalents of the structures listed in the pseudocode section (with the exception of input and output (see below). They will not be expected to use JavaScript for Object Oriented programming or file handling. Questions will not be asked in JavaScript where something is passed to a subroutine by value or reference is relevant.",
+        "input": "Input will be taken in by reading values from a form. NB learners will not be expected to memorise the method for doing this as focus will be on what they do with that input once it is received.",
+        "output": [
+          [
+            "By changing the contents of an HTML element",
+            "chosenElement = document.getElementById(\"example\");\nchosenElement.innerHTML = \"Hello World\";"
+          ],
+          [
+            "By writing directly to the document",
+            "document.write(\"Hello World\");"
+          ],
+          [
+            "By using an alert box",
+            "alert(\"Hello World\");"
+          ]
+        ],
+        "outro": "Any other JavaScript used will be explained in the question."
+      },
+      "lmc": {
+        "intro": "In questions mnemonics will always be given according to the left hand column below. Different implementations of LMC have slight variations in mnemonics used and to take this into account the alternative mnemonics in the right hand column will be accepted in learners’ answers.",
+        "instructions": [
+          {
+            "mnemonic": "ADD",
+            "instruction": "Add",
+            "alternatives": []
+          },
+          {
+            "mnemonic": "SUB",
+            "instruction": "Subtract",
+            "alternatives": []
+          },
+          {
+            "mnemonic": "STA",
+            "instruction": "Store",
+            "alternatives": [
+              "STO"
+            ]
+          },
+          {
+            "mnemonic": "LDA",
+            "instruction": "Load",
+            "alternatives": [
+              "LOAD"
+            ]
+          },
+          {
+            "mnemonic": "BRA",
+            "instruction": "Branch always",
+            "alternatives": [
+              "BR"
+            ]
+          },
+          {
+            "mnemonic": "BRZ",
+            "instruction": "Branch if zero",
+            "alternatives": [
+              "BZ"
+            ]
+          },
+          {
+            "mnemonic": "BRP",
+            "instruction": "Branch if positive",
+            "alternatives": [
+              "BP"
+            ]
+          },
+          {
+            "mnemonic": "INP",
+            "instruction": "Input",
+            "alternatives": [
+              "IN",
+              "INPUT"
+            ]
+          },
+          {
+            "mnemonic": "OUT",
+            "instruction": "Output",
+            "alternatives": []
+          },
+          {
+            "mnemonic": "HLT",
+            "instruction": "End program",
+            "alternatives": [
+              "COB",
+              "END"
+            ]
+          },
+          {
+            "mnemonic": "DAT",
+            "instruction": "Data location",
+            "alternatives": []
+          }
+        ]
+      },
+      "sql": {
+        "intro": "Learners will be expected to be familiar with the structures below. Should any other aspects of SQL be used they will be introduced and explained in the question.",
+        "keywords": [
+          [
+            "SELECT",
+            "(including nested SELECTs)"
+          ],
+          [
+            "FROM",
+            ""
+          ],
+          [
+            "WHERE",
+            ""
+          ],
+          [
+            "LIKE",
+            ""
+          ],
+          [
+            "AND",
+            ""
+          ],
+          [
+            "OR",
+            ""
+          ],
+          [
+            "DELETE",
+            ""
+          ],
+          [
+            "INSERT",
+            ""
+          ],
+          [
+            "DROP",
+            ""
+          ],
+          [
+            "JOIN",
+            "(Which is equivalent to INNER JOIN, there is no expectation to know about outer, left and right joins)"
+          ],
+          [
+            "WILDCARDS",
+            "(Learners should be familiar in the use of ‘*’ and ‘%’ as a wildcard to facilitate searching and matching where appropriate)"
+          ]
+        ]
+      },
+      "boolean": {
+        "intro": "When Boolean algebra is used in questions the notation described below will be used. Other forms of notation exist and below are also a list of accepted notation we will accept from learners.",
+        "operators": [
+          {
+            "name": "Conjunction",
+            "gate": "AND",
+            "notation": "∧",
+            "example": "A ∧ B",
+            "alternatives": [
+              "AND e.g. A AND B",
+              ". e.g. A.B"
+            ],
+            "truth_table": [
+              [
+                "T",
+                "T",
+                "T"
+              ],
+              [
+                "T",
+                "F",
+                "F"
+              ],
+              [
+                "F",
+                "T",
+                "F"
+              ],
+              [
+                "F",
+                "F",
+                "F"
+              ]
+            ]
+          },
+          {
+            "name": "Disjunction",
+            "gate": "OR",
+            "notation": "∨",
+            "example": "A ∨ B",
+            "alternatives": [
+              "OR e.g. A OR B",
+              "+ e.g. A+B"
+            ],
+            "truth_table": [
+              [
+                "T",
+                "T",
+                "T"
+              ],
+              [
+                "T",
+                "F",
+                "T"
+              ],
+              [
+                "F",
+                "T",
+                "T"
+              ],
+              [
+                "F",
+                "F",
+                "F"
+              ]
+            ]
+          },
+          {
+            "name": "Negation",
+            "gate": "NOT",
+            "notation": "¬",
+            "example": "¬A",
+            "alternatives": [
+              "bar e.g. A̅",
+              "~ e.g. ~A",
+              "NOT e.g. NOT A"
+            ],
+            "truth_table": [
+              [
+                "T",
+                "F"
+              ],
+              [
+                "F",
+                "T"
+              ]
+            ]
+          },
+          {
+            "name": "Exclusive Disjunction",
+            "gate": "XOR",
+            "notation": "⊻",
+            "example": "A ⊻ B",
+            "alternatives": [
+              "XOR e.g. A XOR B",
+              "⊕ e.g. A ⊕ B"
+            ],
+            "truth_table": [
+              [
+                "T",
+                "T",
+                "F"
+              ],
+              [
+                "T",
+                "F",
+                "T"
+              ],
+              [
+                "F",
+                "T",
+                "T"
+              ],
+              [
+                "F",
+                "F",
+                "F"
+              ]
+            ]
+          },
+          {
+            "name": "Equivalence / Iff",
+            "gate": null,
+            "notation": "≡",
+            "example": "(A∧B) ≡ ¬(¬A∨¬B)",
+            "alternatives": [
+              "↔"
+            ],
+            "truth_table": null
+          }
+        ]
+      }
+    },
+    "5f": {
+      "title": "Entity relationship diagrams",
+      "intro": "The following symbols are used for entities and their relationships.",
+      "symbols": [
+        [
+          "Entity",
+          "a rectangle"
+        ],
+        [
+          "One-To-One relationship",
+          "two entities joined by a plain line"
+        ],
+        [
+          "One-To-Many relationship",
+          "a line with a crow's foot at the 'many' end"
+        ],
+        [
+          "Many-To-Many relationship",
+          "a line with a crow's foot at both ends"
+        ]
+      ],
+      "_note": "5f is diagrams only; the descriptions in 'symbols' are my wording of the pictures, not OCR text."
+    },
+    "errata": [
+      "Selection, switch/case example: 'case \"B\":1' has a stray '1' in the original.",
+      "String Handling: the method is written 'subString' in the description but 'substring' in the example.",
+      "Constructors and Inheritance appears twice in the original with the same content; transcribed once.",
+      "Iteration example prints \"Hello\" but the text says it 'Will print hello 8 times'.",
+      "The guide's 1.3.2a referred to 'appendix 5g'; in specification Version 3.0 ERDs are appendix 5f."
+    ]
+  },
   "checklist_unmapped": []
 }

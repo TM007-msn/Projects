@@ -1,0 +1,209 @@
+{
+  "_about": "Hand transcription of H446 specification Version 3.0 appendix 5d (pages 32-43) and 5f (page 45). Prose is word for word. In code, curly quotes are normalised to straight quotes; nothing else is changed (known errors in the original are listed under 'errata'). Merged into content/spec.json by tools/build_spec.py.",
+  "5d": {
+    "title": "Languages and Boolean logic guide for use in external assessments",
+    "intro": "The tables below show languages and logic that will be used in the external assessments and indicates the limits and scope of each. Centres are free to go beyond these parameters.",
+    "pseudocode": {
+      "intro": "The following guide shows the format pseudocode will appear in the examined components. It is provided to allow you to give learners familiarity before the exam. Learners are not expected to memorise the syntax of this pseudocode and when asked may provide answers in any style of pseudocode they choose providing its meaning could be reasonably inferred by a competent programmer.",
+      "sections": [
+        {
+          "title": "Variables",
+          "text": "Variables are assigned using the = operator. A variable is declared the first time a value is assigned. It assumes the data type of the value it is given. Variables declared inside a function or procedure are local to that subroutine. Variables in the main program can be made global with the keyword global.",
+          "code": "x=3\nname=\"Bob\"\nglobal userid = 123"
+        },
+        {
+          "title": "Casting",
+          "text": "Variables can be typecast using the int str and float functions.",
+          "code": "str(3) returns \"3\"\nint (\"3\") returns 3\nfloat (\"3.14\") returns 3.14"
+        },
+        {
+          "title": "Outputting to Screen",
+          "text": "",
+          "code": "print(string)\n\nExample\nprint(\"hello\")"
+        },
+        {
+          "title": "Taking Input from User",
+          "text": "",
+          "code": "variable=input(prompt to user)\n\nExample\nname=input(\"Please enter your name\")"
+        },
+        {
+          "title": "Iteration – Count Controlled",
+          "text": "Will print hello 8 times (0–7 inclusive).",
+          "code": "for i=0 to 7\n    print(\"Hello\")\nnext i"
+        },
+        {
+          "title": "Iteration – Condition Controlled",
+          "text": "",
+          "code": "while answer!=\"computer\"\n    answer=input(\"What is the password?\")\nendwhile\n\ndo\n    answer=input(\"What is the password?\")\nuntil answer==\"computer\""
+        },
+        {
+          "title": "Logical Operators",
+          "text": "AND OR NOT",
+          "code": "while x<=5 AND flag==false"
+        },
+        {
+          "title": "Comparison Operators",
+          "table": [
+            ["==", "Equal to"],
+            ["!=", "Not equal to"],
+            ["<", "Less than"],
+            ["<=", "Less than or equal to"],
+            [">", "Greater than"],
+            [">=", "Greater than or equal to"]
+          ]
+        },
+        {
+          "title": "Arithmetic Operators",
+          "table": [
+            ["+", "Addition e.g. x=6+5 gives 11"],
+            ["-", "Subtraction e.g. x=6-5 gives 1"],
+            ["*", "Multiplication e.g. x=12*2 gives 24"],
+            ["/", "Division e.g. x=12/2 gives 6"],
+            ["MOD", "Modulus e.g. 12MOD5 gives 2"],
+            ["DIV", "Quotient e.g. 17DIV5 gives 3"],
+            ["^", "Exponentiation e.g. 3^4 gives 81"]
+          ]
+        },
+        {
+          "title": "Selection",
+          "text": "Selection will be carried out with if/else and switch/case",
+          "code": "if entry==\"a\" then\n    print(\"You selected A\")\nelseif entry==\"b\" then\n    print(\"You selected B\")\nelse\n    print(\"Unrecognised selection\")\nendif\n\nswitch entry:\n    case \"A\":\n        print(\"You selected A\")\n    case \"B\":1\n        print(\"You selected B\")\n    default:\n        print(\"Unrecognised selection\")\nendswitch"
+        },
+        {
+          "title": "String Handling",
+          "text": "To get the length of a string: stringname.length. To get a substring: stringname.subString(startingPosition, numberOfCharacters). NB The string will start with the 0th character.",
+          "code": "someText=\"Computer Science\"\nprint(someText.length)\nprint(someText.substring(3,3))\n\nWill display\n16\nput"
+        },
+        {
+          "title": "Subroutines",
+          "text": "Unless stated values passed to subroutines can be assumed to be passed by value. If this is relevant to the question byVal and byRef will be used. In the case below x is passed by value and y is passed by reference.",
+          "code": "function triple(number)\n    return number*3\nendfunction\n\nCalled from main program\ny=triple(7)\n\nprocedure greeting(name)\n    print(\"hello\"+name)\nendprocedure\n\nCalled from main program\ngreeting(\"Hamish\")\n\nprocedure foobar(x:byVal, y:byRef)\n    …\n    …\nendprocedure"
+        },
+        {
+          "title": "Arrays",
+          "text": "Arrays will be 0 based and declared with the keyword array.",
+          "code": "array names[5]\nnames[0]=\"Ahmad\"\nnames[1]=\"Ben\"\nnames[2]=\"Catherine\"\nnames[3]=\"Dana\"\nnames[4]=\"Elijah\"\nprint(names[3])\n\nExample of 2D array:\nArray board[8,8]\nboard[0,0]=\"rook\""
+        },
+        {
+          "title": "Reading to and Writing from Files",
+          "text": "To open a file to read from openRead is used and readLine to return a line of text from the file. The following program makes x the first line of sample.txt. endOfFile() is used to determine the end of the file. The following program will print out the contents of sample.txt. To open a file to write to openWrite is used and writeLine to add a line of text to the file. In the program below hello world is made the contents of sample.txt (any previous contents are overwritten).",
+          "code": "myFile = openRead(\"sample.txt\")\nx = myFile.readLine()\nmyFile.close()\n\nmyFile = openRead(\"sample.txt\")\nwhile NOT myFile.endOfFile()\n    print(myFile.readLine())\nendwhile\nmyFile.close()\n\nmyFile = openWrite(\"sample.txt\")\nmyFile.writeLine(\"Hello World\")\nmyFile.close()"
+        },
+        {
+          "title": "Comments",
+          "text": "Comments are denoted by //",
+          "code": "print(\"Hello World\") //This is a comment"
+        },
+        {
+          "title": "Object-Oriented: Methods and Attributes",
+          "text": "Object oriented code will match the pseudocode listed above with the following extensions. Methods and attributes can be assumed to be public unless otherwise stated. Where the access level is relevant to the question it will always be explicit in the code denoted by the keywords public and private. Methods will always be instance methods, learners aren’t expected to be aware of static methods. They will be called using object.method so",
+          "code": "private attempts = 3\n\npublic procedure setAttempts(number)\n    attempts=number\nendprocedure\n\npublic function getAttempts()\n    return attempts\nendfunction\n\nplayer.setAttempts(5)\nprint(player.getAttempts())"
+        },
+        {
+          "title": "Object-Oriented: Constructors and Inheritance",
+          "text": "Constructors will be procedures with the name new. Inheritance is denoted by the inherits keyword, superclass methods will be called with the keyword super. i.e. super.methodName(parameters) in the case of the constructor this would be super.new(). To create an instance of an object the following format is used: objectName = new className(parameters)",
+          "code": "class Pet\n    private name\n    public procedure new(givenName)\n        name=givenName\n    endprocedure\nendclass\n\nclass Dog inherits Pet\n    private breed\n    public procedure new(givenName, givenBreed)\n        super.new(givenName)\n        breed=givenBreed\n    endprocedure\nendclass\n\nmyDog = new Dog(\"Fido\", \"Scottish Terrier\")"
+        }
+      ]
+    },
+    "html": {
+      "intro": "Learners are expected to have an awareness of the following tags. Any other tags used will be introduced in the question.",
+      "tags": [
+        ["<html>", ""],
+        ["<link>", "to link to a CSS file"],
+        ["<head>", ""],
+        ["<title>", ""],
+        ["<body>", ""],
+        ["<h1> <h2> <h3>", ""],
+        ["<img>", "including the src, alt, height and width attributes."],
+        ["<a>", "including the href attribute."],
+        ["<div>", ""],
+        ["<form>", ""],
+        ["<input>", "where the input is a textbox (i.e. has the attribute type=\"text\" and another attribute name to identify it) or a submit button (i.e. has the attribute type=\"submit\")"],
+        ["<p>", ""],
+        ["<li>", ""],
+        ["<ol>", ""],
+        ["<ul>", ""],
+        ["<script>", ""]
+      ],
+      "outro": "Any other elements used will be explained in the question."
+    },
+    "css": {
+      "intro": "Learners are expected to be able to use CSS directly inside elements using the style attribute and external style sheets. In the style sheets they should be able to use CSS to define the styling of elements, classes and Identifiers.",
+      "code": "<h1 style=\"color:blue;\">\n\nh1{\n    color:blue;\n}\n\n.infoBox{\n    background-color: green;\n}\n\n#menu{\n    background-color: #A2441B;\n}",
+      "properties_intro": "They are expected to be familiar with the following properties.",
+      "properties": ["background-color", "border-color", "border-style", "border-width", "color with named and hex colours", "font-family", "font-size", "height", "width"],
+      "outro": "Any other properties used will be explained in the question."
+    },
+    "javascript": {
+      "intro": "Learners are expected to be able to follow and write basic JavaScript code. It is hoped they will get practical experience of JavaScript in their study of the course. They will not be expected to commit exact details of syntax to memory. Questions in the exam will not penalise learners for minor inaccuracies in syntax. Learners will be expected to be familiar with the JavaScript equivalents of the structures listed in the pseudocode section (with the exception of input and output (see below). They will not be expected to use JavaScript for Object Oriented programming or file handling. Questions will not be asked in JavaScript where something is passed to a subroutine by value or reference is relevant.",
+      "input": "Input will be taken in by reading values from a form. NB learners will not be expected to memorise the method for doing this as focus will be on what they do with that input once it is received.",
+      "output": [
+        ["By changing the contents of an HTML element", "chosenElement = document.getElementById(\"example\");\nchosenElement.innerHTML = \"Hello World\";"],
+        ["By writing directly to the document", "document.write(\"Hello World\");"],
+        ["By using an alert box", "alert(\"Hello World\");"]
+      ],
+      "outro": "Any other JavaScript used will be explained in the question."
+    },
+    "lmc": {
+      "intro": "In questions mnemonics will always be given according to the left hand column below. Different implementations of LMC have slight variations in mnemonics used and to take this into account the alternative mnemonics in the right hand column will be accepted in learners’ answers.",
+      "instructions": [
+        {"mnemonic": "ADD", "instruction": "Add", "alternatives": []},
+        {"mnemonic": "SUB", "instruction": "Subtract", "alternatives": []},
+        {"mnemonic": "STA", "instruction": "Store", "alternatives": ["STO"]},
+        {"mnemonic": "LDA", "instruction": "Load", "alternatives": ["LOAD"]},
+        {"mnemonic": "BRA", "instruction": "Branch always", "alternatives": ["BR"]},
+        {"mnemonic": "BRZ", "instruction": "Branch if zero", "alternatives": ["BZ"]},
+        {"mnemonic": "BRP", "instruction": "Branch if positive", "alternatives": ["BP"]},
+        {"mnemonic": "INP", "instruction": "Input", "alternatives": ["IN", "INPUT"]},
+        {"mnemonic": "OUT", "instruction": "Output", "alternatives": []},
+        {"mnemonic": "HLT", "instruction": "End program", "alternatives": ["COB", "END"]},
+        {"mnemonic": "DAT", "instruction": "Data location", "alternatives": []}
+      ]
+    },
+    "sql": {
+      "intro": "Learners will be expected to be familiar with the structures below. Should any other aspects of SQL be used they will be introduced and explained in the question.",
+      "keywords": [
+        ["SELECT", "(including nested SELECTs)"],
+        ["FROM", ""],
+        ["WHERE", ""],
+        ["LIKE", ""],
+        ["AND", ""],
+        ["OR", ""],
+        ["DELETE", ""],
+        ["INSERT", ""],
+        ["DROP", ""],
+        ["JOIN", "(Which is equivalent to INNER JOIN, there is no expectation to know about outer, left and right joins)"],
+        ["WILDCARDS", "(Learners should be familiar in the use of ‘*’ and ‘%’ as a wildcard to facilitate searching and matching where appropriate)"]
+      ]
+    },
+    "boolean": {
+      "intro": "When Boolean algebra is used in questions the notation described below will be used. Other forms of notation exist and below are also a list of accepted notation we will accept from learners.",
+      "operators": [
+        {"name": "Conjunction", "gate": "AND", "notation": "∧", "example": "A ∧ B", "alternatives": ["AND e.g. A AND B", ". e.g. A.B"], "truth_table": [["T","T","T"],["T","F","F"],["F","T","F"],["F","F","F"]]},
+        {"name": "Disjunction", "gate": "OR", "notation": "∨", "example": "A ∨ B", "alternatives": ["OR e.g. A OR B", "+ e.g. A+B"], "truth_table": [["T","T","T"],["T","F","T"],["F","T","T"],["F","F","F"]]},
+        {"name": "Negation", "gate": "NOT", "notation": "¬", "example": "¬A", "alternatives": ["bar e.g. A̅", "~ e.g. ~A", "NOT e.g. NOT A"], "truth_table": [["T","F"],["F","T"]]},
+        {"name": "Exclusive Disjunction", "gate": "XOR", "notation": "⊻", "example": "A ⊻ B", "alternatives": ["XOR e.g. A XOR B", "⊕ e.g. A ⊕ B"], "truth_table": [["T","T","F"],["T","F","T"],["F","T","T"],["F","F","F"]]},
+        {"name": "Equivalence / Iff", "gate": null, "notation": "≡", "example": "(A∧B) ≡ ¬(¬A∨¬B)", "alternatives": ["↔"], "truth_table": null}
+      ]
+    }
+  },
+  "5f": {
+    "title": "Entity relationship diagrams",
+    "intro": "The following symbols are used for entities and their relationships.",
+    "symbols": [
+      ["Entity", "a rectangle"],
+      ["One-To-One relationship", "two entities joined by a plain line"],
+      ["One-To-Many relationship", "a line with a crow's foot at the 'many' end"],
+      ["Many-To-Many relationship", "a line with a crow's foot at both ends"]
+    ],
+    "_note": "5f is diagrams only; the descriptions in 'symbols' are my wording of the pictures, not OCR text."
+  },
+  "errata": [
+    "Selection, switch/case example: 'case \"B\":1' has a stray '1' in the original.",
+    "String Handling: the method is written 'subString' in the description but 'substring' in the example.",
+    "Constructors and Inheritance appears twice in the original with the same content; transcribed once.",
+    "Iteration example prints \"Hello\" but the text says it 'Will print hello 8 times'.",
+    "The guide's 1.3.2a referred to 'appendix 5g'; in specification Version 3.0 ERDs are appendix 5f."
+  ]
+}

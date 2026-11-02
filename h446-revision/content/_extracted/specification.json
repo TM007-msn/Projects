@@ -1,0 +1,725 @@
+{
+  "source": "ocr-h446-specification.pdf",
+  "version": "Version 3.0 (April 2026)",
+  "topics": {
+    "1.1": {
+      "title": "The characteristics of contemporary processors, input, output and storage devices",
+      "heading": "Components of a computer and their uses"
+    },
+    "1.2": {
+      "title": "Software and software development",
+      "heading": "Types of software and the different methodologies used to develop software"
+    },
+    "1.3": {
+      "title": "Exchanging data",
+      "heading": "How data is exchanged between different systems"
+    },
+    "1.4": {
+      "title": "Data types, data structures and algorithms",
+      "heading": "How data is represented and stored within different structures. Different algorithms that can be applied to these structures"
+    },
+    "1.5": {
+      "title": "Legal, moral, cultural and ethical issues",
+      "heading": "The individual moral, social, ethical and cultural opportunities and risks of digital technology. Legislation surrounding the use of computers and ethical issues that can or may in the future arise from the use of computers"
+    },
+    "2.1": {
+      "title": "Elements of computational thinking",
+      "heading": "Understand what is meant by computational thinking"
+    },
+    "2.2": {
+      "title": "Problem solving and programming",
+      "heading": "How computers can be used to solve problems and programs can be written to solve them (Learners will benefit from being able to program in a procedure/imperative language and object oriented language.)"
+    },
+    "2.3": {
+      "title": "Algorithms",
+      "heading": "The use of algorithms to describe problems and standard algorithms"
+    }
+  },
+  "subtopics": [
+    {
+      "id": "1.1.1",
+      "topic": "1.1",
+      "title": "Structure and function of the processor",
+      "pages": [
+        12
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory Data Register; MDR, Current Instruction Register; CIR). Buses: data, address and control: how this relates to assembly language programs."
+        },
+        {
+          "letter": "b",
+          "wording": "The Fetch-Decode-Execute Cycle; including its effects on registers."
+        },
+        {
+          "letter": "c",
+          "wording": "The factors affecting the performance of the CPU: clock speed, number of cores, cache."
+        },
+        {
+          "letter": "d",
+          "wording": "The use of pipelining in a processor to improve efficiency."
+        },
+        {
+          "letter": "e",
+          "wording": "Von Neumann, Harvard and contemporary processor architecture."
+        }
+      ]
+    },
+    {
+      "id": "1.1.2",
+      "topic": "1.1",
+      "title": "Types of processor",
+      "pages": [
+        12
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The differences between and uses of CISC and RISC processors."
+        },
+        {
+          "letter": "b",
+          "wording": "GPUs and their uses (including those not related to graphics)."
+        },
+        {
+          "letter": "c",
+          "wording": "Multicore and Parallel systems."
+        }
+      ]
+    },
+    {
+      "id": "1.1.3",
+      "topic": "1.1",
+      "title": "Input, output and storage",
+      "pages": [
+        12
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "How different input, output and storage devices can be applied to the solution of different problems."
+        },
+        {
+          "letter": "b",
+          "wording": "The uses of magnetic, flash and optical storage devices."
+        },
+        {
+          "letter": "c",
+          "wording": "RAM and ROM."
+        },
+        {
+          "letter": "d",
+          "wording": "Virtual storage."
+        }
+      ]
+    },
+    {
+      "id": "1.2.1",
+      "topic": "1.2",
+      "title": "Systems Software",
+      "pages": [
+        13
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The need for, function and purpose of operating systems."
+        },
+        {
+          "letter": "b",
+          "wording": "Memory Management (paging, segmentation and virtual memory)."
+        },
+        {
+          "letter": "c",
+          "wording": "Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the Fetch-Decode-Execute Cycle."
+        },
+        {
+          "letter": "d",
+          "wording": "Scheduling: round robin, first come first served, multi-level feedback queues, shortest job first and shortest remaining time."
+        },
+        {
+          "letter": "e",
+          "wording": "Distributed, embedded, multi-tasking, multi-user and Real Time operating systems."
+        },
+        {
+          "letter": "f",
+          "wording": "BIOS."
+        },
+        {
+          "letter": "g",
+          "wording": "Device drivers."
+        },
+        {
+          "letter": "h",
+          "wording": "Virtual machines, any instance where software is used to take on the function of a machine, including executing intermediate code or running an operating system within another."
+        }
+      ]
+    },
+    {
+      "id": "1.2.2",
+      "topic": "1.2",
+      "title": "Applications Generation",
+      "pages": [
+        13
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The nature of applications, justifying suitable applications for a specific purpose."
+        },
+        {
+          "letter": "b",
+          "wording": "Utilities."
+        },
+        {
+          "letter": "c",
+          "wording": "Open source vs closed source."
+        },
+        {
+          "letter": "d",
+          "wording": "Translators:Interpreters, compilers and assemblers."
+        },
+        {
+          "letter": "e",
+          "wording": "Stages of compilation (lexical analysis, syntax analysis, code generation and optimisation)."
+        },
+        {
+          "letter": "f",
+          "wording": "Linkers and loaders and use of libraries."
+        }
+      ]
+    },
+    {
+      "id": "1.2.3",
+      "topic": "1.2",
+      "title": "Software Development",
+      "pages": [
+        13
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Understand the waterfall lifecycle, agile methodologies, extreme programming, the spiral model and rapid application development."
+        },
+        {
+          "letter": "b",
+          "wording": "The relative merits and drawbacks of different methodologies and when they might be used."
+        },
+        {
+          "letter": "c",
+          "wording": "Writing and following algorithms."
+        }
+      ]
+    },
+    {
+      "id": "1.2.4",
+      "topic": "1.2",
+      "title": "Types of Programming Language",
+      "pages": [
+        13
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Need for and characteristics of a variety of programming paradigms."
+        },
+        {
+          "letter": "b",
+          "wording": "Procedural languages."
+        },
+        {
+          "letter": "c",
+          "wording": "Assembly language (including following and writing simple programs with the Little Man Computer instruction set). See appendix 5d."
+        },
+        {
+          "letter": "d",
+          "wording": "Modes of addressing memory (immediate, direct, indirect and indexed)."
+        },
+        {
+          "letter": "e",
+          "wording": "Object-oriented languages (see appendix 5d for pseudocode style) with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism."
+        }
+      ]
+    },
+    {
+      "id": "1.3.1",
+      "topic": "1.3",
+      "title": "Compression, Encryption and Hashing",
+      "pages": [
+        14
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Lossy vs Lossless compression."
+        },
+        {
+          "letter": "b",
+          "wording": "Run length encoding and dictionary coding for lossless compression."
+        },
+        {
+          "letter": "c",
+          "wording": "Symmetric and asymmetric encryption."
+        },
+        {
+          "letter": "d",
+          "wording": "Different uses of hashing."
+        }
+      ]
+    },
+    {
+      "id": "1.3.2",
+      "topic": "1.3",
+      "title": "Databases",
+      "pages": [
+        14
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Relational database, flat file, primary key, foreign key, secondary key, entity relationship modelling, normalisation and indexing. See appendix 5f."
+        },
+        {
+          "letter": "b",
+          "wording": "Methods of capturing, selecting, managing and exchanging data."
+        },
+        {
+          "letter": "c",
+          "wording": "Normalisation to 3NF."
+        },
+        {
+          "letter": "d",
+          "wording": "SQL – Interpret and modify. See appendix 5d."
+        },
+        {
+          "letter": "e",
+          "wording": "Referential integrity."
+        },
+        {
+          "letter": "f",
+          "wording": "Transaction processing, ACID (Atomicity, Consistency, Isolation, Durability), record locking and redundancy."
+        }
+      ]
+    },
+    {
+      "id": "1.3.3",
+      "topic": "1.3",
+      "title": "Networks",
+      "pages": [
+        14
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Characteristics of networks and the importance of protocols and standards."
+        },
+        {
+          "letter": "b",
+          "wording": "The internet structure:\n• The TCP/IP Stack.\n• DNS\n• Protocol layering.\n• LANs and WANs.\n• Packet and circuit switching."
+        },
+        {
+          "letter": "c",
+          "wording": "Network security and threats, use of firewalls, proxies and encryption."
+        },
+        {
+          "letter": "d",
+          "wording": "Network hardware."
+        },
+        {
+          "letter": "e",
+          "wording": "Client-server and peer to peer."
+        }
+      ]
+    },
+    {
+      "id": "1.3.4",
+      "topic": "1.3",
+      "title": "Web Technologies",
+      "pages": [
+        14
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "HTML, CSS and JavaScript. See appendix 5d."
+        },
+        {
+          "letter": "b",
+          "wording": "Search engine indexing."
+        },
+        {
+          "letter": "c",
+          "wording": "PageRank algorithm."
+        },
+        {
+          "letter": "d",
+          "wording": "Server and client side processing."
+        }
+      ]
+    },
+    {
+      "id": "1.4.1",
+      "topic": "1.4",
+      "title": "Data Types",
+      "pages": [
+        15
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Primitive data types, integer, real/floating point, character, string and Boolean."
+        },
+        {
+          "letter": "b",
+          "wording": "Represent positive integers in binary."
+        },
+        {
+          "letter": "c",
+          "wording": "Use of sign and magnitude and two’s complement to represent negative numbers in binary."
+        },
+        {
+          "letter": "d",
+          "wording": "Addition and subtraction of binary integers."
+        },
+        {
+          "letter": "e",
+          "wording": "Represent positive integers in hexadecimal."
+        },
+        {
+          "letter": "f",
+          "wording": "Convert positive integers between binary hexadecimal and denary."
+        },
+        {
+          "letter": "g",
+          "wording": "Representation and normalisation of floating point numbers in binary."
+        },
+        {
+          "letter": "h",
+          "wording": "Floating point arithmetic, positive and negative numbers, addition and subtraction."
+        },
+        {
+          "letter": "i",
+          "wording": "Bitwise manipulation and masks: shifts, combining with AND, OR, and XOR."
+        },
+        {
+          "letter": "j",
+          "wording": "How character sets (ASCII and UNICODE) are used to represent text."
+        }
+      ]
+    },
+    {
+      "id": "1.4.2",
+      "topic": "1.4",
+      "title": "Data Structures",
+      "pages": [
+        15
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Arrays (of up to 3 dimensions), records, lists, tuples."
+        },
+        {
+          "letter": "b",
+          "wording": "The following structures to store data: linked-list, graph (directed and undirected), stack, queue, tree, binary search tree, hash table."
+        },
+        {
+          "letter": "c",
+          "wording": "How to create, traverse, add data to and remove data from the data structures mentioned above. (NB this can be either using arrays and procedural programming or an object-oriented approach)."
+        }
+      ]
+    },
+    {
+      "id": "1.4.3",
+      "topic": "1.4",
+      "title": "Boolean Algebra",
+      "pages": [
+        15
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Define problems using Boolean logic. See appendix 5d."
+        },
+        {
+          "letter": "b",
+          "wording": "Manipulate Boolean expressions, including the use of Karnaugh maps to simplify Boolean expressions."
+        },
+        {
+          "letter": "c",
+          "wording": "Use the following rules to derive or simplify statements in Boolean algebra: De Morgan’s Laws, distribution, association, commutation, double negation."
+        },
+        {
+          "letter": "d",
+          "wording": "Using logic gate diagrams and truth tables. See appendix 5d."
+        },
+        {
+          "letter": "e",
+          "wording": "The logic associated with D type flip flops, half and full adders."
+        }
+      ]
+    },
+    {
+      "id": "1.5.1",
+      "topic": "1.5",
+      "title": "Computing related legislation",
+      "pages": [
+        16
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The Data Protection Act 1998."
+        },
+        {
+          "letter": "b",
+          "wording": "The Computer Misuse Act 1990."
+        },
+        {
+          "letter": "c",
+          "wording": "The Copyright Design and Patents Act 1988."
+        },
+        {
+          "letter": "d",
+          "wording": "The Regulation of Investigatory Powers Act 2000."
+        }
+      ]
+    },
+    {
+      "id": "1.5.2",
+      "topic": "1.5",
+      "title": "Moral and ethical Issues",
+      "pages": [
+        16
+      ],
+      "unlettered": true,
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The individual moral, social, ethical and cultural opportunities and risks of digital technology:\n• Computers in the workforce.\n• Automated decision making.\n• Artificial intelligence.\n• Environmental effects.\n• Censorship and the Internet.\n• Monitor behaviour.\n• Analyse personal information.\n• Piracy and offensive communications.\n• Layout, colour paradigms and character sets."
+        }
+      ]
+    },
+    {
+      "id": "2.1.1",
+      "topic": "2.1",
+      "title": "Thinking abstractly",
+      "pages": [
+        17
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "The nature of abstraction."
+        },
+        {
+          "letter": "b",
+          "wording": "The need for abstraction."
+        },
+        {
+          "letter": "c",
+          "wording": "The differences between an abstraction and reality."
+        },
+        {
+          "letter": "d",
+          "wording": "Devise an abstract model for a variety of situations."
+        }
+      ]
+    },
+    {
+      "id": "2.1.2",
+      "topic": "2.1",
+      "title": "Thinking ahead",
+      "pages": [
+        17
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Identify the inputs and outputs for a given situation."
+        },
+        {
+          "letter": "b",
+          "wording": "Determine the preconditions for devising a solution to a problem."
+        },
+        {
+          "letter": "c",
+          "wording": "The nature, benefits and drawbacks of caching."
+        },
+        {
+          "letter": "d",
+          "wording": "The need for reusable program components."
+        }
+      ]
+    },
+    {
+      "id": "2.1.3",
+      "topic": "2.1",
+      "title": "Thinking procedurally",
+      "pages": [
+        17
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Identify the components of a problem."
+        },
+        {
+          "letter": "b",
+          "wording": "Identify the components of a solution to a problem."
+        },
+        {
+          "letter": "c",
+          "wording": "Determine the order of the steps needed to solve a problem."
+        },
+        {
+          "letter": "d",
+          "wording": "Identify sub-procedures necessary to solve a problem."
+        }
+      ]
+    },
+    {
+      "id": "2.1.4",
+      "topic": "2.1",
+      "title": "Thinking logically",
+      "pages": [
+        17
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Identify the points in a solution where a decision has to be taken."
+        },
+        {
+          "letter": "b",
+          "wording": "Determine the logical conditions that affect the outcome of a decision."
+        },
+        {
+          "letter": "c",
+          "wording": "Determine how decisions affect flow through a program."
+        }
+      ]
+    },
+    {
+      "id": "2.1.5",
+      "topic": "2.1",
+      "title": "Thinking concurrently",
+      "pages": [
+        17
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Determine the parts of a problem that can be tackled at the same time."
+        },
+        {
+          "letter": "b",
+          "wording": "Outline the benefits and trade offs that might result from concurrent processing in a particular situation."
+        }
+      ]
+    },
+    {
+      "id": "2.2.1",
+      "topic": "2.2",
+      "title": "Programming techniques",
+      "pages": [
+        18
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Programming constructs: sequence, iteration, branching."
+        },
+        {
+          "letter": "b",
+          "wording": "Recursion, how it can be used and compares to an iterative approach."
+        },
+        {
+          "letter": "c",
+          "wording": "Global and local variables."
+        },
+        {
+          "letter": "d",
+          "wording": "Modularity, functions and procedures, parameter passing by value and by reference."
+        },
+        {
+          "letter": "e",
+          "wording": "Use of an IDE to develop/debug a program."
+        },
+        {
+          "letter": "f",
+          "wording": "Use of object oriented techniques."
+        }
+      ]
+    },
+    {
+      "id": "2.2.2",
+      "topic": "2.2",
+      "title": "Computational methods",
+      "pages": [
+        18
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Features that make a problem solvable by computational methods."
+        },
+        {
+          "letter": "b",
+          "wording": "Problem recognition."
+        },
+        {
+          "letter": "c",
+          "wording": "Problem decomposition."
+        },
+        {
+          "letter": "d",
+          "wording": "Use of divide and conquer."
+        },
+        {
+          "letter": "e",
+          "wording": "Use of abstraction."
+        },
+        {
+          "letter": "f",
+          "wording": "Learners should apply their knowledge of:\n• backtracking\n• data mining\n• heuristics\n• performance modelling\n• pipelining\n• visualisation to solve problems."
+        }
+      ]
+    },
+    {
+      "id": "2.3.1",
+      "topic": "2.3",
+      "title": "Algorithms",
+      "pages": [
+        18
+      ],
+      "points": [
+        {
+          "letter": "a",
+          "wording": "Analysis and design of algorithms for a given situation."
+        },
+        {
+          "letter": "b",
+          "wording": "The suitability of different algorithms for a given task and data set, in terms of execution time and space."
+        },
+        {
+          "letter": "c",
+          "wording": "Measures and methods to determine the efficiency of different algorithms, Big O notation (constant, linear, polynomial, exponential and logarithmic complexity)."
+        },
+        {
+          "letter": "d",
+          "wording": "Comparison of the complexity of algorithms."
+        },
+        {
+          "letter": "e",
+          "wording": "Algorithms for the main data structures, (stacks, queues, trees, linked lists, depth-first (post-order) and breadth-first traversal of trees)."
+        },
+        {
+          "letter": "f",
+          "wording": "Standard algorithms (bubble sort, insertion sort, merge sort, quick sort, Dijkstra’s shortest path algorithm, A* algorithm, binary search and linear search)."
+        }
+      ]
+    }
+  ]
+}

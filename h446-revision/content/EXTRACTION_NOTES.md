@@ -1,10 +1,12 @@
 # Extraction notes
 
-Where the two PDFs disagree, don't line up, or leave a gap. Nothing listed here was guessed into
-`spec.json`; decisions still needed from Taylor are marked **DECIDE**.
+Where the three PDFs disagree, don't line up, or leave a gap. Nothing listed here was guessed into
+`spec.json`; decisions taken are recorded in section 1.
 
 Sources:
 
+- **Specification:** `spec/ocr-h446-specification.pdf`, Cambridge OCR H446 specification,
+  Version 3.0 (April 2026). Authoritative for wording.
 - **Guide:** `spec/ocr-h446-clarification-guide.pdf`, OCR "Subject content clarification",
   Version 1, © OCR 2017 (PDF created 30/08/2018).
 - **Checklist:** `spec/revision-checklist.pdf`, Craig'n'Dave "OCR A-Level Computer Science Revision
@@ -14,34 +16,48 @@ Full statement-by-statement mapping with match scores: `content/_extracted/mappi
 
 ---
 
-## 1. Decisions needed
+## 1. Decisions (resolved 02/11/2026)
 
-1. **DECIDE: Appendix 5d / 5g are referenced but not supplied.** The guide says "See appendix 5d"
-   for 1.2.4c (Little Man Computer instruction set), 1.2.4e (OOP pseudocode style), 1.3.2d (SQL
-   commands), 1.3.4a (HTML/CSS/JavaScript), 1.4.3a and 1.4.3d (Boolean notation, logic gates), and
-   "appendix 5g" for 1.3.2a (ERD notation). These appendices are in the full H446 specification,
-   not in either PDF. Without them I can't source LMC mnemonics, the exact SQL keyword list, the
-   HTML tag list or the exam's Boolean symbols from the spec. Options: (a) you add the H446
-   specification PDF (or just appendix 5d/5g) to `spec/`, and I extract from it; (b) I leave these
-   out. I recommend (a): LMC and SQL are high-yield for both papers.
-2. **DECIDE: are checklist-only additions in scope?** The checklist adds a few things the OCR guide
-   doesn't say (section 3 below). My recommendation: treat additions that only restate OCR wording
-   more specifically as in scope (Topic 8 items under 1.2.4b, records/lists/tuples under 1.4.2a,
-   LIFO/FIFO under 1.4.2b), but treat **XML as an exchange format (1.3.2b)** as beyond spec unless
-   you confirm it, because only the checklist mentions it.
-3. **DECIDE: are these PDFs current for 2027 exams?** The guide is Version 1 from 2017. I can't
-   tell from the PDFs whether OCR has since changed the spec wording. The obvious candidate is
-   1.5.1a "Data Protection Act 1998": UK law has since moved on (Data Protection Act 2018 / UK
-   GDPR), and I'm not sure whether the current H446 specification still names the 1998 Act. The
-   guide itself says answers are accepted based on the law "when the specification was started or
-   when the examination was sat". Worth checking the current spec's version history on OCR's site.
-4. **DECIDE: granularity of three bullet-list points.** 1.5.2a (9 bullets: workforce, automated
-   decisions, AI, environment, censorship, monitoring, personal information, piracy, layout/colour/
-   character sets), 2.2.2f (6 bullets: backtracking, data mining, heuristics, performance modelling,
-   pipelining, visualisation) and 1.3.3b (5 bullets: TCP/IP stack, DNS, protocol layering, LANs and
-   WANs, packet and circuit switching) are each a single spec point. A single self-rating for "all
-   of ethics" is coarse. I can add optional sub-items in the tracker (e.g. "1.5.2a • AI") that roll
-   up to the official point, without changing the spec ids. Your call.
+1. **Appendix 5d/5f: resolved.** Taylor added the full specification
+   (`spec/ocr-h446-specification.pdf`, **Version 3.0, April 2026**). Appendix 5d (pseudocode, HTML,
+   CSS, JavaScript, LMC, SQL, Boolean notation) and 5f (ERD symbols) are transcribed in
+   `tools/appendix_5d_5f.json` and merged into `spec.json` under `appendices`. ERDs are appendix
+   **5f** in v3.0 (the 2017 guide said 5g).
+2. **The PDFs are current: confirmed.** The specification's summary of updates shows no
+   subject-content changes since first teaching (v2 to v3.0 changed only wording, NEA, covers and
+   branding). v3.0 still names the Data Protection Act 1998 in 1.5.1a.
+3. **Checklist-only additions: in scope when relevant to the spec or good to know.** All current
+   checklist additions (Topic 8 programming specifics, records/lists/tuples, LIFO/FIFO, flat file
+   set-up, XML as an exchange format, casting) qualify and stay mapped. Content generated from them
+   is tagged `"source": "checklist"` so it can be told apart from OCR wording.
+4. **Bullet-list points split into tracker sub-items.** 1.3.3b (5), 1.5.2a (9) and 2.2.2f (6) have
+   `sub_items` with ids like `1.5.2a.3`. Ratings on sub-items roll up to the official point.
+
+## 1a. Specification v3.0 vs the 2017 guide
+
+`spec_wording` now comes from the specification; the guide's version is kept as `guide_wording`.
+Same 24 subtopics, same 111 points, same letters. Differences:
+
+- **1.5.1c** is "The Copyright **Design** and Patents Act 1988" (the guide dropped "Design").
+- Subtopic titles: **1.2.1 "Systems Software"** (guide: "Operating Systems"); **1.5.2 "Moral and
+  ethical Issues"** (guide: "Ethical, moral and cultural issues"); 1.2.2 "Applications Generation"
+  (case only).
+- 1.5.2 has **no letter** in the specification; kept as `1.5.2a` and marked `unlettered_in_spec`.
+- 1.1.1b: "Cycle; including its effects on registers" (guide: ", including its effect").
+- 1.1.3a: "applied to the solution of different problems" (guide: "applied as a solution of").
+- 1.4.2c adds "NB"; 1.5.2a drops the brackets ("individual moral, social, ethical and cultural")
+  and uses British "behaviour"; 1.3.2a uses "modelling" (guide: "modeling").
+- Everything else is capitalisation or punctuation ("Translators:Interpreters" has no space in the
+  original).
+
+Appendix 5d errata (kept verbatim, listed in `spec.json` → `appendices.errata`): stray `1` in
+`case "B":1`; `subString` vs `substring`; the constructors section is printed twice; the loop
+example prints "Hello" but says "hello".
+
+Note for content: the specification's pseudocode guide has no string functions beyond `.length`
+and `.substring`, but the checklist (cl-08-09) mentions upper/lower case and character ↔ ASCII
+conversion. Questions using other functions "will be specifically introduced", so cards on these
+will be marked as checklist-sourced.
 
 ## 2. Gaps: spec points with thin or no supporting text
 

@@ -1,10 +1,11 @@
-"""Step 1 of spec extraction: pull raw, verbatim text out of the two spec PDFs.
+"""Step 1 of spec extraction: pull raw, verbatim text out of the three spec PDFs.
 
 Run from the project root:
     pip install -r tools/requirements-dev.txt
     python tools/extract_pdfs.py
 
 Writes:
+    content/_extracted/specification.json  - H446 specification section 2c (official wording)
     content/_extracted/clarification.json  - OCR guide, one entry per subtopic
     content/_extracted/checklist.json      - Craig'n'Dave checklist, one entry per topic
 
@@ -284,10 +285,90 @@ def extract_checklist():
     return {"source": CHECKLIST_PDF.name, "topics": topics}
 
 
+SPEC_PDF = ROOT / "spec" / "ocr-h446-specification.pdf"
+SPEC_CONTENT_PAGES = range(12, 19)   # PDF pages holding section 2c (Components 01 and 02)
+COLUMN_SPLIT = 292                   # x position between subtopic column and points column
+
+
+def spec_rows(page):
+    """Group a page's 11pt words into rows, splitting each row into the left
+    (subtopic) and right (points) columns. A row whose text crosses the
+    column boundary is a full-width heading."""
+    words = [w for w in page.extract_words(extra_attrs=["size"])
+             if w["size"] >= 10.5 and 30 < w["x0"] < 560]
+    rows = {}
+    for w in words:
+        key = round(w["top"])
+        k = next((r for r in rows if abs(r - key) <= 2), key)
+        rows.setdefault(k, []).append(w)
+    out = []
+    for top in sorted(rows):
+        ws = sorted(rows[top], key=lambda w: w["x0"])
+        if any(w["x0"] < COLUMN_SPLIT <= w["x1"] for w in ws):
+            out.append(("full", " ".join(w["text"] for w in ws)))
+            continue
+        left = [w["text"] for w in ws if w["x1"] < COLUMN_SPLIT]
+        right = [w["text"] for w in ws if w["x0"] >= COLUMN_SPLIT]
+        if left:
+            out.append(("left", " ".join(left)))
+        if right:
+            out.append(("right", " ".join(right)))
+    return out
+
+
+def extract_specification():
+    """Official subject content (section 2c) of the H446 specification."""
+    pdf = pdfplumber.open(SPEC_PDF)
+    version = re.search(r"Version [\d.]+ \([A-Za-z]+ \d{4}\)", pdf.pages[0].extract_text() or "")
+    topics, subtopics = {}, []
+    topic, sub, heading_open = None, None, False
+    for page_no in SPEC_CONTENT_PAGES:
+        for kind, text in spec_rows(pdf.pages[page_no - 1]):
+            text = text.replace("‑", "-")  # non-breaking hyphen -> hyphen
+            if text.startswith("2c."):
+                topic, sub, heading_open = None, None, False
+                continue
+            tm = re.match(r"^(\d\.\d) (\D.+)$", text)
+            if kind in ("left", "full") and tm:
+                topic = tm.group(1)
+                topics[topic] = {"title": tm.group(2).strip(), "heading": ""}
+                sub, heading_open = None, True
+                continue
+            sm = re.match(r"^(\d\.\d\.\d) (.+)$", text)
+            if kind == "left" and sm and topic:
+                sub = {"id": sm.group(1), "topic": topic, "title": sm.group(2).strip(),
+                       "point_lines": [], "pages": [page_no]}
+                subtopics.append(sub)
+                heading_open = False
+                continue
+            if heading_open and kind in ("left", "full"):
+                h = topics[topic]["heading"]
+                topics[topic]["heading"] = join_lines([h, text]) if h else text
+                continue
+            if kind == "right" and sub is not None:
+                sub["point_lines"].append(text)
+                if page_no not in sub["pages"]:
+                    sub["pages"].append(page_no)
+    for s in subtopics:
+        lines = s.pop("point_lines")
+        if lines and not re.match(r"^\([a-z]\)", lines[0]):
+            # 1.5.2 has a single unlettered point; give it the letter a.
+            lines[0] = "(a) " + lines[0]
+            s["unlettered"] = True
+        lines = [re.sub(r"^\(([a-z])\)\s*", r"\1) ", ln) for ln in lines]
+        s["points"] = split_points(lines)
+    return {"source": SPEC_PDF.name, "version": version.group(0) if version else None,
+            "topics": topics, "subtopics": subtopics}
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     guide = extract_guide()
     checklist = extract_checklist()
+    specification = extract_specification()
+    (OUT_DIR / "specification.json").write_text(json.dumps(specification, indent=2, ensure_ascii=False) + "\n")
+    print(f"Specification ({specification['version']}): {len(specification['subtopics'])} subtopics, "
+          f"{sum(len(s['points']) for s in specification['subtopics'])} points")
     (OUT_DIR / "clarification.json").write_text(json.dumps(guide, indent=2, ensure_ascii=False) + "\n")
     (OUT_DIR / "checklist.json").write_text(json.dumps(checklist, indent=2, ensure_ascii=False) + "\n")
     print(f"Guide: {len(guide['subtopics'])} subtopics, "
