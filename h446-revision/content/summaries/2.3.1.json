@@ -22,13 +22,13 @@
     },
     {
       "id": "sum-2.3.1-03",
-      "text": "Best, average and worst cases differ because they depend on the data (for example, sorted, random or reversed). Learn these complexities:",
+      "text": "Best, average and worst cases differ because they depend on the data (for example, sorted, random or reversed). Learn these complexities (all in Big O, so \"n²\" means O(n²)):",
       "spec_ids": [
         "2.3.1c",
         "2.3.1d"
       ],
       "verified": false,
-      "code": "Algorithm        Best         Average      Worst\nLinear search    O(1)         O(n)         O(n)\nBinary search    O(1)         O(log n)     O(log n)\nBubble sort      O(n)         O(n²)        O(n²)\nInsertion sort   O(n)         O(n²)        O(n²)\nMerge sort       O(n log n)   O(n log n)   O(n log n)\nQuick sort       O(n log n)   O(n log n)   O(n²)"
+      "code": "Algorithm  Best     Average  Worst\nLinear     1        n        n\nBinary     1        log n    log n\nBubble     n        n²       n²\nInsertion  n        n²       n²\nMerge      n log n  n log n  n log n\nQuick      n log n  n log n  n²"
     },
     {
       "id": "sum-2.3.1-04",

@@ -309,6 +309,10 @@ a { color: var(--accent); }
 }
 .toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
 
+@media (max-width: 420px) {
+  .code { font-size: 0.78rem; padding: 10px; }
+}
+
 @media (min-width: 700px) {
   main { padding-top: 24px; }
   .topic > summary { flex-direction: row; align-items: center; justify-content: space-between; }

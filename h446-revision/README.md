@@ -5,7 +5,7 @@ keyword summaries with a cover mode, and (in later phases) spaced-repetition fla
 games and auto-marked tests. Built for one user on a home server, reachable over the LAN and
 Tailscale.
 
-> Status: **Phase 1** (spec tracker, login, topic 1.1 summaries). The full README, including
+> Status: **Phase 2** (spec tracker, login, keyword summaries for every topic). The full README, including
 > flashcards, tests, offline use and progress export, is finished at the end of the build.
 
 ## Run it
