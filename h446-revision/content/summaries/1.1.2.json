@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.1.2",
+  "key_points": [
+    {
+      "id": "sum-1.1.2-01",
+      "text": "CISC processors have a large set of complex instructions, some taking several clock cycles. Programs need fewer instructions, so they take up less memory and the compiler has less to do, but the hardware is more complex and harder to pipeline. Typical use: desktop and laptop computers.",
+      "spec_ids": [
+        "1.1.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-02",
+      "text": "RISC processors have a small set of simple instructions, each usually completed in one clock cycle. This makes pipelining easier and the hardware simpler, using less power and producing less heat, but programs need more instructions and the compiler does more work. Typical use: mobile phones, tablets and embedded systems.",
+      "spec_ids": [
+        "1.1.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-03",
+      "text": "A GPU has a large number of cores and uses SIMD, so it can carry out the same instruction on lots of data at once. That suits graphics, where the same calculation is done for millions of pixels.",
+      "spec_ids": [
+        "1.1.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-04",
+      "text": "GPUs are also used for non-graphics work that applies the same operation to lots of data, such as scientific modelling and data mining. They are suited to these tasks because of their specialist instructions, many cores and SIMD processing, but are poor at sequential tasks where each step depends on the last.",
+      "spec_ids": [
+        "1.1.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-05",
+      "text": "A parallel system processes several instructions at the same time, using multiple processors in the same computer or distributed across multiple cores in a CPU or GPU.",
+      "spec_ids": [
+        "1.1.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-06",
+      "text": "Benefits of parallel processing: tasks that can be split into independent parts finish faster, and several programs can run at the same time. Limitations: some tasks can't be split because each step needs the previous result, software must be written to use parallelism, and coordinating the cores adds overhead, so doubling the cores doesn't double the speed.",
+      "spec_ids": [
+        "1.1.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.2-07",
+      "text": "A multicore system can run multiple programs at the same time (one per core) and can split one suitably written program across its cores.",
+      "spec_ids": [
+        "1.1.2c"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-cisc",
+    "kw-risc",
+    "kw-gpu",
+    "kw-simd",
+    "kw-core",
+    "kw-multicore",
+    "kw-parallel-processing"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.1.2-01",
+      "text": "CISC vs RISC: CISC means fewer, more complex instructions per program (more work in hardware); RISC means more, simpler instructions (more work for the compiler, easier pipelining).",
+      "keyword_ids": [
+        "kw-cisc",
+        "kw-risc"
+      ],
+      "spec_ids": [
+        "1.1.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.2-02",
+      "text": "GPU vs CPU: a GPU has many simple cores doing the same thing to lots of data; a CPU has fewer, more powerful cores that are better at general-purpose and sequential work.",
+      "keyword_ids": [
+        "kw-gpu",
+        "kw-cpu"
+      ],
+      "spec_ids": [
+        "1.1.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.2-03",
+      "text": "Parallel processing vs pipelining: parallel processing uses several processors or cores at once; pipelining overlaps instruction stages within one processor.",
+      "keyword_ids": [
+        "kw-parallel-processing",
+        "kw-pipelining"
+      ],
+      "spec_ids": [
+        "1.1.2c",
+        "1.1.1d"
+      ],
+      "verified": false
+    }
+  ]
+}

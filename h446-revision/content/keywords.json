@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "keywords": [
+    {
+      "id": "kw-cpu",
+      "term": "Central Processing Unit",
+      "acronym": "CPU",
+      "definition": "The processor: the component that carries out instructions by repeatedly fetching, decoding and executing them.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1c"
+      ],
+      "related": [
+        "kw-alu",
+        "kw-control-unit",
+        "kw-register",
+        "kw-fde-cycle"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-alu",
+      "term": "Arithmetic and Logic Unit",
+      "acronym": "ALU",
+      "definition": "The part of the processor that carries out arithmetic operations (such as addition and subtraction) and logical operations (such as AND, OR and comparisons) on data.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "related": [
+        "kw-accumulator",
+        "kw-control-unit"
+      ],
+      "dont_confuse_with": "Control Unit: decodes instructions and coordinates the processor; it doesn't do the calculations.",
+      "verified": false
+    },
+    {
+      "id": "kw-control-unit",
+      "term": "Control Unit",
+      "acronym": "CU",
+      "definition": "The part of the processor that decodes instructions and sends control signals to coordinate the other components and the movement of data into, out of and within the processor.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-alu",
+        "kw-control-bus",
+        "kw-cir"
+      ],
+      "dont_confuse_with": "ALU: performs the arithmetic and logic; the Control Unit directs it.",
+      "verified": false
+    },
+    {
+      "id": "kw-register",
+      "term": "Register",
+      "acronym": null,
+      "definition": "A small, very fast storage location inside the processor that holds an instruction, a memory address or an item of data while it is being used.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "related": [
+        "kw-program-counter",
+        "kw-accumulator",
+        "kw-mar",
+        "kw-mdr",
+        "kw-cir"
+      ],
+      "dont_confuse_with": "Cache: also fast memory on the processor, but holds copies of frequently used instructions and data from RAM rather than the value being worked on right now.",
+      "verified": false
+    },
+    {
+      "id": "kw-program-counter",
+      "term": "Program Counter",
+      "acronym": "PC",
+      "definition": "A register that holds the memory address of the next instruction to be fetched.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-mar",
+        "kw-fde-cycle"
+      ],
+      "dont_confuse_with": "MAR: holds the address of the memory location currently being read from or written to.",
+      "verified": false
+    },
+    {
+      "id": "kw-accumulator",
+      "term": "Accumulator",
+      "acronym": "ACC",
+      "definition": "A register that holds the data currently being processed and stores the results of calculations carried out by the ALU.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "related": [
+        "kw-alu",
+        "kw-mdr"
+      ],
+      "dont_confuse_with": "MDR: holds data on its way to or from memory; the ACC holds the value being worked on and the ALU's result.",
+      "verified": false
+    },
+    {
+      "id": "kw-mar",
+      "term": "Memory Address Register",
+      "acronym": "MAR",
+      "definition": "A register that holds the address of the memory location currently being read from or written to.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-mdr",
+        "kw-program-counter",
+        "kw-address-bus"
+      ],
+      "dont_confuse_with": "MDR: holds the data or instruction itself, not its address.",
+      "verified": false
+    },
+    {
+      "id": "kw-mdr",
+      "term": "Memory Data Register",
+      "acronym": "MDR",
+      "definition": "A register that holds the data or instruction that has just been read from memory, or that is about to be written to memory.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-mar",
+        "kw-cir",
+        "kw-data-bus"
+      ],
+      "dont_confuse_with": "MAR: holds the address of the memory location, not the data stored there.",
+      "verified": false
+    },
+    {
+      "id": "kw-cir",
+      "term": "Current Instruction Register",
+      "acronym": "CIR",
+      "definition": "A register that holds the instruction currently being decoded and executed.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-program-counter",
+        "kw-mdr",
+        "kw-control-unit"
+      ],
+      "dont_confuse_with": "PC: holds the address of the next instruction, not the current instruction itself.",
+      "verified": false
+    },
+    {
+      "id": "kw-bus",
+      "term": "Bus",
+      "acronym": null,
+      "definition": "A set of parallel wires that carries signals between the components of a computer, such as between the processor and memory.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "related": [
+        "kw-data-bus",
+        "kw-address-bus",
+        "kw-control-bus"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-data-bus",
+      "term": "Data bus",
+      "acronym": null,
+      "definition": "A bidirectional bus that carries data and instructions between the processor, memory and input/output devices.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-mdr",
+        "kw-address-bus"
+      ],
+      "dont_confuse_with": "Address bus: carries memory addresses, one way only, from the processor to memory.",
+      "verified": false
+    },
+    {
+      "id": "kw-address-bus",
+      "term": "Address bus",
+      "acronym": null,
+      "definition": "A unidirectional bus that carries memory addresses from the processor to memory; its width determines how many memory locations can be addressed.",
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-mar",
+        "kw-data-bus"
+      ],
+      "dont_confuse_with": "Data bus: carries the data and instructions themselves, in both directions.",
+      "verified": false
+    },
+    {
+      "id": "kw-control-bus",
+      "term": "Control bus",
+      "acronym": null,
+      "definition": "A bidirectional bus that carries control signals, such as memory read, memory write and clock signals, between the control unit and the other components.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "related": [
+        "kw-control-unit",
+        "kw-bus"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-fde-cycle",
+      "term": "Fetch-Decode-Execute cycle",
+      "acronym": "FDE",
+      "definition": "The cycle the processor repeats for every instruction: fetch the next instruction from memory, decode it to work out what to do, then execute it.",
+      "spec_ids": [
+        "1.1.1b"
+      ],
+      "related": [
+        "kw-program-counter",
+        "kw-mar",
+        "kw-mdr",
+        "kw-cir",
+        "kw-pipelining"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-clock-speed",
+      "term": "Clock speed",
+      "acronym": null,
+      "definition": "The number of clock cycles the processor carries out per second, measured in hertz (Hz); a higher clock speed means more instructions can be executed each second.",
+      "spec_ids": [
+        "1.1.1c"
+      ],
+      "related": [
+        "kw-core",
+        "kw-cache"
+      ],
+      "dont_confuse_with": "Number of cores: more cores lets more instructions run at the same time; clock speed is how fast each core works through them.",
+      "verified": false
+    },
+    {
+      "id": "kw-core",
+      "term": "Core",
+      "acronym": null,
+      "definition": "An independent processing unit within a processor that can fetch, decode and execute instructions on its own.",
+      "spec_ids": [
+        "1.1.1c",
+        "1.1.2c"
+      ],
+      "related": [
+        "kw-multicore",
+        "kw-clock-speed"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-cache",
+      "term": "Cache",
+      "acronym": null,
+      "definition": "A small amount of very fast memory in or next to the processor that stores frequently used instructions and data, so they can be accessed more quickly than from RAM.",
+      "spec_ids": [
+        "1.1.1c"
+      ],
+      "related": [
+        "kw-ram",
+        "kw-register",
+        "kw-clock-speed"
+      ],
+      "dont_confuse_with": "RAM: main memory; much larger but slower to access than cache.",
+      "verified": false
+    },
+    {
+      "id": "kw-pipelining",
+      "term": "Pipelining",
+      "acronym": null,
+      "definition": "Overlapping the stages of the FDE cycle, so that while one instruction is being executed the next is being decoded and the one after that is being fetched.",
+      "spec_ids": [
+        "1.1.1d"
+      ],
+      "related": [
+        "kw-fde-cycle",
+        "kw-risc"
+      ],
+      "dont_confuse_with": "Parallel processing: separate cores or processors working at the same time; pipelining overlaps the stages of different instructions within one processor.",
+      "verified": false
+    },
+    {
+      "id": "kw-von-neumann",
+      "term": "Von Neumann architecture",
+      "acronym": null,
+      "definition": "A processor architecture in which instructions and data are stored in the same memory and travel along the same buses, so they can't be fetched at the same time.",
+      "spec_ids": [
+        "1.1.1e"
+      ],
+      "related": [
+        "kw-harvard",
+        "kw-contemporary-architecture"
+      ],
+      "dont_confuse_with": "Harvard architecture: separate memories and buses for instructions and data.",
+      "verified": false
+    },
+    {
+      "id": "kw-harvard",
+      "term": "Harvard architecture",
+      "acronym": null,
+      "definition": "A processor architecture with physically separate memories and buses for instructions and data, so an instruction and an item of data can be accessed at the same time.",
+      "spec_ids": [
+        "1.1.1e"
+      ],
+      "related": [
+        "kw-von-neumann",
+        "kw-contemporary-architecture"
+      ],
+      "dont_confuse_with": "Von Neumann architecture: one shared memory and set of buses for both.",
+      "verified": false
+    },
+    {
+      "id": "kw-contemporary-architecture",
+      "term": "Contemporary processor architecture",
+      "acronym": null,
+      "definition": "Modern processors combine both designs: instructions and data share main memory (Von Neumann), but the processor has separate caches for instructions and for data (Harvard).",
+      "spec_ids": [
+        "1.1.1e"
+      ],
+      "related": [
+        "kw-von-neumann",
+        "kw-harvard",
+        "kw-cache"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-cisc",
+      "term": "Complex Instruction Set Computer",
+      "acronym": "CISC",
+      "definition": "A processor design with a large set of complex instructions, some taking several clock cycles, so a task needs fewer lines of assembly code.",
+      "spec_ids": [
+        "1.1.2a"
+      ],
+      "related": [
+        "kw-risc"
+      ],
+      "dont_confuse_with": "RISC: a small set of simple instructions, each typically taking one clock cycle.",
+      "verified": false
+    },
+    {
+      "id": "kw-risc",
+      "term": "Reduced Instruction Set Computer",
+      "acronym": "RISC",
+      "definition": "A processor design with a small set of simple instructions, each typically completed in one clock cycle, which makes pipelining easier.",
+      "spec_ids": [
+        "1.1.2a"
+      ],
+      "related": [
+        "kw-cisc",
+        "kw-pipelining"
+      ],
+      "dont_confuse_with": "CISC: many complex instructions, some taking several clock cycles.",
+      "verified": false
+    },
+    {
+      "id": "kw-gpu",
+      "term": "Graphics Processing Unit",
+      "acronym": "GPU",
+      "definition": "A processor with a large number of cores designed to carry out the same operation on many items of data at the same time, used for graphics and other highly parallel tasks such as modelling and data mining.",
+      "spec_ids": [
+        "1.1.2b"
+      ],
+      "related": [
+        "kw-simd",
+        "kw-parallel-processing",
+        "kw-core"
+      ],
+      "dont_confuse_with": "CPU: fewer, more powerful cores suited to general-purpose and sequential tasks.",
+      "verified": false
+    },
+    {
+      "id": "kw-simd",
+      "term": "Single Instruction, Multiple Data",
+      "acronym": "SIMD",
+      "definition": "Processing in which one instruction is carried out on many items of data at the same time.",
+      "spec_ids": [
+        "1.1.2b"
+      ],
+      "related": [
+        "kw-gpu",
+        "kw-parallel-processing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-multicore",
+      "term": "Multicore processor",
+      "acronym": null,
+      "definition": "A processor with two or more cores on a single chip, so several instructions, or several programs, can be processed at the same time.",
+      "spec_ids": [
+        "1.1.2c",
+        "1.1.1c"
+      ],
+      "related": [
+        "kw-core",
+        "kw-parallel-processing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-parallel-processing",
+      "term": "Parallel processing",
+      "acronym": null,
+      "definition": "Using two or more processors or cores at the same time to carry out different parts of a task, or different tasks.",
+      "spec_ids": [
+        "1.1.2c"
+      ],
+      "related": [
+        "kw-multicore",
+        "kw-gpu",
+        "kw-simd"
+      ],
+      "dont_confuse_with": "Pipelining: overlaps the stages of instructions inside one processor rather than using several processors.",
+      "verified": false
+    },
+    {
+      "id": "kw-input-device",
+      "term": "Input device",
+      "acronym": null,
+      "definition": "Hardware used to enter data into a computer system, such as a keyboard, barcode scanner, microphone or sensor.",
+      "spec_ids": [
+        "1.1.3a"
+      ],
+      "related": [
+        "kw-output-device"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-output-device",
+      "term": "Output device",
+      "acronym": null,
+      "definition": "Hardware used to present the results of processing to a person or another system, such as a monitor, printer, speaker or actuator.",
+      "spec_ids": [
+        "1.1.3a"
+      ],
+      "related": [
+        "kw-input-device"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-secondary-storage",
+      "term": "Secondary storage",
+      "acronym": null,
+      "definition": "Non-volatile storage that holds programs and data that are not currently in use, such as a hard disk drive, SSD or optical disc.",
+      "spec_ids": [
+        "1.1.3a",
+        "1.1.3b"
+      ],
+      "related": [
+        "kw-magnetic-storage",
+        "kw-flash-storage",
+        "kw-optical-storage",
+        "kw-ram"
+      ],
+      "dont_confuse_with": "RAM: main memory holding what is in use right now, and volatile.",
+      "verified": false
+    },
+    {
+      "id": "kw-magnetic-storage",
+      "term": "Magnetic storage",
+      "acronym": null,
+      "definition": "Storage that records data by magnetising tiny areas of a spinning disk or a tape in one of two directions, such as a hard disk drive or magnetic tape.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "related": [
+        "kw-flash-storage",
+        "kw-optical-storage",
+        "kw-secondary-storage"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-optical-storage",
+      "term": "Optical storage",
+      "acronym": null,
+      "definition": "Storage that uses a laser to read (and on some discs write) data on the reflective surface of a disc, such as a CD, DVD or Blu-ray.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "related": [
+        "kw-magnetic-storage",
+        "kw-flash-storage",
+        "kw-secondary-storage"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-flash-storage",
+      "term": "Flash storage",
+      "acronym": null,
+      "definition": "Solid-state, non-volatile storage that holds data electronically in memory chips with no moving parts, such as an SSD, USB memory stick or SD card.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "related": [
+        "kw-magnetic-storage",
+        "kw-optical-storage",
+        "kw-non-volatile"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-ram",
+      "term": "Random Access Memory",
+      "acronym": "RAM",
+      "definition": "Volatile main memory that holds the programs and data currently in use, and can be both read from and written to.",
+      "spec_ids": [
+        "1.1.3c"
+      ],
+      "related": [
+        "kw-rom",
+        "kw-volatile",
+        "kw-cache"
+      ],
+      "dont_confuse_with": "ROM: non-volatile and normally read-only; holds start-up instructions.",
+      "verified": false
+    },
+    {
+      "id": "kw-rom",
+      "term": "Read Only Memory",
+      "acronym": "ROM",
+      "definition": "Non-volatile memory whose contents cannot normally be changed, used to store the instructions needed to start the computer, such as the BIOS.",
+      "spec_ids": [
+        "1.1.3c"
+      ],
+      "related": [
+        "kw-ram",
+        "kw-non-volatile"
+      ],
+      "dont_confuse_with": "RAM: volatile, read/write memory for programs and data in use.",
+      "verified": false
+    },
+    {
+      "id": "kw-volatile",
+      "term": "Volatile",
+      "acronym": null,
+      "definition": "Describes memory that loses its contents when the power is switched off, such as RAM.",
+      "spec_ids": [
+        "1.1.3c"
+      ],
+      "related": [
+        "kw-non-volatile",
+        "kw-ram"
+      ],
+      "dont_confuse_with": "Non-volatile: keeps its contents without power.",
+      "verified": false
+    },
+    {
+      "id": "kw-non-volatile",
+      "term": "Non-volatile",
+      "acronym": null,
+      "definition": "Describes memory or storage that keeps its contents when the power is switched off, such as ROM, flash and magnetic storage.",
+      "spec_ids": [
+        "1.1.3c",
+        "1.1.3b"
+      ],
+      "related": [
+        "kw-volatile",
+        "kw-rom",
+        "kw-secondary-storage"
+      ],
+      "dont_confuse_with": "Volatile: loses its contents without power.",
+      "verified": false
+    },
+    {
+      "id": "kw-virtual-storage",
+      "term": "Virtual storage",
+      "acronym": null,
+      "definition": "Storage that may appear to be local but is physically located elsewhere on the network, remotely or in the cloud.",
+      "spec_ids": [
+        "1.1.3d"
+      ],
+      "related": [
+        "kw-secondary-storage"
+      ],
+      "dont_confuse_with": "Virtual memory (1.2.1): part of secondary storage used as if it were extra RAM when RAM is full.",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.1.3",
+  "key_points": [
+    {
+      "id": "sum-1.1.3-01",
+      "text": "You don't need to know how input and output devices work. You need to recommend a suitable device for a given scenario and justify it from the scenario's needs (for example, a barcode scanner at a shop till for fast, accurate entry, or sensors in an embedded control system).",
+      "spec_ids": [
+        "1.1.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-02",
+      "text": "When choosing storage, compare capacity, speed of access, portability, durability, reliability and cost per gigabyte, and link each to the scenario.",
+      "spec_ids": [
+        "1.1.3a",
+        "1.1.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-03",
+      "text": "Magnetic storage (hard disk drive, tape): high capacity and low cost per gigabyte, but it has moving parts, so access is slower and it can be damaged if knocked. Suits servers, large data stores and backups.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-04",
+      "text": "Flash storage (SSD, USB stick, SD card): fast access, no moving parts so robust, silent and low power, and portable. It costs more per gigabyte and each part of it can only be written a limited number of times. Suits phones, laptops and portable devices.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-05",
+      "text": "Optical storage (CD, DVD, Blu-ray): cheap, light and portable, good for distributing media, but low capacity, slow, and easily scratched.",
+      "spec_ids": [
+        "1.1.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-06",
+      "text": "RAM is volatile read/write memory holding the operating system, programs and data currently in use. ROM is non-volatile and normally read-only, holding the instructions needed to start the computer. In embedded systems and mobile devices, ROM or flash holds the software (firmware) that runs the device.",
+      "spec_ids": [
+        "1.1.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.3-07",
+      "text": "Virtual storage appears to be local but is physically located elsewhere on the network or in the cloud. Benefits: access from any device and location, easy sharing, capacity that can grow, and backups handled by the provider. Drawbacks: needs a network connection, speed depends on bandwidth, data security and privacy depend on a third party, and there may be ongoing costs.",
+      "spec_ids": [
+        "1.1.3d"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-input-device",
+    "kw-output-device",
+    "kw-secondary-storage",
+    "kw-magnetic-storage",
+    "kw-optical-storage",
+    "kw-flash-storage",
+    "kw-ram",
+    "kw-rom",
+    "kw-volatile",
+    "kw-non-volatile",
+    "kw-virtual-storage"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.1.3-01",
+      "text": "RAM vs ROM: RAM is volatile and read/write (programs in use); ROM is non-volatile and normally read-only (start-up instructions).",
+      "keyword_ids": [
+        "kw-ram",
+        "kw-rom"
+      ],
+      "spec_ids": [
+        "1.1.3c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.3-02",
+      "text": "Virtual storage vs virtual memory: virtual storage is storage located elsewhere on a network or in the cloud; virtual memory (1.2.1) is part of secondary storage used as extra RAM.",
+      "keyword_ids": [
+        "kw-virtual-storage"
+      ],
+      "spec_ids": [
+        "1.1.3d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.3-03",
+      "text": "RAM vs secondary storage: RAM holds what is in use right now and is volatile; secondary storage keeps programs and data long term and is non-volatile.",
+      "keyword_ids": [
+        "kw-ram",
+        "kw-secondary-storage"
+      ],
+      "spec_ids": [
+        "1.1.3a",
+        "1.1.3c"
+      ],
+      "verified": false
+    }
+  ]
+}

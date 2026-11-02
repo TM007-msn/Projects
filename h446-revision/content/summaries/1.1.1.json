@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.1.1",
+  "key_points": [
+    {
+      "id": "sum-1.1.1-01",
+      "text": "The processor contains the ALU, the Control Unit, registers and cache. It is connected to main memory by three buses: the data bus, the address bus and the control bus.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-02",
+      "text": "Each register has one job: the PC holds the address of the next instruction, the MAR holds the address being read from or written to, the MDR holds the data or instruction being transferred, the CIR holds the instruction being decoded and executed, and the ACC holds the value being worked on and the ALU's results.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-03",
+      "text": "Assembly language works directly with these registers. In Little Man Computer, LDA copies a value from memory into the ACC (the address goes through the MAR, the value comes back through the MDR), ADD uses the ALU and leaves the result in the ACC, and STA writes the ACC back to memory.",
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-04",
+      "text": "Fetch: the address in the PC is copied to the MAR and the PC is incremented. The address goes along the address bus; the instruction stored there comes back along the data bus into the MDR, and is then copied into the CIR.",
+      "spec_ids": [
+        "1.1.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-05",
+      "text": "Decode and execute: the Control Unit decodes the instruction in the CIR to work out what to do and what data it needs. It is then executed: for example, data is loaded via the MAR and MDR, the ALU performs a calculation with the result in the ACC, or a branch instruction changes the PC.",
+      "spec_ids": [
+        "1.1.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-06",
+      "text": "Performance depends on clock speed (more cycles per second means more instructions per second), the number of cores (more instructions processed at the same time, but only if the work can be split between them) and cache (a larger cache means more instructions and data are found there instead of fetched from slower RAM).",
+      "spec_ids": [
+        "1.1.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-07",
+      "text": "Pipelining overlaps the FDE stages of different instructions: while one is executed, the next is decoded and a third is fetched. This increases the number of instructions completed per second, but if a branch is taken the instructions already fetched are wrong and the pipeline has to be flushed (emptied).",
+      "spec_ids": [
+        "1.1.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.1.1-08",
+      "text": "Von Neumann: instructions and data share one memory and one set of buses (the stored program idea), which is simple and flexible but means they can't be fetched at the same time. Harvard: separate memories and buses, so both can be fetched at once; common in embedded systems. Contemporary processors mix the two, with shared main memory but separate instruction and data caches.",
+      "spec_ids": [
+        "1.1.1e"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-cpu",
+    "kw-alu",
+    "kw-control-unit",
+    "kw-register",
+    "kw-program-counter",
+    "kw-accumulator",
+    "kw-mar",
+    "kw-mdr",
+    "kw-cir",
+    "kw-bus",
+    "kw-data-bus",
+    "kw-address-bus",
+    "kw-control-bus",
+    "kw-fde-cycle",
+    "kw-clock-speed",
+    "kw-core",
+    "kw-cache",
+    "kw-pipelining",
+    "kw-von-neumann",
+    "kw-harvard",
+    "kw-contemporary-architecture"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.1.1-01",
+      "text": "MAR vs MDR: the MAR holds an address (where); the MDR holds the data or instruction at that address (what).",
+      "keyword_ids": [
+        "kw-mar",
+        "kw-mdr"
+      ],
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.1-02",
+      "text": "PC vs CIR: the PC holds the address of the next instruction; the CIR holds the current instruction itself.",
+      "keyword_ids": [
+        "kw-program-counter",
+        "kw-cir"
+      ],
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.1-03",
+      "text": "Address bus vs data bus: the address bus is one-way (processor to memory) and carries addresses; the data bus is two-way and carries data and instructions.",
+      "keyword_ids": [
+        "kw-address-bus",
+        "kw-data-bus"
+      ],
+      "spec_ids": [
+        "1.1.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.1-04",
+      "text": "Pipelining vs more cores: pipelining overlaps stages of different instructions inside one core; more cores means separate processing units each running their own instructions.",
+      "keyword_ids": [
+        "kw-pipelining",
+        "kw-core"
+      ],
+      "spec_ids": [
+        "1.1.1c",
+        "1.1.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.1.1-05",
+      "text": "Cache vs registers: registers hold the values being used in the current instruction; cache holds copies of frequently used instructions and data from RAM.",
+      "keyword_ids": [
+        "kw-cache",
+        "kw-register"
+      ],
+      "spec_ids": [
+        "1.1.1a",
+        "1.1.1c"
+      ],
+      "verified": false
+    }
+  ]
+}
