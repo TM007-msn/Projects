@@ -209,3 +209,41 @@ Resource links aren't copied: the page reads them from `spec.json`.
   event ids are built from `crypto.getRandomValues()`.
 - Until Phase 6, the offline queue is a small `localStorage` list: ratings made with no signal are
   kept and resent automatically (shown as "n changes waiting to sync").
+
+---
+
+## Phase 2: remaining content
+
+### Goal
+
+Keywords and summaries for 1.2 to 2.3 (21 subtopics), one topic per commit, in the 1.1 style.
+No corrections to 1.1 have been made yet (Taylor hasn't reviewed it), so the 1.1 style is
+carried forward unchanged. If the review finds a systematic problem, fix it across all topics in
+one pass.
+
+### Data model changes
+
+- Optional keyword fields:
+  - `"source": "checklist"` for items that exist only because of the Craig'n'Dave checklist
+    (decision 3 in EXTRACTION_NOTES).
+  - `"alternative_acronyms": [...]` for the LMC mnemonics OCR also accepts (STO, LOAD, BR, BZ,
+    BP, IN/INPUT, COB/END), so typed answers in Phase 4/5 can accept them.
+- Keywords can reference sub-item ids (e.g. `1.5.2a.3`) in `spec_ids`.
+- One keyword per concept, even when it's on two spec points (e.g. Abstraction is 2.1.1 and
+  2.2.2e). When two concepts share a word, the term says which is meant: "Normalisation
+  (floating point)" vs "Normalisation (databases)", "Record (data structure)" vs "Record
+  (database)", "Pipelining (problem solving)" vs the processor's "Pipelining".
+
+### New content checks
+
+- Every keyword appears in at least one summary (so nothing is unreachable).
+- Optional fields have the right types.
+
+### Risks
+
+| Risk | Mitigation |
+|---|---|
+| Words with two spec meanings ("redundancy" in 1.3.2f is fault tolerance, not data redundancy; "pipelining" in 1.1.1d vs 2.2.2f) | Separate, disambiguated keywords plus "don't confuse" notes. |
+| Algorithm facts stated wrongly (Big O cases, preconditions) | Only standard, uncontroversial complexities; anything implementation-dependent (e.g. Dijkstra's Big O) left out and noted. |
+| Orderings that sources disagree on (waterfall stages, compilation optimisation) | Noted in CONTENT_NOTES now, before Phase 4 builds ordering items. |
+| Volume (about 250 keywords) makes errors likely | Everything stays unverified; uncertainties listed per topic in CONTENT_NOTES. |

@@ -85,7 +85,10 @@ export async function renderSummary(root, subtopicId) {
     sections.push(h("section", {},
       h("h2", {}, "Key points"),
       h("ol", { class: "key-points" }, summary.key_points.map((kp) =>
-        h("li", { class: "content-item" }, h("p", {}, kp.text), actionsSlot(kp))))));
+        h("li", { class: "content-item" },
+          h("p", {}, kp.text),
+          kp.code ? h("pre", { class: "code" }, h("code", {}, kp.code)) : null,
+          actionsSlot(kp))))));
 
     const keywords = summary.keyword_ids.map((id) => store.keywords.get(id)).filter(Boolean);
     sections.push(h("section", {},

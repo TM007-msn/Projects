@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.2.2",
+  "key_points": [
+    {
+      "id": "sum-1.2.2-01",
+      "text": "Applications let users do tasks (word processing, databases, web browsing, graphics). Recommend specific or general-purpose applications by linking their features to what the scenario needs.",
+      "spec_ids": [
+        "1.2.2a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-02",
+      "text": "Utility software keeps the computer running well: for example disk defragmentation, backup, compression, file management, system clean-up and security (anti-virus, firewall).",
+      "spec_ids": [
+        "1.2.2b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-03",
+      "text": "Open source: free to view, change and share, with community support, but often less formal support and anyone can see its weaknesses. Closed source: the owner keeps control and can charge for it and offer support, but users can't fix or adapt it themselves. Recommend by thinking about cost, support, security and whether the code needs changing, for both creator and user.",
+      "spec_ids": [
+        "1.2.2c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-04",
+      "text": "Translators turn source code into machine code. A compiler translates the whole program once: the executable runs fast and the source code stays hidden, but errors are only reported after the whole program is compiled and it must be recompiled for each platform. An interpreter translates line by line each time: easier to debug and portable, but slower and the source code must be distributed. An assembler translates assembly language into machine code.",
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-05",
+      "text": "Lexical analysis removes whitespace and comments, splits the code into tokens and builds a symbol table.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-06",
+      "text": "Syntax analysis checks the tokens against the rules of the language, reports syntax errors and builds an abstract syntax tree. Code generation then produces object code from the tree, and optimisation makes the code faster or smaller without changing what it does.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.2-07",
+      "text": "Libraries are pre-written, pre-tested code that saves development time, but you rely on someone else's code and it may include features you don't need. The linker combines the program's object code with library code (statically, copied in, or dynamically, loaded at run time); the loader copies the executable into memory to run it.",
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-application-software",
+    "kw-utility-software",
+    "kw-open-source",
+    "kw-closed-source",
+    "kw-translator",
+    "kw-compiler",
+    "kw-interpreter",
+    "kw-assembler",
+    "kw-source-code",
+    "kw-object-code",
+    "kw-machine-code",
+    "kw-lexical-analysis",
+    "kw-token",
+    "kw-symbol-table",
+    "kw-syntax-analysis",
+    "kw-abstract-syntax-tree",
+    "kw-code-generation",
+    "kw-optimisation",
+    "kw-library",
+    "kw-linker",
+    "kw-loader",
+    "kw-static-linking",
+    "kw-dynamic-linking"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.2.2-01",
+      "text": "Compiler vs interpreter: a compiler translates the whole program once into an executable; an interpreter translates and runs one line at a time, every time.",
+      "keyword_ids": [
+        "kw-compiler",
+        "kw-interpreter"
+      ],
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.2-02",
+      "text": "Linker vs loader: the linker joins object code and libraries into an executable; the loader copies the executable into memory to run it.",
+      "keyword_ids": [
+        "kw-linker",
+        "kw-loader"
+      ],
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.2-03",
+      "text": "Static vs dynamic linking: static copies the library into the executable; dynamic loads a shared library when the program runs.",
+      "keyword_ids": [
+        "kw-static-linking",
+        "kw-dynamic-linking"
+      ],
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.2-04",
+      "text": "Open source vs free of charge: open source means the source code is available; closed source software can also be free to download.",
+      "keyword_ids": [
+        "kw-open-source",
+        "kw-closed-source"
+      ],
+      "spec_ids": [
+        "1.2.2c"
+      ],
+      "verified": false
+    }
+  ]
+}

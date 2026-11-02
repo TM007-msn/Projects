@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.2.1",
+  "key_points": [
+    {
+      "id": "sum-1.2.1-01",
+      "text": "The operating system is needed to manage the hardware and provide a platform for software. Its tasks include resource and memory management, file management, interrupt handling, security, providing a user interface and providing utilities.",
+      "spec_ids": [
+        "1.2.1a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-02",
+      "text": "Paging splits memory into fixed-size pages; segmentation splits it into variable-size, logical segments. Both let a program be stored in non-contiguous parts of memory.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-03",
+      "text": "Virtual memory uses secondary storage as extra RAM: pages not currently needed are swapped out. Benefit: more or larger programs can run than RAM alone allows. Drawback: secondary storage is much slower, and heavy swapping causes disk thrashing.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-04",
+      "text": "Interrupts: at the end of each FDE cycle the processor checks for interrupts. If one has a higher priority than the current task, the contents of the registers are saved (on a stack), the ISR is loaded and run, then the saved values are restored so the original task carries on.",
+      "spec_ids": [
+        "1.2.1c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-05",
+      "text": "Scheduling shares processor time between processes to keep the processor busy, respond quickly and be fair. Round robin gives time slices in turn; FCFS runs jobs in arrival order; SJF runs the shortest job next; SRT always runs the job with least time remaining (and can interrupt); MLFQ moves jobs between priority queues. SJF and SRT need run times to be estimated, and long jobs can be starved of time.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-06",
+      "text": "Types of operating system overlap: distributed (one system across several computers), embedded (built into a dedicated device), multi-tasking (switches between programs quickly), multi-user (many users share one computer) and real time (guaranteed response within a time limit). Recommend one by matching its key feature to the scenario.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-07",
+      "text": "The BIOS is stored in ROM. On start-up it runs the power-on self test (POST) to check the hardware, then loads the boot loader, which loads the operating system into RAM. Device drivers let the operating system talk to each piece of hardware without knowing its details.",
+      "spec_ids": [
+        "1.2.1f",
+        "1.2.1g"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.1-08",
+      "text": "A virtual machine is software taking the role of a machine: running intermediate code (so the same code runs on any platform with that virtual machine, but more slowly than native machine code) or running one operating system inside another (useful for testing and running old software, but slower than running directly on the hardware).",
+      "spec_ids": [
+        "1.2.1h"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-operating-system",
+    "kw-memory-management",
+    "kw-paging",
+    "kw-segmentation",
+    "kw-virtual-memory",
+    "kw-disk-thrashing",
+    "kw-interrupt",
+    "kw-isr",
+    "kw-scheduling",
+    "kw-round-robin",
+    "kw-fcfs",
+    "kw-mlfq",
+    "kw-sjf",
+    "kw-srt",
+    "kw-distributed-os",
+    "kw-embedded-os",
+    "kw-multi-tasking-os",
+    "kw-multi-user-os",
+    "kw-real-time-os",
+    "kw-bios",
+    "kw-device-driver",
+    "kw-virtual-machine",
+    "kw-intermediate-code"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.2.1-01",
+      "text": "Paging vs segmentation: pages are a fixed size and split memory physically; segments vary in size and match the logical parts of a program.",
+      "keyword_ids": [
+        "kw-paging",
+        "kw-segmentation"
+      ],
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.1-02",
+      "text": "Virtual memory vs virtual machine: virtual memory is secondary storage used as extra RAM; a virtual machine is software that behaves like a computer.",
+      "keyword_ids": [
+        "kw-virtual-memory",
+        "kw-virtual-machine"
+      ],
+      "spec_ids": [
+        "1.2.1b",
+        "1.2.1h"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.1-03",
+      "text": "SJF vs SRT: SJF picks the shortest job and lets it finish; SRT can switch to a newly arrived job if it would finish sooner.",
+      "keyword_ids": [
+        "kw-sjf",
+        "kw-srt"
+      ],
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.1-04",
+      "text": "Multi-tasking vs multi-user: multi-tasking means one user running many programs; multi-user means many users sharing one computer.",
+      "keyword_ids": [
+        "kw-multi-tasking-os",
+        "kw-multi-user-os"
+      ],
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "verified": false
+    }
+  ]
+}

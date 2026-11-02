@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.2.3",
+  "key_points": [
+    {
+      "id": "sum-1.2.3-01",
+      "text": "Waterfall: stages are done in order and each is signed off before the next. Clear structure, documentation and deadlines; suits projects with fixed, well-understood requirements. Drawbacks: the user sees little until the end and changes are expensive to make once a stage is finished.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.3-02",
+      "text": "Agile methodologies build the software in short iterations with regular feedback from the client, so changing requirements can be handled. Suits projects where requirements are unclear or likely to change; drawbacks are less documentation and the need for the client to be closely involved.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.3-03",
+      "text": "Extreme programming (an agile method) uses short iterations, pair programming, writing tests before code, and a customer representative in the team. It produces high-quality code but needs a committed client and is costly in programmer time.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.3-04",
+      "text": "Spiral model: each loop plans, analyses risks, builds and evaluates a bigger version. Good for large, high-risk projects because risks are tackled early; drawbacks are the cost of risk analysis and the expertise it needs.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.3-05",
+      "text": "Rapid application development builds prototypes quickly and refines them with user feedback until one becomes the final system. Good when users are available and the interface matters; less suited to large or safety-critical systems, and the code can be less efficient.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.3-06",
+      "text": "Algorithms can be written as pseudocode, a flowchart or program code. In the exam, code is shown in OCR's pseudocode style, but your answers don't need to be syntactically perfect as long as they use appropriate structures.",
+      "spec_ids": [
+        "1.2.3c"
+      ],
+      "verified": false
+    }
+  ],
+  "keyword_ids": [
+    "kw-waterfall",
+    "kw-agile",
+    "kw-extreme-programming",
+    "kw-pair-programming",
+    "kw-spiral-model",
+    "kw-rad",
+    "kw-prototype",
+    "kw-algorithm",
+    "kw-pseudocode",
+    "kw-flowchart"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.2.3-01",
+      "text": "Waterfall vs agile: waterfall finishes each stage once, in order; agile repeats short cycles and expects requirements to change.",
+      "keyword_ids": [
+        "kw-waterfall",
+        "kw-agile"
+      ],
+      "spec_ids": [
+        "1.2.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.3-02",
+      "text": "RAD vs spiral: RAD is driven by user feedback on prototypes; spiral is driven by risk analysis on each loop.",
+      "keyword_ids": [
+        "kw-rad",
+        "kw-spiral-model"
+      ],
+      "spec_ids": [
+        "1.2.3a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.3-03",
+      "text": "Agile vs extreme programming: agile is the family of approaches; extreme programming is one specific agile method.",
+      "keyword_ids": [
+        "kw-agile",
+        "kw-extreme-programming"
+      ],
+      "spec_ids": [
+        "1.2.3a"
+      ],
+      "verified": false
+    }
+  ]
+}

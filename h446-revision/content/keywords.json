@@ -602,6 +602,1528 @@
       ],
       "dont_confuse_with": "Virtual memory (1.2.1): part of secondary storage used as if it were extra RAM when RAM is full.",
       "verified": false
+    },
+    {
+      "id": "kw-operating-system",
+      "term": "Operating system",
+      "acronym": "OS",
+      "definition": "System software that manages the computer's hardware and resources and provides a platform and user interface for running other software.",
+      "spec_ids": [
+        "1.2.1a"
+      ],
+      "related": [
+        "kw-memory-management",
+        "kw-scheduling",
+        "kw-interrupt",
+        "kw-device-driver"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-memory-management",
+      "term": "Memory management",
+      "acronym": null,
+      "definition": "The part of the operating system that allocates memory to processes, keeps them separate from each other, and moves data between RAM and secondary storage when needed.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "related": [
+        "kw-paging",
+        "kw-segmentation",
+        "kw-virtual-memory"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-paging",
+      "term": "Paging",
+      "acronym": null,
+      "definition": "Dividing memory into fixed-size blocks called pages, so a program's pages can be stored in any free page frames in memory, not necessarily next to each other.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "related": [
+        "kw-segmentation",
+        "kw-virtual-memory"
+      ],
+      "dont_confuse_with": "Segmentation: divides memory into variable-size blocks based on the logical parts of a program.",
+      "verified": false
+    },
+    {
+      "id": "kw-segmentation",
+      "term": "Segmentation",
+      "acronym": null,
+      "definition": "Dividing memory into variable-size blocks called segments, each holding a logical part of a program such as a subroutine or a data structure.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "related": [
+        "kw-paging"
+      ],
+      "dont_confuse_with": "Paging: fixed-size pages, divided physically rather than by what the program contains.",
+      "verified": false
+    },
+    {
+      "id": "kw-virtual-memory",
+      "term": "Virtual memory",
+      "acronym": null,
+      "definition": "An area of secondary storage used as if it were extra RAM when RAM is full; pages not currently needed are swapped out to it and swapped back in when required.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "related": [
+        "kw-paging",
+        "kw-disk-thrashing",
+        "kw-ram"
+      ],
+      "dont_confuse_with": "Virtual storage (1.1.3): storage located elsewhere on a network or in the cloud.",
+      "verified": false
+    },
+    {
+      "id": "kw-disk-thrashing",
+      "term": "Disk thrashing",
+      "acronym": null,
+      "definition": "When the computer spends more time swapping pages between RAM and virtual memory than running programs, so it slows down badly.",
+      "spec_ids": [
+        "1.2.1b"
+      ],
+      "related": [
+        "kw-virtual-memory"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-interrupt",
+      "term": "Interrupt",
+      "acronym": null,
+      "definition": "A signal to the processor from hardware or software saying that something needs attention, which may cause the processor to stop its current task and run an interrupt service routine.",
+      "spec_ids": [
+        "1.2.1c"
+      ],
+      "related": [
+        "kw-isr",
+        "kw-fde-cycle"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-isr",
+      "term": "Interrupt Service Routine",
+      "acronym": "ISR",
+      "definition": "The code that runs to deal with a particular interrupt; afterwards, the saved state of the interrupted task is restored and it carries on.",
+      "spec_ids": [
+        "1.2.1c"
+      ],
+      "related": [
+        "kw-interrupt"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-scheduling",
+      "term": "Scheduling",
+      "acronym": null,
+      "definition": "How the operating system decides which process gets processor time next, so that time is shared fairly and efficiently between processes.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-round-robin",
+        "kw-fcfs",
+        "kw-mlfq",
+        "kw-sjf",
+        "kw-srt"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-round-robin",
+      "term": "Round robin",
+      "acronym": null,
+      "definition": "A scheduling algorithm that gives each process a fixed time slice in turn; a process that hasn't finished goes to the back of the queue.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-scheduling",
+        "kw-fcfs"
+      ],
+      "dont_confuse_with": "First come first served: each process runs to completion before the next one starts; no time slices.",
+      "verified": false
+    },
+    {
+      "id": "kw-fcfs",
+      "term": "First come first served",
+      "acronym": "FCFS",
+      "definition": "A scheduling algorithm that runs processes in the order they arrive, each one to completion before the next starts.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-round-robin",
+        "kw-scheduling"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-mlfq",
+      "term": "Multi-level feedback queues",
+      "acronym": "MLFQ",
+      "definition": "A scheduling algorithm that uses several queues of different priority, moving processes between queues according to how they behave (for example, how much processor time they use).",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-scheduling",
+        "kw-round-robin"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-sjf",
+      "term": "Shortest job first",
+      "acronym": "SJF",
+      "definition": "A scheduling algorithm that runs the waiting process with the shortest estimated total running time next, letting it run to completion.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-srt",
+        "kw-scheduling"
+      ],
+      "dont_confuse_with": "Shortest remaining time: can interrupt the running process when a shorter one arrives.",
+      "verified": false
+    },
+    {
+      "id": "kw-srt",
+      "term": "Shortest remaining time",
+      "acronym": "SRT",
+      "definition": "A scheduling algorithm that always runs the process with the least time left to finish, switching to a newly arrived process if it would finish sooner.",
+      "spec_ids": [
+        "1.2.1d"
+      ],
+      "related": [
+        "kw-sjf",
+        "kw-scheduling"
+      ],
+      "dont_confuse_with": "Shortest job first: once a job starts, it runs to completion.",
+      "verified": false
+    },
+    {
+      "id": "kw-distributed-os",
+      "term": "Distributed operating system",
+      "acronym": null,
+      "definition": "An operating system that runs across several computers and makes them appear to the user as a single system, sharing tasks and resources between them.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "related": [
+        "kw-multi-user-os",
+        "kw-parallel-processing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-embedded-os",
+      "term": "Embedded operating system",
+      "acronym": null,
+      "definition": "A small operating system built into a dedicated device, such as a washing machine or car engine controller, designed for a specific task with limited resources.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "related": [
+        "kw-real-time-os"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-multi-tasking-os",
+      "term": "Multi-tasking operating system",
+      "acronym": null,
+      "definition": "An operating system that appears to run several programs at the same time by switching the processor between them very quickly.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "related": [
+        "kw-multi-user-os",
+        "kw-scheduling"
+      ],
+      "dont_confuse_with": "Multi-user operating system: lets several users use the computer's resources at once.",
+      "verified": false
+    },
+    {
+      "id": "kw-multi-user-os",
+      "term": "Multi-user operating system",
+      "acronym": null,
+      "definition": "An operating system that allows several users to use one computer's resources at the same time, using scheduling to share processor time fairly between them.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "related": [
+        "kw-multi-tasking-os",
+        "kw-scheduling"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-real-time-os",
+      "term": "Real-time operating system",
+      "acronym": "RTOS",
+      "definition": "An operating system that guarantees to process inputs and respond within a fixed, very short time, used where delays could be dangerous, such as in aircraft or medical equipment.",
+      "spec_ids": [
+        "1.2.1e"
+      ],
+      "related": [
+        "kw-embedded-os"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-bios",
+      "term": "Basic Input Output System",
+      "acronym": "BIOS",
+      "definition": "Firmware stored in ROM that runs when the computer is switched on: it checks the hardware (POST), then loads the operating system's boot loader from storage.",
+      "spec_ids": [
+        "1.2.1f"
+      ],
+      "related": [
+        "kw-rom",
+        "kw-operating-system"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-device-driver",
+      "term": "Device driver",
+      "acronym": null,
+      "definition": "Software that lets the operating system communicate with a particular hardware device by translating the operating system's general instructions into ones the device understands.",
+      "spec_ids": [
+        "1.2.1g"
+      ],
+      "related": [
+        "kw-operating-system"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-virtual-machine",
+      "term": "Virtual machine",
+      "acronym": "VM",
+      "definition": "Software that takes on the function of a machine, for example running an operating system inside another, or executing intermediate code.",
+      "spec_ids": [
+        "1.2.1h"
+      ],
+      "related": [
+        "kw-intermediate-code",
+        "kw-interpreter"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-intermediate-code",
+      "term": "Intermediate code",
+      "acronym": null,
+      "definition": "Code that is partly translated (such as bytecode) and can be run on any platform that has a suitable virtual machine to execute it.",
+      "spec_ids": [
+        "1.2.1h",
+        "1.2.2d"
+      ],
+      "related": [
+        "kw-virtual-machine",
+        "kw-compiler"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-application-software",
+      "term": "Application software",
+      "acronym": null,
+      "definition": "Software that lets the user carry out a task, such as a word processor, web browser, database or graphics editor.",
+      "spec_ids": [
+        "1.2.2a"
+      ],
+      "related": [
+        "kw-utility-software"
+      ],
+      "dont_confuse_with": "Utility software: maintains or improves the running of the computer rather than doing the user's task.",
+      "verified": false
+    },
+    {
+      "id": "kw-utility-software",
+      "term": "Utility software",
+      "acronym": null,
+      "definition": "System software that performs a specific task to maintain or improve the running of the computer, such as disk defragmentation, backup, compression or anti-virus.",
+      "spec_ids": [
+        "1.2.2b"
+      ],
+      "related": [
+        "kw-application-software",
+        "kw-operating-system"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-open-source",
+      "term": "Open source software",
+      "acronym": null,
+      "definition": "Software whose source code is made freely available, so users can view, modify and redistribute it under its licence.",
+      "spec_ids": [
+        "1.2.2c"
+      ],
+      "related": [
+        "kw-closed-source"
+      ],
+      "dont_confuse_with": "Closed source: only the compiled program is supplied and the source code is kept private.",
+      "verified": false
+    },
+    {
+      "id": "kw-closed-source",
+      "term": "Closed source software",
+      "acronym": null,
+      "definition": "Software whose source code is kept private by its owner; users get only the compiled program and a licence that restricts how they can use it.",
+      "spec_ids": [
+        "1.2.2c"
+      ],
+      "related": [
+        "kw-open-source"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-translator",
+      "term": "Translator",
+      "acronym": null,
+      "definition": "A program that converts source code into machine code: a compiler, an interpreter or an assembler.",
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "related": [
+        "kw-compiler",
+        "kw-interpreter",
+        "kw-assembler"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-compiler",
+      "term": "Compiler",
+      "acronym": null,
+      "definition": "A translator that converts the whole of a high-level program into machine code (object code) in one go, producing an executable that can be run without the compiler.",
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "related": [
+        "kw-interpreter",
+        "kw-object-code"
+      ],
+      "dont_confuse_with": "Interpreter: translates and runs the program one line at a time, every time it runs.",
+      "verified": false
+    },
+    {
+      "id": "kw-interpreter",
+      "term": "Interpreter",
+      "acronym": null,
+      "definition": "A translator that translates and executes a high-level program one line at a time, stopping at the first error it finds.",
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "related": [
+        "kw-compiler",
+        "kw-intermediate-code"
+      ],
+      "dont_confuse_with": "Compiler: translates the whole program once and produces an executable file.",
+      "verified": false
+    },
+    {
+      "id": "kw-assembler",
+      "term": "Assembler",
+      "acronym": null,
+      "definition": "A translator that converts assembly language into machine code, generally one machine code instruction for each assembly language instruction.",
+      "spec_ids": [
+        "1.2.2d",
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-assembly-language",
+        "kw-compiler"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-source-code",
+      "term": "Source code",
+      "acronym": null,
+      "definition": "A program as written by the programmer in a programming language, before it is translated.",
+      "spec_ids": [
+        "1.2.2d"
+      ],
+      "related": [
+        "kw-object-code"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-object-code",
+      "term": "Object code",
+      "acronym": null,
+      "definition": "The machine code produced by translating source code, which may still need to be linked with library code before it can run.",
+      "spec_ids": [
+        "1.2.2d",
+        "1.2.2e",
+        "1.2.2f"
+      ],
+      "related": [
+        "kw-source-code",
+        "kw-linker",
+        "kw-machine-code"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-machine-code",
+      "term": "Machine code",
+      "acronym": null,
+      "definition": "Instructions in binary that the processor can execute directly.",
+      "spec_ids": [
+        "1.2.2d",
+        "1.2.4a"
+      ],
+      "related": [
+        "kw-object-code",
+        "kw-assembly-language"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lexical-analysis",
+      "term": "Lexical analysis",
+      "acronym": null,
+      "definition": "The first stage of compilation: comments and whitespace are removed and the source code is split into tokens, with identifiers added to a symbol table.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-token",
+        "kw-symbol-table",
+        "kw-syntax-analysis"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-token",
+      "term": "Token",
+      "acronym": null,
+      "definition": "The smallest meaningful unit of source code, such as a keyword, identifier, operator or value, produced by lexical analysis.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-lexical-analysis"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-symbol-table",
+      "term": "Symbol table",
+      "acronym": null,
+      "definition": "A table built during compilation that records each identifier (such as a variable or subroutine name) with information about it, such as its data type and scope.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-lexical-analysis"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-syntax-analysis",
+      "term": "Syntax analysis",
+      "acronym": null,
+      "definition": "The stage of compilation that checks the tokens follow the rules (grammar) of the language, reports any syntax errors, and builds an abstract syntax tree.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-abstract-syntax-tree",
+        "kw-lexical-analysis"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-abstract-syntax-tree",
+      "term": "Abstract syntax tree",
+      "acronym": "AST",
+      "definition": "A tree representing the structure of the program, built during syntax analysis and passed on to code generation.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-syntax-analysis",
+        "kw-code-generation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-code-generation",
+      "term": "Code generation",
+      "acronym": null,
+      "definition": "The stage of compilation that produces object code (machine code) from the abstract syntax tree.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-abstract-syntax-tree",
+        "kw-optimisation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-optimisation",
+      "term": "Optimisation",
+      "acronym": null,
+      "definition": "The stage of compilation that changes the code so it runs faster or uses less memory, without changing what it does, for example by removing redundant instructions.",
+      "spec_ids": [
+        "1.2.2e"
+      ],
+      "related": [
+        "kw-code-generation"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-library",
+      "term": "Library",
+      "acronym": null,
+      "definition": "A collection of pre-written, pre-tested code (such as subroutines) that programmers can use in their own programs.",
+      "spec_ids": [
+        "1.2.2f",
+        "2.1.2d"
+      ],
+      "related": [
+        "kw-linker"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-linker",
+      "term": "Linker",
+      "acronym": null,
+      "definition": "A program that combines object code with the library code it uses into a single executable file.",
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "related": [
+        "kw-loader",
+        "kw-library",
+        "kw-static-linking",
+        "kw-dynamic-linking"
+      ],
+      "dont_confuse_with": "Loader: copies the executable into memory so it can run.",
+      "verified": false
+    },
+    {
+      "id": "kw-loader",
+      "term": "Loader",
+      "acronym": null,
+      "definition": "Part of the operating system that copies an executable program (and any dynamically linked libraries it needs) into memory so it can run.",
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "related": [
+        "kw-linker"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-static-linking",
+      "term": "Static linking",
+      "acronym": null,
+      "definition": "Copying the library code a program needs into its executable file, which makes the file larger but means it runs without the library installed.",
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "related": [
+        "kw-dynamic-linking",
+        "kw-linker"
+      ],
+      "dont_confuse_with": "Dynamic linking: the library stays separate and is loaded when the program runs.",
+      "verified": false
+    },
+    {
+      "id": "kw-dynamic-linking",
+      "term": "Dynamic linking",
+      "acronym": null,
+      "definition": "Keeping library code in a separate file that is loaded when the program runs, so executables are smaller and many programs can share one copy of the library.",
+      "spec_ids": [
+        "1.2.2f"
+      ],
+      "related": [
+        "kw-static-linking",
+        "kw-loader"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-waterfall",
+      "term": "Waterfall lifecycle",
+      "acronym": null,
+      "definition": "A software development model in which each stage (such as analysis, design, implementation, testing and maintenance) is completed in order before the next one begins.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "related": [
+        "kw-agile",
+        "kw-spiral-model"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-agile",
+      "term": "Agile methodologies",
+      "acronym": null,
+      "definition": "Approaches to software development that build the software in short, repeated iterations, delivering working parts often and adapting to changing requirements through close contact with the client.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "related": [
+        "kw-extreme-programming",
+        "kw-rad",
+        "kw-waterfall"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-extreme-programming",
+      "term": "Extreme programming",
+      "acronym": "XP",
+      "definition": "An agile methodology that develops software in short iterations using practices such as pair programming, test-first development and a customer representative working with the team.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "related": [
+        "kw-agile",
+        "kw-pair-programming"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pair-programming",
+      "term": "Pair programming",
+      "acronym": null,
+      "definition": "An extreme programming practice in which two programmers work at one computer, one writing code while the other reviews it, swapping roles regularly.",
+      "spec_ids": [
+        "1.2.3a"
+      ],
+      "related": [
+        "kw-extreme-programming"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-spiral-model",
+      "term": "Spiral model",
+      "acronym": null,
+      "definition": "A software development model that repeats a cycle of planning, risk analysis, development and evaluation, building a larger version of the software each loop; suited to large, high-risk projects.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "related": [
+        "kw-waterfall",
+        "kw-prototype"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-rad",
+      "term": "Rapid application development",
+      "acronym": "RAD",
+      "definition": "A software development model that builds a series of prototypes quickly, getting user feedback on each one, until the prototype becomes the final product.",
+      "spec_ids": [
+        "1.2.3a",
+        "1.2.3b"
+      ],
+      "related": [
+        "kw-prototype",
+        "kw-agile"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-prototype",
+      "term": "Prototype",
+      "acronym": null,
+      "definition": "An early, incomplete version of a system built to show users how it will look and work and to get their feedback.",
+      "spec_ids": [
+        "1.2.3a"
+      ],
+      "related": [
+        "kw-rad",
+        "kw-spiral-model"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-algorithm",
+      "term": "Algorithm",
+      "acronym": null,
+      "definition": "A sequence of steps that can be followed to solve a problem or complete a task.",
+      "spec_ids": [
+        "1.2.3c",
+        "2.3.1a"
+      ],
+      "related": [
+        "kw-pseudocode",
+        "kw-flowchart"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-pseudocode",
+      "term": "Pseudocode",
+      "acronym": null,
+      "definition": "A way of writing an algorithm using structured, code-like statements that are not tied to any particular programming language.",
+      "spec_ids": [
+        "1.2.3c",
+        "2.3.1a"
+      ],
+      "related": [
+        "kw-algorithm",
+        "kw-flowchart"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-flowchart",
+      "term": "Flowchart",
+      "acronym": null,
+      "definition": "A diagram that shows an algorithm using standard symbols (such as start/stop, process, decision and input/output) connected by arrows.",
+      "spec_ids": [
+        "1.2.3c",
+        "2.3.1a"
+      ],
+      "related": [
+        "kw-algorithm",
+        "kw-pseudocode"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-programming-paradigm",
+      "term": "Programming paradigm",
+      "acronym": null,
+      "definition": "A style or approach to programming, such as procedural, object-oriented or low-level, each suited to different kinds of problem.",
+      "spec_ids": [
+        "1.2.4a"
+      ],
+      "related": [
+        "kw-procedural-language",
+        "kw-object-oriented-language",
+        "kw-low-level-language"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-procedural-language",
+      "term": "Procedural language",
+      "acronym": null,
+      "definition": "A language in which a program is a sequence of instructions grouped into procedures and functions, using sequence, selection and iteration.",
+      "spec_ids": [
+        "1.2.4a",
+        "1.2.4b"
+      ],
+      "related": [
+        "kw-programming-paradigm",
+        "kw-object-oriented-language"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-low-level-language",
+      "term": "Low-level language",
+      "acronym": null,
+      "definition": "A language close to the processor's own instructions, such as machine code or assembly language, giving direct control of the hardware.",
+      "spec_ids": [
+        "1.2.4a",
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-assembly-language",
+        "kw-machine-code"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-assembly-language",
+      "term": "Assembly language",
+      "acronym": null,
+      "definition": "A low-level language that uses mnemonics in place of binary machine code instructions, usually with one mnemonic per machine code instruction.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-mnemonic",
+        "kw-assembler",
+        "kw-lmc"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-mnemonic",
+      "term": "Mnemonic",
+      "acronym": null,
+      "definition": "A short, memorable code for a machine code instruction, such as ADD or LDA in assembly language.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-assembly-language"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lmc",
+      "term": "Little Man Computer",
+      "acronym": "LMC",
+      "definition": "A simplified model of a Von Neumann computer with a small instruction set, used to learn assembly language programming.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-assembly-language",
+        "kw-accumulator"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-opcode",
+      "term": "Opcode",
+      "acronym": null,
+      "definition": "The part of a machine code or assembly language instruction that says which operation to carry out.",
+      "spec_ids": [
+        "1.2.4c",
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-operand"
+      ],
+      "dont_confuse_with": "Operand: the data, or the address of the data, the operation works on.",
+      "verified": false
+    },
+    {
+      "id": "kw-operand",
+      "term": "Operand",
+      "acronym": null,
+      "definition": "The part of an instruction that holds the data to be used, or the address of that data.",
+      "spec_ids": [
+        "1.2.4c",
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-opcode",
+        "kw-addressing-mode"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lmc-add",
+      "term": "Add",
+      "acronym": "ADD",
+      "definition": "LMC instruction that adds the value stored at the given memory address to the accumulator.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc",
+        "kw-lmc-sub"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lmc-sub",
+      "term": "Subtract",
+      "acronym": "SUB",
+      "definition": "LMC instruction that subtracts the value stored at the given memory address from the accumulator.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc",
+        "kw-lmc-add"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lmc-sta",
+      "term": "Store",
+      "acronym": "STA",
+      "definition": "LMC instruction that copies the value in the accumulator into the given memory address.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc",
+        "kw-lmc-lda"
+      ],
+      "dont_confuse_with": "LDA: copies a value from memory into the accumulator (the opposite direction).",
+      "verified": false,
+      "alternative_acronyms": [
+        "STO"
+      ]
+    },
+    {
+      "id": "kw-lmc-lda",
+      "term": "Load",
+      "acronym": "LDA",
+      "definition": "LMC instruction that copies the value stored at the given memory address into the accumulator.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc",
+        "kw-lmc-sta"
+      ],
+      "dont_confuse_with": "STA: copies the accumulator into memory (the opposite direction).",
+      "verified": false,
+      "alternative_acronyms": [
+        "LOAD"
+      ]
+    },
+    {
+      "id": "kw-lmc-bra",
+      "term": "Branch always",
+      "acronym": "BRA",
+      "definition": "LMC instruction that always jumps to the given address, by setting the program counter to it.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc-brz",
+        "kw-lmc-brp"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "alternative_acronyms": [
+        "BR"
+      ]
+    },
+    {
+      "id": "kw-lmc-brz",
+      "term": "Branch if zero",
+      "acronym": "BRZ",
+      "definition": "LMC instruction that jumps to the given address only if the value in the accumulator is zero.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc-bra",
+        "kw-lmc-brp"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "alternative_acronyms": [
+        "BZ"
+      ]
+    },
+    {
+      "id": "kw-lmc-brp",
+      "term": "Branch if positive",
+      "acronym": "BRP",
+      "definition": "LMC instruction that jumps to the given address only if the value in the accumulator is zero or positive.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc-bra",
+        "kw-lmc-brz"
+      ],
+      "dont_confuse_with": "BRZ: branches only when the accumulator is exactly zero.",
+      "verified": false,
+      "alternative_acronyms": [
+        "BP"
+      ]
+    },
+    {
+      "id": "kw-lmc-inp",
+      "term": "Input",
+      "acronym": "INP",
+      "definition": "LMC instruction that takes a value from the user and stores it in the accumulator.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc-out"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "alternative_acronyms": [
+        "IN",
+        "INPUT"
+      ]
+    },
+    {
+      "id": "kw-lmc-out",
+      "term": "Output",
+      "acronym": "OUT",
+      "definition": "LMC instruction that outputs the value in the accumulator.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc-inp"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-lmc-hlt",
+      "term": "End program",
+      "acronym": "HLT",
+      "definition": "LMC instruction that stops the program.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc"
+      ],
+      "dont_confuse_with": null,
+      "verified": false,
+      "alternative_acronyms": [
+        "COB",
+        "END"
+      ]
+    },
+    {
+      "id": "kw-lmc-dat",
+      "term": "Data location",
+      "acronym": "DAT",
+      "definition": "LMC instruction that reserves a memory location (labelled) to hold data, optionally with a starting value.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "related": [
+        "kw-lmc"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-addressing-mode",
+      "term": "Addressing mode",
+      "acronym": null,
+      "definition": "The way an instruction's operand is interpreted to find the data: immediate, direct, indirect or indexed.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-immediate-addressing",
+        "kw-direct-addressing",
+        "kw-indirect-addressing",
+        "kw-indexed-addressing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-immediate-addressing",
+      "term": "Immediate addressing",
+      "acronym": null,
+      "definition": "An addressing mode in which the operand is the actual value to be used.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-direct-addressing"
+      ],
+      "dont_confuse_with": "Direct addressing: the operand is the address where the value is stored.",
+      "verified": false
+    },
+    {
+      "id": "kw-direct-addressing",
+      "term": "Direct addressing",
+      "acronym": null,
+      "definition": "An addressing mode in which the operand is the memory address of the value to be used.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-immediate-addressing",
+        "kw-indirect-addressing"
+      ],
+      "dont_confuse_with": "Indirect addressing: the operand is the address of a location holding the address of the value.",
+      "verified": false
+    },
+    {
+      "id": "kw-indirect-addressing",
+      "term": "Indirect addressing",
+      "acronym": null,
+      "definition": "An addressing mode in which the operand is the address of a memory location that holds the address of the value to be used.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-direct-addressing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-indexed-addressing",
+      "term": "Indexed addressing",
+      "acronym": null,
+      "definition": "An addressing mode in which the address of the value is found by adding the operand to the value in the index register; useful for working through an array.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-index-register",
+        "kw-direct-addressing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-index-register",
+      "term": "Index register",
+      "acronym": null,
+      "definition": "A register whose value is added to the operand in indexed addressing; incrementing it steps through consecutive memory locations.",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "related": [
+        "kw-indexed-addressing"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-object-oriented-language",
+      "term": "Object-oriented language",
+      "acronym": null,
+      "definition": "A language in which programs are built from objects, created from classes, that combine data (attributes) with the code that acts on it (methods).",
+      "spec_ids": [
+        "1.2.4a",
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-class",
+        "kw-object",
+        "kw-procedural-language"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-class",
+      "term": "Class",
+      "acronym": null,
+      "definition": "A template that defines the attributes and methods that objects of that type will have.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-object",
+        "kw-attribute",
+        "kw-method"
+      ],
+      "dont_confuse_with": "Object: a specific instance created from a class.",
+      "verified": false
+    },
+    {
+      "id": "kw-object",
+      "term": "Object",
+      "acronym": null,
+      "definition": "An instance of a class, with its own values for the class's attributes.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-class",
+        "kw-instantiation"
+      ],
+      "dont_confuse_with": "Class: the template the object is created from.",
+      "verified": false
+    },
+    {
+      "id": "kw-instantiation",
+      "term": "Instantiation",
+      "acronym": null,
+      "definition": "Creating an object from a class, which runs the class's constructor; in OCR pseudocode, for example, myDog = new Dog(\"Fido\", \"Scottish Terrier\").",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-constructor",
+        "kw-object"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-constructor",
+      "term": "Constructor",
+      "acronym": null,
+      "definition": "A method that runs when an object is created, used to set up its attributes; in OCR pseudocode it is a procedure called new.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-instantiation",
+        "kw-class"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-attribute",
+      "term": "Attribute",
+      "acronym": null,
+      "definition": "A variable that belongs to a class or object and holds data about it.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-method",
+        "kw-class"
+      ],
+      "dont_confuse_with": "Method: a subroutine that belongs to the class.",
+      "verified": false
+    },
+    {
+      "id": "kw-method",
+      "term": "Method",
+      "acronym": null,
+      "definition": "A subroutine (procedure or function) that belongs to a class and defines a behaviour of its objects.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-attribute",
+        "kw-class"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-inheritance",
+      "term": "Inheritance",
+      "acronym": null,
+      "definition": "When a subclass takes on the attributes and methods of its superclass, and can add its own or override them.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-superclass",
+        "kw-subclass",
+        "kw-polymorphism"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-superclass",
+      "term": "Superclass",
+      "acronym": null,
+      "definition": "A class whose attributes and methods are inherited by one or more subclasses; also called a parent class.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-subclass",
+        "kw-inheritance"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-subclass",
+      "term": "Subclass",
+      "acronym": null,
+      "definition": "A class that inherits the attributes and methods of a superclass; also called a child class.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-superclass",
+        "kw-inheritance"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-encapsulation",
+      "term": "Encapsulation",
+      "acronym": null,
+      "definition": "Keeping an object's attributes private so they can only be accessed or changed through its public methods, such as get and set methods.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-private",
+        "kw-getter-setter"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-private",
+      "term": "Private",
+      "acronym": null,
+      "definition": "An access level meaning an attribute or method can only be used from inside its own class.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-public",
+        "kw-encapsulation"
+      ],
+      "dont_confuse_with": "Public: can be used from outside the class.",
+      "verified": false
+    },
+    {
+      "id": "kw-public",
+      "term": "Public",
+      "acronym": null,
+      "definition": "An access level meaning an attribute or method can be used from outside its class; in OCR pseudocode, methods and attributes are public unless stated otherwise.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-private"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-getter-setter",
+      "term": "Get and set methods",
+      "acronym": null,
+      "definition": "Public methods that return (get) or change (set) the value of a private attribute, so other code can't access the attribute directly.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-encapsulation",
+        "kw-private"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-polymorphism",
+      "term": "Polymorphism",
+      "acronym": null,
+      "definition": "The ability of objects of different classes to respond to the same method call in their own way, for example a subclass overriding a method it inherits.",
+      "spec_ids": [
+        "1.2.4e",
+        "2.2.1f"
+      ],
+      "related": [
+        "kw-inheritance",
+        "kw-method"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
+    },
+    {
+      "id": "kw-constant",
+      "term": "Constant",
+      "acronym": null,
+      "definition": "A named value that cannot be changed while the program is running.",
+      "spec_ids": [
+        "1.2.4b",
+        "2.2.1c"
+      ],
+      "related": [
+        "kw-variable"
+      ],
+      "dont_confuse_with": "Variable: a named value that can change while the program runs.",
+      "verified": false,
+      "source": "checklist"
+    },
+    {
+      "id": "kw-variable",
+      "term": "Variable",
+      "acronym": null,
+      "definition": "A named location in memory that holds a value which can change while the program is running.",
+      "spec_ids": [
+        "1.2.4b",
+        "2.2.1c"
+      ],
+      "related": [
+        "kw-constant"
+      ],
+      "dont_confuse_with": null,
+      "verified": false
     }
   ]
 }

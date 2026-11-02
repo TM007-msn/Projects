@@ -262,6 +262,11 @@ a { color: var(--accent); }
 .key-points li { margin-bottom: 12px; }
 .content-item .item-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
 
+.code {
+  background: var(--surface-2); border-radius: 8px; padding: 10px 12px; margin: 6px 0;
+  overflow-x: auto; font: 0.875rem/1.45 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
 .keywords, .confuse, .links { list-style: none; padding: 0; margin: 0; }
 .kw, .confuse li {
   background: var(--surface); border: 1px solid var(--border);

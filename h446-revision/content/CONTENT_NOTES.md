@@ -3,6 +3,30 @@
 Things to check when verifying content, and decisions about wording or ordering. Newest topic
 first.
 
+## Topic 1.2
+
+**Not certain, check first**
+
+- **BRP branches on zero as well as positive.** That's how LMC implementations behave and how I've
+  defined it, but check against your class notes.
+- **Multi-level feedback queues.** The details (how many queues, when a process moves up or down)
+  vary between textbooks; the definition stays general on purpose.
+- **Utility vs device driver.** The OCR guide lists "device driver" as an example of utility
+  software (1.2.2b), while most books treat drivers as separate system software (1.2.1g). Both are
+  defined; the utility definition doesn't list drivers.
+- **Interrupt check timing.** "The processor checks for interrupts at the end of each FDE cycle"
+  is the standard A level description; real processors are more complicated.
+
+**Orderings sources disagree on (no ordering items, or every valid order accepted)**
+
+- **Waterfall stages.** Names and number vary (feasibility / requirements / analysis / design /
+  implementation / testing / deployment / evaluation / maintenance). An ordering item will only use
+  the core stages that are always in the same order: analysis, design, implementation, testing,
+  maintenance.
+- **Stages of compilation.** The spec lists lexical analysis, syntax analysis, code generation,
+  optimisation. Real compilers often optimise before and after code generation, so an ordering
+  item will accept "optimisation" either before or after "code generation", or leave it out.
+
 ## Topic 1.1
 
 **Things I'm not certain about. Check these first when verifying.**

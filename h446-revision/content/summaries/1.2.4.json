@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "subtopic": "1.2.4",
+  "key_points": [
+    {
+      "id": "sum-1.2.4-01",
+      "text": "A programming paradigm is a style of programming. Procedural suits tasks that are a clear sequence of steps; object-oriented suits systems built from interacting things that share behaviour; low-level suits code that must control hardware directly or be very fast and small.",
+      "spec_ids": [
+        "1.2.4a"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-02",
+      "text": "Procedural languages use variables, constants, sequence, selection, iteration, subroutines, string handling, file handling and arithmetic and Boolean operators. You need to read, trace, amend and write procedural code. Constants are useful because a value can't be changed by mistake and only needs updating in one place.",
+      "spec_ids": [
+        "1.2.4b"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-03",
+      "text": "Assembly language uses mnemonics, one per machine code instruction, and gives direct control of the processor; each instruction has an opcode and an operand. It is translated by an assembler. Little Man Computer instructions: ADD, SUB, STA, LDA, BRA, BRZ, BRP, INP, OUT, HLT, DAT.",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-04",
+      "text": "An LMC program that outputs the larger of two inputs:",
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "verified": false,
+      "code": "INP\nSTA first\nINP\nSTA second\nSUB first\nBRP secondbig\nLDA first\nOUT\nHLT\nsecondbig LDA second\nOUT\nHLT\nfirst DAT\nsecond DAT"
+    },
+    {
+      "id": "sum-1.2.4-05",
+      "text": "Addressing modes: immediate (operand is the value), direct (operand is the address of the value), indirect (operand is the address of a location holding the address), indexed (address = operand + index register, used to step through arrays).",
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-06",
+      "text": "Object-oriented programming: a class is a template with attributes and methods; objects are instances of it, created by the constructor (new). Inheritance lets a subclass reuse a superclass's attributes and methods; polymorphism lets different classes respond to the same method in their own way.",
+      "spec_ids": [
+        "1.2.4e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-07",
+      "text": "Encapsulation keeps attributes private so they can only be changed through public get and set methods. This protects data from being changed by mistake and lets the class's internals change without affecting code that uses it.",
+      "spec_ids": [
+        "1.2.4e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "sum-1.2.4-08",
+      "text": "OCR pseudocode for a class:",
+      "spec_ids": [
+        "1.2.4e"
+      ],
+      "verified": false,
+      "code": "class Pet\n    private name\n    public procedure new(givenName)\n        name=givenName\n    endprocedure\nendclass\nclass Dog inherits Pet\n    private breed\n    public procedure new(givenName, givenBreed)\n        super.new(givenName)\n        breed=givenBreed\n    endprocedure\nendclass"
+    }
+  ],
+  "keyword_ids": [
+    "kw-programming-paradigm",
+    "kw-procedural-language",
+    "kw-low-level-language",
+    "kw-assembly-language",
+    "kw-mnemonic",
+    "kw-lmc",
+    "kw-opcode",
+    "kw-operand",
+    "kw-lmc-add",
+    "kw-lmc-sub",
+    "kw-lmc-sta",
+    "kw-lmc-lda",
+    "kw-lmc-bra",
+    "kw-lmc-brz",
+    "kw-lmc-brp",
+    "kw-lmc-inp",
+    "kw-lmc-out",
+    "kw-lmc-hlt",
+    "kw-lmc-dat",
+    "kw-addressing-mode",
+    "kw-immediate-addressing",
+    "kw-direct-addressing",
+    "kw-indirect-addressing",
+    "kw-indexed-addressing",
+    "kw-index-register",
+    "kw-object-oriented-language",
+    "kw-class",
+    "kw-object",
+    "kw-instantiation",
+    "kw-constructor",
+    "kw-attribute",
+    "kw-method",
+    "kw-inheritance",
+    "kw-superclass",
+    "kw-subclass",
+    "kw-encapsulation",
+    "kw-private",
+    "kw-public",
+    "kw-getter-setter",
+    "kw-polymorphism",
+    "kw-constant",
+    "kw-variable"
+  ],
+  "dont_confuse": [
+    {
+      "id": "dc-1.2.4-01",
+      "text": "Immediate vs direct addressing: immediate uses the operand as the value; direct uses it as the address of the value.",
+      "keyword_ids": [
+        "kw-immediate-addressing",
+        "kw-direct-addressing"
+      ],
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.4-02",
+      "text": "Direct vs indirect addressing: direct goes to the address once; indirect goes to the address, reads another address there, then goes to that.",
+      "keyword_ids": [
+        "kw-direct-addressing",
+        "kw-indirect-addressing"
+      ],
+      "spec_ids": [
+        "1.2.4d"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.4-03",
+      "text": "LDA vs STA: LDA loads from memory into the accumulator; STA stores the accumulator into memory.",
+      "keyword_ids": [
+        "kw-lmc-lda",
+        "kw-lmc-sta"
+      ],
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.4-04",
+      "text": "BRZ vs BRP: BRZ branches only when the accumulator is zero; BRP branches when it is zero or positive.",
+      "keyword_ids": [
+        "kw-lmc-brz",
+        "kw-lmc-brp"
+      ],
+      "spec_ids": [
+        "1.2.4c"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.4-05",
+      "text": "Class vs object: the class is the template; an object is one instance made from it.",
+      "keyword_ids": [
+        "kw-class",
+        "kw-object"
+      ],
+      "spec_ids": [
+        "1.2.4e"
+      ],
+      "verified": false
+    },
+    {
+      "id": "dc-1.2.4-06",
+      "text": "Inheritance vs polymorphism: inheritance is reusing a superclass's attributes and methods; polymorphism is the same method call behaving differently for different classes.",
+      "keyword_ids": [
+        "kw-inheritance",
+        "kw-polymorphism"
+      ],
+      "spec_ids": [
+        "1.2.4e"
+      ],
+      "verified": false
+    }
+  ]
+}

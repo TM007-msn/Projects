@@ -79,6 +79,20 @@ def test_keyword_shape():
             assert r != k["id"]
 
 
+def test_optional_keyword_fields():
+    for k in KEYWORDS:
+        if "source" in k:
+            assert k["source"] == "checklist", k["id"]
+        if "alternative_acronyms" in k:
+            assert isinstance(k["alternative_acronyms"], list) and all(isinstance(a, str) for a in k["alternative_acronyms"])
+
+
+def test_every_keyword_is_in_a_summary():
+    listed = {kid for s in SUMMARIES for kid in s["keyword_ids"]}
+    missing = sorted(KEYWORD_IDS - listed)
+    assert not missing, f"keywords not in any summary: {missing}"
+
+
 def test_definitions_are_one_or_two_sentences():
     for k in KEYWORDS:
         d = k["definition"]
@@ -96,6 +110,7 @@ def test_terms_unique():
 
 def test_acronyms_unique():
     acronyms = [k["acronym"] for k in KEYWORDS if k["acronym"]]
+    acronyms += [a for k in KEYWORDS for a in k.get("alternative_acronyms", [])]
     assert len(acronyms) == len(set(acronyms))
 
 
@@ -108,6 +123,9 @@ def test_summary_shape(summary):
     for dc in summary["dont_confuse"]:
         for kid in dc["keyword_ids"]:
             assert kid in KEYWORD_IDS
+    for kp in summary["key_points"]:
+        assert isinstance(kp.get("code", ""), str), kp["id"]
+        assert "\n" not in kp["text"], f"{kp['id']}: put code in the 'code' field, not 'text'"
     # Key points must stay within the summary's own subtopic.
     for kp in summary["key_points"]:
         for sid in kp["spec_ids"]:
