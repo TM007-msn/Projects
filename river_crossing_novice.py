@@ -77,6 +77,7 @@ while playing == True:
     # Output what is on this side of the river
     print("-----------------------")
     print("This side of the river:")
+    # Selection: output each item whose position is 0
     if farmer == 0:
         print("Farmer")
     if fox == 0:
@@ -89,6 +90,7 @@ while playing == True:
 
     # Output what is on the other side of the river
     print("The other side of the river:")
+    # Selection: output each item whose position is 1
     if farmer == 1:
         print("Farmer")
     if fox == 1:
